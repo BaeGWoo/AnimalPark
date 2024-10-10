@@ -1,0 +1,469 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.30f1 (70558241b701) revision 7361922'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Education' Language: 'ko' Physical Memory: 16297 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.30f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker12
+-projectPath
+C:/Users/Administrator/Desktop/AnimalPark/Game
+-logFile
+Logs/AssetImportWorker12.log
+-srvPort
+52903
+Successfully changed project path to: C:/Users/Administrator/Desktop/AnimalPark/Game
+C:/Users/Administrator/Desktop/AnimalPark/Game
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [4332] Host "[IP] 192.168.0.62 [Port] 0 [Flags] 2 [Guid] 1248074380 [EditorId] 1248074380 [Version] 1048832 [Id] WindowsEditor(7,I-06) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [4332] Host "[IP] 192.168.0.62 [Port] 0 [Flags] 2 [Guid] 1248074380 [EditorId] 1248074380 [Version] 1048832 [Id] WindowsEditor(7,I-06) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
+Refreshing native plugins compatible for Editor in 5.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.30f1 (70558241b701)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Administrator/Desktop/AnimalPark/Game/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 (ID=0x2184)
+    Vendor:   NVIDIA
+    VRAM:     5980 MB
+    Driver:   31.0.15.3623
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56928
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.005733 seconds.
+- Loaded All Assemblies, in  0.291 seconds
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.228 seconds
+Domain Reload Profiling: 519ms
+	BeginReloadAssembly (90ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (118ms)
+		LoadAssemblies (89ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (116ms)
+			TypeCache.Refresh (115ms)
+				TypeCache.ScanAssembly (104ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (229ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (179ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (122ms)
+			ProcessInitializeOnLoadMethodAttributes (43ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.489 seconds
+Refreshing native plugins compatible for Editor in 2.12 ms, found 3 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.500 seconds
+Domain Reload Profiling: 989ms
+	BeginReloadAssembly (127ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (18ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (292ms)
+		LoadAssemblies (219ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (148ms)
+			TypeCache.Refresh (130ms)
+				TypeCache.ScanAssembly (118ms)
+			ScanForSourceGeneratedMonoScriptInfo (13ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (500ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (377ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (44ms)
+			ProcessInitializeOnLoadAttributes (305ms)
+			ProcessInitializeOnLoadMethodAttributes (17ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 2.07 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3148 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (58.0 KB). Loaded Objects now: 3619.
+Memory consumption went from 133.3 MB to 133.3 MB.
+Total: 2.818900 ms (FindLiveObjects: 0.221100 ms CreateObjectMapping: 0.135800 ms MarkObjects: 2.381900 ms  DeleteObjects: 0.079500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CFXR_UpgradeCheck.cs: ecbc382cf7f886ae36ac82906454b189 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 7024.937044 seconds.
+  path: Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric/CFXR2 Sparks Rain.prefab
+  artifactKey: Guid(798157bad7358b04499c9d71cd3c0d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric/CFXR2 Sparks Rain.prefab using Guid(798157bad7358b04499c9d71cd3c0d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd75115ca41612626368e4ab56404f645') in 0.109397 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.399803 seconds.
+  path: Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Eerie/CFXR2 Souls Escape.prefab
+  artifactKey: Guid(b5c8ca7ed10b61e499cce8ec3b6e2e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Eerie/CFXR2 Souls Escape.prefab using Guid(b5c8ca7ed10b61e499cce8ec3b6e2e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7ec1d076fcc24d5b2078f32c54aceb3') in 0.095158 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 25
+========================================================================
+Received Import Request.
+  Time since last request: 481.346063 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 2 electro.prefab
+  artifactKey: Guid(9271980c86eec475d9419e916113798f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 2 electro.prefab using Guid(9271980c86eec475d9419e916113798f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c4c15591daa5c5632563059b51c8ef3') in 0.012967 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 0.002686 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 4 yellow arrow.prefab
+  artifactKey: Guid(0a07764c4b0cf4c4cbc0806021aaa4ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 4 yellow arrow.prefab using Guid(0a07764c4b0cf4c4cbc0806021aaa4ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe382484c5d2642b981a59f074554318') in 0.015514 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 8 dagger.prefab
+  artifactKey: Guid(b1b3a81cbaf6d4fd5bac73e8911ff429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 8 dagger.prefab using Guid(b1b3a81cbaf6d4fd5bac73e8911ff429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '469a9d640aa214e2b9a0d9850e73eb35') in 0.018271 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 27 heart.prefab
+  artifactKey: Guid(99b475befccfd407bb00d2250c168952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 27 heart.prefab using Guid(99b475befccfd407bb00d2250c168952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b3621e289b5e268829236f2f8870ce2') in 0.014723 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 16 fire.prefab
+  artifactKey: Guid(c7c0d516402e140ae8aea84f62b02dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 16 fire.prefab using Guid(c7c0d516402e140ae8aea84f62b02dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1cccef95f1157aa09e91a93a28e43b0') in 0.013562 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 24
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 9 water.prefab
+  artifactKey: Guid(fe273631a52684257828c3a1692b1bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 9 water.prefab using Guid(fe273631a52684257828c3a1692b1bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1efc8b14ab412151b67f15ee6ac83f60') in 0.013411 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 24
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 17 nova violet.prefab
+  artifactKey: Guid(7de52c8dd08ea49d085982315a05bd7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 17 nova violet.prefab using Guid(7de52c8dd08ea49d085982315a05bd7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67f2e3469039c612cd6ff397b9b03e4b') in 0.013577 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 40
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 10 blue laser.prefab
+  artifactKey: Guid(e439e129c085844df872ff66aea1fee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 10 blue laser.prefab using Guid(e439e129c085844df872ff66aea1fee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd01b2f09cd0be42a523c829c6d14fe0e') in 0.013394 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 19 circle bomb.prefab
+  artifactKey: Guid(5b0857c6f7fb44a1b838a439c6e7996c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 19 circle bomb.prefab using Guid(5b0857c6f7fb44a1b838a439c6e7996c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '095749d12867515495b520745c43d25f') in 0.014994 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 24 green explosion.prefab
+  artifactKey: Guid(d876d55ccc75b49e19929501f87d25af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 24 green explosion.prefab using Guid(d876d55ccc75b49e19929501f87d25af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '004a891f06390347ad6dd3a3191e8083') in 0.014320 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 15 pink crystal.prefab
+  artifactKey: Guid(d9c71709f281d4d49a31beda762c02be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 15 pink crystal.prefab using Guid(d9c71709f281d4d49a31beda762c02be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '801e12ce57a01eef55123e7546ed5e35') in 0.011844 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 22 cute star.prefab
+  artifactKey: Guid(6d45e6e096e194424b76d61f88511df6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 22 cute star.prefab using Guid(6d45e6e096e194424b76d61f88511df6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8565827240d1a8ce32c23cce5f71b91') in 0.012832 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 21 red arrow.prefab
+  artifactKey: Guid(61e0d322bb57e4c9aaae909c361ed55f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 21 red arrow.prefab using Guid(61e0d322bb57e4c9aaae909c361ed55f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bcfdd47de38536dcccb11650df74758') in 0.012811 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 24
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 23 cube.prefab
+  artifactKey: Guid(ff208763f31564695ae2e7882b1b0b78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Impacts/AAA Projectiles Vol 1 - Impact 23 cube.prefab using Guid(ff208763f31564695ae2e7882b1b0b78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f01671295c60b00ccbe9aea16c3c98') in 0.011910 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 7.935276 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 2 electro.prefab
+  artifactKey: Guid(9c1f6c5598e174d409010f5dca80c626) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 2 electro.prefab using Guid(9c1f6c5598e174d409010f5dca80c626) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b6ce32cd6bb62fc4cd6d3e00b36ccd2') in 0.013349 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 24 green explosion.prefab
+  artifactKey: Guid(42d493f259ebc408c8b82a36632eb543) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 24 green explosion.prefab using Guid(42d493f259ebc408c8b82a36632eb543) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b0a8c089871abd9054879caf14b2d24') in 0.012907 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 18 nova orange.prefab
+  artifactKey: Guid(4584455f05395429f9b5b331d8d0282d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 18 nova orange.prefab using Guid(4584455f05395429f9b5b331d8d0282d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcbf66bf01f4dee432a0830b6eb85eb8') in 0.016925 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 11 orange arrow.prefab
+  artifactKey: Guid(00fac8021755b4eb092c0f78c711218b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 11 orange arrow.prefab using Guid(00fac8021755b4eb092c0f78c711218b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e0ac06428e60d453a0c0a6e5db703f7') in 0.016318 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 6 blue fire.prefab
+  artifactKey: Guid(9923a547607674fb09a228eaf6ab9e24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 6 blue fire.prefab using Guid(9923a547607674fb09a228eaf6ab9e24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0cd8b6a975ab5c61670e6a6e3959a5a') in 0.020089 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 27 heart.prefab
+  artifactKey: Guid(3986e923006e14c649dfef1503ba4210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 27 heart.prefab using Guid(3986e923006e14c649dfef1503ba4210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3459b90d43f0421d7d79494130c9d22b') in 0.018713 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 7 pink.prefab
+  artifactKey: Guid(2a5839dac860b4826b435f3c02a58581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 7 pink.prefab using Guid(2a5839dac860b4826b435f3c02a58581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7150ce1fa888021036b15c5be21e7d44') in 0.016486 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 16 fire.prefab
+  artifactKey: Guid(c141ea40a44c8474786f90939ecaaba9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 16 fire.prefab using Guid(c141ea40a44c8474786f90939ecaaba9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccfb7138f8e1b54d1b6232daf55aea9f') in 0.014492 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 19 circle bomb.prefab
+  artifactKey: Guid(924c2257318b049379839022b321be0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Particles/Muzzles/AAA Projectiles Vol 1 - Muzzle 19 circle bomb.prefab using Guid(924c2257318b049379839022b321be0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5452e80037be2647b8aded567173bde8') in 0.012825 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 7.760155 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Projectiles/AAA Projectiles Vol 1 - 2 electro.prefab
+  artifactKey: Guid(f120f2188ecc74f44a968f0381be8cf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Projectiles/AAA Projectiles Vol 1 - 2 electro.prefab using Guid(f120f2188ecc74f44a968f0381be8cf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f832d23d60db27f334a4a4b0f53e5fd8') in 0.013805 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 24
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Projectiles/AAA Projectiles Vol 1 - 19 circle bomb.prefab
+  artifactKey: Guid(147e775eb944144f795ea5aeacecc72c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Projectiles/AAA Projectiles Vol 1 - 19 circle bomb.prefab using Guid(147e775eb944144f795ea5aeacecc72c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc83c8076c48ed5383bc8944e23cf94e') in 0.013093 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 25
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Projectiles/AAA Projectiles Vol 1 - 5 red.prefab
+  artifactKey: Guid(b3ef8b5a267ed4eae90dce0c674ab819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Projectiles/AAA Projectiles Vol 1 - 5 red.prefab using Guid(b3ef8b5a267ed4eae90dce0c674ab819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3402e24b47a0ddbf77ec3e763e81d735') in 0.012759 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Projectiles/AAA Projectiles Vol 1 - 7 pink.prefab
+  artifactKey: Guid(64a8b226923f04cc0a7caf6a602d5f95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Projectiles/AAA Projectiles Vol 1 - 7 pink.prefab using Guid(64a8b226923f04cc0a7caf6a602d5f95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32ed94c3cbb7a7839737df5a78d92934') in 0.013001 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 25
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Projectiles/AAA Projectiles Vol 1 - 6 blue fire.prefab
+  artifactKey: Guid(0318bb82842ef4167b45044d69119449) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Projectiles/AAA Projectiles Vol 1 - 6 blue fire.prefab using Guid(0318bb82842ef4167b45044d69119449) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16c6b5ed57acc4d6e2a83cf029498dd4') in 0.013835 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Projectiles/AAA Projectiles Vol 1 - 13 red laser.prefab
+  artifactKey: Guid(12100b82c6fbb47f2bcd9887907b7d8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Projectiles/AAA Projectiles Vol 1 - 13 red laser.prefab using Guid(12100b82c6fbb47f2bcd9887907b7d8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd02a6af5fde794a8a63343d17ab3dd3') in 0.013234 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Projectiles/AAA Projectiles Vol 1 - 21 red arrow.prefab
+  artifactKey: Guid(faf2101a6fcfc466e998594840479731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Projectiles/AAA Projectiles Vol 1 - 21 red arrow.prefab using Guid(faf2101a6fcfc466e998594840479731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac03f42bd887939721dbe10c1488cf00') in 0.013242 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 18
+========================================================================
+Received Import Request.
+  Time since last request: 7.776176 seconds.
+  path: Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Materials/Wall - AAA Stylized Projectiles  - Mod 2.mat
+  artifactKey: Guid(2dce1133121814c91a6fdc6665de1116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/AAA Stylized Projectiles Vol.1/Materials/Wall - AAA Stylized Projectiles  - Mod 2.mat using Guid(2dce1133121814c91a6fdc6665de1116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09e5a15a513f65c495ed246f64147f84') in 0.270460 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 882.408298 seconds.
+  path: Assets/MainGame/3D Sprite Sci-Fi Props/SpriteProps_Materials/SpriteProps_Green.mat
+  artifactKey: Guid(1a63d72c6152ef54493960acf859fc4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/3D Sprite Sci-Fi Props/SpriteProps_Materials/SpriteProps_Green.mat using Guid(1a63d72c6152ef54493960acf859fc4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7042276e5b79dfba709800ff24e36f90') in 0.033071 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/MainGame/3D Sprite Sci-Fi Props/SpriteProps_Materials/SpriteProps_Red.mat
+  artifactKey: Guid(52e4708390753da4d9c262a4a102d958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/3D Sprite Sci-Fi Props/SpriteProps_Materials/SpriteProps_Red.mat using Guid(52e4708390753da4d9c262a4a102d958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8da6f9f47df56acd7baeb880c8e40cd') in 0.031323 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
