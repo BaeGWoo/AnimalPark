@@ -10,6 +10,8 @@ public class Pudu : Animal
     private Vector3[] moveDirection = new Vector3[2];
     private Animator animator;
     [SerializeField] GameObject AttackBox;
+    [SerializeField] ParticleSystem AttackMotion;
+    [SerializeField] float duration = 2.0f;
 
     private void Awake()
     {
@@ -19,7 +21,12 @@ public class Pudu : Animal
 
         moveDirection[0] = new Vector3(transform.position.x, 0, target.z);
         moveDirection[1] = new Vector3(target.x, 0, transform.position.z);
-        
+
+        if (AttackMotion != null)
+        {
+            // 파티클을 비활성화 상태로 설정
+            AttackMotion.Stop();
+        }
     }
 
     public override void Move()
@@ -35,22 +42,15 @@ public class Pudu : Animal
 
 
 
-    public void Attack()
+    public override void ActiveAttackBox()
     {
-        
+        AttackBox.SetActive(true);
     }
 
-    private IEnumerator ActiveAttackBox()
+    public override void Attack()
     {
-        animator.SetTrigger("Jump");
-
-        // GameObject를 활성화합니다.
-        AttackBox.SetActive(true);
-
-        // 지정한 시간 동안 대기합니다.
-        yield return new WaitForSeconds(1.0f);
-
-        // GameObject를 비활성화합니다.
-        AttackBox.SetActive(false);
+        //  AttackBox.SetActive(true);
+        animator.SetTrigger("Attack");
+        Attack(AttackMotion, duration, AttackBox);
     }
 }

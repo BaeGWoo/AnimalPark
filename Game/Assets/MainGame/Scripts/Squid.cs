@@ -9,6 +9,8 @@ public class Squid : Animal
     private Vector3[] movePoint = new Vector3[9];
     private Vector3[] moveDirection = new Vector3[8];
     [SerializeField] GameObject AttackBox;
+    [SerializeField] ParticleSystem AttackMotion;
+    [SerializeField] float duration = 2.0f;
     private Animator animator;
 
     private void Awake()
@@ -25,6 +27,11 @@ public class Squid : Animal
         
 
         animator = GetComponent<Animator>();
+        if (AttackMotion != null)
+        {
+            // 파티클을 비활성화 상태로 설정
+            AttackMotion.Stop();
+        }
     }
 
     public override void Move()
@@ -43,19 +50,11 @@ public class Squid : Animal
     
     public void Attack()
     {
-        StartCoroutine(ActiveAttackBox());
+        animator.SetTrigger("Attack");
+        Attack(AttackMotion, duration, AttackBox);
     }
 
-    private IEnumerator ActiveAttackBox()
-    {
-        animator.SetTrigger("Attack");
-        // GameObject를 활성화합니다.
+    public override void ActiveAttackBox() {
         AttackBox.SetActive(true);
-
-        // 지정한 시간 동안 대기합니다.
-        yield return new WaitForSeconds(1.0f);
-
-        // GameObject를 비활성화합니다.
-        AttackBox.SetActive(false);
     }
 }

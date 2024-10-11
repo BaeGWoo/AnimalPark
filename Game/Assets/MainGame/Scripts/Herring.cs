@@ -8,6 +8,8 @@ public class Herring : Animal
     private Vector3[] moveDirection = new Vector3[8];
     private Animator animator;
     [SerializeField] GameObject AttackBox;
+    [SerializeField] ParticleSystem AttackMotion;
+    [SerializeField] float duration = 2.0f;
 
     private void Awake()
     {
@@ -24,6 +26,12 @@ public class Herring : Animal
        
 
         animator = GetComponent<Animator>();
+        if (AttackMotion != null)
+        {
+            // 파티클을 비활성화 상태로 설정
+            AttackMotion.Stop();
+        }
+
     }
 
     public override void Move()
@@ -43,24 +51,17 @@ public class Herring : Animal
         animator.SetTrigger("Jump");
     }
 
-
-
-    public void Attack()
+    public override void ActiveAttackBox()
     {
-        StartCoroutine(ActiveAttackBox());
-    }
-
-    private IEnumerator ActiveAttackBox()
-    {
-        animator.SetTrigger("Attack");
-
-        // GameObject를 활성화합니다.
         AttackBox.SetActive(true);
-
-        // 지정한 시간 동안 대기합니다.
-        yield return new WaitForSeconds(1.0f);
-
-        // GameObject를 비활성화합니다.
-        AttackBox.SetActive(false);
     }
+
+    public override void Attack()
+    {
+      //  AttackBox.SetActive(true);
+        animator.SetTrigger("Attack");
+        Attack(AttackMotion, duration, AttackBox);
+    }
+
+    
 }

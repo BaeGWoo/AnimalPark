@@ -45,4 +45,12 @@ public class Hunter : MonoBehaviour
 
         animator.SetBool("Run", Running);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Attack"))
+        {
+            other.transform.root.GetComponent<Animal>().Attack();
+        }
+    }
 }

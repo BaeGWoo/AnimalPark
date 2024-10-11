@@ -9,6 +9,10 @@ public class Animal : MonoBehaviour
     public virtual void Move() { }
     public virtual void JumpAnimaition() { }
 
+    public virtual void Attack() { }
+
+    public virtual void ActiveAttackBox() { }
+
     public void Move(Vector3 curPosition,Quaternion curRotation, Vector3[] movePoint, Vector3[] moveDirection)
     {
         AIManager.TileMap[(int)(curPosition.x / 2), (int)(curPosition.z / 2)] = 0;
@@ -70,10 +74,34 @@ public class Animal : MonoBehaviour
         float yRotation = Mathf.Round(eulerAngles.y / 90) * 90;
 
         // 회전값을 설정합니다.
-        transform.rotation = Quaternion.Euler(eulerAngles.x, yRotation, eulerAngles.z);
-        if (transform.position == Hunter.HunterPosition)
+        curRotation = Quaternion.Euler(eulerAngles.x, yRotation, eulerAngles.z);
+        if (curPosition == Hunter.HunterPosition)
         {
             //Attack();
         }
+    }
+
+
+    public void Attack(ParticleSystem attackMotion, float duration, GameObject attackArea)
+    {
+        attackMotion.Play();
+        StartCoroutine(DeactivateAfterDuration(attackMotion, duration,attackArea));
+    }
+
+   
+
+    private IEnumerator DeactivateAfterDuration(ParticleSystem attackMotion, float duration, GameObject attackArea)
+    {
+        yield return new WaitForSeconds(duration);
+
+        // 파티클이 종료될 때까지 대기
+        while (attackMotion.isPlaying)
+        {
+            yield return null;
+        }
+
+        // GameObject 비활성화
+        attackArea.SetActive(false);
+        
     }
 }
