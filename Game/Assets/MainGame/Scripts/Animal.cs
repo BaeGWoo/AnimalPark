@@ -12,6 +12,7 @@ public class Animal : MonoBehaviour
     public virtual void Attack() { }
 
     public virtual void ActiveAttackBox() { }
+    public virtual void UnActiveAttackBox() { }
 
     public void Move(Vector3 curPosition,Quaternion curRotation, Vector3[] movePoint, Vector3[] moveDirection)
     {
@@ -77,31 +78,32 @@ public class Animal : MonoBehaviour
         curRotation = Quaternion.Euler(eulerAngles.x, yRotation, eulerAngles.z);
         if (curPosition == Hunter.HunterPosition)
         {
-            //Attack();
+            Attack();
         }
     }
 
 
-    public void Attack(ParticleSystem attackMotion, float duration, GameObject attackArea)
+    public void Attack(GameObject attackMotion, float duration)
     {
-        attackMotion.Play();
-        StartCoroutine(DeactivateAfterDuration(attackMotion, duration,attackArea));
+        //attackMotion.Play();
+        attackMotion.SetActive(true);
+        StartCoroutine(DeactivateAfterDuration(attackMotion, duration));
     }
 
    
 
-    private IEnumerator DeactivateAfterDuration(ParticleSystem attackMotion, float duration, GameObject attackArea)
+    private IEnumerator DeactivateAfterDuration(GameObject attackMotion, float duration)
     {
         yield return new WaitForSeconds(duration);
 
         // 파티클이 종료될 때까지 대기
-        while (attackMotion.isPlaying)
-        {
-            yield return null;
-        }
+        //while (attackMotion.isPlaying)
+        //{
+        //    yield return null;
+        //}
 
         // GameObject 비활성화
-        attackArea.SetActive(false);
+        attackMotion.SetActive(false);
         
     }
 }

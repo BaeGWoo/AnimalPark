@@ -39,6 +39,14 @@ public class AIManager : MonoBehaviour
         }
     }
 
+    public void AnimalUnAttackBox()
+    {
+        for (int i = 0; i < Animals.Length; i++)
+        {
+            Animals[i].GetComponent<Animal>().UnActiveAttackBox();
+        }
+    }
+
     private IEnumerator TurnManager()
     {
         while (count>=0) // 게임이 계속 진행되는 동안 반복
@@ -46,9 +54,12 @@ public class AIManager : MonoBehaviour
             count--;
             // 동물의 이동
             AnimalMove();
+            yield return new WaitForSeconds(2.0f); // 필요에 따라 시간 조정
+            AnimalAttack();
 
             // 동물의 이동이 끝나기를 대기
-            yield return new WaitForSeconds(1f); // 필요에 따라 시간 조정
+            yield return new WaitForSeconds(2.0f); // 필요에 따라 시간 조정
+            AnimalUnAttackBox();
 
             // Hunter의 이동
             hunter.Move();
@@ -59,14 +70,14 @@ public class AIManager : MonoBehaviour
                 yield return null; // 한 프레임 대기
             }
             //Hunter.Moveable = false;
-            AnimalAttack();
 
             // Hunter의 이동이 끝나기를 대기
-            yield return new WaitForSeconds(3.0f); // 필요에 따라 시간 조정
 
+            
 
             // 다음 턴을 위해 잠시 대기 (원하는 경우)
             yield return null;
+
         }
     }
 

@@ -7,7 +7,7 @@ public class Sparrow : Animal
     private Vector3[] movePoint = new Vector3[9];
     private Vector3[] moveDirection = new Vector3[8];
     private Animator animator;
-    [SerializeField] ParticleSystem AttackMotion;
+    [SerializeField] GameObject AttackMotion;
     [SerializeField] GameObject AttackBox;
     [SerializeField] float duration = 2.0f;
 
@@ -24,11 +24,7 @@ public class Sparrow : Animal
         
 
         animator = GetComponent<Animator>();
-        if (AttackMotion != null)
-        {
-            // 파티클을 비활성화 상태로 설정
-            AttackMotion.Stop();
-        }
+        
     }
 
     public override void Move()
@@ -54,10 +50,15 @@ public class Sparrow : Animal
         AttackBox.SetActive(true);
     }
 
+    public override void UnActiveAttackBox()
+    {
+        AttackBox.SetActive(false);
+    }
+
     public override void Attack()
     {
         //  AttackBox.SetActive(true);
         animator.SetTrigger("Attack");
-        Attack(AttackMotion, duration, AttackBox);
+        Attack(AttackMotion, duration);
     }
 }
