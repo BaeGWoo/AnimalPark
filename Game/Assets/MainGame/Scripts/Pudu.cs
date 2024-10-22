@@ -31,7 +31,7 @@ public class Pudu : Animal
 
         movePoint[1] = new Vector3(Hunter.HunterPosition.x, 0, transform.position.z);
         movePoint[2] = new Vector3(transform.position.x, 0, Hunter.HunterPosition.z);
-        base.Move(transform.position, transform.rotation, movePoint, moveDirection);
+        base.Move(transform.position, transform.rotation, movePoint);
     }
 
     public override void JumpAnimaition(){animator.SetTrigger("Jump");}

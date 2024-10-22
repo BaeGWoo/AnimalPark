@@ -38,7 +38,7 @@ public class Squid : Animal
             movePoint[i] = new Vector3(moveDirection[i - 1].x + transform.position.x, 0, moveDirection[i - 1].z + transform.position.z);
         }
 
-        base.Move(transform.position,transform.rotation,movePoint, moveDirection);
+        base.Move(transform.position,transform.rotation,movePoint);
     }
 
     public override void JumpAnimaition(){animator.SetTrigger("Jump");}

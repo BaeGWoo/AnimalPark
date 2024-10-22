@@ -11,10 +11,12 @@ public class Animal : MonoBehaviour
 
     public virtual void Attack() { }
 
+    public virtual void Damaged() { }
+
     public virtual void ActiveAttackBox() { }
     public virtual void UnActiveAttackBox() { }
 
-    public void Move(Vector3 curPosition,Quaternion curRotation, Vector3[] movePoint, Vector3[] moveDirection)
+    public void Move(Vector3 curPosition,Quaternion curRotation, Vector3[] movePoint)
     {
         AIManager.TileMap[(int)(curPosition.x / 2), (int)(curPosition.z / 2)] = 0;
         Vector3 target = Hunter.HunterPosition;
@@ -45,12 +47,10 @@ public class Animal : MonoBehaviour
         }
         AIManager.TileMap[(int)(movePoint[minDirection].x / 2), (int)(movePoint[minDirection].z) / 2] = 1;
         StartCoroutine(JumpToPosition(curPosition, curRotation, new Vector3(movePoint[minDirection].x, 0, movePoint[minDirection].z)));
-        //JumpToPosition(curPosition,new Vector3(movePoint[minDirection].x, 0, movePoint[minDirection].z), jumpDuration, jumpHeight);
     }
 
     IEnumerator JumpToPosition(Vector3 curPosition,Quaternion curRotation, Vector3 targetPosition)
     {
-        //animator.SetTrigger("Jump");
         JumpAnimaition();
         Vector3 startPosition = curPosition;
         float elapsedTime = 0f;
@@ -105,5 +105,10 @@ public class Animal : MonoBehaviour
         // GameObject 비활성화
         attackMotion.SetActive(false);
         
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject, 1.0f);
     }
 }

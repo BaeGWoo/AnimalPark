@@ -10,6 +10,7 @@ public class Taipan : Animal
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject AttackMotion;
     [SerializeField] float duration = 2.0f;
+    private float Health = 3;
 
     private void Awake()
     {
@@ -20,11 +21,6 @@ public class Taipan : Animal
        
 
         animator = GetComponent<Animator>();
-        //if (AttackMotion != null)
-        //{
-        //    // 파티클을 비활성화 상태로 설정
-        //    AttackMotion.Stop();
-        //}
     }
 
     public override void Move()
@@ -35,7 +31,7 @@ public class Taipan : Animal
         {
             movePoint[i] = new Vector3(moveDirection[i - 1].x + transform.position.x, 0, moveDirection[i - 1].z + transform.position.z);
         }
-        base.Move(transform.position, transform.rotation, movePoint, moveDirection);
+        base.Move(transform.position, transform.rotation, movePoint);
     }
     public override void JumpAnimaition(){animator.SetTrigger("Jump");}
 
@@ -54,8 +50,17 @@ public class Taipan : Animal
 
     public override void Attack()
     {
-        //  AttackBox.SetActive(true);
         animator.SetTrigger("Attack");
         Attack(AttackMotion, duration);
+    }
+
+    public override void Damaged()
+    {
+        Health--;
+        if (Health <= 0)
+        {
+            animator.SetTrigger("Die");
+            base.Die();
+        }
     }
 }

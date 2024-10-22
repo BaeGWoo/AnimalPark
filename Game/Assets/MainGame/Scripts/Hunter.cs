@@ -14,6 +14,8 @@ public class Hunter : MonoBehaviour
     [SerializeField] Slider HPSlider;
     private Vector3 HPPosition;
     private Animator animator;
+    private int keyInput;
+    [SerializeField] GameObject[] AttackBox;
 
     void Awake()
     {
@@ -34,6 +36,28 @@ public class Hunter : MonoBehaviour
     public void Attack()
     {
         Moveable = false;
+        bool inputReceived = false;
+
+        while (!inputReceived)  // 입력이 들어올 때까지 반복
+        {
+            // 1번 키가 눌렸을 때
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                keyInput = 1;
+                inputReceived = true;  // 입력을 받았다고 표시             
+            }
+
+            // 2번 키가 눌렸을 때
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                keyInput = 2;
+                inputReceived = true;  // 입력을 받았다고 표시
+            }         
+        }
+
+        animator.SetTrigger("Attack" + keyInput);
+        AttackBox[keyInput - 1].SetActive(true);
+
     }
 
     // Update is called once per frame
