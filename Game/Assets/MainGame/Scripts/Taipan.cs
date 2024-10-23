@@ -10,7 +10,11 @@ public class Taipan : Animal
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject AttackMotion;
     [SerializeField] float duration = 2.0f;
-    private float Health = 3;
+    [SerializeField] float Health = 3;
+
+    private AIManager aiManager;
+
+   
 
     private void Awake()
     {
@@ -21,6 +25,7 @@ public class Taipan : Animal
        
 
         animator = GetComponent<Animator>();
+        aiManager = FindObjectOfType<AIManager>();
     }
 
     public override void Move()
@@ -59,6 +64,7 @@ public class Taipan : Animal
         Health--;
         if (Health <= 0)
         {
+            aiManager.RemoveAnimal(gameObject);
             animator.SetTrigger("Die");
             base.Die();
         }

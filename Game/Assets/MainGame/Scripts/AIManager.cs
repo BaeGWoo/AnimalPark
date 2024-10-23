@@ -7,10 +7,11 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 public class AIManager : MonoBehaviour
 {
     [SerializeField] GameObject[] Animals;
-    private List<Animal> animals = new List<Animal>();
+    //private List<Animal> animals = new List<Animal>();
     public static int[,] TileMap = new int[8, 8];
     [SerializeField] Hunter hunter;
     int count = 5;
+   
 
     private void Start()
     {
@@ -54,35 +55,51 @@ public class AIManager : MonoBehaviour
             count--;
             // 동물의 이동
             AnimalMove();
-            yield return new WaitForSeconds(2.0f); // 필요에 따라 시간 조정
+            yield return new WaitForSeconds(1.0f); // 필요에 따라 시간 조정
             AnimalAttack();
 
             // 동물의 이동이 끝나기를 대기
-            yield return new WaitForSeconds(2.0f); // 필요에 따라 시간 조정
+            yield return new WaitForSeconds(1.0f); // 필요에 따라 시간 조정
             AnimalUnAttackBox();
 
             // Hunter의 이동
             hunter.Move();
 
-            // Hunter의 이동이 끝나기를 대기
             while (Hunter.Moveable)
             {
-                hunter.Attack();
-                yield return new WaitForSeconds(1.5f); // 한 프레임 대기
+                yield return null;
+
             }
-            //Hunter.Moveable = false;
+
+            // Hunter의 공격
+            hunter.Attack();
 
             // Hunter의 이동이 끝나기를 대기
+           
 
-            
-
-            // 다음 턴을 위해 잠시 대기 (원하는 경우)
-            yield return null;
+            while (Hunter.Attackable)
+            {
+                yield return null;
+            }
 
         }
     }
 
+    public void RemoveAnimal(GameObject animal)
+    {
+        // 배열을 리스트로 변환
+        List<GameObject> animalList = new List<GameObject>(Animals);
 
+        // 해당 동물 GameObject를 리스트에서 삭제
+        if (animalList.Contains(animal))
+        {
+            animalList.Remove(animal);
+            //Debug.Log(animal.name + "가 동물 배열에서 제거되었습니다.");
+        }
+
+        // 리스트를 다시 배열로 변환
+        Animals = animalList.ToArray();
+    }
 
     // Update is called once per frame
     void Update()

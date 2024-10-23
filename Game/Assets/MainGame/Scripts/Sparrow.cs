@@ -10,6 +10,8 @@ public class Sparrow : Animal
     [SerializeField] GameObject AttackMotion;
     [SerializeField] GameObject AttackBox;
     [SerializeField] float duration = 2.0f;
+    [SerializeField] float Health = 3;
+    private AIManager aiManager;
 
     private void Awake()
     {
@@ -24,7 +26,7 @@ public class Sparrow : Animal
         
 
         animator = GetComponent<Animator>();
-        
+        aiManager = FindObjectOfType<AIManager>();
     }
 
     public override void Move()
@@ -60,5 +62,16 @@ public class Sparrow : Animal
         //  AttackBox.SetActive(true);
         animator.SetTrigger("Attack");
         Attack(AttackMotion, duration);
+    }
+
+    public override void Damaged()
+    {
+        Health--;
+        if (Health <= 0)
+        {
+            aiManager.RemoveAnimal(gameObject);
+            animator.SetTrigger("Die");
+            base.Die();
+        }
     }
 }

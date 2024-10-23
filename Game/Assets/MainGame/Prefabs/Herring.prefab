@@ -14814,9 +14814,10 @@ GameObject:
   - component: {fileID: 8809269418214567811}
   - component: {fileID: 4593625265537236964}
   - component: {fileID: -9202225689528891293}
+  - component: {fileID: 2446002844041859243}
   m_Layer: 0
   m_Name: Herring
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14911,6 +14912,27 @@ MonoBehaviour:
   AttackBox: {fileID: 2524442739778754533}
   AttackMotion: {fileID: 5112403345868107899}
   duration: 2
+--- !u!65 &2446002844041859243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788002894554749541}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.17, z: -0.22}
 --- !u!1 &2159887111207473544
 GameObject:
   m_ObjectHideFlags: 0

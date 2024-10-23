@@ -8,7 +8,9 @@ public class Colobus :Animal
     private Vector3[] movePoint= new Vector3[5];
     private Vector3[] moveDirection = new Vector3[4];
     private Animator animator;
+    [SerializeField] float Health = 3;
 
+    private AIManager aiManager;
     private void Awake()
     {
         moveDirection[0] = new Vector3(4f, 0, 0);
@@ -18,6 +20,7 @@ public class Colobus :Animal
         
 
         animator = GetComponent<Animator>();
+        aiManager = FindObjectOfType<AIManager>();
     }
 
     public override void Move()
@@ -38,5 +41,16 @@ public class Colobus :Animal
     public void Attack()
     {
 
+    }
+
+    public override void Damaged()
+    {
+        Health--;
+        if (Health <= 0)
+        {
+            aiManager.RemoveAnimal(gameObject);
+            animator.SetTrigger("Die");
+            base.Die();
+        }
     }
 }

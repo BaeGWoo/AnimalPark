@@ -9,7 +9,10 @@ public class Herring : Animal
     private Animator animator;
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject AttackMotion;
+    [SerializeField] float Health = 3;
     [SerializeField] float duration = 2.0f;
+
+    private AIManager aiManager;
 
     private void Awake()
     {
@@ -26,7 +29,7 @@ public class Herring : Animal
        
 
         animator = GetComponent<Animator>();
-       
+        aiManager = FindObjectOfType<AIManager>();
 
     }
 
@@ -64,5 +67,14 @@ public class Herring : Animal
         Attack(AttackMotion, duration);
     }
 
-    
+    public override void Damaged()
+    {
+        Health--;
+        if (Health <= 0)
+        {
+            aiManager.RemoveAnimal(gameObject);
+            animator.SetTrigger("Die");
+            base.Die();
+        }
+    }
 }

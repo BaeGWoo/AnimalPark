@@ -6,6 +6,8 @@ public class Animal : MonoBehaviour
 {
     public float jumpHeight = 2f; // 점프 높이
     public float jumpDuration = 1f; // 점프 애니메이션의 지속 시간
+    
+
     public virtual void Move() { }
     public virtual void JumpAnimaition() { }
 
@@ -15,6 +17,7 @@ public class Animal : MonoBehaviour
 
     public virtual void ActiveAttackBox() { }
     public virtual void UnActiveAttackBox() { }
+
 
     public void Move(Vector3 curPosition,Quaternion curRotation, Vector3[] movePoint)
     {
@@ -68,7 +71,18 @@ public class Animal : MonoBehaviour
        }
       
         transform.position = new Vector3(targetPosition.x, startPosition.y, targetPosition.z);
+        
         transform.LookAt(Hunter.HunterPosition);
+
+
+        // y축 회전값을 45의 배수로 반올림
+        float targetYRotation = Mathf.Round(transform.rotation.eulerAngles.y / 90f) * 90f;
+
+        // 새로운 회전을 적용 (x, z는 0으로 고정, y만 45의 배수로 설정)
+        transform.rotation = Quaternion.Euler(0, targetYRotation%360, 0);
+
+
+
         Vector3 eulerAngles = curRotation.eulerAngles;
 
         // 각도 값을 0~360 범위로 변환합니다.
@@ -108,7 +122,7 @@ public class Animal : MonoBehaviour
     }
 
     public void Die()
-    {
-        Destroy(gameObject, 1.0f);
+    { 
+        Destroy(gameObject, 1.5f);
     }
 }

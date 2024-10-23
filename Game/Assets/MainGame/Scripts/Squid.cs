@@ -11,7 +11,10 @@ public class Squid : Animal
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject AttackMotion;
     [SerializeField] float duration = 2.0f;
+    [SerializeField] float Health = 3;
     private Animator animator;
+
+    private AIManager aiManager;
 
     private void Awake()
     {
@@ -27,7 +30,7 @@ public class Squid : Animal
         
 
         animator = GetComponent<Animator>();
-       
+        aiManager = FindObjectOfType<AIManager>();
     }
 
     public override void Move()
@@ -57,5 +60,16 @@ public class Squid : Animal
     public override void UnActiveAttackBox()
     {
         AttackBox.SetActive(false);
+    }
+
+    public override void Damaged()
+    {
+        Health--;
+        if (Health <= 0)
+        {
+            aiManager.RemoveAnimal(gameObject);
+            animator.SetTrigger("Die");
+            base.Die();
+        }
     }
 }

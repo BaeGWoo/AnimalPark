@@ -7,8 +7,11 @@ public class Hunter : MonoBehaviour
 {
     public static Vector3 HunterPosition;
     public static Transform HunterRotation;
+
     public static bool Moveable = false;
     public static bool Running = false;
+    public static bool Attackable = false;
+
     [SerializeField] AIManager aiManager;
     [SerializeField] BoxCollider Huntercollider;
     [SerializeField] Slider HPSlider;
@@ -35,29 +38,7 @@ public class Hunter : MonoBehaviour
 
     public void Attack()
     {
-        Moveable = false;
-        bool inputReceived = false;
-
-        while (!inputReceived)  // 입력이 들어올 때까지 반복
-        {
-            // 1번 키가 눌렸을 때
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                keyInput = 1;
-                inputReceived = true;  // 입력을 받았다고 표시             
-            }
-
-            // 2번 키가 눌렸을 때
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                keyInput = 2;
-                inputReceived = true;  // 입력을 받았다고 표시
-            }         
-        }
-
-        animator.SetTrigger("Attack" + keyInput);
-        AttackBox[keyInput - 1].SetActive(true);
-
+        Attackable = true;
     }
 
     // Update is called once per frame
@@ -70,11 +51,7 @@ public class Hunter : MonoBehaviour
             Debug.Log("RUN");
             
         }
-        //Vector3 lookDirection = HPPosition;
-        //lookDirection.y = 0; // 수직 방향은 무시
-        //HPSlider.transform.position = transform.position+HPPosition;
-        //HPSlider.transform.rotation= Quaternion.Euler(45, 0, 0);
-        //HPSlider.transform.LookAt(Camera.main.transform);
+        
         animator.SetBool("Run", Running);
 
     }
@@ -86,5 +63,32 @@ public class Hunter : MonoBehaviour
             other.transform.root.GetComponent<Animal>().Attack();
         Debug.Log(other.transform.root.name);
         }
+    }
+
+    public void AttackType(Button button)
+    {
+        if (!Attackable) return;
+        string animatorTrigger = button.name;
+        int num = int.Parse(animatorTrigger.Substring("Attack".Length));
+        animator.SetTrigger("Attack" + num);
+
+        StartCoroutine(HunterAttackMotion(num));
+       
+        StartCoroutine(HunterAttackEnd(num));
+    }
+
+    IEnumerator HunterAttackMotion(int num)
+    {
+        yield return new WaitForSeconds(0.5f);
+        AttackBox[num - 1].SetActive(true);
+
+    }
+
+    IEnumerator HunterAttackEnd(int num)
+    {
+        yield return new WaitForSeconds(2.5f);
+
+        Attackable = false;
+        AttackBox[num - 1].SetActive(false);
     }
 }

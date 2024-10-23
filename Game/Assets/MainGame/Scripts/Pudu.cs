@@ -12,7 +12,9 @@ public class Pudu : Animal
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject AttackMotion;
     [SerializeField] float duration = 2.0f;
+    [SerializeField] float Health = 3;
 
+    private AIManager aiManager;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -22,7 +24,7 @@ public class Pudu : Animal
         moveDirection[0] = new Vector3(transform.position.x, 0, target.z);
         moveDirection[1] = new Vector3(target.x, 0, transform.position.z);
 
-      
+        aiManager = FindObjectOfType<AIManager>();
     }
 
     public override void Move()
@@ -53,5 +55,16 @@ public class Pudu : Animal
         //  AttackBox.SetActive(true);
         animator.SetTrigger("Attack");
         Attack(AttackMotion, duration);
+    }
+
+    public override void Damaged()
+    {
+        Health--;
+        if (Health <= 0)
+        {
+            aiManager.RemoveAnimal(gameObject);
+            animator.SetTrigger("Die");
+            base.Die();
+        }
     }
 }
