@@ -12,7 +12,7 @@ public class Taipan : Animal
     [SerializeField] float duration = 2.0f;
     [SerializeField] float Health = 3;
 
-    private AIManager aiManager;
+    
 
    
 
@@ -62,11 +62,21 @@ public class Taipan : Animal
     public override void Damaged()
     {
         Health--;
+
+
+
         if (Health <= 0)
         {
             aiManager.RemoveAnimal(gameObject);
             animator.SetTrigger("Die");
             base.Die();
         }
+
+        base.Damaged();
+    }
+
+    public override float GetHP()
+    {
+        return Health;
     }
 }

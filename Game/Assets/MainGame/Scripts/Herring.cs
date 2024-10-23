@@ -12,7 +12,7 @@ public class Herring : Animal
     [SerializeField] float Health = 3;
     [SerializeField] float duration = 2.0f;
 
-    private AIManager aiManager;
+ 
 
     private void Awake()
     {
@@ -76,5 +76,10 @@ public class Herring : Animal
             animator.SetTrigger("Die");
             base.Die();
         }
+    }
+
+    public override float GetHP()
+    {
+        return Health;
     }
 }

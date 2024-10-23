@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
@@ -10,12 +11,15 @@ public class AIManager : MonoBehaviour
     //private List<Animal> animals = new List<Animal>();
     public static int[,] TileMap = new int[8, 8];
     [SerializeField] Hunter hunter;
+    [SerializeField] GameObject animalImagePrefab;
+    [SerializeField] Canvas animalCanvas;
     int count = 5;
    
 
     private void Start()
     {
         StartCoroutine(TurnManager());
+        UpdateAnimalList();
     }
 
     public void AnimalMove()
@@ -99,6 +103,54 @@ public class AIManager : MonoBehaviour
 
         // 리스트를 다시 배열로 변환
         Animals = animalList.ToArray();
+    }
+
+
+    public void UpdateAnimalList()
+    {
+        foreach (Transform child in animalCanvas.transform)
+        {
+            if (child.CompareTag("Animal"))
+            {
+                Destroy(child.gameObject);  // 태그가 "AnimalImage"인 자식 오브젝트만 삭제
+            }
+        }
+
+        RectTransform prefabRectTransform = animalImagePrefab.GetComponent<RectTransform>();
+        Debug.Log(prefabRectTransform.transform.position);
+        Vector3 initialPosition = prefabRectTransform.localPosition;// 초기 위치
+        float yOffset = -145f; // Y 값에서의 간격
+        Vector3 currentPosition = new Vector3(0,-145.0f,0);
+
+        for (int i = 0; i < Animals.Length; i++)
+        {
+            GameObject animalFace = Instantiate(animalImagePrefab, animalCanvas.transform);
+            
+
+            animalFace.GetComponent<Image>().sprite = Resources.Load<Sprite>(Animals[i].name);
+
+            RectTransform rectTransform = animalFace.GetComponent<RectTransform>();
+            rectTransform.localPosition += currentPosition*i;
+
+
+            Slider hpSlider = animalFace.GetComponentInChildren<Slider>();
+            hpSlider.value = Animals[i].GetComponent<Animal>().GetHP();
+            // 다음 오브젝트의 위치를 위해 y 값 조정
+            //currentPosition.y += yOffset;
+        }       
+    }
+
+    public void UpdateAnimalHp()
+    {
+        int index = 0;
+        foreach (Transform child in animalCanvas.transform)
+        {
+            if (child.CompareTag("Animal"))
+            {
+                Slider hpSlider = child.gameObject.GetComponentInChildren<Slider>();
+                hpSlider.value = Animals[index++].GetComponent<Animal>().GetHP()/3;
+            }
+        }
     }
 
     // Update is called once per frame

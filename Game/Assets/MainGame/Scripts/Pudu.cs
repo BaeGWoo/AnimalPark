@@ -14,7 +14,7 @@ public class Pudu : Animal
     [SerializeField] float duration = 2.0f;
     [SerializeField] float Health = 3;
 
-    private AIManager aiManager;
+  
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -23,8 +23,8 @@ public class Pudu : Animal
 
         moveDirection[0] = new Vector3(transform.position.x, 0, target.z);
         moveDirection[1] = new Vector3(target.x, 0, transform.position.z);
-
         aiManager = FindObjectOfType<AIManager>();
+
     }
 
     public override void Move()
@@ -66,5 +66,10 @@ public class Pudu : Animal
             animator.SetTrigger("Die");
             base.Die();
         }
+    }
+
+    public override float GetHP()
+    {
+        return Health;
     }
 }

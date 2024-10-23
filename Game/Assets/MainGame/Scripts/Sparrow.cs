@@ -11,7 +11,7 @@ public class Sparrow : Animal
     [SerializeField] GameObject AttackBox;
     [SerializeField] float duration = 2.0f;
     [SerializeField] float Health = 3;
-    private AIManager aiManager;
+    
 
     private void Awake()
     {
@@ -73,5 +73,10 @@ public class Sparrow : Animal
             animator.SetTrigger("Die");
             base.Die();
         }
+    }
+
+    public override float GetHP()
+    {
+        return Health;
     }
 }

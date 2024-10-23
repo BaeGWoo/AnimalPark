@@ -14,8 +14,7 @@ public class Squid : Animal
     [SerializeField] float Health = 3;
     private Animator animator;
 
-    private AIManager aiManager;
-
+  
     private void Awake()
     {
         moveDirection[0] = new Vector3(4, 0, 8);
@@ -71,5 +70,10 @@ public class Squid : Animal
             animator.SetTrigger("Die");
             base.Die();
         }
+    }
+
+    public override float GetHP()
+    {
+        return Health;
     }
 }

@@ -10,7 +10,7 @@ public class Colobus :Animal
     private Animator animator;
     [SerializeField] float Health = 3;
 
-    private AIManager aiManager;
+  
     private void Awake()
     {
         moveDirection[0] = new Vector3(4f, 0, 0);
@@ -52,5 +52,10 @@ public class Colobus :Animal
             animator.SetTrigger("Die");
             base.Die();
         }
+    }
+
+    public override float GetHP()
+    {
+        return Health;
     }
 }

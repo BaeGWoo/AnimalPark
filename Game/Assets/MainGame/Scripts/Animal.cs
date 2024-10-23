@@ -6,18 +6,24 @@ public class Animal : MonoBehaviour
 {
     public float jumpHeight = 2f; // 점프 높이
     public float jumpDuration = 1f; // 점프 애니메이션의 지속 시간
-    
+    protected AIManager aiManager;
 
     public virtual void Move() { }
     public virtual void JumpAnimaition() { }
 
     public virtual void Attack() { }
 
-    public virtual void Damaged() { }
+    public virtual void Damaged() { aiManager.UpdateAnimalHp(); }
+
+    public virtual float GetHP() { return 0; }
 
     public virtual void ActiveAttackBox() { }
     public virtual void UnActiveAttackBox() { }
 
+    private void Awake()
+    {
+        aiManager = FindObjectOfType<AIManager>();
+    }
 
     public void Move(Vector3 curPosition,Quaternion curRotation, Vector3[] movePoint)
     {
@@ -124,5 +130,6 @@ public class Animal : MonoBehaviour
     public void Die()
     { 
         Destroy(gameObject, 1.5f);
+        aiManager.UpdateAnimalList();
     }
 }
