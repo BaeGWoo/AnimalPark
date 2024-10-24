@@ -93,7 +93,7 @@ public class MouseEffect : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 GameObject clickedObject = hit.transform.gameObject;
-                Debug.Log(clickedObject);
+              
                 if (clickedObject.CompareTag("map") || clickedObject.CompareTag("BlackTile"))
                 {
                     if (!clickedObject.GetComponent<MouseEffect>().moveableArea || clickedObject == targetblock)
@@ -194,7 +194,6 @@ public class MouseEffect : MonoBehaviour
     private void OnReachedDestination()
     {
         currentStage = MoveStage.Done;
-        Debug.Log("목표 위치에 도달했습니다!");
         // 다음 행동을 여기에 구현하세요.
         Hunter.Moveable = false;
         Hunter.Running = false;

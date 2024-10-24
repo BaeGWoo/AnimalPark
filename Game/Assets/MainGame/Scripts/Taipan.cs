@@ -8,13 +8,13 @@ public class Taipan : Animal
     private Vector3[] moveDirection = new Vector3[4];
     private Animator animator;
     [SerializeField] GameObject AttackBox;
-    [SerializeField] GameObject AttackMotion;
-    [SerializeField] float duration = 2.0f;
+    [SerializeField] GameObject[] AttackMotion;
+    [SerializeField] float duration = 3.5f;
     [SerializeField] float Health = 3;
+    public bool attackable = false;
+    public bool hitable = false;
 
-    
 
-   
 
     private void Awake()
     {
@@ -45,16 +45,19 @@ public class Taipan : Animal
 
     public override void ActiveAttackBox()
     {
+        attackable = true;
         AttackBox.SetActive(true);
     }
 
     public override void UnActiveAttackBox()
     {
+        attackable = false;
         AttackBox.SetActive(false);
     }
 
     public override void Attack()
     {
+        base.Attack();
         animator.SetTrigger("Attack");
         Attack(AttackMotion, duration);
     }
@@ -78,5 +81,10 @@ public class Taipan : Animal
     public override float GetHP()
     {
         return Health;
+    }
+
+    public override bool GetAttackAble()
+    {
+        return attackable;
     }
 }

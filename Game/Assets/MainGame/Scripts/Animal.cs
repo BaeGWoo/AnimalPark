@@ -6,17 +6,24 @@ public class Animal : MonoBehaviour
 {
     public float jumpHeight = 2f; // 점프 높이
     public float jumpDuration = 1f; // 점프 애니메이션의 지속 시간
+   
     protected AIManager aiManager;
 
     public virtual void Move() { }
     public virtual void JumpAnimaition() { }
 
-    public virtual void Attack() { }
+        
+    public virtual void Attack() {  }
 
     public virtual void Damaged() { aiManager.UpdateAnimalHp(); }
 
     public virtual float GetHP() { return 0; }
 
+    public virtual bool GetAttackAble() { return true; }
+
+    public  virtual void SparrowAttack() { }
+
+    public virtual void ColobusAttack() { }
     public virtual void ActiveAttackBox() { }
     public virtual void UnActiveAttackBox() { }
 
@@ -82,7 +89,8 @@ public class Animal : MonoBehaviour
 
 
         // y축 회전값을 45의 배수로 반올림
-        float targetYRotation = Mathf.Round(transform.rotation.eulerAngles.y / 90f) * 90f;
+        //float targetYRotation = Mathf.Round(transform.rotation.eulerAngles.y / 90f) * 90f;
+        float targetYRotation = transform.rotation.eulerAngles.y;
 
         // 새로운 회전을 적용 (x, z는 0으로 고정, y만 45의 배수로 설정)
         transform.rotation = Quaternion.Euler(0, targetYRotation%360, 0);
@@ -103,28 +111,40 @@ public class Animal : MonoBehaviour
     }
 
 
-    public void Attack(GameObject attackMotion, float duration)
+    // 공격 모션인 ParticleSystem 켜기
+    public void Attack(GameObject[] attackMotion, float duration)
     {
-        //attackMotion.Play();
-        attackMotion.SetActive(true);
-        StartCoroutine(DeactivateAfterDuration(attackMotion, duration));
+
+        for (int i = 0; i < attackMotion.Length; i++)
+        {
+            attackMotion[i].SetActive(true);
+            StartCoroutine(DeactivateAfterDuration(attackMotion, duration));
+        }
+
+       
+        if (gameObject.name == "Sparrow")
+        {
+            SparrowAttack();
+        }
+
+        if (gameObject.name == "Colobus")
+        {
+            ColobusAttack();
+        }
     }
 
    
-
-    private IEnumerator DeactivateAfterDuration(GameObject attackMotion, float duration)
+    // 공격 모션인 ParticleSystem 끄기
+    private IEnumerator DeactivateAfterDuration(GameObject[] attackMotion, float duration)
     {
         yield return new WaitForSeconds(duration);
+        for (int i = 0; i < attackMotion.Length; i++)
+        {
+            attackMotion[i].SetActive(false);
+        }
+        UnActiveAttackBox();
 
-        // 파티클이 종료될 때까지 대기
-        //while (attackMotion.isPlaying)
-        //{
-        //    yield return null;
-        //}
-
-        // GameObject 비활성화
-        attackMotion.SetActive(false);
-        
+       
     }
 
     public void Die()

@@ -61,25 +61,37 @@ public class AIManager : MonoBehaviour
             AnimalMove();
             yield return new WaitForSeconds(1.0f); // 필요에 따라 시간 조정
             AnimalAttack();
+            yield return new WaitForSeconds(1.0f);
+            
+            if (CheckAniamlAttack())
+            {    
+                yield return new WaitForSeconds(3.0f); 
+            }
 
-            // 동물의 이동이 끝나기를 대기
-            yield return new WaitForSeconds(1.0f); // 필요에 따라 시간 조정
+            else
+            {
+                yield return new WaitForSeconds(1.0f); 
+            }
+
             AnimalUnAttackBox();
 
+           
             // Hunter의 이동
-            hunter.Move();
+            //hunter.Move();
+            HunterMove();
 
             while (Hunter.Moveable)
             {
+
                 yield return null;
 
             }
 
             // Hunter의 공격
-            hunter.Attack();
-
+            //hunter.Attack();
+            HunterAttack();
             // Hunter의 이동이 끝나기를 대기
-           
+
 
             while (Hunter.Attackable)
             {
@@ -88,6 +100,22 @@ public class AIManager : MonoBehaviour
 
         }
     }
+    public bool CheckAniamlAttack()
+    {
+        bool check = true;
+
+
+        for (int i = 0; i < Animals.Length; i++)
+        {
+            if (Animals[i].GetComponent<Animal>().GetAttackAble())
+                check = false;
+        }
+
+      
+
+        return check;
+    }
+
 
     public void RemoveAnimal(GameObject animal)
     {
@@ -117,7 +145,6 @@ public class AIManager : MonoBehaviour
         }
 
         RectTransform prefabRectTransform = animalImagePrefab.GetComponent<RectTransform>();
-        Debug.Log(prefabRectTransform.transform.position);
         Vector3 initialPosition = prefabRectTransform.localPosition;// 초기 위치
         float yOffset = -145f; // Y 값에서의 간격
         Vector3 currentPosition = new Vector3(0,-145.0f,0);
@@ -125,8 +152,8 @@ public class AIManager : MonoBehaviour
         for (int i = 0; i < Animals.Length; i++)
         {
             GameObject animalFace = Instantiate(animalImagePrefab, animalCanvas.transform);
-            
 
+            //Image childImage = animalFace.GetComponentInChildren<Image>();
             animalFace.GetComponent<Image>().sprite = Resources.Load<Sprite>(Animals[i].name);
 
             RectTransform rectTransform = animalFace.GetComponent<RectTransform>();
@@ -134,7 +161,7 @@ public class AIManager : MonoBehaviour
 
 
             Slider hpSlider = animalFace.GetComponentInChildren<Slider>();
-            hpSlider.value = Animals[i].GetComponent<Animal>().GetHP();
+            hpSlider.value = Animals[i].GetComponent<Animal>().GetHP()/3;
             // 다음 오브젝트의 위치를 위해 y 값 조정
             //currentPosition.y += yOffset;
         }       
@@ -152,6 +179,25 @@ public class AIManager : MonoBehaviour
             }
         }
     }
+
+    public void HunterMove()
+    {
+        for(int i = 0; i < Animals.Length; i++)
+        {
+            Animals[i].GetComponent<BoxCollider>().enabled = false;
+        }
+        hunter.Move();
+    }
+
+    public void HunterAttack()
+    {
+        for (int i = 0; i < Animals.Length; i++)
+        {
+            Animals[i].GetComponent<BoxCollider>().enabled = true;
+        }
+        hunter.Attack();
+    }
+
 
     // Update is called once per frame
     void Update()

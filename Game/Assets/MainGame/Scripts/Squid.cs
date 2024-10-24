@@ -9,12 +9,13 @@ public class Squid : Animal
     private Vector3[] movePoint = new Vector3[9];
     private Vector3[] moveDirection = new Vector3[8];
     [SerializeField] GameObject AttackBox;
-    [SerializeField] GameObject AttackMotion;
+    [SerializeField] GameObject[] AttackMotion;
     [SerializeField] float duration = 2.0f;
     [SerializeField] float Health = 3;
     private Animator animator;
+    public bool attackable = false;
+    public bool hitable = false;
 
-  
     private void Awake()
     {
         moveDirection[0] = new Vector3(4, 0, 8);
@@ -53,11 +54,13 @@ public class Squid : Animal
     }
 
     public override void ActiveAttackBox() {
+        attackable = true;
         AttackBox.SetActive(true);
     }
 
     public override void UnActiveAttackBox()
     {
+        attackable = false;
         AttackBox.SetActive(false);
     }
 
@@ -75,5 +78,10 @@ public class Squid : Animal
     public override float GetHP()
     {
         return Health;
+    }
+
+    public override bool GetAttackAble()
+    {
+        return attackable;
     }
 }

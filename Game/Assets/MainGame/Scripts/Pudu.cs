@@ -10,11 +10,11 @@ public class Pudu : Animal
     private Vector3[] moveDirection = new Vector3[2];
     private Animator animator;
     [SerializeField] GameObject AttackBox;
-    [SerializeField] GameObject AttackMotion;
+    [SerializeField] GameObject[] AttackMotion;
     [SerializeField] float duration = 2.0f;
     [SerializeField] float Health = 3;
-
-  
+    public bool attackable = false;
+    public bool hitable = false;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -42,11 +42,13 @@ public class Pudu : Animal
 
     public override void ActiveAttackBox()
     {
+        attackable = true;
         AttackBox.SetActive(true);
     }
 
     public override void UnActiveAttackBox()
     {
+        attackable = false;
         AttackBox.SetActive(false);
     }
 
@@ -71,5 +73,10 @@ public class Pudu : Animal
     public override float GetHP()
     {
         return Health;
+    }
+
+    public override bool GetAttackAble()
+    {
+        return attackable;
     }
 }

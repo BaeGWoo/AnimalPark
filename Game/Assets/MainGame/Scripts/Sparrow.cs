@@ -7,11 +7,13 @@ public class Sparrow : Animal
     private Vector3[] movePoint = new Vector3[9];
     private Vector3[] moveDirection = new Vector3[8];
     private Animator animator;
-    [SerializeField] GameObject AttackMotion;
+    [SerializeField] GameObject[] AttackMotion;
     [SerializeField] GameObject AttackBox;
-    [SerializeField] float duration = 2.0f;
+    [SerializeField] GameObject AttackTargetBox;
+    [SerializeField] float duration = 3.0f;
     [SerializeField] float Health = 3;
-    
+    public bool attackable = false;
+    public bool hitable = false;
 
     private void Awake()
     {
@@ -49,19 +51,50 @@ public class Sparrow : Animal
 
     public override void ActiveAttackBox()
     {
+        attackable = true;
         AttackBox.SetActive(true);
     }
 
     public override void UnActiveAttackBox()
     {
+        attackable = false;
         AttackBox.SetActive(false);
     }
 
     public override void Attack()
     {
-        //  AttackBox.SetActive(true);
         animator.SetTrigger("Attack");
         Attack(AttackMotion, duration);
+    }
+
+    public override void SparrowAttack()
+    {
+        StartCoroutine(MoveTowardsTarget());
+    }
+
+    private IEnumerator MoveTowardsTarget()
+    {
+        Vector3 LeftWing= AttackMotion[0].transform.position;
+        Vector3 RightWing = AttackMotion[1].transform.position;
+
+
+        while (Vector3.Distance(AttackMotion[1].transform.position, AttackTargetBox.transform.position) > 0.1f)
+        {
+            Vector3 Lcur = AttackMotion[0].transform.position;
+            Vector3 Rcur = AttackMotion[1].transform.position;
+            AttackMotion[0].transform.position = Vector3.MoveTowards(Lcur, AttackTargetBox.transform.position, 2.0f * Time.deltaTime);
+            AttackMotion[1].transform.position = Vector3.MoveTowards(Rcur, AttackTargetBox.transform.position, 2.0f * Time.deltaTime);
+
+            // 매 프레임마다 한 번씩 이동
+            yield return null;
+        }
+        AttackMotion[0].transform.position = LeftWing;
+        AttackMotion[1].transform.position = RightWing;
+
+        for(int i = 0; i < AttackMotion.Length; i++)
+        {
+            AttackMotion[i].SetActive(false);
+        }
     }
 
     public override void Damaged()
@@ -79,4 +112,10 @@ public class Sparrow : Animal
     {
         return Health;
     }
+
+    public override bool GetAttackAble()
+    {
+        return attackable;
+    }
+
 }

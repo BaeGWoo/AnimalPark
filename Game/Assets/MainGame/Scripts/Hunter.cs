@@ -15,10 +15,14 @@ public class Hunter : MonoBehaviour
     [SerializeField] AIManager aiManager;
     [SerializeField] BoxCollider Huntercollider;
     [SerializeField] Slider HPSlider;
+    [SerializeField] GameObject bananaMotion;
+    [SerializeField] GameObject[] AttackWeapon;
+
     private Vector3 HPPosition;
     private Animator animator;
     private int keyInput;
     [SerializeField] GameObject[] AttackBox;
+    public float Health;
 
     void Awake()
     {
@@ -28,6 +32,7 @@ public class Hunter : MonoBehaviour
         HunterRotation = GetComponent<Transform>();
         animator = GetComponent<Animator>();
         HPPosition = HPSlider.transform.position;
+        Health = 5;
     }
 
     public void Move()
@@ -46,12 +51,7 @@ public class Hunter : MonoBehaviour
     {
         transform.position = HunterPosition;
        Huntercollider.enabled=!Moveable;
-        if (Running)
-        {
-            Debug.Log("RUN");
-            
-        }
-        
+       
         animator.SetBool("Run", Running);
 
     }
@@ -61,8 +61,23 @@ public class Hunter : MonoBehaviour
         if (other.CompareTag("Attack"))
         {
             other.transform.root.GetComponent<Animal>().Attack();
-        Debug.Log(other.transform.root.name);
+            Health--;
+            HPSlider.value = Health / 5;
         }
+        else if (other.CompareTag("banana"))
+        {
+            StartCoroutine(BananaMotion());
+            Health--;
+            HPSlider.value = Health / 5;
+        }
+
+    }
+
+    IEnumerator BananaMotion()
+    {
+        bananaMotion.SetActive(true);
+        yield return new WaitForSeconds(1.0f);
+        bananaMotion.SetActive(false);
     }
 
     public void AttackType(Button button)
@@ -71,7 +86,7 @@ public class Hunter : MonoBehaviour
         string animatorTrigger = button.name;
         int num = int.Parse(animatorTrigger.Substring("Attack".Length));
         animator.SetTrigger("Attack" + num);
-
+        AttackWeapon[num - 1].SetActive(true);
         StartCoroutine(HunterAttackMotion(num));
        
         StartCoroutine(HunterAttackEnd(num));
@@ -90,5 +105,6 @@ public class Hunter : MonoBehaviour
 
         Attackable = false;
         AttackBox[num - 1].SetActive(false);
+        AttackWeapon[num - 1].SetActive(false);
     }
 }
