@@ -37,7 +37,7 @@ public class MouseEffect : MonoBehaviour
         curPostiion = transform.position;
         if (CompareTag("BlackTile"))
         {
-            padding = 1.8f;
+            padding = 2.0f;
         }
        
     }
@@ -52,6 +52,11 @@ public class MouseEffect : MonoBehaviour
         else
         {
             StartCoroutine(ReturnArea());
+        }
+
+        if (Hunter.fireball)
+        {
+            StartCoroutine(AttackAbleDirection());
         }
         
     }
@@ -74,6 +79,64 @@ public class MouseEffect : MonoBehaviour
         }
         yield return null; // 다음 프레임까지 대기
     }
+    public IEnumerator AttackAbleDirection()
+    {
+        float distance;
+        distance = Math.Abs(Hunter.HunterPosition.x - (curPostiion.x - padding)) + Math.Abs(Hunter.HunterPosition.z - curPostiion.z);
+        curdistance = distance;
+        if (distance <= 2)
+        {
+            if (this.gameObject != targetblock)
+            {
+                objectRenderer.material = redMaterial;
+
+                ChooseAttackDirection();
+            }
+
+        }
+        yield return null; // 다음 프레임까지 대기
+    }
+
+    public void ChooseAttackDirection()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                GameObject clickedObject = hit.transform.gameObject;
+
+                if (!(clickedObject.CompareTag("map") || clickedObject.CompareTag("BlackTile")))
+                {
+                    return;
+
+                }
+             
+                
+                // 클릭한 위치의 x와 z 좌표 추출
+                Vector3 clickPosition = hit.point;
+                float x = clickPosition.x;
+                float z = clickPosition.z;
+                int xIndex = Mathf.RoundToInt(x / xSpacing);
+                int zIndex = Mathf.RoundToInt(z / zSpacing);
+                Vector3 newPosition = new Vector3(xIndex * xSpacing, clickedObject.transform.position.y, zIndex * zSpacing);
+                Hunter.HunterRotation.LookAt(newPosition);
+
+                float targetYRotation = Hunter.HunterRotation.eulerAngles.y;
+
+                // 새로운 회전을 적용 (x, z는 0으로 고정, y만 45의 배수로 설정)
+                Hunter.HunterRotation.rotation = Quaternion.Euler(0, targetYRotation % 360, 0);
+                StartCoroutine(ReturnArea());
+                Hunter.fireball = false;
+                Hunter.chooseDirection = true;
+                Debug.Log("방향선택");
+            }
+        }
+    }
+
 
     public IEnumerator ReturnArea()
     {

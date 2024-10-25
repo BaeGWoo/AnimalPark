@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Sparrow : Animal
 {
-    private Vector3[] movePoint = new Vector3[9];
-    private Vector3[] moveDirection = new Vector3[8];
+    private Vector3[] movePoint = new Vector3[5];
+    private Vector3[] moveDirection = new Vector3[4];
     private Animator animator;
     [SerializeField] GameObject[] AttackMotion;
     [SerializeField] GameObject AttackBox;
@@ -17,14 +17,10 @@ public class Sparrow : Animal
 
     private void Awake()
     {
-        moveDirection[0] = new Vector3(-2f, 0, 4);
-        moveDirection[1] = new Vector3(-4f, 0, 2);
-        moveDirection[2] = new Vector3(2f, 0, 4);
-        moveDirection[3] = new Vector3(4f, 0, 2);
-        moveDirection[4] = new Vector3(-4f, 0, -2);
-        moveDirection[5] = new Vector3(-2f, 0, -4);
-        moveDirection[6] = new Vector3(2f, 0, -4);
-        moveDirection[7] = new Vector3(4f, 0, -2);
+        moveDirection[0] = new Vector3(2, 0, 2);
+        moveDirection[1] = new Vector3(-2, 0, 2);
+        moveDirection[2] = new Vector3(-2, 0, -2);
+        moveDirection[3] = new Vector3(2, 0, -2);
         
 
         animator = GetComponent<Animator>();
@@ -106,6 +102,8 @@ public class Sparrow : Animal
             animator.SetTrigger("Die");
             base.Die();
         }
+
+        base.Damaged();
     }
 
     public override float GetHP()

@@ -24841,7 +24841,6 @@ GameObject:
   - component: {fileID: 6542475742532904914}
   - component: {fileID: 8063424725686825057}
   - component: {fileID: -5927269898006975988}
-  - component: {fileID: 8344229886250872015}
   - component: {fileID: 4297647938288201931}
   m_Layer: 0
   m_Name: Pudu
@@ -24938,27 +24937,12 @@ MonoBehaviour:
   jumpHeight: 2
   jumpDuration: 1
   AttackBox: {fileID: 700022050810548747}
-  AttackMotion: {fileID: 2433282508523890284}
+  AttackMotion:
+  - {fileID: 0}
   duration: 2
   Health: 3
---- !u!114 &8344229886250872015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8813081442005981002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fe5321c00e909b478e2472449e553f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpHeight: 2
-  jumpDuration: 1
-  AttackBox: {fileID: 700022050810548747}
-  AttackMotion: {fileID: 2433282508523890284}
-  duration: 2
-  Health: 3
+  attackable: 0
+  hitable: 0
 --- !u!65 &4297647938288201931
 BoxCollider:
   m_ObjectHideFlags: 0

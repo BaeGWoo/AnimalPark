@@ -15,7 +15,7 @@ C:/Users/User/Desktop/AnimalPark/Game
 -logFile
 Logs/AssetImportWorker3.log
 -srvPort
-56940
+64576
 Successfully changed project path to: C:/Users/User/Desktop/AnimalPark/Game
 C:/Users/User/Desktop/AnimalPark/Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/User/Desktop/AnimalPark/Game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [20356] Host "[IP] 59.28.64.224 [Port] 0 [Flags] 2 [Guid] 1537944234 [EditorId] 1537944234 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [32736] Host "[IP] 118.38.174.254 [Port] 0 [Flags] 2 [Guid] 3207964338 [EditorId] 3207964338 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [20356] Host "[IP] 59.28.64.224 [Port] 0 [Flags] 2 [Guid] 1537944234 [EditorId] 1537944234 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [32736] Host "[IP] 118.38.174.254 [Port] 0 [Flags] 2 [Guid] 3207964338 [EditorId] 3207964338 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 15.00 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 14.74 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.30f1 (70558241b701)
 [Subsystems] Discovering subsystems at path C:/Users/User/2022.3.30f1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'C:/Users/User/2022.3.30f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56700
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56472
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Users/User/2022.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.018121 seconds.
-- Loaded All Assemblies, in  0.480 seconds
+Registered in 0.014192 seconds.
+- Loaded All Assemblies, in  0.575 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.344 seconds
-Domain Reload Profiling: 819ms
-	BeginReloadAssembly (162ms)
+- Finished resetting the current domain, in  0.287 seconds
+Domain Reload Profiling: 857ms
+	BeginReloadAssembly (218ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (46ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (95ms)
-	LoadAllAssembliesAndSetupDomain (158ms)
-		LoadAssemblies (157ms)
+	RebuildCommonClasses (73ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (83ms)
+	LoadAllAssembliesAndSetupDomain (176ms)
+		LoadAssemblies (211ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (155ms)
-			TypeCache.Refresh (153ms)
-				TypeCache.ScanAssembly (137ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
+		AnalyzeDomain (172ms)
+			TypeCache.Refresh (171ms)
+				TypeCache.ScanAssembly (155ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (344ms)
+	FinalizeReload (287ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (279ms)
+		SetupLoadedEditorAssemblies (229ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (13ms)
+			InitializePlatformSupportModulesInManaged (11ms)
 			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (182ms)
-			ProcessInitializeOnLoadMethodAttributes (74ms)
+			ProcessInitializeOnLoadAttributes (154ms)
+			ProcessInitializeOnLoadMethodAttributes (55ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,55 +115,55 @@ Domain Reload Profiling: 819ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.861 seconds
-Refreshing native plugins compatible for Editor in 6.62 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.832 seconds
+Refreshing native plugins compatible for Editor in 6.43 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.753 seconds
-Domain Reload Profiling: 1604ms
-	BeginReloadAssembly (216ms)
+- Finished resetting the current domain, in  0.689 seconds
+Domain Reload Profiling: 1511ms
+	BeginReloadAssembly (177ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (25ms)
-	RebuildCommonClasses (39ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (58ms)
-	LoadAllAssembliesAndSetupDomain (523ms)
-		LoadAssemblies (431ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (53ms)
+	LoadAllAssembliesAndSetupDomain (546ms)
+		LoadAssemblies (464ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (224ms)
-			TypeCache.Refresh (201ms)
-				TypeCache.ScanAssembly (184ms)
-			ScanForSourceGeneratedMonoScriptInfo (16ms)
+		AnalyzeDomain (197ms)
+			TypeCache.Refresh (175ms)
+				TypeCache.ScanAssembly (156ms)
+			ScanForSourceGeneratedMonoScriptInfo (15ms)
 			ResolveRequiredComponents (6ms)
-	FinalizeReload (753ms)
+	FinalizeReload (689ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (573ms)
+		SetupLoadedEditorAssemblies (526ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (9ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (84ms)
-			ProcessInitializeOnLoadAttributes (437ms)
-			ProcessInitializeOnLoadMethodAttributes (24ms)
+			BeforeProcessingInitializeOnLoad (76ms)
+			ProcessInitializeOnLoadAttributes (399ms)
+			ProcessInitializeOnLoadMethodAttributes (22ms)
 			AfterProcessingInitializeOnLoad (15ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (17ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 10.88 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 6.90 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3149 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (58.0 KB). Loaded Objects now: 3620.
-Memory consumption went from 128.5 MB to 128.5 MB.
-Total: 4.270500 ms (FindLiveObjects: 0.316700 ms CreateObjectMapping: 0.246400 ms MarkObjects: 3.555900 ms  DeleteObjects: 0.150500 ms)
+Unloading 3151 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (58.0 KB). Loaded Objects now: 3624.
+Memory consumption went from 129.7 MB to 129.7 MB.
+Total: 3.063900 ms (FindLiveObjects: 0.267800 ms CreateObjectMapping: 0.207600 ms MarkObjects: 2.484800 ms  DeleteObjects: 0.102500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -180,150 +180,164 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 79989.579073 seconds.
-  path: Assets/MainGame/Prefabs/Colobus.prefab
-  artifactKey: Guid(31efbb3f0716bc644aa7745b87f6e375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Colobus.prefab using Guid(31efbb3f0716bc644aa7745b87f6e375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27495a49aac6c102bf87a46912844b67') in 0.243685 seconds
+  Time since last request: 165123.713573 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/winter well.prefab
+  artifactKey: Guid(9255ef51eba781941b9ee7753301ffa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/winter well.prefab using Guid(9255ef51eba781941b9ee7753301ffa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47c02d0067a090a5c24aeb3effa54827') in 0.119111 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 171
+Number of asset objects unloaded after import = 10
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/MainGame/Prefabs/White.prefab
-  artifactKey: Guid(80f178f5794b0164baa76e698c66c189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/White.prefab using Guid(80f178f5794b0164baa76e698c66c189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b591a8f232f342409660ed53194d618f') in 0.029489 seconds
+  Time since last request: 3.241846 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball purple.prefab
+  artifactKey: Guid(25e3cba4b2f57754db5edbb72db006ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball purple.prefab using Guid(25e3cba4b2f57754db5edbb72db006ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c14239d549d356eee12f1c1a63439eca') in 0.015907 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
+Number of asset objects unloaded after import = 10
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.882 seconds
-Refreshing native plugins compatible for Editor in 12.65 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.586 seconds
-Domain Reload Profiling: 2454ms
-	BeginReloadAssembly (280ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (43ms)
-	RebuildCommonClasses (56ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (71ms)
-	LoadAllAssembliesAndSetupDomain (442ms)
-		LoadAssemblies (586ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (38ms)
-			TypeCache.Refresh (17ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (8ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (1586ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (560ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (6ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (103ms)
-			ProcessInitializeOnLoadAttributes (381ms)
-			ProcessInitializeOnLoadMethodAttributes (23ms)
-			AfterProcessingInitializeOnLoad (34ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (20ms)
-Refreshing native plugins compatible for Editor in 11.82 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3129 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (31.7 KB). Loaded Objects now: 3632.
-Memory consumption went from 130.0 MB to 130.0 MB.
-Total: 4.097800 ms (FindLiveObjects: 0.258300 ms CreateObjectMapping: 0.220100 ms MarkObjects: 3.566800 ms  DeleteObjects: 0.051600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball red.prefab
+  artifactKey: Guid(f87ca7d4a36dc9f488ced2f03f6e46b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball red.prefab using Guid(f87ca7d4a36dc9f488ced2f03f6e46b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '910468039b65f52b29b6cbfd66a3727d') in 0.028976 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.661 seconds
-Refreshing native plugins compatible for Editor in 9.93 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.688 seconds
-Domain Reload Profiling: 2339ms
-	BeginReloadAssembly (215ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (31ms)
-	RebuildCommonClasses (46ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (47ms)
-	LoadAllAssembliesAndSetupDomain (328ms)
-		LoadAssemblies (447ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (17ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (1689ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (640ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (106ms)
-			ProcessInitializeOnLoadAttributes (464ms)
-			ProcessInitializeOnLoadMethodAttributes (31ms)
-			AfterProcessingInitializeOnLoad (23ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (20ms)
-Refreshing native plugins compatible for Editor in 9.48 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3130 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (31.8 KB). Loaded Objects now: 3635.
-Memory consumption went from 130.2 MB to 130.2 MB.
-Total: 2.962900 ms (FindLiveObjects: 0.296200 ms CreateObjectMapping: 0.237900 ms MarkObjects: 2.384100 ms  DeleteObjects: 0.043800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 3.019795 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Sports environment/soccer grandstand 2.prefab
+  artifactKey: Guid(aa5a9015e16c5d54787eef47d6fbfd26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Sports environment/soccer grandstand 2.prefab using Guid(aa5a9015e16c5d54787eef47d6fbfd26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0b69d83cb8dba21f3ad9cf39f707a93') in 0.023451 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 6.795285 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land desert pyramids.prefab
+  artifactKey: Guid(4628409824966fd4abc1e1db57ad7a19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land desert pyramids.prefab using Guid(4628409824966fd4abc1e1db57ad7a19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '345a073f1f32690ebdb7cfb04f9222ed') in 0.019297 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land downtown.prefab
+  artifactKey: Guid(affb8f15cd852eb488101d67924b5adb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land downtown.prefab using Guid(affb8f15cd852eb488101d67924b5adb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '604ab4a93fd94821dbe6e85051112c64') in 0.079468 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 26.476792 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/desert pyramids with environment.prefab
+  artifactKey: Guid(9e905e6d058bb5746847ae6f0f420eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/desert pyramids with environment.prefab using Guid(9e905e6d058bb5746847ae6f0f420eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5dda26e2595bc1907fb3b7a4929d9d0') in 0.038692 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 420
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/japanes island.prefab
+  artifactKey: Guid(4ad7a5a7fc42f6b49945c81440d0dfe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/japanes island.prefab using Guid(4ad7a5a7fc42f6b49945c81440d0dfe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f923a4be23147b677aba68c096d3c71a') in 0.033993 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 436
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/wild west railway station with environment.prefab
+  artifactKey: Guid(df6e0d5705c11244c8b08313c0fe392b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/wild west railway station with environment.prefab using Guid(df6e0d5705c11244c8b08313c0fe392b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db1b1c7399a5b2d43f3bae9fe03ae693') in 0.077405 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1098
+========================================================================
+Received Import Request.
+  Time since last request: 119.012409 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/plants yellow.prefab
+  artifactKey: Guid(d543d9d683913134a9bd404dda7c0102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/plants yellow.prefab using Guid(d543d9d683913134a9bd404dda7c0102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7493b54f0badd094cd62ffd66080000') in 0.012409 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 869.771088 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/railway station.prefab
+  artifactKey: Guid(e6c5a2bf49e7a57498df51805886b778) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/railway station.prefab using Guid(e6c5a2bf49e7a57498df51805886b778) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f47b1522405e9e5aca5545d8a06497b') in 0.026898 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 467.715541 seconds.
+  path: Assets/MainGame/Images/Colobus-removebg-preview.png
+  artifactKey: Guid(6dfdae5df8cef404c9771485890526a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Images/Colobus-removebg-preview.png using Guid(6dfdae5df8cef404c9771485890526a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bfe1b53cc9380975ee4cb8cfcbf7421') in 0.027849 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.005465 seconds.
+  path: Assets/MainGame/Images/Herring-removebg-preview.png
+  artifactKey: Guid(ed33c7283ca06f04b833a5fa63a0c4c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Images/Herring-removebg-preview.png using Guid(ed33c7283ca06f04b833a5fa63a0c4c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24bf129d34eecf26ce6ad1c87dcd7561') in 0.009670 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.028942 seconds.
+  path: Assets/MainGame/Images/Nature-removebg-preview.png
+  artifactKey: Guid(287a84e995acc0e4db886af7ba3289f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Images/Nature-removebg-preview.png using Guid(287a84e995acc0e4db886af7ba3289f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efad54dde00ff96ae45c03f7ad75d696') in 0.011865 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/MainGame/Images/Squid-removebg-preview.png
+  artifactKey: Guid(4e60d42f80bc1fe41b2e3081c93a8081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Images/Squid-removebg-preview.png using Guid(4e60d42f80bc1fe41b2e3081c93a8081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '709a19a5d983c73e6d7ca4c0cc05b227') in 0.009367 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/MainGame/Images/Desert-removebg-preview.png
+  artifactKey: Guid(dadc423995faf824991a3ee4f17b27c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Images/Desert-removebg-preview.png using Guid(dadc423995faf824991a3ee4f17b27c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30c6f84c29bebd03fd2e47e8216657f0') in 0.008612 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/MainGame/Images/Island-removebg-preview.png
+  artifactKey: Guid(0e71fe633d158504cbdb853a41492a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Images/Island-removebg-preview.png using Guid(0e71fe633d158504cbdb853a41492a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '498642e2b5dda6ceb62baeaefa1d467e') in 0.010095 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/MainGame/Images/Pudu-removebg-preview.png
+  artifactKey: Guid(40b5dc24f47bcd949b3fce2f28ec4ee9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Images/Pudu-removebg-preview.png using Guid(40b5dc24f47bcd949b3fce2f28ec4ee9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddb049ee2ceb7e9b369736c48c021f85') in 0.015612 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 53.018332 seconds.
+  path: Assets/Resources/Herring-removebg-preview.png
+  artifactKey: Guid(ed33c7283ca06f04b833a5fa63a0c4c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Herring-removebg-preview.png using Guid(ed33c7283ca06f04b833a5fa63a0c4c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54a0b0cefc1cfba09036d90186de0fa1') in 0.022382 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Resources/Taipan-removebg-preview.png
+  artifactKey: Guid(01cb4c821fbe55e42bd81d962b9cf4e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Taipan-removebg-preview.png using Guid(01cb4c821fbe55e42bd81d962b9cf4e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '513994454bf9042566b88128056eda1b') in 0.011487 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다.
 AssetImportWorker is now disconnected from the server

@@ -68,6 +68,7 @@ public class Pudu : Animal
             animator.SetTrigger("Die");
             base.Die();
         }
+        base.Damaged();
     }
 
     public override float GetHP()
