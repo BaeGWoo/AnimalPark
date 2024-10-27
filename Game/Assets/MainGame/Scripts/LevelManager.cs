@@ -30,6 +30,10 @@ public class LevelManager : MonoBehaviour
                 {
                     Maps[i].interactable = false;
                 }
+                else
+                {
+                    Maps[i].interactable = true;
+                }
             }
 
             yield return null;
