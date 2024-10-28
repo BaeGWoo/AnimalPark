@@ -1,0 +1,393 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.30f1 (70558241b701) revision 7361922'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ko' Physical Memory: 16314 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Users\User\2022.3.30f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/User/Desktop/AnimalPark/Game
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+58661
+Successfully changed project path to: C:/Users/User/Desktop/AnimalPark/Game
+C:/Users/User/Desktop/AnimalPark/Game
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [22352] Host "[IP] 183.103.60.190 [Port] 0 [Flags] 2 [Guid] 2090482899 [EditorId] 2090482899 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [22352] Host "[IP] 183.103.60.190 [Port] 0 [Flags] 2 [Guid] 2090482899 [EditorId] 2090482899 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
+Refreshing native plugins compatible for Editor in 15.31 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.30f1 (70558241b701)
+[Subsystems] Discovering subsystems at path C:/Users/User/2022.3.30f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/User/Desktop/AnimalPark/Game/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 SUPER (ID=0x2187)
+    Vendor:   NVIDIA
+    VRAM:     3930 MB
+    Driver:   32.0.15.6094
+Initialize mono
+Mono path[0] = 'C:/Users/User/2022.3.30f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56296
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Users/User/2022.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.015369 seconds.
+- Loaded All Assemblies, in  0.447 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.306 seconds
+Domain Reload Profiling: 747ms
+	BeginReloadAssembly (137ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (77ms)
+	LoadAllAssembliesAndSetupDomain (173ms)
+		LoadAssemblies (133ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (171ms)
+			TypeCache.Refresh (169ms)
+				TypeCache.ScanAssembly (153ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (306ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (242ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (161ms)
+			ProcessInitializeOnLoadMethodAttributes (60ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.774 seconds
+Refreshing native plugins compatible for Editor in 8.10 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.690 seconds
+Domain Reload Profiling: 1457ms
+	BeginReloadAssembly (189ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (476ms)
+		LoadAssemblies (396ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (196ms)
+			TypeCache.Refresh (174ms)
+				TypeCache.ScanAssembly (159ms)
+			ScanForSourceGeneratedMonoScriptInfo (15ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (690ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (535ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (78ms)
+			ProcessInitializeOnLoadAttributes (404ms)
+			ProcessInitializeOnLoadMethodAttributes (21ms)
+			AfterProcessingInitializeOnLoad (18ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 8.30 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3152 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (57.8 KB). Loaded Objects now: 3625.
+Memory consumption went from 129.8 MB to 129.7 MB.
+Total: 2.598300 ms (FindLiveObjects: 0.231600 ms CreateObjectMapping: 0.150100 ms MarkObjects: 2.123400 ms  DeleteObjects: 0.092300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 356634.785756 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Islands.unity
+  artifactKey: Guid(1c96b0f32c6fba94b85491455227deed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Islands.unity using Guid(1c96b0f32c6fba94b85491455227deed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec944c260d3ffdf1c2116fbe8dc5e93e') in 0.002743 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.830020 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Location autumn atmosphere forest.unity
+  artifactKey: Guid(7de6c5c3229750c46b54f0e4ad9d5cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Location autumn atmosphere forest.unity using Guid(7de6c5c3229750c46b54f0e4ad9d5cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '560d2b4fa0d3593e0bc689f1f4f1a5c5') in 0.000543 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.107039 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Lands.unity
+  artifactKey: Guid(96dcc51749811cc4c971b77372b56079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Lands.unity using Guid(96dcc51749811cc4c971b77372b56079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c06a305a70c465cee061769ccb72038') in 0.000540 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 7.408690 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Location wild west railway station.unity
+  artifactKey: Guid(a0643ebbed5ccf8409353aa89a4a67dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Location wild west railway station.unity using Guid(a0643ebbed5ccf8409353aa89a4a67dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06218881e2c2ab159088f17d3cdc6196') in 0.000569 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.937771 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Stones.unity
+  artifactKey: Guid(11f96be395cf1aa41bfe0687a95d5f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Stones.unity using Guid(11f96be395cf1aa41bfe0687a95d5f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f99501c06146808241cfd1a62c237142') in 0.000519 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.422695 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Plants.unity
+  artifactKey: Guid(cc2efe80766aac64da8c0a7e8bc7aef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Plants.unity using Guid(cc2efe80766aac64da8c0a7e8bc7aef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90b515d1b8975e1dbcda8534795d52a9') in 0.000529 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.632027 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Mountains.unity
+  artifactKey: Guid(622bfd8a411e9f04db36adb01e0d6b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Mountains.unity using Guid(622bfd8a411e9f04db36adb01e0d6b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3d28b0aabe0ebcbf7d43114905a183c') in 0.000515 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.204339 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/All models.unity
+  artifactKey: Guid(a38fc3a945cda43488e9a5295fa72684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/All models.unity using Guid(a38fc3a945cda43488e9a5295fa72684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8165123922d3c9c8d478340cc1d0ab36') in 0.000555 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.341019 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/All scenes.unity
+  artifactKey: Guid(1ab8ef884b1bd74478ac677e568556ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/All scenes.unity using Guid(1ab8ef884b1bd74478ac677e568556ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60e3f1e5e218577a2bb15c99fb8498ea') in 0.000830 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.325502 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Animals.unity
+  artifactKey: Guid(e2b34a05108021f4e9fd25617cf85ac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Animals.unity using Guid(e2b34a05108021f4e9fd25617cf85ac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '423bcc098a52ac1dc0943e22a4b40427') in 0.000580 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.848519 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Environment.unity
+  artifactKey: Guid(e1d105f3473e044eaa897ad3f6c39929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Environment.unity using Guid(e1d105f3473e044eaa897ad3f6c39929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e1a12a464f2711a1b6ae86ad48ab47e') in 0.000572 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.593968 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Houses.unity
+  artifactKey: Guid(a974c34f66133a74d829be9d9fd71d56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Houses.unity using Guid(a974c34f66133a74d829be9d9fd71d56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6203dbf98ff731c1f72508642f37e20b') in 0.000521 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.196604 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Location camping forest.unity
+  artifactKey: Guid(9eb3d3406fabb5b408a4f80927c3710d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Location camping forest.unity using Guid(9eb3d3406fabb5b408a4f80927c3710d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78bad62abbe258bbab33ce499a1322c9') in 0.000532 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.905534 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Location christmas village.unity
+  artifactKey: Guid(ba25f1bc76b39ce479934b67922d92c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Location christmas village.unity using Guid(ba25f1bc76b39ce479934b67922d92c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ef973f3bc6895801ea4afac81de9ab1') in 0.000667 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.408160 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Location desert pyramids.unity
+  artifactKey: Guid(0edecaf13b593624e8812d812e8bb8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Scenes/Location desert pyramids.unity using Guid(0edecaf13b593624e8812d812e8bb8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f39c740aeff6482a4cc9a6c8f29431bc') in 0.000542 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 11.235079 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Mountains/skull mountain.prefab
+  artifactKey: Guid(b8c5edca6b9707249bdee190239a0d1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Mountains/skull mountain.prefab using Guid(b8c5edca6b9707249bdee190239a0d1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d826fd86e5d381292730fa80dbd017f') in 0.093953 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 43.152080 seconds.
+  path: Assets/MainGame/RenderTextures/Profile.renderTexture
+  artifactKey: Guid(0a59a79eeacc82d4b93adc2618762efa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/RenderTextures/Profile.renderTexture using Guid(0a59a79eeacc82d4b93adc2618762efa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7ad78a4b84baf4a051bbbf4b73930d5') in 0.015442 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 145.233147 seconds.
+  path: Assets/MainGame/Scene/Main.unity
+  artifactKey: Guid(8121cbb593508754da3b6415b860d842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Scene/Main.unity using Guid(8121cbb593508754da3b6415b860d842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30edac66618d45b3c87d31ee73e100a3') in 0.000732 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 395.069984 seconds.
+  path: Assets/MainGame/Prefabs/NauterMap.prefab
+  artifactKey: Guid(7b4dc6c01a8eba34590cec4517dce13a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NauterMap.prefab using Guid(7b4dc6c01a8eba34590cec4517dce13a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b2fbd29708ed9c60feeef7f0647b674') in 0.059791 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 518
+========================================================================
+Received Import Request.
+  Time since last request: 330.180727 seconds.
+  path: Assets/MainGame/Prefabs/Desert Map.prefab
+  artifactKey: Guid(e65d14bc928b7e24089376447ec91119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Desert Map.prefab using Guid(e65d14bc928b7e24089376447ec91119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66dfaa2803dbc8affa219ea2abec82b5') in 0.047706 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 309
+========================================================================
+Received Import Request.
+  Time since last request: 289.432393 seconds.
+  path: Assets/MainGame/Prefabs/Winter Map.prefab
+  artifactKey: Guid(0b10fbfcf88c4c4449013bb668f3a245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Winter Map.prefab using Guid(0b10fbfcf88c4c4449013bb668f3a245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3948961e4f995ee1d54126bb1c7bc275') in 0.042093 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 646
+========================================================================
+Received Import Request.
+  Time since last request: 194.224293 seconds.
+  path: Assets/MainGame/Prefabs/City Map.prefab
+  artifactKey: Guid(00e7f1cd8b3d49745857460d2e44d7d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/City Map.prefab using Guid(00e7f1cd8b3d49745857460d2e44d7d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fa5f0fa5c0b3f966216032b7803f6fd') in 0.031514 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 615
+========================================================================
+Received Import Request.
+  Time since last request: 11.354684 seconds.
+  path: Assets/MainGame/Prefabs/Maps
+  artifactKey: Guid(516d137afb90d804695854f2de9783b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Maps using Guid(516d137afb90d804695854f2de9783b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9056e9e926910bd3082de2a874e6de63') in 0.000660 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 196.585931 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Camping environment/bonfire.prefab
+  artifactKey: Guid(fd2a35f4603b5bd45b6b41ecba1f8f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Camping environment/bonfire.prefab using Guid(fd2a35f4603b5bd45b6b41ecba1f8f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cddabf3473fb5d2550492827f156c3a8') in 0.010245 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.027668 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Camping environment/camping tent red.prefab
+  artifactKey: Guid(b51e1dda82f41594bad822d658942833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Camping environment/camping tent red.prefab using Guid(b51e1dda82f41594bad822d658942833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '689395ebb465bcab2ddbc1c122a2b053') in 0.027825 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 1.476949 seconds.
+  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Benchs/bench.prefab
+  artifactKey: Guid(9e7a8bebdab867e478a0231ba85086c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Benchs/bench.prefab using Guid(9e7a8bebdab867e478a0231ba85086c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1aa0a72b9458d3a5915e582b17d2629') in 0.007926 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
