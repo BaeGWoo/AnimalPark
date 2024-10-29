@@ -2911,7 +2911,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 772946542}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1323468807}
+        m_TargetAssemblyTypeName: Hunter, Assembly-CSharp
+        m_MethodName: PanelActive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &772946542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8538,6 +8550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384a2ac03cd46f54e8b320ad5a539cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Blocks: []
   BlackTile: {fileID: 6740255542596633180, guid: 7e11e78c695eeb947a2e2619a8a5c883, type: 3}
   WhiteTile: {fileID: 1281267947291596, guid: 80f178f5794b0164baa76e698c66c189, type: 3}
 --- !u!4 &1096329925
@@ -14127,7 +14140,6 @@ MonoBehaviour:
   AttackBox:
   - {fileID: 2112383459}
   - {fileID: 62974388}
-  Health: 0
 --- !u!4 &1323468808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: abf18a5e45352dd4f904fe81c2ac0b66, type: 3}
@@ -14172,6 +14184,7 @@ MonoBehaviour:
   hunter: {fileID: 1323468807}
   animalImagePrefab: {fileID: 2089527198144723283, guid: 9916827e4aac6754c9f2b38e57598454, type: 3}
   animalCanvas: {fileID: 1837024296}
+  MaxAnimalHP: 3
 --- !u!4 &1327829268
 Transform:
   m_ObjectHideFlags: 0
@@ -15112,6 +15125,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: abf18a5e45352dd4f904fe81c2ac0b66, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1257074965}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: abf18a5e45352dd4f904fe81c2ac0b66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1837024297}
     - targetCorrespondingSourceObject: {fileID: 8700783698680967558, guid: abf18a5e45352dd4f904fe81c2ac0b66, type: 3}
       insertIndex: -1
       addedObject: {fileID: 580232056}
@@ -16606,7 +16622,7 @@ RectTransform:
   - {fileID: 108375494}
   - {fileID: 244246518}
   - {fileID: 1201529827}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1323468808}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -16700,7 +16716,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1847429785}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1323468802}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1847429785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17633,4 +17661,3 @@ SceneRoots:
   - {fileID: 1327829268}
   - {fileID: 1096329925}
   - {fileID: 889740596}
-  - {fileID: 1837024297}

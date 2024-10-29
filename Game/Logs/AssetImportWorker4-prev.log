@@ -15,7 +15,7 @@ C:/Users/User/Desktop/AnimalPark/Game
 -logFile
 Logs/AssetImportWorker4.log
 -srvPort
-58661
+53512
 Successfully changed project path to: C:/Users/User/Desktop/AnimalPark/Game
 C:/Users/User/Desktop/AnimalPark/Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/User/Desktop/AnimalPark/Game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [30528] Host "[IP] 183.103.60.190 [Port] 0 [Flags] 2 [Guid] 63272180 [EditorId] 63272180 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [14816] Host "[IP] 211.104.236.101 [Port] 0 [Flags] 2 [Guid] 871321743 [EditorId] 871321743 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [30528] Host "[IP] 183.103.60.190 [Port] 0 [Flags] 2 [Guid] 63272180 [EditorId] 63272180 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [14816] Host "[IP] 211.104.236.101 [Port] 0 [Flags] 2 [Guid] 871321743 [EditorId] 871321743 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 13.55 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 18.38 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.30f1 (70558241b701)
 [Subsystems] Discovering subsystems at path C:/Users/User/2022.3.30f1/Editor/Data/Resources/UnitySubsystems
@@ -70,17 +70,17 @@ Initialize mono
 Mono path[0] = 'C:/Users/User/2022.3.30f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56688
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56896
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Users/User/2022.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.013287 seconds.
-- Loaded All Assemblies, in  0.425 seconds
+Registered in 0.013846 seconds.
+- Loaded All Assemblies, in  0.416 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.316 seconds
-Domain Reload Profiling: 738ms
-	BeginReloadAssembly (140ms)
+- Finished resetting the current domain, in  0.302 seconds
+Domain Reload Profiling: 714ms
+	BeginReloadAssembly (147ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
@@ -88,26 +88,26 @@ Domain Reload Profiling: 738ms
 		CreateAndSetChildDomain (1ms)
 	RebuildCommonClasses (36ms)
 	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (75ms)
-	LoadAllAssembliesAndSetupDomain (159ms)
-		LoadAssemblies (137ms)
+	initialDomainReloadingComplete (73ms)
+	LoadAllAssembliesAndSetupDomain (145ms)
+		LoadAssemblies (143ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (157ms)
-			TypeCache.Refresh (155ms)
-				TypeCache.ScanAssembly (134ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (317ms)
+		AnalyzeDomain (142ms)
+			TypeCache.Refresh (141ms)
+				TypeCache.ScanAssembly (126ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (303ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (248ms)
+		SetupLoadedEditorAssemblies (236ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (7ms)
+			SetLoadedEditorAssemblies (8ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (167ms)
-			ProcessInitializeOnLoadMethodAttributes (58ms)
+			ProcessInitializeOnLoadAttributes (152ms)
+			ProcessInitializeOnLoadMethodAttributes (62ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,55 +115,55 @@ Domain Reload Profiling: 738ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.816 seconds
-Refreshing native plugins compatible for Editor in 7.20 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.753 seconds
+Refreshing native plugins compatible for Editor in 6.90 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.790 seconds
-Domain Reload Profiling: 1598ms
-	BeginReloadAssembly (170ms)
+- Finished resetting the current domain, in  0.706 seconds
+Domain Reload Profiling: 1452ms
+	BeginReloadAssembly (177ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (19ms)
-	RebuildCommonClasses (43ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (61ms)
-	LoadAllAssembliesAndSetupDomain (520ms)
-		LoadAssemblies (403ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (470ms)
+		LoadAssemblies (394ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (227ms)
-			TypeCache.Refresh (202ms)
-				TypeCache.ScanAssembly (184ms)
-			ScanForSourceGeneratedMonoScriptInfo (17ms)
-			ResolveRequiredComponents (7ms)
-	FinalizeReload (791ms)
+		AnalyzeDomain (193ms)
+			TypeCache.Refresh (172ms)
+				TypeCache.ScanAssembly (156ms)
+			ScanForSourceGeneratedMonoScriptInfo (15ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (707ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (615ms)
+		SetupLoadedEditorAssemblies (541ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (88ms)
-			ProcessInitializeOnLoadAttributes (471ms)
-			ProcessInitializeOnLoadMethodAttributes (25ms)
+			BeforeProcessingInitializeOnLoad (75ms)
+			ProcessInitializeOnLoadAttributes (414ms)
+			ProcessInitializeOnLoadMethodAttributes (23ms)
 			AfterProcessingInitializeOnLoad (17ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (17ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 7.10 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 7.73 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3152 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (58.2 KB). Loaded Objects now: 3625.
-Memory consumption went from 129.8 MB to 129.7 MB.
-Total: 3.166700 ms (FindLiveObjects: 0.261100 ms CreateObjectMapping: 0.242900 ms MarkObjects: 2.550900 ms  DeleteObjects: 0.110800 ms)
+Unloading 33 unused Assets / (57.9 KB). Loaded Objects now: 3625.
+Memory consumption went from 129.9 MB to 129.8 MB.
+Total: 2.752900 ms (FindLiveObjects: 0.263000 ms CreateObjectMapping: 0.274500 ms MarkObjects: 2.127300 ms  DeleteObjects: 0.087500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -180,233 +180,54 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 358331.201270 seconds.
-  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab
-  artifactKey: Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab using Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed30ed50098c60661043932172500752') in 0.133817 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 367
-========================================================================
-Received Import Request.
-  Time since last request: 1.953104 seconds.
-  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab
-  artifactKey: Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab using Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd540ab5df6fae6194dbe525f00dd1108') in 0.029302 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 367
-========================================================================
-Received Import Request.
-  Time since last request: 2.673123 seconds.
-  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab
-  artifactKey: Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab using Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46528655251de08aa25a083bcc975238') in 0.028372 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 367
-========================================================================
-Received Import Request.
-  Time since last request: 5.551752 seconds.
-  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab
-  artifactKey: Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab using Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2421f2bde9eb1d94e63ac7a3d9594a3e') in 0.027997 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 367
-========================================================================
-Received Import Request.
-  Time since last request: 1.907744 seconds.
-  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab
-  artifactKey: Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab using Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8ad974af26331b71c63c6f7535504ee') in 0.031370 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 367
-========================================================================
-Received Import Request.
-  Time since last request: 3.596614 seconds.
-  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab
-  artifactKey: Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab using Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52411d96ce2949d43ade03b223d327d9') in 0.028981 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 367
-========================================================================
-Received Import Request.
-  Time since last request: 0.572480 seconds.
-  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab
-  artifactKey: Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab using Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc81e4cb2614fbfd6ce78d8101ca447a') in 0.025650 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 367
-========================================================================
-Received Import Request.
-  Time since last request: 4.407177 seconds.
-  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab
-  artifactKey: Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab using Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f10212a3c5f88765bf8a8d5b6a9feff3') in 0.025464 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 367
-========================================================================
-Received Import Request.
-  Time since last request: 3.131272 seconds.
-  path: Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab
-  artifactKey: Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab using Guid(bfa0480056e122842bc0b06019fb3b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76a4231582c039de3fd3de8dbafcefc1') in 0.027803 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 367
-========================================================================
-Received Import Request.
-  Time since last request: 242.623181 seconds.
-  path: Assets/MainGame/Prefabs/Maps/Space Map.prefab
-  artifactKey: Guid(16c2d3118b23c5149b2a4c653d843c06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Maps/Space Map.prefab using Guid(16c2d3118b23c5149b2a4c653d843c06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cd07f50a19164435807170edb74b16e') in 0.032050 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 361
-========================================================================
-Received Import Request.
-  Time since last request: 227.658340 seconds.
-  path: Assets/MainGame/Prefabs/Maps/Island Map.prefab
-  artifactKey: Guid(dc94936f63b589647a91cd207719fdc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Maps/Island Map.prefab using Guid(dc94936f63b589647a91cd207719fdc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fef9817d7e70490196841c21e82557c7') in 0.032748 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 429
-========================================================================
-Received Import Request.
-  Time since last request: 11.238473 seconds.
-  path: Assets/MainGame/Scene/City.unity
-  artifactKey: Guid(2fc0e132ca4b8ec47a2a68bcfd2f6ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/City.unity using Guid(2fc0e132ca4b8ec47a2a68bcfd2f6ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8afbc970789e4f36ff4dfbd75bf72bfc') in 0.000663 seconds
+  Time since last request: 432653.816556 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/RED Prefabs
+  artifactKey: Guid(e89a866e22e98584f80f70934e7f3ef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/RED Prefabs using Guid(e89a866e22e98584f80f70934e7f3ef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b6b2e35b69524b099cd1af3a8e0b29e') in 0.002620 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 74.746980 seconds.
-  path: Assets/MainGame/Scene/Desert.unity
-  artifactKey: Guid(dfea9094d65153d408c16eba8a85f962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Desert.unity using Guid(dfea9094d65153d408c16eba8a85f962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '371513fc254a97939644dafb9da16c1c') in 0.000571 seconds
+  Time since last request: 0.044545 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/RED Prefabs/Castle_W_Red.prefab
+  artifactKey: Guid(09e5e64bb35b5a941b7a4c74335f15d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/RED Prefabs/Castle_W_Red.prefab using Guid(09e5e64bb35b5a941b7a4c74335f15d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8ef772490a87016775dbade4e1b1619') in 0.140560 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 199
 ========================================================================
 Received Import Request.
-  Time since last request: 28.267145 seconds.
-  path: Assets/MainGame/Scene/Island.unity
-  artifactKey: Guid(388cb24ba5a696542a203f9885c7dde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Island.unity using Guid(388cb24ba5a696542a203f9885c7dde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bc740fa0f684f31c5a812026cbd2b5c') in 0.000506 seconds
+  Time since last request: 1.422549 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/SnowPiles/SnowCorner.prefab
+  artifactKey: Guid(407f2672db34d0b46aad7351ac16d705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/SnowPiles/SnowCorner.prefab using Guid(407f2672db34d0b46aad7351ac16d705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc4142a0c8372cbadb69f54a48112640') in 0.021334 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 9
 ========================================================================
 Received Import Request.
-  Time since last request: 25.814846 seconds.
-  path: Assets/MainGame/Scene/Nature.unity
-  artifactKey: Guid(ccd6663fc05202d499e5c0fc39b6bf74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Nature.unity using Guid(ccd6663fc05202d499e5c0fc39b6bf74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdfcd476e302258b326f7d1624fdc5a9') in 0.000515 seconds
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/SnowPiles/SnowEnd.prefab
+  artifactKey: Guid(e0f642d643245a44db47576f710d7dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/SnowPiles/SnowEnd.prefab using Guid(e0f642d643245a44db47576f710d7dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2f9f33b4276b25510e8d73550a32d7b') in 0.019728 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 9
 ========================================================================
 Received Import Request.
-  Time since last request: 21.718436 seconds.
-  path: Assets/MainGame/Scene/Space.unity
-  artifactKey: Guid(ed01618fd273afa4cbdd415dfc9e6cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Space.unity using Guid(ed01618fd273afa4cbdd415dfc9e6cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f171b67b4361d78b253079c3c67f8c43') in 0.000526 seconds
+  Time since last request: 0.956479 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/Ground/WinterGroundDirt.prefab
+  artifactKey: Guid(017654b38a60d604b9bb14fd5ee8bae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/Ground/WinterGroundDirt.prefab using Guid(017654b38a60d604b9bb14fd5ee8bae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4063085eb3f55c65f21b85f666d5da1') in 0.009140 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 9
 ========================================================================
 Received Import Request.
-  Time since last request: 21.074173 seconds.
-  path: Assets/MainGame/Scene/Winter.unity
-  artifactKey: Guid(462dd7d629b4b7f448ec65f99c615f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Winter.unity using Guid(462dd7d629b4b7f448ec65f99c615f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5697555ad5502a192ea482fa829a0368') in 0.000532 seconds
+  Time since last request: 0.000017 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/Ground/WinterGroundRockSnow.prefab
+  artifactKey: Guid(bad351c878112904cbbc404a34243224) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/Ground/WinterGroundRockSnow.prefab using Guid(bad351c878112904cbbc404a34243224) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0529595021ae51591a778ca044a6d076') in 0.008244 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 35.622663 seconds.
-  path: Assets/MainGame/Scene/City.unity
-  artifactKey: Guid(2fc0e132ca4b8ec47a2a68bcfd2f6ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/City.unity using Guid(2fc0e132ca4b8ec47a2a68bcfd2f6ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb8dba9f70ce5129dab3cae6081904c1') in 0.000588 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 8.926891 seconds.
-  path: Assets/MainGame/Scene/Desert.unity
-  artifactKey: Guid(dfea9094d65153d408c16eba8a85f962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Desert.unity using Guid(dfea9094d65153d408c16eba8a85f962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ecc4d5a156925a177eb7a642f548701') in 0.000613 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 8.218889 seconds.
-  path: Assets/MainGame/Scene/Island.unity
-  artifactKey: Guid(388cb24ba5a696542a203f9885c7dde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Island.unity using Guid(388cb24ba5a696542a203f9885c7dde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7ea582f220af5bba3950af85a8bee8e') in 0.000558 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 11.573834 seconds.
-  path: Assets/MainGame/Scene/Nature.unity
-  artifactKey: Guid(ccd6663fc05202d499e5c0fc39b6bf74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Nature.unity using Guid(ccd6663fc05202d499e5c0fc39b6bf74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd071c0002710708097ef40eb247dd1d') in 0.000537 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 11.585678 seconds.
-  path: Assets/MainGame/Scene/Space.unity
-  artifactKey: Guid(ed01618fd273afa4cbdd415dfc9e6cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Space.unity using Guid(ed01618fd273afa4cbdd415dfc9e6cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '977e9d46f5b4b4c3db11dee6f26c72bb') in 0.000726 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 7.271203 seconds.
-  path: Assets/MainGame/Scene/Winter.unity
-  artifactKey: Guid(462dd7d629b4b7f448ec65f99c615f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Winter.unity using Guid(462dd7d629b4b7f448ec65f99c615f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58e8d2758a3e6f593ca8048461e4a6c3') in 0.000769 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 28.319853 seconds.
-  path: Assets/MainGame/Scene/City.unity
-  artifactKey: Guid(2fc0e132ca4b8ec47a2a68bcfd2f6ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/City.unity using Guid(2fc0e132ca4b8ec47a2a68bcfd2f6ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2acc47ad27a3923bd4b968a27db48e9f') in 0.000565 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 8.185102 seconds.
-  path: Assets/MainGame/Scene/Desert.unity
-  artifactKey: Guid(dfea9094d65153d408c16eba8a85f962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Desert.unity using Guid(dfea9094d65153d408c16eba8a85f962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db66d8b8404f4438a457278740112dc') in 0.000568 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.953994 seconds.
-  path: Assets/MainGame/Scene/Island.unity
-  artifactKey: Guid(388cb24ba5a696542a203f9885c7dde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Island.unity using Guid(388cb24ba5a696542a203f9885c7dde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d1af37e7c87be848575419651987b55') in 0.000550 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 6.929315 seconds.
-  path: Assets/MainGame/Scene/Nature.unity
-  artifactKey: Guid(ccd6663fc05202d499e5c0fc39b6bf74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Nature.unity using Guid(ccd6663fc05202d499e5c0fc39b6bf74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b01271788bf9671eec1bb384b223e19c') in 0.000501 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.543177 seconds.
-  path: Assets/MainGame/Scene/Space.unity
-  artifactKey: Guid(ed01618fd273afa4cbdd415dfc9e6cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Space.unity using Guid(ed01618fd273afa4cbdd415dfc9e6cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86f8c2edbbf9986b19eee9c3885f532f') in 0.000531 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.297518 seconds.
-  path: Assets/MainGame/Scene/Winter.unity
-  artifactKey: Guid(462dd7d629b4b7f448ec65f99c615f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Winter.unity using Guid(462dd7d629b4b7f448ec65f99c615f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1a26d01a28d939ac8069585a6068c7c') in 0.000680 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 9
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

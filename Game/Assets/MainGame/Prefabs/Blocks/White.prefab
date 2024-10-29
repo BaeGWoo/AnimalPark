@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 33170449077539204}
   - component: {fileID: 23595205515415294}
   - component: {fileID: 4568572669508307493}
-  - component: {fileID: 1384982251069019874}
+  - component: {fileID: -1291102090546581484}
   m_Layer: 0
   m_Name: White
-  m_TagString: map
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,13 +100,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0.002955079, y: -0.49997658, z: 0.04546058}
---- !u!114 &1384982251069019874
+--- !u!114 &-1291102090546581484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,13 +115,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1281267947291596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cf6f57364ca5c747acf93ee618807bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e615a3dfbb7f4b449beb5d930d9d9fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curdistance: 0
   redMaterial: {fileID: 2100000, guid: df4aa1ae5a614564daf19ebc1552eccd, type: 2}
   curPostiion: {x: 0, y: 0, z: 0}
   moveableArea: 0
-  xSpacing: 2
-  zSpacing: 2
-  padding: 0
-  curdistance: 0
+  padding: 2
