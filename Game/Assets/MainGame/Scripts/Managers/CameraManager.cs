@@ -11,14 +11,13 @@ public class CameraManager : MonoBehaviour
 
     private void Update()
     {
-        //if (Hunter.Moveable || Hunter.Attackable)
-            //ClickPosition();
+        if (Hunter.Moveable || Hunter.Attackable)
+            ClickPosition();
          
     }
 
     public void ClickPosition()
     {
-        Debug.Log("CLICK");
         if (Input.GetMouseButtonDown(0))
         {
             
@@ -41,7 +40,8 @@ public class CameraManager : MonoBehaviour
                 {
                     if (clickedObject.CompareTag("AttackAbleDirection"))
                     {
-                        Hunter.attackAbleDirection=clickedObject;
+                        Hunter.attackAbleDirection=clickedObject.transform.position;
+                        Hunter.chooseDirection = true;
                     }
                 }
 

@@ -78,6 +78,13 @@ public class AIManager : MonoBehaviour
         }
     }
 
+    public void AnimalActiveCollider(bool state)
+    {
+        for (int i = 0; i < Animals.Length; i++)
+        {         
+            Animals[i].GetComponent<BoxCollider>().enabled = state;
+        }
+    }
     
     private IEnumerator TurnManager()
     {
@@ -117,6 +124,7 @@ public class AIManager : MonoBehaviour
             // Hunter의 이동이 끝나기를 대기
             while (Hunter.Attackable)
             {
+                AnimalActiveCollider(Hunter.chooseDirection);
                 yield return null;
             }
 

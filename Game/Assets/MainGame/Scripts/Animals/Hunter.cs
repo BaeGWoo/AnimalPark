@@ -16,7 +16,7 @@ public class Hunter : MonoBehaviour
     public static bool fireball = false;
     public static bool chooseDirection = false;
     public static float Health;
-    private float speed = 3.0f;
+    private float speed = 1.0f;
 
     [SerializeField] AIManager aiManager;
     [SerializeField] BoxCollider Huntercollider;
@@ -29,10 +29,11 @@ public class Hunter : MonoBehaviour
     private Vector3 HPPosition;
     private Animator animator;
     private int keyInput;
+    private int WeaponNumber = 0;
     [SerializeField] GameObject[] AttackBox;
 
     public static GameObject moveAbleBlock;
-    public static GameObject attackAbleDirection;
+    public static Vector3 attackAbleDirection;
 
     private enum MoveStage { MovingX, MovingZ, Done }
     private MoveStage currentStage = MoveStage.MovingX;
@@ -55,15 +56,7 @@ public class Hunter : MonoBehaviour
        
     }
 
-    public void moveHunterPosition()
-    {
-        if (moveAbleBlock != null)
-        {
-            // 새 위치 계산
-            Vector3 newPosition = moveAbleBlock.transform.position;
-            StartCoroutine(MoveTo(newPosition));
-        }
-    }
+    
 
     public void Attack()
     {
@@ -79,55 +72,19 @@ public class Hunter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //HunterPosition= transform.position;
         Huntercollider.enabled = !Moveable;
 
         animator.SetBool("Run", Running);
 
-        if (Moveable || Attackable)
-            ClickPosition();
+        
 
         if (Moveable && moveAbleBlock != null)
         {
             moveHunterPosition();
         }
-
     }
 
-    public void ClickPosition()
-    {
-        Debug.Log("CLICK");
-        if (Input.GetMouseButtonDown(0))
-        {
-
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                GameObject clickedObject = hit.transform.gameObject;
-                Debug.Log(clickedObject);
-                if (Hunter.Moveable)
-                {
-                    if (clickedObject.CompareTag("MoveAbleBlock"))
-                    {
-                        Hunter.moveAbleBlock = clickedObject;
-                    }
-                }
-
-                if (Hunter.Attackable)
-                {
-                    if (clickedObject.CompareTag("AttackAbleDirection"))
-                    {
-                        Hunter.attackAbleDirection = clickedObject;
-                    }
-                }
-
-
-            }
-        }
-
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -153,90 +110,80 @@ public class Hunter : MonoBehaviour
         bananaMotion.SetActive(false);
     }
 
+
+    #region HunterAttack
     public void AttackType(Button button)
     {
-        Debug.Log("ATTACK");
         if (!Attackable) return;
-        string animatorTrigger = button.name;
-        if (animatorTrigger == "Attack2")
+        
+        int num = int.Parse(button.name.Substring("Attack".Length));
+        WeaponNumber = num-1;
+
+        StartCoroutine(HunterWeaponAttack());
+
+
+    }
+
+    IEnumerator HunterWeaponAttack()
+    {
+        if (WeaponNumber == 1)
         {
             fireball = true;
-        }
-        int num = int.Parse(animatorTrigger.Substring("Attack".Length));
-
-
-        if (fireball)
-        {
             chooseDirection = false;
-
-            StartCoroutine(ChooseFireBallDirection(num));
+            while (!chooseDirection)
+            {
+                yield return null;
+            }
+            ActiveHunterAttack();
         }
 
         else
-        {
-            animator.SetTrigger("Attack" + num);
-            AttackWeapon[num - 1].SetActive(true);
-            StartCoroutine(HunterAttackMotion(num));
-
-            StartCoroutine(HunterAttackEnd(num));
-        }
-
-
+            ActiveHunterAttack();
     }
 
-    IEnumerator HunterAttackMotion(int num)
+    public void ActiveHunterAttack()
+    {
+        Quaternion curRotation = transform.rotation;
+        transform.LookAt(attackAbleDirection);
+      
+        animator.SetTrigger("Attack" + (WeaponNumber+1));
+        AttackWeapon[WeaponNumber].SetActive(true);
+        StartCoroutine(HunterAttackMotion());
+
+        StartCoroutine(HunterAttackEnd());
+        
+    }
+
+    IEnumerator HunterAttackMotion()
     {
         yield return new WaitForSeconds(0.5f);
-        AttackBox[num - 1].SetActive(true);
-
-
+        AttackBox[WeaponNumber].SetActive(true);
     }
 
-    IEnumerator HunterAttackEnd(int num)
+    IEnumerator HunterAttackEnd()
     {
         yield return new WaitForSeconds(2.5f);
 
         Attackable = false;
-        AttackBox[num - 1].SetActive(false);
-        AttackWeapon[num - 1].SetActive(false);
+        fireball = false;
+        chooseDirection = true;
+        AttackBox[WeaponNumber].SetActive(false);
+        AttackWeapon[WeaponNumber].SetActive(false);
     }
+    #endregion
 
-    IEnumerator ChooseFireBallDirection(int num)
+
+    #region HunterMove
+    public void moveHunterPosition()
     {
-        while (!chooseDirection)
+        if (moveAbleBlock != null)
         {
-            yield return null;
+            // 새 위치 계산
+            Vector3 newPosition = moveAbleBlock.transform.position;
+            StartCoroutine(MoveTo(newPosition));
         }
-
-        animator.SetTrigger("Attack" + num);
-        AttackWeapon[num - 1].SetActive(true);
-
-        StartCoroutine(HunterAttackMotion(num));
-        // StartCoroutine(Fireball());
-        StartCoroutine(HunterAttackEnd(num));
     }
 
-    public void PanelActive()
-    {
-        MenuPanel.SetActive(true);
-    }
-
-    public void ReLoadScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void ExitScene()
-    {
-        SceneManager.LoadScene("Lobby");
-        gameObject.SetActive(false);
-    }
-
-    
-
-   
-
-   
 
     private IEnumerator MoveTo(Vector3 target)
     {
@@ -248,7 +195,7 @@ public class Hunter : MonoBehaviour
         transform.LookAt(targetPosition);
 
         float yRotation = transform.eulerAngles.y;
-        float step = speed * Time.deltaTime;
+        float step = 2.0f * Time.deltaTime;
 
         transform.rotation = Quaternion.Euler(0, yRotation, 0);
         while (Mathf.Abs(currentPosition.x - target.x) > Mathf.Epsilon)
@@ -285,8 +232,32 @@ public class Hunter : MonoBehaviour
         Moveable = false;
         Running = false;
         HunterPosition = transform.position;
+        moveAbleBlock = null;
     }
 
+    #endregion
 
 
+    public void PanelActive()
+    {
+        MenuPanel.SetActive(true);
+    }
+
+    public void ReLoadScene()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("Lobby");
+        StartCoroutine(LoadScene(sceneName));
+    }
+    IEnumerator LoadScene(string name)
+    {
+        yield return null;
+        SceneManager.LoadScene(name);
+        MenuPanel.SetActive(false);
+    }
+    public void ExitScene()
+    {
+        SceneManager.LoadScene("Lobby");
+        gameObject.SetActive(false);
+    }
 }
