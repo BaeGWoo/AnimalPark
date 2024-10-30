@@ -18,10 +18,10 @@ public class Taipan : Animal
 
     private void Awake()
     {
-        moveDirection[0] = new Vector3(2, 0, 0);
-        moveDirection[1] = new Vector3(-2, 0, 0);
-        moveDirection[2] = new Vector3(0, 0, -2);
-        moveDirection[3] = new Vector3(0, 0, 2);
+        moveDirection[0] = new Vector3(4, 0, 0);
+        moveDirection[1] = new Vector3(-4, 0, 0);
+        moveDirection[2] = new Vector3(0, 0, -4);
+        moveDirection[3] = new Vector3(0, 0, 4);
        
 
         animator = GetComponent<Animator>();

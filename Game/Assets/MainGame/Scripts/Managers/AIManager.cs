@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 using UnityEngine.SceneManagement;
+using System.Text.RegularExpressions;
+using UnityEngine.Windows;
 
 public class AIManager : MonoBehaviour
 {
@@ -14,24 +16,25 @@ public class AIManager : MonoBehaviour
     [SerializeField] Hunter hunter;
     [SerializeField] GameObject animalImagePrefab;
     [SerializeField] Canvas animalCanvas;
+    [SerializeField] GameObject clearPanel;
     [SerializeField] int MaxAnimalHP = 3;
     int count = 5;
+    
 
-    private void Awake()
+
+    private void Awake(){DontDestroyOnLoad(gameObject);}
+    public void StartTurn(){StartCoroutine(ActiveAiManager());}
+
+    private void Update()
     {
-        DontDestroyOnLoad(gameObject);
-    }
+     
+        if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("esc");
+            hunter.PanelActive();
+        }
 
-    //private void Start()
-    //{
-    //    StartCoroutine(TurnManager());
-    //    UpdateAnimalList();
-    //}
-
-    public void StartTurn()
-    {
-        StartCoroutine(ActiveAiManager());
-        
+       
     }
 
     IEnumerator ActiveAiManager()
@@ -47,28 +50,60 @@ public class AIManager : MonoBehaviour
         UpdateAnimalList();
     }
 
+    
+    private IEnumerator TurnManager()
+    {
+        while (Hunter.Health>=0) // 게임이 계속 진행되는 동안 반복
+        {
+            // 동물의 이동
+            AnimalMove();
+            yield return new WaitForSeconds(1.0f); // 필요에 따라 시간 조정
+            AnimalAttack();
+            yield return new WaitForSeconds(1.0f);
+            
+            if (CheckAniamlAttack()){yield return new WaitForSeconds(3.0f);}
+
+            else{yield return new WaitForSeconds(1.0f);}
+
+            AnimalUnAttackBox();
+          
+            // Hunter의 이동
+            HunterMove();
+
+            while (Hunter.Moveable) { yield return null;}
+
+            
+
+            // Hunter의 공격           
+            hunter.Attack();
+
+            // Hunter의 이동이 끝나기를 대기
+            while (Hunter.Attackable)
+            {
+                AnimalActiveCollider(Hunter.chooseDirection);
+                yield return null;
+            }
+        }
+    }
+
+
+
+
+    #region 동물 동작 제어
     public void AnimalMove()
     {
-        Vector3[] movePoints=null;
-        Vector3[] moveDirections=null;
+        Vector3[] movePoints = null;
+        Vector3[] moveDirections = null;
         Animator animator = null;
 
 
-        for (int i=0;i< Animals.Length; i++)
-        {          
+        for (int i = 0; i < Animals.Length; i++)
+        {
             Animals[i].GetComponent<Animal>().Move();
             Animals[i].GetComponent<BoxCollider>().enabled = true;
         }
     }
 
-    public void AnimalAttack()
-    {
-
-        for (int i = 0; i < Animals.Length; i++)
-        {
-            Animals[i].GetComponent<Animal>().ActiveAttackBox();
-        }
-    }
 
     public void AnimalUnAttackBox()
     {
@@ -81,55 +116,19 @@ public class AIManager : MonoBehaviour
     public void AnimalActiveCollider(bool state)
     {
         for (int i = 0; i < Animals.Length; i++)
-        {         
+        {
             Animals[i].GetComponent<BoxCollider>().enabled = state;
         }
     }
-    
-    private IEnumerator TurnManager()
+
+    public void AnimalAttack()
     {
-        while (Hunter.Health>=0) // 게임이 계속 진행되는 동안 반복
+        for (int i = 0; i < Animals.Length; i++)
         {
-            // 동물의 이동
-            AnimalMove();
-            yield return new WaitForSeconds(1.0f); // 필요에 따라 시간 조정
-            AnimalAttack();
-            yield return new WaitForSeconds(1.0f);
-            
-            if (CheckAniamlAttack())
-            {    
-                yield return new WaitForSeconds(3.0f); 
-            }
-
-            else
-            {
-                yield return new WaitForSeconds(1.0f); 
-            }
-
-            AnimalUnAttackBox();
-
-           
-            // Hunter의 이동
-            HunterMove();
-
-            while (Hunter.Moveable)
-            {
-                yield return null;
-            }
-
-            // Hunter의 공격
-            HunterAttack();
-            //hunter.Attack();
-
-            // Hunter의 이동이 끝나기를 대기
-            while (Hunter.Attackable)
-            {
-                AnimalActiveCollider(Hunter.chooseDirection);
-                yield return null;
-            }
-
+            Animals[i].GetComponent<Animal>().ActiveAttackBox();
         }
     }
+
 
     // 현재 공격가능한 개체 탐색
     public bool CheckAniamlAttack()
@@ -144,7 +143,71 @@ public class AIManager : MonoBehaviour
 
         return check;
     }
+    #endregion
 
+
+    #region AnimalCanvasUpdate
+
+    public void UpdateAnimalList()
+    {
+        // 기존에 있던 썸네일 모두 삭제
+        foreach (Transform child in animalCanvas.transform)
+        {
+            if (child.CompareTag("Animal"))
+            {
+                Destroy(child.gameObject);  
+            }
+        }
+
+
+        if (GetAnimalsCount() <= 0)
+        {
+            clearPanel.SetActive(true);
+
+        }
+
+
+        // 동물 이미지 프리팹에서 기본 위치값 받아오기
+        //RectTransform prefabRectTransform = animalImagePrefab.GetComponent<RectTransform>();
+        //Vector3 initialPosition = prefabRectTransform.localPosition;
+        float offset = -145f; 
+        Vector3 thumbnailPosition = new Vector3(0, offset, 0);
+
+        // 새로운 리스트에 맞게 프리팹 생성
+        for (int i = 0; i < Animals.Length; i++)
+        {
+            // 각 인덱스 번호에 맞는 동물 스프라이트 할당
+            GameObject animalThumbnail = Instantiate(animalImagePrefab, animalCanvas.transform);
+            string animalName = Regex.Replace(Animals[i].name, @"\d", "");
+            animalThumbnail.transform.Find("Thumbnail").GetComponent<Image>().sprite = Resources.Load<Sprite>(animalName);
+
+            // 각 인덱스별 위치설정
+            //RectTransform rectTransform = animalFace.GetComponent<RectTransform>();
+            //rectTransform.localPosition += thumbnailPosition * i;
+            animalThumbnail.GetComponent<RectTransform>().localPosition += thumbnailPosition * i;
+
+            Slider hpSlider = animalThumbnail.GetComponentInChildren<Slider>();
+            hpSlider.value = Animals[i].GetComponent<Animal>().GetHP()/ MaxAnimalHP;
+        }
+
+        
+    }
+
+    public void UpdateAnimalHp()
+    {
+        UpdateAnimalList();
+        int index = 0;
+        if(Animals.Length <= 0) { return; }
+        foreach (Transform child in animalCanvas.transform)
+        {
+            if (child.CompareTag("Animal")&&index<Animals.Length)
+            {
+                Slider hpSlider = child.gameObject.GetComponentInChildren<Slider>();
+                Debug.Log(Animals[index].name);
+                hpSlider.value = Animals[index++].GetComponent<Animal>().GetHP()/ MaxAnimalHP;
+            }
+        }
+    }
 
     public void RemoveAnimal(GameObject animal)
     {
@@ -161,53 +224,12 @@ public class AIManager : MonoBehaviour
         Animals = animalList.ToArray();
     }
 
-
-    public void UpdateAnimalList()
+    public int GetAnimalsCount()
     {
-        // 기존에 있던 썸네일 모두 삭제
-        foreach (Transform child in animalCanvas.transform)
-        {
-            if (child.CompareTag("Animal"))
-            {
-                Destroy(child.gameObject);  
-            }
-        }
-
-        // 동물 이미지 프리팹에서 기본 위치값 받아오기
-        RectTransform prefabRectTransform = animalImagePrefab.GetComponent<RectTransform>();
-        Vector3 initialPosition = prefabRectTransform.localPosition;
-        float yOffset = -145f; 
-        Vector3 currentPosition = new Vector3(0,-145.0f,0);
-
-        // 새로운 리스트에 맞게 프리팹 생성
-        for (int i = 0; i < Animals.Length; i++)
-        {
-            // 각 인덱스 번호에 맞는 동물 스프라이트 할당
-            GameObject animalFace = Instantiate(animalImagePrefab, animalCanvas.transform);
-            animalFace.GetComponent<Image>().sprite = Resources.Load<Sprite>(Animals[i].name);
-
-            // 각 인덱스별 위치설정
-            RectTransform rectTransform = animalFace.GetComponent<RectTransform>();
-            rectTransform.localPosition += currentPosition*i;
-
-
-            Slider hpSlider = animalFace.GetComponentInChildren<Slider>();
-            hpSlider.value = Animals[i].GetComponent<Animal>().GetHP()/ MaxAnimalHP;
-        }       
+        return Animals.Length;
     }
 
-    public void UpdateAnimalHp()
-    {
-        int index = 0;
-        foreach (Transform child in animalCanvas.transform)
-        {
-            if (child.CompareTag("Animal"))
-            {
-                Slider hpSlider = child.gameObject.GetComponentInChildren<Slider>();
-                hpSlider.value = Animals[index++].GetComponent<Animal>().GetHP()/ MaxAnimalHP;
-            }
-        }
-    }
+    #endregion
 
     public void HunterMove()
     {
@@ -218,21 +240,7 @@ public class AIManager : MonoBehaviour
         hunter.Move();
     }
 
-    public void HunterAttack()
-    {
-        for (int i = 0; i < Animals.Length; i++)
-        {
-            Animals[i].GetComponent<BoxCollider>().enabled = true;
-        }
-        hunter.Attack();
-    }
+  
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("esc");
-            hunter.PanelActive();
-        }
-    }
+    
 }

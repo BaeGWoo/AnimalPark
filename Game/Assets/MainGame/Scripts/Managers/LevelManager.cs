@@ -4,15 +4,16 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] Button[] Maps;
+    [SerializeField] UnityEngine.UI.Button[] Maps;
     [SerializeField] bool[] Level;
     [SerializeField] GameObject Hunter;
     [SerializeField] GameObject AIManager;
+    [SerializeField] GameObject clearPanel;
     private AIManager aiManager;
-    //public EventSystem eventSystem;
     public static string SceneName;
 
    
@@ -28,34 +29,39 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(LinkMaps());
+        LinkMaps();
     }
 
   
 
-
-    IEnumerator LinkMaps()
+    // 로비로 이동했을때만 호출
+    public void LinkMaps()
     {
-        while (true)
+
+        for (int i = 1; i < Maps.Length; i++)
         {
-            for(int i = 1; i < Maps.Length; i++)
+            if (!Level[i - 1])
             {
-                if (!Level[i - 1])
-                {
-                    Maps[i].interactable = false;
-                }
-                else
-                {
-                    Maps[i].interactable = true;
-                }
+                Maps[i].interactable = false;
             }
-
-            yield return null;
-
+            else
+            {
+                Maps[i].interactable = true;
+            }
         }
+
     }
 
-    public void ClickMap(Button button)
+    public void LevelUp()
+    {
+        int SceneNumber= SceneManager.GetActiveScene().buildIndex-1;
+        Level[SceneNumber] = true;
+        clearPanel.SetActive(false);
+        SceneManager.LoadScene("Lobby");
+        LinkMaps();
+    }
+
+    public void ClickMap(UnityEngine.UI.Button button)
     {
         SceneManager.LoadScene(button.name);
         SceneName=button.name;
