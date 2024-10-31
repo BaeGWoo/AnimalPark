@@ -19,10 +19,25 @@ public class AIManager : MonoBehaviour
     [SerializeField] GameObject clearPanel;
     [SerializeField] int MaxAnimalHP = 3;
     int count = 5;
-    
 
+    private static AIManager instance;
+    public static Dictionary<string, GameObject[]> animalArray;
 
-    private void Awake(){DontDestroyOnLoad(gameObject);}
+    private void Awake()
+    {
+       
+        if(instance == null)
+        {
+            instance = this;
+            animalArray = new Dictionary<string, GameObject[]>();
+        }
+
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+    }
     public void StartTurn(){StartCoroutine(ActiveAiManager());}
 
     private void Update()
@@ -30,24 +45,25 @@ public class AIManager : MonoBehaviour
      
         if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("esc");
             hunter.PanelActive();
         }
-
        
     }
 
     IEnumerator ActiveAiManager()
     {
-        yield return new WaitForSeconds(0.5f);
-        GameObject[] temp = GameObject.Find("AnimalManager").GetComponent<AnimalManager>().GetCurrentAnimals();
-        Animals = new GameObject[temp.Length];
-        for (int i = 0; i < Animals.Length; i++)
+        for (int i = 0; i < 8; i++)
         {
-            Animals[i] = temp[i];
+            for (int j = 0; j < 8; j++)
+            {
+                TileMap[i, j] = 0;
+            }
         }
+        yield return null;
+
         StartCoroutine(TurnManager());
-        UpdateAnimalList();
+
+
     }
 
     
@@ -70,9 +86,9 @@ public class AIManager : MonoBehaviour
             // Hunter의 이동
             HunterMove();
 
-            while (Hunter.Moveable) { yield return null;}
+            while (Hunter.Moveable) {  yield return null;}
 
-            
+           
 
             // Hunter의 공격           
             hunter.Attack();
@@ -80,12 +96,20 @@ public class AIManager : MonoBehaviour
             // Hunter의 이동이 끝나기를 대기
             while (Hunter.Attackable)
             {
-                AnimalActiveCollider(Hunter.chooseDirection);
+                //AnimalActiveCollider(Hunter.chooseDirection);
                 yield return null;
             }
         }
     }
 
+    public void HunterMove()
+    {
+        for (int i = 0; i < Animals.Length; i++)
+        {
+            Animals[i].GetComponent<BoxCollider>().enabled = false;
+        }
+        hunter.Move();
+    }
 
 
 
@@ -193,6 +217,9 @@ public class AIManager : MonoBehaviour
         
     }
 
+  
+
+
     public void UpdateAnimalHp()
     {
         UpdateAnimalList();
@@ -231,16 +258,27 @@ public class AIManager : MonoBehaviour
 
     #endregion
 
-    public void HunterMove()
+   
+    public void getAnimalList(GameObject[] array)
     {
-        for(int i = 0; i < Animals.Length; i++)
+        string sceneName = LevelManager.SceneName;
+        if (sceneName == "Lobby") return;
+       
+
+      
+        Animals = null;
+        Animals=new GameObject[array.Length];
+
+        for(int i = 0; i <array.Length; i++)
         {
-            Animals[i].GetComponent<BoxCollider>().enabled = false;
+            Animals[i]=array[i];
         }
-        hunter.Move();
+        UpdateAnimalList();
     }
 
-  
+    public void ResetAnimalList()
+    {
+        Animals = null; Animals = new GameObject[0];
+    }
 
-    
 }

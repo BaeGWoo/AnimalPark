@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
+    private static CameraManager instance;
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
         DontDestroyOnLoad(this);
     }
 
@@ -27,7 +37,6 @@ public class CameraManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 GameObject clickedObject = hit.transform.gameObject;
-                Debug.Log(clickedObject);
                 if (Hunter.Moveable)
                 {
                     if (clickedObject.CompareTag("MoveAbleBlock"))

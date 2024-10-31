@@ -8029,7 +8029,7 @@ GameObject:
   - component: {fileID: 283961538}
   - component: {fileID: 283961537}
   m_Layer: 0
-  m_Name: AiManager
+  m_Name: AIManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11930,7 +11930,9 @@ MonoBehaviour:
   Level: 
   Hunter: {fileID: 867037031}
   AIManager: {fileID: 283961536}
+  TileManager: {fileID: 1398636742}
   clearPanel: {fileID: 785649877}
+  mapPanel: {fileID: 963891581}
 --- !u!4 &600487442
 Transform:
   m_ObjectHideFlags: 0
@@ -11943,7 +11945,8 @@ Transform:
   m_LocalPosition: {x: 0.0000019073486, y: 6.6266613, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 963891585}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &608812285
@@ -15369,7 +15372,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ff572e217cd1a44ac2ebca63de7ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aiManager: {fileID: 283961537}
+  AIManager: {fileID: 283961536}
+  LevelManager: {fileID: 600487440}
+  TileManager: {fileID: 1398636742}
   Huntercollider: {fileID: 0}
   HPSlider: {fileID: 547256112}
   bananaMotion: {fileID: 167173750}
@@ -17077,7 +17082,7 @@ RectTransform:
   m_Children:
   - {fileID: 77038122}
   - {fileID: 535455587}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 600487442}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -35031,7 +35036,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1562534193}
   - {fileID: 357965941}
-  - {fileID: 963891585}
   - {fileID: 600487442}
   - {fileID: 1398636744}
   - {fileID: 283961538}

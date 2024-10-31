@@ -19,7 +19,11 @@ public class Hunter : MonoBehaviour
     public static float Health;
     //private float speed = 1.0f;
 
-    [SerializeField] AIManager aiManager;
+    [SerializeField] GameObject AIManager;
+    [SerializeField] GameObject LevelManager;
+    [SerializeField] GameObject TileManager;
+
+
     [SerializeField] BoxCollider Huntercollider;
     [SerializeField] Slider HPSlider;
     [SerializeField] GameObject bananaMotion;
@@ -33,44 +37,49 @@ public class Hunter : MonoBehaviour
     private int WeaponNumber = 0;
     [SerializeField] GameObject[] AttackBox;
 
+    private AIManager aiManager;
+    private LevelManager levelManager;
+    private TileManager tileManager;
+
+
     public static GameObject moveAbleBlock;
     public static Vector3 attackAbleDirection;
 
-    private enum MoveStage { MovingX, MovingZ, Done }
-    private MoveStage currentStage = MoveStage.MovingX;
-
+    
+    private static Hunter instance;
+    //private TileManager tileManager;
+    //private LevelManager levelManager;
     void Awake()
     {
+        DontDestroyOnLoad(gameObject);
+        if(instance == null)
+        {
+            instance = this;
+        }
+
+        else if(instance != this)
+        {
+            Destroy(gameObject);
+        }
+
         HunterPosition = new Vector3(0, 0, 0);
         Huntercollider = GetComponent<BoxCollider>();
         HunterRotation = GetComponent<Transform>();
         animator = GetComponent<Animator>();
-       
+
+
+        aiManager =AIManager.GetComponent<AIManager>();
+        levelManager =LevelManager.GetComponent<LevelManager>();
+        tileManager =TileManager.GetComponent<TileManager>();
+
+      
         HPPosition = HPSlider.transform.position;
         Health = 10;
-        DontDestroyOnLoad(gameObject);
     }
 
-    public void Move()
-    {
-        Moveable = true;
-       
-    }
+   
 
-    
 
-    public void Attack()
-    {
-        Attackable = true;
-    }
-
-    public void Die()
-    {
-        animator.SetTrigger("Die");
-        MenuPanel.SetActive(true);
-    }
-
-    // Update is called once per frame
     void Update()
     {
         Huntercollider.enabled = !Moveable;
@@ -111,6 +120,25 @@ public class Hunter : MonoBehaviour
         bananaMotion.SetActive(false);
     }
 
+    #region Hunter State
+    public void Move()
+    {
+        Moveable = true;
+
+    }
+
+    public void Attack()
+    {
+        Attackable = true;
+    }
+
+    public void Die()
+    {
+        animator.SetTrigger("Die");
+        MenuPanel.SetActive(true);
+    }
+    #endregion
+
 
     #region HunterAttack
     public void AttackType(Button button)
@@ -144,9 +172,10 @@ public class Hunter : MonoBehaviour
 
     public void ActiveHunterAttack()
     {
+        aiManager.AnimalActiveCollider(true);
         Quaternion curRotation = transform.rotation;
         transform.LookAt(attackAbleDirection);
-      
+
         animator.SetTrigger("Attack" + (WeaponNumber+1));
         AttackWeapon[WeaponNumber].SetActive(true);
         StartCoroutine(HunterAttackMotion());
@@ -170,6 +199,7 @@ public class Hunter : MonoBehaviour
         chooseDirection = true;
         AttackBox[WeaponNumber].SetActive(false);
         AttackWeapon[WeaponNumber].SetActive(false);
+        //attackAbleDirection = new Vector3(0, 0, 0);
     }
     #endregion
 
@@ -230,6 +260,8 @@ public class Hunter : MonoBehaviour
     #endregion
 
 
+    #region æ¿ ¿Ãµø
+
     public void PanelActive()
     {
         MenuPanel.SetActive(true);
@@ -238,18 +270,48 @@ public class Hunter : MonoBehaviour
     public void ReLoadScene()
     {
         string sceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene("Lobby");
+        ExitScene();
+
+        MenuPanel.SetActive(false);
+        gameObject.SetActive(true);
+
         StartCoroutine(LoadScene(sceneName));
+        transform.position = Vector3.zero;
+        HunterPosition=transform.position;
     }
     IEnumerator LoadScene(string name)
     {
         yield return null;
+        AIManager.SetActive(true);
+
+
+        LevelManager.SetActive(false);
+        levelManager.SetSceneName(name);
+
+
         SceneManager.LoadScene(name);
-        MenuPanel.SetActive(false);
+        aiManager.StartTurn();
+        
+        TileManager.SetActive(true);
+        tileManager.CreateTileMap();
     }
+
     public void ExitScene()
     {
-        SceneManager.LoadScene("Lobby");
+        MenuPanel.SetActive(false);
+        Moveable = false;
+        
+        aiManager.ResetAnimalList();
+        AIManager.SetActive(false);
+       
+        TileManager.SetActive(false);
+        
+        LevelManager.SetActive(true);
+        levelManager.LinkMaps();
+        
         gameObject.SetActive(false);
+        SceneManager.LoadScene("Lobby");
+        
     }
+    #endregion
 }

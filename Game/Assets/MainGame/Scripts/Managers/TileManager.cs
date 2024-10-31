@@ -12,21 +12,38 @@ public class TileManager : MonoBehaviour
     
     public Dictionary<string, int> SceneNumber;
     private int sceneNumber = -1;
+    string[] SceneName = new string[7] { "Nature", "Island", "Desert", "City", "Winter", "Space", "Lobby" };
 
     [SerializeField] GameObject BlackTile;
     [SerializeField] GameObject WhiteTile;
+
+    private static TileManager instance;
+
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-        SceneNumber = new Dictionary<string, int>();
-        string[] SceneName = new string[7] { "Nature", "Island", "Desert", "City", "Winter", "Space", "Lobby" };
-
-        for (int i = 0; i < SceneName.Length; i++)
+        if (instance == null)
         {
-            SceneNumber[SceneName[i]] = i;
-          
+            instance = this;
+            SceneNumber = new Dictionary<string, int>();
+            for (int i = 0; i < SceneName.Length; i++)
+            {
+                SceneNumber[SceneName[i]] = i;
+
+            }
+
         }
+
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+
+
+        
     }
+
    
 
     private void OnEnable()
@@ -59,8 +76,9 @@ public class TileManager : MonoBehaviour
     }
 
 
-    private void CreateTileMap()
+    public void CreateTileMap()
     {
+        sceneNumber = SceneNumber[LevelManager.SceneName];
         int BlockNumber = sceneNumber * 2;
         GameObject curTile = Blocks[BlockNumber];
         for (int i = 0; i < 8; i++)
@@ -77,5 +95,7 @@ public class TileManager : MonoBehaviour
                 curTile = Blocks[BlockNumber];
             }
         }
+
+
     }
 }
