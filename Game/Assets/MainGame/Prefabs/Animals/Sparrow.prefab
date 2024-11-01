@@ -204,7 +204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8214338149618832455
 Transform:
   m_ObjectHideFlags: 0
@@ -372,10 +372,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 2
   jumpDuration: 1
-  AttackMotion: {fileID: 0}
+  AttackMotion:
+  - {fileID: 0}
   AttackBox: {fileID: 3380154401823672996}
+  AttackTargetBox: {fileID: 8993558008579522731}
   duration: 2
   Health: 3
+  attackable: 0
+  hitable: 0
 --- !u!1 &2076963283488858125
 GameObject:
   m_ObjectHideFlags: 0
@@ -5265,7 +5269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6354930243699726410
 Transform:
   m_ObjectHideFlags: 0
@@ -10356,7 +10360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7648212744280878632
 Transform:
   m_ObjectHideFlags: 0

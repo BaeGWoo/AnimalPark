@@ -17,6 +17,7 @@ public class Hunter : MonoBehaviour
     public static bool fireball = false;
     public static bool chooseDirection = false;
     public static float Health;
+    private float MaxHealth;
     //private float speed = 1.0f;
 
     [SerializeField] GameObject AIManager;
@@ -74,7 +75,8 @@ public class Hunter : MonoBehaviour
 
       
         HPPosition = HPSlider.transform.position;
-        Health = 10;
+        Health = 5;
+        MaxHealth = 5;
     }
 
    
@@ -102,13 +104,18 @@ public class Hunter : MonoBehaviour
         {
             other.transform.root.GetComponent<Animal>().Attack();
             Health--;
-            HPSlider.value = Health / 10;
+            HPSlider.value = Health / MaxHealth;
         }
         else if (other.CompareTag("banana"))
         {
             StartCoroutine(BananaMotion());
             Health--;
-            HPSlider.value = Health / 5;
+            HPSlider.value = Health / MaxHealth;
+        }
+
+        if (Health <= 0)
+        {
+            Die();
         }
 
     }
@@ -175,6 +182,8 @@ public class Hunter : MonoBehaviour
         aiManager.AnimalActiveCollider(true);
         Quaternion curRotation = transform.rotation;
         transform.LookAt(attackAbleDirection);
+        transform.rotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
+
 
         animator.SetTrigger("Attack" + (WeaponNumber+1));
         AttackWeapon[WeaponNumber].SetActive(true);
@@ -274,7 +283,8 @@ public class Hunter : MonoBehaviour
 
         MenuPanel.SetActive(false);
         gameObject.SetActive(true);
-
+        animator.SetTrigger("Reset");
+        Health = MaxHealth;
         StartCoroutine(LoadScene(sceneName));
         transform.position = Vector3.zero;
         HunterPosition=transform.position;
@@ -308,10 +318,23 @@ public class Hunter : MonoBehaviour
         
         LevelManager.SetActive(true);
         levelManager.LinkMaps();
-        
+
+        Health = MaxHealth;
+        animator.SetTrigger("Reset");
         gameObject.SetActive(false);
         SceneManager.LoadScene("Lobby");
         
     }
     #endregion
+
+    public void LevelUp()
+    {
+        levelManager.LevelUp();
+        ExitScene();
+        transform.position= Vector3.zero;
+        Health = MaxHealth;
+        HunterPosition = transform.position;
+        levelManager.LinkMaps();
+        //버튼 이벤트를 헌터에 주고 씬 이동전에 LevelUp호출
+    }
 }

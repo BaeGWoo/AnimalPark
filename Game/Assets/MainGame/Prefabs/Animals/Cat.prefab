@@ -734,8 +734,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 2
   jumpDuration: 1
-  AttackBox: {fileID: 0}
-  AttackMotion: []
+  AttackBox: {fileID: 7939683113812343093}
+  AttackMotion:
+  - {fileID: 4675221605286376268}
   duration: 3.5
   Health: 3
   attackable: 0
@@ -1109,7 +1110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3774849629518362133
 Transform:
   m_ObjectHideFlags: 0
@@ -1257,6 +1258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CFX4 Aura Bubble C
       objectReference: {fileID: 0}
+    - target: {fileID: 1844191813266838, guid: 968c924d2be019d4b9e67647551eec3e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4299952606933750, guid: 968c924d2be019d4b9e67647551eec3e, type: 3}
       propertyPath: m_LocalScale.x
       value: 25
@@ -1326,6 +1331,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 968c924d2be019d4b9e67647551eec3e, type: 3}
+--- !u!1 &4675221605286376268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844191813266838, guid: 968c924d2be019d4b9e67647551eec3e, type: 3}
+  m_PrefabInstance: {fileID: 4676763980444606170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4677114413978872876 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4299952606933750, guid: 968c924d2be019d4b9e67647551eec3e, type: 3}

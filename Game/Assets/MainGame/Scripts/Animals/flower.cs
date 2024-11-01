@@ -12,13 +12,14 @@ public class flower : Animal
     [SerializeField] float Health = 3;
     public bool attackable = false;
     public bool hitable = false;
-
+    private Vector3 startSize;
 
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         aiManager = FindObjectOfType<AIManager>();
+        startSize = transform.localScale;
     }
 
    
@@ -35,6 +36,7 @@ public class flower : Animal
 
     public override void UnActiveAttackBox()
     {
+        ResetSize();
         attackable = false;
         AttackBox.SetActive(false);
     }
@@ -44,6 +46,7 @@ public class flower : Animal
         base.Attack();
         animator.SetTrigger("Attack");
         Attack(AttackMotion, duration);
+        SizeUp();
     }
 
     public override void Damaged()
@@ -70,5 +73,18 @@ public class flower : Animal
     public override bool GetAttackAble()
     {
         return attackable;
+    }
+
+    public void SizeUp()
+    {
+      
+        Vector3 targetSize = startSize * 3;
+
+        transform.localScale = targetSize;
+    }
+
+    public void ResetSize()
+    {
+        transform.localScale = startSize;
     }
 }

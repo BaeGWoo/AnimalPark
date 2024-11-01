@@ -99,6 +99,12 @@ public class AIManager : MonoBehaviour
                 //AnimalActiveCollider(Hunter.chooseDirection);
                 yield return null;
             }
+
+            if (Animals.Length <= 0||Hunter.Health<=0)
+            {
+                break;
+            }
+
         }
     }
 
@@ -183,12 +189,7 @@ public class AIManager : MonoBehaviour
             }
         }
 
-
-        if (GetAnimalsCount() <= 0)
-        {
-            clearPanel.SetActive(true);
-
-        }
+       
 
 
         // 동물 이미지 프리팹에서 기본 위치값 받아오기
@@ -217,7 +218,16 @@ public class AIManager : MonoBehaviour
         
     }
 
-  
+    public void ShowNext()
+    {
+        StartCoroutine(PopUpClearPanel());
+    }
+
+  IEnumerator PopUpClearPanel()
+    {
+        yield return new WaitForSeconds(1.5f);
+        clearPanel.SetActive(true);
+    }
 
 
     public void UpdateAnimalHp()

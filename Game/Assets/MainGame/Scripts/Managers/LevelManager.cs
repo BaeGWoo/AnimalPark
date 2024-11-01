@@ -71,13 +71,11 @@ public class LevelManager : MonoBehaviour
 
     public void LevelUp()
     {
-        //hunter->ExitScene을 하면서 LevelUp시키기
-        //버튼 이벤트를 헌터에 주고 씬 이동전에 LevelUp호출
         int SceneNumber= SceneManager.GetActiveScene().buildIndex-1;
         Level[SceneNumber] = true;
         clearPanel.SetActive(false);
-        SceneManager.LoadScene("Lobby");
-        LinkMaps();
+        //SceneManager.LoadScene("Lobby");
+        //LinkMaps();
     }
 
     public void ClickMap(UnityEngine.UI.Button button)
@@ -91,7 +89,11 @@ public class LevelManager : MonoBehaviour
 
 
         SceneName =button.name;
-        SceneManager.LoadScene(button.name);
+
+        //SceneManager.LoadScene(button.name);
+        SetSceneName(button.name);
+        SceneManager.LoadScene("Loading");
+       
        
         tileManager.CreateTileMap();      
         aiManager.StartTurn();
@@ -103,5 +105,10 @@ public class LevelManager : MonoBehaviour
     public void SetSceneName(string name)
     {
         SceneName = name;
+    }
+
+    public string GetSceneName()
+    {
+        return SceneName;
     }
 }

@@ -149,7 +149,12 @@ public class Animal : MonoBehaviour
 
     public void Die()
     { 
-        Destroy(gameObject, 1.5f);
+        Destroy(gameObject, 1.0f);
         aiManager.UpdateAnimalList();
+        if (aiManager.GetAnimalsCount() <= 0)
+        {
+            aiManager.ShowNext();
+
+        }
     }
 }

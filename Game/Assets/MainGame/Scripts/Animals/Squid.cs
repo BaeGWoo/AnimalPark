@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class Squid : Animal
 {
-    private Vector3[] movePoint = new Vector3[5];
+    private Vector3[] movePoint = new Vector3[4];
     private Vector3[] moveDirection = new Vector3[4];
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject[] AttackMotion;
@@ -31,10 +31,10 @@ public class Squid : Animal
 
     public override void Move()
     {
-        movePoint[0] = transform.position;
-        for (int i = 1; i < movePoint.Length; i++)
+        //movePoint[0] = transform.position;
+        for (int i = 0; i < movePoint.Length; i++)
         {
-            movePoint[i] = new Vector3(moveDirection[i - 1].x + transform.position.x, 0, moveDirection[i - 1].z + transform.position.z);
+            movePoint[i] = new Vector3(moveDirection[i].x + transform.position.x, 0, moveDirection[i].z + transform.position.z);
         }
 
         base.Move(transform.position,transform.rotation,movePoint);
