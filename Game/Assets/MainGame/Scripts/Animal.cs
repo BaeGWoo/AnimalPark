@@ -6,7 +6,7 @@ public class Animal : MonoBehaviour
 {
     public float jumpHeight = 2f; // 점프 높이
     public float jumpDuration = 1f; // 점프 애니메이션의 지속 시간
-   
+    public float molePoint = 0.5f;
     protected AIManager aiManager;
 
     public virtual void Move() { }
@@ -18,6 +18,7 @@ public class Animal : MonoBehaviour
     public virtual void Damaged() { aiManager.UpdateAnimalHp(); }
 
     public virtual float GetHP() { return 0; }
+    public virtual float GetMaxHp() { return 0; }
 
     public virtual bool GetAttackAble() { return true; }
 
@@ -63,6 +64,7 @@ public class Animal : MonoBehaviour
         }
         AIManager.TileMap[(int)(movePoint[minDirection].x / 2), (int)(movePoint[minDirection].z) / 2] = 1;
         StartCoroutine(JumpToPosition(curPosition, curRotation, new Vector3(movePoint[minDirection].x, 0, movePoint[minDirection].z)));
+        Debug.Log(minDirection+ "(" + movePoint[minDirection].x + "," + 0 + "," + movePoint[minDirection].z);
     }
 
     IEnumerator JumpToPosition(Vector3 curPosition,Quaternion curRotation, Vector3 targetPosition)

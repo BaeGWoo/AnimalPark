@@ -12,6 +12,7 @@ public class Sparrow : Animal
     [SerializeField] GameObject AttackTargetBox;
     [SerializeField] float duration = 3.0f;
     [SerializeField] float Health = 3;
+    private float MaxHealth = 3;
     public bool attackable = false;
     public bool hitable = false;
 
@@ -96,6 +97,7 @@ public class Sparrow : Animal
     public override void Damaged()
     {
         Health--;
+        animator.SetTrigger("Damage");
         if (Health <= 0)
         {
             aiManager.RemoveAnimal(gameObject);
@@ -109,6 +111,10 @@ public class Sparrow : Animal
     public override float GetHP()
     {
         return Health;
+    }
+    public override float GetMaxHp()
+    {
+        return MaxHealth;
     }
 
     public override bool GetAttackAble()

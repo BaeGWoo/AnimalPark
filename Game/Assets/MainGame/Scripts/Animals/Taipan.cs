@@ -11,6 +11,7 @@ public class Taipan : Animal
     [SerializeField] GameObject[] AttackMotion;
     [SerializeField] float duration = 3.5f;
     [SerializeField] float Health = 3;
+    private float MaxHealth = 3;
     public bool attackable = false;
     public bool hitable = false;
 
@@ -65,7 +66,7 @@ public class Taipan : Animal
     public override void Damaged()
     {
         Health--;
-
+        animator.SetTrigger("Damage");
 
 
         if (Health <= 0)
@@ -81,6 +82,10 @@ public class Taipan : Animal
     public override float GetHP()
     {
         return Health;
+    }
+    public override float GetMaxHp()
+    {
+        return MaxHealth;
     }
 
     public override bool GetAttackAble()

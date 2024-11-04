@@ -12,32 +12,45 @@ public class LoadingSceneManager : MonoBehaviour
     [SerializeField] Sprite[] loadingImages;
     [SerializeField] Image[] ducks;
     [SerializeField] Slider loadingBar;
+    [SerializeField] GameObject loadingCanvas;
 
-
-    private void OnEnable()
+    [SerializeField] GameObject AIManager;
+    [SerializeField] GameObject TileManager;
+    private AIManager aiManager;
+    private TileManager tileManager;
+    private static LoadingSceneManager instance;
+    private void Awake()
     {
-        SceneManager.sceneLoaded += SceneOnLoaded;
+        if (instance == null)
+        {
+            instance = this;
+        }
+
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+
+
+        aiManager = AIManager.GetComponent<AIManager>();
+        tileManager = TileManager.GetComponent<TileManager>();
     }
 
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= SceneOnLoaded;
-    }
 
-    private void SceneOnLoaded(Scene scene, LoadSceneMode mode)
-    {
-        StartCoroutine(LoadNextScene(FindAnyObjectByType<LevelManager>().GetComponent<LevelManager>().GetSceneName()));
-    }
 
-    private void Start()
+    // 각 씬이 불완전하게 보여지는 것을 방지하기 위해 페이크로딩을 이용
+    // 캔버스를 활성화 후 코루틴 함수 호출
+    public void LoadScene(string sceneName)
     {
-     //   StartCoroutine(LoadNextScene("Lobby"));
+        loadingCanvas.SetActive(true);
+        StartCoroutine(LoadNextScene(sceneName));
     }
 
 
     IEnumerator LoadNextScene(string next)
     {
-        float loadTime = 3f;
+        float loadTime = 2f;
         float elapsedTime = 0f;
 
         float changeInterval = 0.1f; // 0.5초마다 이미지 교체
@@ -53,9 +66,9 @@ public class LoadingSceneManager : MonoBehaviour
             elapsedTime += Time.deltaTime;
 
             MoveDucks((int)(elapsedTime / changeInterval) % loadingImages.Length);
-            nextChangeTime += changeInterval; // 다음 교체 시간을 업데이트
+            nextChangeTime += changeInterval;
 
-            // 로딩 바 업데이트
+            
             loadingBar.value = Mathf.Lerp(loadingBar.value, elapsedTime / loadTime, Time.deltaTime); 
         }
 
@@ -76,6 +89,11 @@ public class LoadingSceneManager : MonoBehaviour
 
                 // 씬 전환 허용
                 asyncLoad.allowSceneActivation = true;
+                yield return new WaitForSeconds(0.5f);
+                tileManager.CreateTileMap();
+                aiManager.StartTurn();
+                loadingBar.value = 0;
+                loadingCanvas.SetActive(false);
             }
         }
     }

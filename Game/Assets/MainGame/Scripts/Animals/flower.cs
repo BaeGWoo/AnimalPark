@@ -9,7 +9,8 @@ public class flower : Animal
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject[] AttackMotion;
     [SerializeField] float duration = 3.5f;
-    [SerializeField] float Health = 3;
+    [SerializeField] float Health = 2;
+    private float MaxHealth = 2;
     public bool attackable = false;
     public bool hitable = false;
     private Vector3 startSize;
@@ -68,6 +69,10 @@ public class flower : Animal
     public override float GetHP()
     {
         return Health;
+    }
+    public override float GetMaxHp()
+    {
+        return MaxHealth;
     }
 
     public override bool GetAttackAble()

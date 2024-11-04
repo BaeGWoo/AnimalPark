@@ -23,7 +23,7 @@ public class Hunter : MonoBehaviour
     [SerializeField] GameObject AIManager;
     [SerializeField] GameObject LevelManager;
     [SerializeField] GameObject TileManager;
-
+    [SerializeField] GameObject LoadManager;
 
     [SerializeField] BoxCollider Huntercollider;
     [SerializeField] Slider HPSlider;
@@ -41,6 +41,7 @@ public class Hunter : MonoBehaviour
     private AIManager aiManager;
     private LevelManager levelManager;
     private TileManager tileManager;
+    private LoadingSceneManager loadManager;
 
 
     public static GameObject moveAbleBlock;
@@ -72,7 +73,7 @@ public class Hunter : MonoBehaviour
         aiManager =AIManager.GetComponent<AIManager>();
         levelManager =LevelManager.GetComponent<LevelManager>();
         tileManager =TileManager.GetComponent<TileManager>();
-
+        loadManager=LoadManager.GetComponent<LoadingSceneManager>();
       
         HPPosition = HPSlider.transform.position;
         Health = 5;
@@ -299,11 +300,12 @@ public class Hunter : MonoBehaviour
         levelManager.SetSceneName(name);
 
 
-        SceneManager.LoadScene(name);
-        aiManager.StartTurn();
-        
         TileManager.SetActive(true);
-        tileManager.CreateTileMap();
+        //tileManager.CreateTileMap();
+        //aiManager.StartTurn();
+        loadManager.LoadScene(name);
+        //SceneManager.LoadScene(name);
+        
     }
 
     public void ExitScene()

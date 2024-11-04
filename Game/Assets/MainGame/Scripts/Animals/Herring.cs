@@ -11,6 +11,7 @@ public class Herring : Animal
     [SerializeField] GameObject[] AttackMotion;
     [SerializeField] float Health = 3;
     [SerializeField] float duration = 2.0f;
+    private float MaxHealth = 3;
     public bool attackable = false;
     public bool hitable = false;
 
@@ -68,6 +69,7 @@ public class Herring : Animal
     public override void Damaged()
     {
         Health--;
+        animator.SetTrigger("Damage");
         if (Health <= 0)
         {
             aiManager.RemoveAnimal(gameObject);
@@ -80,6 +82,11 @@ public class Herring : Animal
     public override float GetHP()
     {
         return Health;
+    }
+
+    public override float GetMaxHp()
+    {
+        return MaxHealth;
     }
 
     public override bool GetAttackAble()

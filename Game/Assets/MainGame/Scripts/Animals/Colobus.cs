@@ -13,6 +13,8 @@ public class Colobus :Animal
     [SerializeField] GameObject[] AttackMotion;
 
     [SerializeField] float Health = 3;
+    private float MaxHealth = 3;
+
     public bool attackable = false;
     public bool hitable = false;
     private void Awake()
@@ -90,6 +92,7 @@ public class Colobus :Animal
     public override void Damaged()
     {
         Health--;
+        animator.SetTrigger("Damage");
         if (Health <= 0)
         {
             aiManager.RemoveAnimal(gameObject);
@@ -103,6 +106,11 @@ public class Colobus :Animal
     public override float GetHP()
     {
         return Health;
+    }
+
+    public override float GetMaxHp()
+    {
+        return MaxHealth;
     }
 
     public override bool GetAttackAble()

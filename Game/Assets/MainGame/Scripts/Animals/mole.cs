@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class mole : Animal
 {
-    private Vector3[] movePoint = new Vector3[65];
+    private Vector3[] movePoint = new Vector3[12];
+    private Vector3[] moveDirection = new Vector3[16];
     private Animator animator;
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject[] AttackMotion;
     [SerializeField] float duration = 3.5f;
-    [SerializeField] float Health = 3;
+    [SerializeField] float Health = 2;
+    private float MaxHealth = 2;
     public bool attackable = false;
     public bool hitable = false;
 
@@ -17,51 +20,40 @@ public class mole : Animal
 
     private void Awake()
     {
-       
-        int index = 0;
-        for(int i = 0; i < 8; i++)
-        {
-            for(int j = 0; j < 8; j++)
-            {
-                movePoint[index++] = new Vector3(i * 2, 0, j * 2);
-            }
-        }
-
-
         animator = GetComponent<Animator>();
         aiManager = FindObjectOfType<AIManager>();
+
+        Vector3 target = Hunter.HunterPosition;
+
+       
     }
 
     public override void Move()
     {
-        AIManager.TileMap[(int)(transform.position.x / 2), (int)(transform.position.z / 2)] = 0;
-        Vector3 target = Hunter.HunterPosition;
-
-
-        float distance = 100;
-        int minDirection = 0;
-
-
-
-        // 이동할 위치 중 target과 가장 인접한 위치 찾기
-        for (int i = 0; i < movePoint.Length; i++)
+        int index = 0;
+      // 우상(2,0,2)
+      for(int i = 1; i <= 3; i++)
         {
-            float temp;
-            temp = Mathf.Abs((movePoint[i].x - target.x) + (movePoint[i].z - target.z));
-
-            if (movePoint[i].x >= -0.01f && movePoint[i].x <= 14 && movePoint[i].z >= -0.01f && movePoint[i].z <= 14)
-            {
-                if (AIManager.TileMap[(int)(movePoint[i].x / 2), (int)(movePoint[i].z / 2)] != 1)
-                {
-                    if (temp < distance)
-                    {
-                        distance = temp;
-                        minDirection = i;
-                    }
-                }
-            }
+            movePoint[index++] = new Vector3(transform.position.x + 2 * i, 0.5f, transform.position.z + 2 * i);
         }
-        AIManager.TileMap[(int)(movePoint[minDirection].x / 2), (int)(movePoint[minDirection].z) / 2] = 1;
+        //우하(2,0,-2)
+        for(int i = 1; i <= 3; i++)
+        {
+            movePoint[index++]=new Vector3(transform.position.x + 2 * i, 0.5f, transform.position.z - 2 * i);
+        }
+        //좌상(-2,0,2)
+        for (int i = 1; i <= 3; i++)
+        {
+            movePoint[index++] = new Vector3(transform.position.x - 2 * i, 0.5f, transform.position.z + 2 * i);
+        }
+        //좌하(-2,0,-2)
+        for (int i = 1; i <= 3; i++)
+        {
+            movePoint[index++] = new Vector3(transform.position.x - 2 * i, 0.5f, transform.position.z - 2 * i);
+        }
+
+
+        base.Move(transform.position, transform.rotation, movePoint);
     }
     
 
@@ -106,6 +98,11 @@ public class mole : Animal
     public override float GetHP()
     {
         return Health;
+    }
+
+    public override float GetMaxHp()
+    {
+        return MaxHealth;
     }
 
     public override bool GetAttackAble()

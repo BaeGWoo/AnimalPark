@@ -15,7 +15,7 @@ C:/Users/Administrator/Desktop/AnimalPark/Game
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-51452
+53121
 Successfully changed project path to: C:/Users/Administrator/Desktop/AnimalPark/Game
 C:/Users/Administrator/Desktop/AnimalPark/Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/Administrator/Desktop/AnimalPark/Game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [20364] Host "[IP] 192.168.0.62 [Port] 0 [Flags] 2 [Guid] 1953244287 [EditorId] 1953244287 [Version] 1048832 [Id] WindowsEditor(7,I-06) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [6148] Host "[IP] 192.168.0.62 [Port] 0 [Flags] 2 [Guid] 354017632 [EditorId] 354017632 [Version] 1048832 [Id] WindowsEditor(7,I-06) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [20364] Host "[IP] 192.168.0.62 [Port] 0 [Flags] 2 [Guid] 1953244287 [EditorId] 1953244287 [Version] 1048832 [Id] WindowsEditor(7,I-06) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [6148] Host "[IP] 192.168.0.62 [Port] 0 [Flags] 2 [Guid] 354017632 [EditorId] 354017632 [Version] 1048832 [Id] WindowsEditor(7,I-06) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 16.10 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 8.23 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.30f1 (70558241b701)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/Resources/UnitySubsystems
@@ -70,46 +70,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56900
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56972
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.011715 seconds.
-- Loaded All Assemblies, in  0.763 seconds
+Registered in 0.005535 seconds.
+- Loaded All Assemblies, in  0.342 seconds
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.505 seconds
-Domain Reload Profiling: 1267ms
-	BeginReloadAssembly (208ms)
+- Finished resetting the current domain, in  0.271 seconds
+Domain Reload Profiling: 613ms
+	BeginReloadAssembly (108ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (53ms)
-	RebuildNativeTypeToScriptingClass (24ms)
-	initialDomainReloadingComplete (108ms)
-	LoadAllAssembliesAndSetupDomain (368ms)
-		LoadAssemblies (211ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (139ms)
+		LoadAssemblies (108ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (360ms)
-			TypeCache.Refresh (357ms)
-				TypeCache.ScanAssembly (328ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (506ms)
+		AnalyzeDomain (137ms)
+			TypeCache.Refresh (135ms)
+				TypeCache.ScanAssembly (122ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (271ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (376ms)
+		SetupLoadedEditorAssemblies (215ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (23ms)
-			SetLoadedEditorAssemblies (9ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (239ms)
-			ProcessInitializeOnLoadMethodAttributes (101ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (140ms)
+			ProcessInitializeOnLoadMethodAttributes (59ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -117,8 +117,8 @@ Domain Reload Profiling: 1267ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.111 seconds
-Refreshing native plugins compatible for Editor in 4.54 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.732 seconds
+Refreshing native plugins compatible for Editor in 3.22 ms, found 3 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
@@ -126,47 +126,47 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.874 seconds
-Domain Reload Profiling: 1984ms
-	BeginReloadAssembly (203ms)
+- Finished resetting the current domain, in  0.669 seconds
+Domain Reload Profiling: 1400ms
+	BeginReloadAssembly (150ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (26ms)
-	RebuildCommonClasses (41ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (62ms)
-	LoadAllAssembliesAndSetupDomain (789ms)
-		LoadAssemblies (528ms)
+		CreateAndSetChildDomain (20ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (500ms)
+		LoadAssemblies (330ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (388ms)
-			TypeCache.Refresh (342ms)
-				TypeCache.ScanAssembly (264ms)
-			ScanForSourceGeneratedMonoScriptInfo (31ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (875ms)
+		AnalyzeDomain (265ms)
+			TypeCache.Refresh (229ms)
+				TypeCache.ScanAssembly (211ms)
+			ScanForSourceGeneratedMonoScriptInfo (24ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (669ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (629ms)
+		SetupLoadedEditorAssemblies (496ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (88ms)
-			ProcessInitializeOnLoadAttributes (442ms)
-			ProcessInitializeOnLoadMethodAttributes (83ms)
-			AfterProcessingInitializeOnLoad (4ms)
+			BeforeProcessingInitializeOnLoad (64ms)
+			ProcessInitializeOnLoadAttributes (356ms)
+			ProcessInitializeOnLoadMethodAttributes (64ms)
+			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 4.48 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (11ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 4.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5651 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 76 unused Assets / (2.3 MB). Loaded Objects now: 6112.
-Memory consumption went from 224.7 MB to 222.4 MB.
-Total: 5.579100 ms (FindLiveObjects: 0.525600 ms CreateObjectMapping: 0.574800 ms MarkObjects: 3.471500 ms  DeleteObjects: 1.006100 ms)
+Unloading 5652 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 72 unused Assets / (1.5 MB). Loaded Objects now: 6117.
+Memory consumption went from 224.7 MB to 223.1 MB.
+Total: 5.154800 ms (FindLiveObjects: 0.673500 ms CreateObjectMapping: 0.642800 ms MarkObjects: 2.843400 ms  DeleteObjects: 0.994000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -183,68 +183,60 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 9858.999093 seconds.
-  path: Assets/MainGame/Animations/Vampire A Lusth@Standing 1H Magic Attack 01.fbx
-  artifactKey: Guid(ae27e0014d05fff439f751e62c747ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Animations/Vampire A Lusth@Standing 1H Magic Attack 01.fbx using Guid(ae27e0014d05fff439f751e62c747ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3282ebda36ee9313f5c51fcf02aa843d') in 0.031734 seconds
+  Time since last request: 2572.352552 seconds.
+  path: Assets/MainGame/Scene/City.unity
+  artifactKey: Guid(2fc0e132ca4b8ec47a2a68bcfd2f6ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Scene/City.unity using Guid(2fc0e132ca4b8ec47a2a68bcfd2f6ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53974b763b7f21de4d5441d4ca23ee46') in 0.002592 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 203
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/MainGame/Animations/Vampire A Lusth@Standing Melee Attack 360 Low.fbx
-  artifactKey: Guid(1cfe71cfb3c49024aa1f6edb46a9b4f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Animations/Vampire A Lusth@Standing Melee Attack 360 Low.fbx using Guid(1cfe71cfb3c49024aa1f6edb46a9b4f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9338721d53dde3cc000b1d7b0c47b18') in 0.005457 seconds
+  Time since last request: 104.382793 seconds.
+  path: Assets/MainGame/Prefabs/Animals/Colobus.prefab
+  artifactKey: Guid(31efbb3f0716bc644aa7745b87f6e375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Animals/Colobus.prefab using Guid(31efbb3f0716bc644aa7745b87f6e375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92aded992576ea02bc227f0f2d506a37') in 0.164430 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 203
+Number of asset objects unloaded after import = 155
 ========================================================================
 Received Import Request.
-  Time since last request: 40.280002 seconds.
-  path: Assets/Lyrebird-Studio/VFX/Magical Flames/Prefab/Fire/prefV_vfx_fire_darkBlue.prefab
-  artifactKey: Guid(ec053892e6762a244a776d5d80b714bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Lyrebird-Studio/VFX/Magical Flames/Prefab/Fire/prefV_vfx_fire_darkBlue.prefab using Guid(ec053892e6762a244a776d5d80b714bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5591009e6eb7938cdb39be1198015a2') in 0.110792 seconds
+  Time since last request: 0.000027 seconds.
+  path: Assets/MainGame/Prefabs/Animals/Sparrow.prefab
+  artifactKey: Guid(e0e96106427dbee45ad2310a4373d90e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Animals/Sparrow.prefab using Guid(e0e96106427dbee45ad2310a4373d90e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd19c89ea9a71c6017c1780329f1c83b') in 0.081729 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
+Number of asset objects unloaded after import = 159
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Lyrebird-Studio/VFX/Magical Flames/Prefab/Fire/prefV_vfx_fire_green.prefab
-  artifactKey: Guid(52834ed99f4ca4a49b035e8ca32ae1ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Lyrebird-Studio/VFX/Magical Flames/Prefab/Fire/prefV_vfx_fire_green.prefab using Guid(52834ed99f4ca4a49b035e8ca32ae1ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38c9940768a65b977571bd26ed076be9') in 0.011689 seconds
+  Time since last request: 0.000031 seconds.
+  path: Assets/MainGame/Prefabs/Animals/sheep.prefab
+  artifactKey: Guid(8710f52cc5bb93546930f088f3da211d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Animals/sheep.prefab using Guid(8710f52cc5bb93546930f088f3da211d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5ab30150e63ca9d320cc15091e42007') in 0.093508 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 18
+Number of asset objects unloaded after import = 199
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Lyrebird-Studio/VFX/Magical Flames/Prefab/Fire/prefV_vfx_fire_red.prefab
-  artifactKey: Guid(25107bdaa75d15340ad90ddccef42869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Lyrebird-Studio/VFX/Magical Flames/Prefab/Fire/prefV_vfx_fire_red.prefab using Guid(25107bdaa75d15340ad90ddccef42869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3070515308d70a6366459bf02a17469c') in 0.012136 seconds
+  Time since last request: 0.000016 seconds.
+  path: Assets/MainGame/Prefabs/Animals/duck.prefab
+  artifactKey: Guid(bf4827a258ac8b64fa846ee712173b7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Animals/duck.prefab using Guid(bf4827a258ac8b64fa846ee712173b7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15904e94e226e6a270d8627239a834cc') in 0.123866 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 18
-========================================================================
-Received Import Request.
-  Time since last request: 26.314405 seconds.
-  path: Assets/Lyrebird-Studio/VFX/Magical Flames/Prefab/Electricity/prefV_vfx_fire_electric_green.prefab
-  artifactKey: Guid(d33831baa04914346b0ecdd500ab9237) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Lyrebird-Studio/VFX/Magical Flames/Prefab/Electricity/prefV_vfx_fire_electric_green.prefab using Guid(d33831baa04914346b0ecdd500ab9237) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea7b431d574b879a243c4c08ea02a57d') in 0.016205 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 18
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Lyrebird-Studio/VFX/Magical Flames/Prefab/Electricity/prefV_vfx_fire_electric_pink.prefab
-  artifactKey: Guid(5759cf606a7c7d5488458a02c4c245d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Lyrebird-Studio/VFX/Magical Flames/Prefab/Electricity/prefV_vfx_fire_electric_pink.prefab using Guid(5759cf606a7c7d5488458a02c4c245d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5a80077be8c9078e5579b0eebf80eeb') in 0.011138 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 18
+Number of asset objects unloaded after import = 174
 ========================================================================
 Received Import Request.
   Time since last request: 0.000021 seconds.
-  path: Assets/Lyrebird-Studio/VFX/Magical Flames/Prefab/Electricity/prefV_vfx_fire_electric_red.prefab
-  artifactKey: Guid(fbc217cc543c9d04885d32be074d72e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Lyrebird-Studio/VFX/Magical Flames/Prefab/Electricity/prefV_vfx_fire_electric_red.prefab using Guid(fbc217cc543c9d04885d32be074d72e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59a74e0bb16503dfae7e3b7cdd6a47ca') in 0.011796 seconds
+  path: Assets/MainGame/Prefabs/Animals/Squid.prefab
+  artifactKey: Guid(bfd26331260fa464b9064b6f0433966e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Animals/Squid.prefab using Guid(bfd26331260fa464b9064b6f0433966e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb5a6bb23a24c6d6e4a6e1227b2dea97') in 0.179831 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 18
+Number of asset objects unloaded after import = 224
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/MainGame/Prefabs/Animals/Taipan.prefab
+  artifactKey: Guid(92f9abda80909af44816fcf72c062d1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Animals/Taipan.prefab using Guid(92f9abda80909af44816fcf72c062d1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6eab34e1333145e8d683ab2a2e712c4') in 0.100593 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 154
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다.
 AssetImportWorker is now disconnected from the server

@@ -22,7 +22,6 @@ public class AnimalManager : MonoBehaviour
 
     private void SceneOnLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("Animal");
         FindAnyObjectByType<AIManager>().GetComponent<AIManager>().getAnimalList(curAnimals);
     }
 }

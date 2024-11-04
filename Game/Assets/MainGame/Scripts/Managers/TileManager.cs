@@ -56,15 +56,12 @@ public class TileManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    private void OnSceneLoaded(Scene scene,LoadSceneMode mode)
-    {
-       
-        sceneNumber = SceneNumber[LevelManager.SceneName];
-        if (sceneNumber < 6)
-        {
-            CreateTileMap();
-        }
 
+    // DontDestroyObject들이 캔버스와 메인카메라를 독점하면서 다른 씬의 메인카메라 및 캔버스를 배치하지 않기 때문에
+    // 해당 씬에 EventSystem이 없을 경우
+    // EventSystem을 새로 생성해준다.
+    private void OnSceneLoaded(Scene scene,LoadSceneMode mode)
+    {     
         EventSystem eventSystem = FindObjectOfType<EventSystem>();
 
         if (FindObjectOfType<EventSystem>() == null)
@@ -76,6 +73,8 @@ public class TileManager : MonoBehaviour
     }
 
 
+
+    // 각 씬에 맞는 블록타일을 찾아서 맵을 구성합니다.
     public void CreateTileMap()
     {
         sceneNumber = SceneNumber[LevelManager.SceneName];

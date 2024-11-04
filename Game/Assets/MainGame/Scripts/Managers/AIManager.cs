@@ -11,15 +11,13 @@ using UnityEngine.Windows;
 public class AIManager : MonoBehaviour
 {
     [SerializeField] GameObject[] Animals;
-    //private List<Animal> animals = new List<Animal>();
     public static int[,] TileMap = new int[8, 8];
     [SerializeField] Hunter hunter;
     [SerializeField] GameObject animalImagePrefab;
     [SerializeField] Canvas animalCanvas;
     [SerializeField] GameObject clearPanel;
     [SerializeField] int MaxAnimalHP = 3;
-    int count = 5;
-
+   
     private static AIManager instance;
     public static Dictionary<string, GameObject[]> animalArray;
 
@@ -38,7 +36,11 @@ public class AIManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
+
+
     public void StartTurn(){StartCoroutine(ActiveAiManager());}
+
+
 
     private void Update()
     {
@@ -60,7 +62,7 @@ public class AIManager : MonoBehaviour
             }
         }
         yield return null;
-
+        UpdateAnimalList();
         StartCoroutine(TurnManager());
 
 
@@ -69,11 +71,12 @@ public class AIManager : MonoBehaviour
     
     private IEnumerator TurnManager()
     {
-        while (Hunter.Health>=0) // 게임이 계속 진행되는 동안 반복
+        while (Hunter.Health>=0) 
         {
             // 동물의 이동
             AnimalMove();
             yield return new WaitForSeconds(1.0f); // 필요에 따라 시간 조정
+
             AnimalAttack();
             yield return new WaitForSeconds(1.0f);
             
@@ -96,8 +99,8 @@ public class AIManager : MonoBehaviour
             // Hunter의 이동이 끝나기를 대기
             while (Hunter.Attackable)
             {
-                //AnimalActiveCollider(Hunter.chooseDirection);
                 yield return null;
+                //AnimalActiveCollider(Hunter.chooseDirection);
             }
 
             if (Animals.Length <= 0||Hunter.Health<=0)
@@ -122,11 +125,6 @@ public class AIManager : MonoBehaviour
     #region 동물 동작 제어
     public void AnimalMove()
     {
-        Vector3[] movePoints = null;
-        Vector3[] moveDirections = null;
-        Animator animator = null;
-
-
         for (int i = 0; i < Animals.Length; i++)
         {
             Animals[i].GetComponent<Animal>().Move();
@@ -188,13 +186,7 @@ public class AIManager : MonoBehaviour
                 Destroy(child.gameObject);  
             }
         }
-
        
-
-
-        // 동물 이미지 프리팹에서 기본 위치값 받아오기
-        //RectTransform prefabRectTransform = animalImagePrefab.GetComponent<RectTransform>();
-        //Vector3 initialPosition = prefabRectTransform.localPosition;
         float offset = -145f; 
         Vector3 thumbnailPosition = new Vector3(0, offset, 0);
 
@@ -207,12 +199,10 @@ public class AIManager : MonoBehaviour
             animalThumbnail.transform.Find("Thumbnail").GetComponent<Image>().sprite = Resources.Load<Sprite>(animalName);
 
             // 각 인덱스별 위치설정
-            //RectTransform rectTransform = animalFace.GetComponent<RectTransform>();
-            //rectTransform.localPosition += thumbnailPosition * i;
             animalThumbnail.GetComponent<RectTransform>().localPosition += thumbnailPosition * i;
 
             Slider hpSlider = animalThumbnail.GetComponentInChildren<Slider>();
-            hpSlider.value = Animals[i].GetComponent<Animal>().GetHP()/ MaxAnimalHP;
+            hpSlider.value = Animals[i].GetComponent<Animal>().GetHP()/ Animals[i].GetComponent<Animal>().GetMaxHp();
         }
 
         
@@ -240,7 +230,6 @@ public class AIManager : MonoBehaviour
             if (child.CompareTag("Animal")&&index<Animals.Length)
             {
                 Slider hpSlider = child.gameObject.GetComponentInChildren<Slider>();
-                Debug.Log(Animals[index].name);
                 hpSlider.value = Animals[index++].GetComponent<Animal>().GetHP()/ MaxAnimalHP;
             }
         }

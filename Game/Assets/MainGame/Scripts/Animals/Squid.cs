@@ -12,6 +12,7 @@ public class Squid : Animal
     [SerializeField] GameObject[] AttackMotion;
     [SerializeField] float duration = 2.0f;
     [SerializeField] float Health = 3;
+    private float MaxHealth = 3;
     private Animator animator;
     public bool attackable = false;
     public bool hitable = false;
@@ -63,6 +64,7 @@ public class Squid : Animal
     public override void Damaged()
     {
         Health--;
+        animator.SetTrigger("Damage");
         if (Health <= 0)
         {
             aiManager.RemoveAnimal(gameObject);
@@ -77,6 +79,10 @@ public class Squid : Animal
         return Health;
     }
 
+    public override float GetMaxHp()
+    {
+        return MaxHealth;
+    }
     public override bool GetAttackAble()
     {
         return attackable;

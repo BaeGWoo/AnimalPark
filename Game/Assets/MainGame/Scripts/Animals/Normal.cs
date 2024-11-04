@@ -10,7 +10,8 @@ public class Normal : Animal
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject[] AttackMotion;
     [SerializeField] float duration = 3.5f;
-    [SerializeField] float Health = 3;
+    [SerializeField] float Health = 2;
+    private float MaxHealth=2;
     public bool attackable = false;
     public bool hitable = false;
 
@@ -83,7 +84,12 @@ public class Normal : Animal
         return Health;
     }
 
-    public override bool GetAttackAble()
+    public override float GetMaxHp()
+    {
+        return MaxHealth;
+    }
+
+public override bool GetAttackAble()
     {
         return attackable;
     }

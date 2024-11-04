@@ -6,13 +6,13 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Pudu : Animal
 {
-    private Vector3[] movePoint = new Vector3[3];
-    private Vector3[] moveDirection = new Vector3[2];
+    private Vector3[] movePoint = new Vector3[2];
     private Animator animator;
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject[] AttackMotion;
     [SerializeField] float duration = 2.0f;
     [SerializeField] float Health = 3;
+    private float MaxHealth = 3;
     public bool attackable = false;
     public bool hitable = false;
     private void Awake()
@@ -20,19 +20,14 @@ public class Pudu : Animal
         animator = GetComponent<Animator>();
 
         Vector3 target = Hunter.HunterPosition;
-
-        moveDirection[0] = new Vector3(transform.position.x, 0, target.z);
-        moveDirection[1] = new Vector3(target.x, 0, transform.position.z);
         aiManager = FindObjectOfType<AIManager>();
 
     }
 
     public override void Move()
     {
-        movePoint[0] = transform.position;
-
-        movePoint[1] = new Vector3(Hunter.HunterPosition.x, 0, transform.position.z);
-        movePoint[2] = new Vector3(transform.position.x, 0, Hunter.HunterPosition.z);
+        movePoint[0] = new Vector3(Hunter.HunterPosition.x, 0, transform.position.z);
+        movePoint[1] = new Vector3(transform.position.x, 0, Hunter.HunterPosition.z);
         base.Move(transform.position, transform.rotation, movePoint);
     }
 
@@ -62,6 +57,7 @@ public class Pudu : Animal
     public override void Damaged()
     {
         Health--;
+        animator.SetTrigger("Damage");
         if (Health <= 0)
         {
             aiManager.RemoveAnimal(gameObject);
@@ -74,6 +70,11 @@ public class Pudu : Animal
     public override float GetHP()
     {
         return Health;
+    }
+
+    public override float GetMaxHp()
+    {
+        return MaxHealth;
     }
 
     public override bool GetAttackAble()
