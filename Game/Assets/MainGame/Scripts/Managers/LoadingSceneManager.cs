@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 
 
+
 public class LoadingSceneManager : MonoBehaviour
 {
     [SerializeField] Sprite[] loadingImages;
@@ -16,8 +17,14 @@ public class LoadingSceneManager : MonoBehaviour
 
     [SerializeField] GameObject AIManager;
     [SerializeField] GameObject TileManager;
+    //[SerializeField] GameObject LevelManager;
+
+    [SerializeField] Texture2D[] mouseImage;
+
     private AIManager aiManager;
     private TileManager tileManager;
+    //private LevelManager levelManager;
+
     private static LoadingSceneManager instance;
     private void Awake()
     {
@@ -32,12 +39,13 @@ public class LoadingSceneManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
-
+        Cursor.SetCursor(mouseImage[0], Vector2.zero, CursorMode.Auto);
         aiManager = AIManager.GetComponent<AIManager>();
         tileManager = TileManager.GetComponent<TileManager>();
+        //levelManager=LevelManager.GetComponent<LevelManager>();
     }
 
-
+   
 
     // 각 씬이 불완전하게 보여지는 것을 방지하기 위해 페이크로딩을 이용
     // 캔버스를 활성화 후 코루틴 함수 호출
@@ -45,6 +53,16 @@ public class LoadingSceneManager : MonoBehaviour
     {
         loadingCanvas.SetActive(true);
         StartCoroutine(LoadNextScene(sceneName));
+        
+        if (sceneName== "Lobby")
+        {
+            Cursor.SetCursor(mouseImage[0], Vector2.zero, CursorMode.Auto);
+        }
+
+        else
+        {
+            Cursor.SetCursor(mouseImage[1], Vector2.zero, CursorMode.Auto);
+        }
     }
 
 

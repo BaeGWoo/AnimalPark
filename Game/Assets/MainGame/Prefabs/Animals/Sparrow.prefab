@@ -253,8 +253,8 @@ GameObject:
   - component: {fileID: 9012323665090727661}
   - component: {fileID: 3155837066532313661}
   - component: {fileID: 2013441755884746798}
-  - component: {fileID: 1009955469983472745}
   - component: {fileID: 3156677805248473672}
+  - component: {fileID: 8190199336405514505}
   m_Layer: 0
   m_Name: Sparrow
   m_TagString: Animal
@@ -335,8 +335,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!136 &1009955469983472745
-CapsuleCollider:
+--- !u!114 &3156677805248473672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035241110089986665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3172fa9a0ce22874ab2cb26df1977d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 2
+  jumpDuration: 1
+  molePoint: 0.5
+  AttackMotion:
+  - {fileID: 0}
+  AttackBox: {fileID: 3380154401823672996}
+  AttackTargetBox: {fileID: 8993558008579522731}
+  duration: 2
+  Health: 3
+  attackable: 0
+  hitable: 0
+--- !u!65 &8190199336405514505
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -353,33 +376,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.26
-  m_Height: 0.66957575
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.33830807, z: 0}
---- !u!114 &3156677805248473672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2035241110089986665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3172fa9a0ce22874ab2cb26df1977d7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpHeight: 2
-  jumpDuration: 1
-  AttackMotion:
-  - {fileID: 0}
-  AttackBox: {fileID: 3380154401823672996}
-  AttackTargetBox: {fileID: 8993558008579522731}
-  duration: 2
-  Health: 3
-  attackable: 0
-  hitable: 0
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!1 &2076963283488858125
 GameObject:
   m_ObjectHideFlags: 0

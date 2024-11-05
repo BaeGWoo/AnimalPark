@@ -71,6 +71,8 @@ public class AIManager : MonoBehaviour
     
     private IEnumerator TurnManager()
     {
+       
+       
         while (Hunter.Health>=0) 
         {
             // 동물의 이동

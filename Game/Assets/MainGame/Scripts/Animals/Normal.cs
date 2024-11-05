@@ -66,7 +66,7 @@ public class Normal : Animal
     public override void Damaged()
     {
         Health--;
-
+        animator.SetTrigger("Damage");
 
 
         if (Health <= 0)

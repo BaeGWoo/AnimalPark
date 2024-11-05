@@ -47,7 +47,8 @@ public class Hunter : MonoBehaviour
     public static GameObject moveAbleBlock;
     public static Vector3 attackAbleDirection;
 
-    
+  
+
     private static Hunter instance;
     //private TileManager tileManager;
     //private LevelManager levelManager;
@@ -63,8 +64,8 @@ public class Hunter : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        HunterPosition = new Vector3(0, 0, 0);
+        
+        HunterPosition = new Vector3(8, 0, 0);
         Huntercollider = GetComponent<BoxCollider>();
         HunterRotation = GetComponent<Transform>();
         animator = GetComponent<Animator>();
@@ -110,7 +111,7 @@ public class Hunter : MonoBehaviour
         else if (other.CompareTag("banana"))
         {
             StartCoroutine(BananaMotion());
-            Health--;
+            //Health--;
             HPSlider.value = Health / MaxHealth;
         }
 
@@ -286,8 +287,9 @@ public class Hunter : MonoBehaviour
         gameObject.SetActive(true);
         animator.SetTrigger("Reset");
         Health = MaxHealth;
+        HPSlider.value = Health / MaxHealth;
         StartCoroutine(LoadScene(sceneName));
-        transform.position = Vector3.zero;
+        transform.position = new Vector3(8,0,0);
         HunterPosition=transform.position;
     }
     IEnumerator LoadScene(string name)
@@ -310,6 +312,10 @@ public class Hunter : MonoBehaviour
 
     public void ExitScene()
     {
+        Moveable = false;
+        Running = false;
+        Attackable = false;
+
         MenuPanel.SetActive(false);
         Moveable = false;
         
@@ -333,7 +339,7 @@ public class Hunter : MonoBehaviour
     {
         levelManager.LevelUp();
         ExitScene();
-        transform.position= Vector3.zero;
+        transform.position= new Vector3(8,0,0);
         Health = MaxHealth;
         HunterPosition = transform.position;
         levelManager.LinkMaps();
