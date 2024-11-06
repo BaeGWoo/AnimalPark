@@ -341,6 +341,7 @@ public class Hunter : MonoBehaviour
         ExitScene();
         transform.position= new Vector3(8,0,0);
         Health = MaxHealth;
+        HPSlider.value = Health / MaxHealth;
         HunterPosition = transform.position;
         levelManager.LinkMaps();
         //버튼 이벤트를 헌터에 주고 씬 이동전에 LevelUp호출

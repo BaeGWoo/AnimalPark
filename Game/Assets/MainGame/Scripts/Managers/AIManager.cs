@@ -64,8 +64,6 @@ public class AIManager : MonoBehaviour
         yield return null;
         UpdateAnimalList();
         StartCoroutine(TurnManager());
-
-
     }
 
     
@@ -76,6 +74,15 @@ public class AIManager : MonoBehaviour
         while (Hunter.Health>=0) 
         {
             // 동물의 이동
+
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    TileMap[i, j] = 0;
+                }
+            }
+
             AnimalMove();
             yield return new WaitForSeconds(1.0f); // 필요에 따라 시간 조정
 
@@ -84,7 +91,7 @@ public class AIManager : MonoBehaviour
             
             if (CheckAniamlAttack()){yield return new WaitForSeconds(3.0f);}
 
-            else{yield return new WaitForSeconds(1.0f);}
+            else{ yield return null; }
 
             AnimalUnAttackBox();
           
