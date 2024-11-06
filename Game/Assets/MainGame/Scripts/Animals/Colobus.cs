@@ -11,10 +11,12 @@ public class Colobus :Animal
     [SerializeField] float duration = 2.0f;
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject[] AttackMotion;
+    [SerializeField] GameObject Banana;
+    
 
     [SerializeField] float Health = 3;
     private float MaxHealth = 3;
-
+    private Vector3 bananaPosition;
     public bool attackable = false;
     public bool hitable = false;
     private void Awake()
@@ -28,7 +30,7 @@ public class Colobus :Animal
         moveDirection[5] = new Vector3(4, 0, 2);
         moveDirection[6] = new Vector3(4, 0, -2);
         moveDirection[7] = new Vector3(2, 0, -4);
-
+        bananaPosition=Banana.transform.position;
 
         animator = GetComponent<Animator>();
         aiManager = FindObjectOfType<AIManager>();
@@ -67,25 +69,27 @@ public class Colobus :Animal
 
     public override void ColobusAttack()
     {
+        Banana.transform.position = gameObject.transform.position;
+        Banana.SetActive(true);
         StartCoroutine(MoveTowardsTarget());
     }
 
     private IEnumerator MoveTowardsTarget()
     {
-        Vector3 banana = AttackMotion[0].transform.position;      
+        //Vector3 banana = Banana.transform.position;      
         Vector3 Target = Hunter.HunterPosition;
 
-        while (Vector3.Distance(AttackMotion[0].transform.position, Target) > 0.1f)
+        while (Vector3.Distance(Banana.transform.position, Target) > 0.1f)
         {
-            Vector3 cur = AttackMotion[0].transform.position;
-           
-            AttackMotion[0].transform.position = Vector3.MoveTowards(cur, Target, 5.0f * Time.deltaTime);
+            Vector3 cur = Banana.transform.position;
+
+            Banana.transform.position = Vector3.MoveTowards(cur, Target, 5.0f * Time.deltaTime);
           
             // 매 프레임마다 한 번씩 이동
             yield return null;
         }
-        AttackMotion[0].SetActive(false);
-        AttackMotion[0].transform.position = banana;
+        //Banana.SetActive(false);
+        //Banana.transform.position = banana;
         
     }
 
@@ -115,6 +119,13 @@ public class Colobus :Animal
 
     public override bool GetAttackAble()
     {
+        //StartCoroutine(AttackableTime());
         return attackable;
+    }
+
+    IEnumerator AttackableTime()
+    {
+        yield return new WaitForSeconds(2.0f);
+        attackable = false;
     }
 }

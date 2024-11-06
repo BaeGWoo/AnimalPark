@@ -108,10 +108,17 @@ public class Hunter : MonoBehaviour
             Health--;
             HPSlider.value = Health / MaxHealth;
         }
+
+        else if (other.CompareTag("colobusAttack"))
+        {
+            other.transform.root.GetComponent<Animal>().Attack();
+        }
+
         else if (other.CompareTag("banana"))
         {
             StartCoroutine(BananaMotion());
-            //Health--;
+            Health--;
+            other.gameObject.SetActive(false);
             HPSlider.value = Health / MaxHealth;
         }
 
@@ -328,6 +335,9 @@ public class Hunter : MonoBehaviour
         levelManager.LinkMaps();
 
         Health = MaxHealth;
+        HPSlider.value = Health / MaxHealth;
+        transform.position = new Vector3(8, 0, 0);
+        HunterPosition = transform.position;
         animator.SetTrigger("Reset");
         gameObject.SetActive(false);
         SceneManager.LoadScene("Lobby");

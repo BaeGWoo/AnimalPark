@@ -91,7 +91,7 @@ public class AIManager : MonoBehaviour
             
             if (CheckAniamlAttack()){yield return new WaitForSeconds(3.0f);}
 
-            else{ yield return null; }
+            else{ yield return new WaitForSeconds(1.5f); }
 
             AnimalUnAttackBox();
           

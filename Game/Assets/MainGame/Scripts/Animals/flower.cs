@@ -33,6 +33,7 @@ public class flower : Animal
     {
         attackable = true;
         AttackBox.SetActive(true);
+        Attack();
     }
 
     public override void UnActiveAttackBox()

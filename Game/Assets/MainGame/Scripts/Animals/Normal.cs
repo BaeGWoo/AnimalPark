@@ -91,6 +91,13 @@ public class Normal : Animal
 
 public override bool GetAttackAble()
     {
+        //StartCoroutine(AttackableTime());
         return attackable;
+    }
+
+    IEnumerator AttackableTime()
+    {
+        yield return new WaitForSeconds(3.0f);
+        attackable = false;
     }
 }

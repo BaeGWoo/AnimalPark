@@ -100,16 +100,6 @@ public class Animal : MonoBehaviour
 
 
         Vector3 eulerAngles = curRotation.eulerAngles;
-
-        // 각도 값을 0~360 범위로 변환합니다.
-        //float yRotation = Mathf.Round(eulerAngles.y / 90) * 90;
-
-        // 회전값을 설정합니다.
-        //curRotation = Quaternion.Euler(eulerAngles.x, yRotation, eulerAngles.z);
-        //if (curPosition == Hunter.HunterPosition)
-        //{
-        //    Attack();
-        //}
     }
 
 
