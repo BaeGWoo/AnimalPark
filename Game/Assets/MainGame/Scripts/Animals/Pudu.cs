@@ -49,7 +49,6 @@ public class Pudu : Animal
 
     public override void Attack()
     {
-        //  AttackBox.SetActive(true);
         animator.SetTrigger("Attack");
         Attack(AttackMotion, duration);
     }

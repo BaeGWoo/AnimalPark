@@ -109,7 +109,6 @@ public class AIManager : MonoBehaviour
             while (Hunter.Attackable)
             {
                 yield return null;
-                //AnimalActiveCollider(Hunter.chooseDirection);
             }
 
             if (Animals.Length <= 0||Hunter.Health<=0)
@@ -136,11 +135,23 @@ public class AIManager : MonoBehaviour
     {
         for (int i = 0; i < Animals.Length; i++)
         {
-            Animals[i].GetComponent<Animal>().Move();
-            Animals[i].GetComponent<BoxCollider>().enabled = true;
+            StartCoroutine(AnimalMoveTurn(i));
         }
     }
 
+    IEnumerator AnimalMoveTurn(int index)
+    {
+        Animals[index].GetComponent<Animal>().Move();
+        Animals[index].GetComponent<BoxCollider>().enabled = true;
+
+        while (Animals[index].GetComponent<Animal>().moveable)
+        {
+            yield return null;
+        }
+
+        yield return null;
+
+    }
 
     public void AnimalUnAttackBox()
     {

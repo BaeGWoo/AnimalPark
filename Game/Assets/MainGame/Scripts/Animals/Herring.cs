@@ -61,7 +61,6 @@ public class Herring : Animal
 
     public override void Attack()
     {
-      //  AttackBox.SetActive(true);
         animator.SetTrigger("Attack");
         Attack(AttackMotion, duration);
     }

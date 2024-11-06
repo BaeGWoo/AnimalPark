@@ -17,13 +17,11 @@ public class LoadingSceneManager : MonoBehaviour
 
     [SerializeField] GameObject AIManager;
     [SerializeField] GameObject TileManager;
-    //[SerializeField] GameObject LevelManager;
 
     [SerializeField] Texture2D[] mouseImage;
 
     private AIManager aiManager;
     private TileManager tileManager;
-    //private LevelManager levelManager;
 
     private static LoadingSceneManager instance;
     private void Awake()
@@ -42,7 +40,6 @@ public class LoadingSceneManager : MonoBehaviour
         Cursor.SetCursor(mouseImage[0], Vector2.zero, CursorMode.Auto);
         aiManager = AIManager.GetComponent<AIManager>();
         tileManager = TileManager.GetComponent<TileManager>();
-        //levelManager=LevelManager.GetComponent<LevelManager>();
     }
 
    

@@ -18,7 +18,6 @@ public class Hunter : MonoBehaviour
     public static bool chooseDirection = false;
     public static float Health;
     private float MaxHealth;
-    //private float speed = 1.0f;
 
     [SerializeField] GameObject AIManager;
     [SerializeField] GameObject LevelManager;
@@ -50,8 +49,6 @@ public class Hunter : MonoBehaviour
   
 
     private static Hunter instance;
-    //private TileManager tileManager;
-    //private LevelManager levelManager;
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -217,7 +214,6 @@ public class Hunter : MonoBehaviour
         chooseDirection = true;
         AttackBox[WeaponNumber].SetActive(false);
         AttackWeapon[WeaponNumber].SetActive(false);
-        //attackAbleDirection = new Vector3(0, 0, 0);
     }
     #endregion
 
@@ -310,10 +306,7 @@ public class Hunter : MonoBehaviour
 
 
         TileManager.SetActive(true);
-        //tileManager.CreateTileMap();
-        //aiManager.StartTurn();
         loadManager.LoadScene(name);
-        //SceneManager.LoadScene(name);
         
     }
 

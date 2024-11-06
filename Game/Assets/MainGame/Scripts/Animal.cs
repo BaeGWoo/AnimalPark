@@ -7,6 +7,7 @@ public class Animal : MonoBehaviour
     public float jumpHeight = 2f; // 점프 높이
     public float jumpDuration = 1f; // 점프 애니메이션의 지속 시간
     public float molePoint = 0.5f;
+    public bool moveable = false;
     protected AIManager aiManager;
 
     public virtual void Move() { }
@@ -35,6 +36,7 @@ public class Animal : MonoBehaviour
 
     public void Move(Vector3 curPosition,Quaternion curRotation, Vector3[] movePoint)
     {
+        moveable = true;
         AIManager.TileMap[(int)(curPosition.x / 2), (int)(curPosition.z / 2)] = 0;
         Vector3 target = Hunter.HunterPosition;
         
@@ -54,7 +56,7 @@ public class Animal : MonoBehaviour
             {
                 if (AIManager.TileMap[(int)(movePoint[i].x / 2), (int)(movePoint[i].z / 2)] != 1)
                 {
-                    if (temp < distance)
+                    if (temp <= distance)
                     {
                         distance = temp;
                         minDirection = i;
@@ -90,8 +92,6 @@ public class Animal : MonoBehaviour
         transform.LookAt(Hunter.HunterPosition);
 
 
-        // y축 회전값을 45의 배수로 반올림
-        //float targetYRotation = Mathf.Round(transform.rotation.eulerAngles.y / 90f) * 90f;
         float targetYRotation = transform.rotation.eulerAngles.y;
 
         // 새로운 회전을 적용 (x, z는 0으로 고정, y만 45의 배수로 설정)

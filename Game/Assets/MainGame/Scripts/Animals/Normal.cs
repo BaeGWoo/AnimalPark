@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Normal : Animal
 {
-    private Vector3[] movePoint = new Vector3[4];
-    private Vector3[] moveDirection = new Vector3[4];
+    private Vector3[] movePoint = new Vector3[8];
+    private Vector3[] moveDirection = new Vector3[8];
     private Animator animator;
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject[] AttackMotion;
@@ -23,6 +23,11 @@ public class Normal : Animal
         moveDirection[1] = new Vector3(-2, 0, 0);
         moveDirection[2] = new Vector3(0, 0, -2);
         moveDirection[3] = new Vector3(0, 0, 2);
+
+        moveDirection[4] = new Vector3(2, 0, 2);
+        moveDirection[5] = new Vector3(-2, 0, 2);
+        moveDirection[6] = new Vector3(2, 0, -2);
+        moveDirection[7] = new Vector3(-2, 0, 2);
 
 
         animator = GetComponent<Animator>();
@@ -91,13 +96,8 @@ public class Normal : Animal
 
 public override bool GetAttackAble()
     {
-        //StartCoroutine(AttackableTime());
         return attackable;
     }
 
-    IEnumerator AttackableTime()
-    {
-        yield return new WaitForSeconds(3.0f);
-        attackable = false;
-    }
+   
 }

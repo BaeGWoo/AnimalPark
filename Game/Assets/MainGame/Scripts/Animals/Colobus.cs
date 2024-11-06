@@ -76,7 +76,6 @@ public class Colobus :Animal
 
     private IEnumerator MoveTowardsTarget()
     {
-        //Vector3 banana = Banana.transform.position;      
         Vector3 Target = Hunter.HunterPosition;
 
         while (Vector3.Distance(Banana.transform.position, Target) > 0.1f)
@@ -88,8 +87,6 @@ public class Colobus :Animal
             // 매 프레임마다 한 번씩 이동
             yield return null;
         }
-        //Banana.SetActive(false);
-        //Banana.transform.position = banana;
         
     }
 
@@ -119,13 +116,8 @@ public class Colobus :Animal
 
     public override bool GetAttackAble()
     {
-        //StartCoroutine(AttackableTime());
         return attackable;
     }
 
-    IEnumerator AttackableTime()
-    {
-        yield return new WaitForSeconds(2.0f);
-        attackable = false;
-    }
+   
 }

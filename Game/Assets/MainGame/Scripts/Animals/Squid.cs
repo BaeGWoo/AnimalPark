@@ -32,10 +32,9 @@ public class Squid : Animal
 
     public override void Move()
     {
-        //movePoint[0] = transform.position;
         for (int i = 0; i < movePoint.Length; i++)
         {
-            movePoint[i] = new Vector3(moveDirection[i].x + transform.position.x, 0, moveDirection[i].z + transform.position.z);
+            movePoint[i] = moveDirection[i] + transform.position;
         }
 
         base.Move(transform.position,transform.rotation,movePoint);
