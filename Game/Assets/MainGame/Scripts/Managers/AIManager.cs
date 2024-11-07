@@ -82,6 +82,7 @@ public class AIManager : MonoBehaviour
                     TileMap[i, j] = 0;
                 }
             }
+            yield return null;
 
             AnimalMove();
             yield return new WaitForSeconds(1.0f); // 필요에 따라 시간 조정
@@ -116,6 +117,8 @@ public class AIManager : MonoBehaviour
                 break;
             }
 
+          
+
         }
     }
 
@@ -133,7 +136,8 @@ public class AIManager : MonoBehaviour
     #region 동물 동작 제어
     public void AnimalMove()
     {
-        for (int i = 0; i < Animals.Length; i++)
+        int AnimalSize=GetAnimalsCount();
+        for (int i = 0; i < AnimalSize; i++)
         {
             StartCoroutine(AnimalMoveTurn(i));
         }
@@ -141,15 +145,21 @@ public class AIManager : MonoBehaviour
 
     IEnumerator AnimalMoveTurn(int index)
     {
-        Animals[index].GetComponent<Animal>().Move();
-        Animals[index].GetComponent<BoxCollider>().enabled = true;
-
-        while (Animals[index].GetComponent<Animal>().moveable)
-        {
-            yield return null;
-        }
-
         yield return null;
+
+        if(index< Animals.Length)
+        {
+            Animals[index].GetComponent<Animal>().Move();
+            Animals[index].GetComponent<BoxCollider>().enabled = true;
+            while (index<Animals.Length&&Animals[index].GetComponent<Animal>().moveable)
+            {
+               
+                yield return null;
+            }
+        }
+        
+
+        
 
     }
 
@@ -272,6 +282,7 @@ public class AIManager : MonoBehaviour
 
     public int GetAnimalsCount()
     {
+        Debug.Log(Animals.Length);
         return Animals.Length;
     }
 

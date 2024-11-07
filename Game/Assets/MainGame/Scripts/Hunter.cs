@@ -349,4 +349,9 @@ public class Hunter : MonoBehaviour
         levelManager.LinkMaps();
         //버튼 이벤트를 헌터에 주고 씬 이동전에 LevelUp호출
     }
+
+    public void PanelOff()
+    {
+        MenuPanel.SetActive(false);
+    }
 }

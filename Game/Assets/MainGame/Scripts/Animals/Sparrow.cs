@@ -11,8 +11,8 @@ public class Sparrow : Animal
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject AttackTargetBox;
     [SerializeField] float duration = 3.0f;
-    [SerializeField] float Health = 3;
-    private float MaxHealth = 3;
+    [SerializeField] float Health = 2;
+    private float MaxHealth = 2;
     public bool attackable = false;
     public bool hitable = false;
 

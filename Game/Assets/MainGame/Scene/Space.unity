@@ -227,7 +227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4841592419183290926, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4841592419183290926, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -297,7 +297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4841592419183290926, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4841592419183290926, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -488,76 +488,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4123133865119594, guid: b64e48696e8645e479409ed6a1fa88bb, type: 3}
   m_PrefabInstance: {fileID: 789101419}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &805275300
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6359952946562934, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 793680666484222110, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
-      propertyPath: m_Name
-      value: Gecko
-      objectReference: {fileID: 0}
-    - target: {fileID: 4841592419183290926, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4841592419183290926, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4841592419183290926, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4841592419183290926, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4841592419183290926, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4841592419183290926, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4841592419183290926, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4841592419183290926, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4841592419183290926, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 4841592419183290926, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8996717500829936661, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
---- !u!1 &805275301 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 793680666484222110, guid: 1c95f6969880af047a3b3cc4b57fc51a, type: 3}
-  m_PrefabInstance: {fileID: 805275300}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &996655937
 PrefabInstance:
@@ -977,7 +907,6 @@ MonoBehaviour:
   curAnimals:
   - {fileID: 52890718}
   - {fileID: 316438118}
-  - {fileID: 805275301}
   - {fileID: 1112630356}
   - {fileID: 1481053866}
   - {fileID: 520377158}
@@ -1470,7 +1399,6 @@ SceneRoots:
   - {fileID: 1278021813}
   - {fileID: 52890717}
   - {fileID: 316438117}
-  - {fileID: 805275300}
   - {fileID: 1112630355}
   - {fileID: 1481053865}
   - {fileID: 520377157}

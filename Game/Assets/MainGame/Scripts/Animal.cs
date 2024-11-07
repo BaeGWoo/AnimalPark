@@ -66,7 +66,6 @@ public class Animal : MonoBehaviour
         }
         AIManager.TileMap[(int)(movePoint[minDirection].x / 2), (int)(movePoint[minDirection].z) / 2] = 1;
         StartCoroutine(JumpToPosition(curPosition, curRotation, new Vector3(movePoint[minDirection].x, 0, movePoint[minDirection].z)));
-        Debug.Log(minDirection+ "(" + movePoint[minDirection].x + "," + 0 + "," + movePoint[minDirection].z);
     }
 
     IEnumerator JumpToPosition(Vector3 curPosition,Quaternion curRotation, Vector3 targetPosition)
