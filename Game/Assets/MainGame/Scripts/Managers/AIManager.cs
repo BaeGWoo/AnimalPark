@@ -17,7 +17,11 @@ public class AIManager : MonoBehaviour
     [SerializeField] Canvas animalCanvas;
     [SerializeField] GameObject clearPanel;
     [SerializeField] int MaxAnimalHP = 3;
-   
+
+
+    public static bool animalHintPanelActive = false;
+
+
     private static AIManager instance;
     public static Dictionary<string, GameObject[]> animalArray;
 
@@ -37,6 +41,16 @@ public class AIManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void ActiveHintPanel()
+    {
+        animalHintPanelActive = true;
+    }
+
+    public void HintPanelOff(GameObject panel)
+    {
+        animalHintPanelActive = false;
+        panel.SetActive(false);
+    }
 
     public void StartTurn(){StartCoroutine(ActiveAiManager());}
 
@@ -54,6 +68,11 @@ public class AIManager : MonoBehaviour
 
     IEnumerator ActiveAiManager()
     {
+        while (animalHintPanelActive)
+        {
+            yield return null;
+        }
+
         for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 8; j++)

@@ -104,6 +104,7 @@ public class LoadingSceneManager : MonoBehaviour
 
                 // 씬 전환 허용
                 asyncLoad.allowSceneActivation = true;
+                aiManager.ActiveHintPanel();
                 yield return new WaitForSeconds(0.5f);
                 tileManager.CreateTileMap();
                 aiManager.StartTurn();

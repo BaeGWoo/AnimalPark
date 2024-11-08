@@ -19,6 +19,12 @@ public class Hunter : MonoBehaviour
     public static float Health;
     private float MaxHealth;
 
+
+    public bool herringDebuff = false;
+    public bool squidDebuff = false;
+
+
+
     [SerializeField] GameObject AIManager;
     [SerializeField] GameObject LevelManager;
     [SerializeField] GameObject TileManager;

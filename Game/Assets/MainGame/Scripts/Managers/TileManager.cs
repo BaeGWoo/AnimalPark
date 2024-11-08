@@ -16,7 +16,7 @@ public class TileManager : MonoBehaviour
 
     [SerializeField] GameObject BlackTile;
     [SerializeField] GameObject WhiteTile;
-
+    [SerializeField] GameObject[] HintPanel;
     private static TileManager instance;
 
     private void Awake()
@@ -95,6 +95,8 @@ public class TileManager : MonoBehaviour
             }
         }
 
+
+        HintPanel[sceneNumber].SetActive(true);
 
     }
 }

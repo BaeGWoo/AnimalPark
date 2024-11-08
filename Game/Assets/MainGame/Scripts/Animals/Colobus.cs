@@ -5,8 +5,8 @@ using UnityEngine.EventSystems;
 
 public class Colobus :Animal
 {
-    private Vector3[] movePoint= new Vector3[9];
-    private Vector3[] moveDirection = new Vector3[8];
+    private Vector3[] movePoint= new Vector3[4];
+    private Vector3[] moveDirection = new Vector3[4];
     private Animator animator;
     [SerializeField] float duration = 2.0f;
     [SerializeField] GameObject AttackBox;
@@ -21,15 +21,12 @@ public class Colobus :Animal
     public bool hitable = false;
     private void Awake()
     {
-        moveDirection[0] = new Vector3(-2, 0, 4);
-        moveDirection[1] = new Vector3(-4, 0, 2);
-        moveDirection[2] = new Vector3(-4, 0, -2);
-        moveDirection[3] = new Vector3(-2, 0, -4);
+        moveDirection[0] = new Vector3(-2, 0, 0);
+        moveDirection[1] = new Vector3(2, 0, 0);
+        moveDirection[2] = new Vector3(0, 0, -2);
+        moveDirection[3] = new Vector3(0, 0, 2);
 
-        moveDirection[4] = new Vector3(2, 0, 4);
-        moveDirection[5] = new Vector3(4, 0, 2);
-        moveDirection[6] = new Vector3(4, 0, -2);
-        moveDirection[7] = new Vector3(2, 0, -4);
+      
         bananaPosition=Banana.transform.position;
 
         animator = GetComponent<Animator>();
