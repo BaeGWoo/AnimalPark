@@ -99,4 +99,9 @@ public class TileManager : MonoBehaviour
         HintPanel[sceneNumber].SetActive(true);
 
     }
+
+    public void HintPanelOff()
+    {
+        HintPanel[sceneNumber].SetActive(false);
+    }
 }

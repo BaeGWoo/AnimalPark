@@ -12,6 +12,7 @@ public class Herring : Animal
     [SerializeField] float Health = 3;
     [SerializeField] float duration = 2.0f;
     private float MaxHealth = 3;
+    public float AttackDamage = 0;
     public bool attackable = false;
     public bool hitable = false;
 
@@ -29,6 +30,14 @@ public class Herring : Animal
         aiManager = FindObjectOfType<AIManager>();
 
     }
+
+    public override void SetAnimalStatus(float Attack, float Health)
+    {
+        MaxHealth = Health;
+        AttackDamage = Attack;
+    }
+
+    public override float AnimalDamage() { return AttackDamage; }
 
     public override void Move()
     {

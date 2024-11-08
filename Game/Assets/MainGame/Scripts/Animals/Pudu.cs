@@ -13,6 +13,7 @@ public class Pudu : Animal
     [SerializeField] float duration = 2.0f;
     [SerializeField] float Health = 3;
     private float MaxHealth = 3;
+    public float AttackDamage = 0;
     public bool attackable = false;
     public bool hitable = false;
     private void Awake()
@@ -23,6 +24,16 @@ public class Pudu : Animal
         aiManager = FindObjectOfType<AIManager>();
 
     }
+
+    public override void SetAnimalStatus(float Attack, float Health)
+    {
+        MaxHealth = Health;
+        AttackDamage = Attack;
+        this.Health = MaxHealth;
+    }
+
+    public override float AnimalDamage() { return AttackDamage; }
+
 
     public override void Move()
     {

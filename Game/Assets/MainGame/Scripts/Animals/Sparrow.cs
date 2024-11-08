@@ -13,6 +13,7 @@ public class Sparrow : Animal
     [SerializeField] float duration = 3.0f;
     [SerializeField] float Health = 2;
     private float MaxHealth = 2;
+    public float AttackDamage = 0;
     public bool attackable = false;
     public bool hitable = false;
 
@@ -27,6 +28,15 @@ public class Sparrow : Animal
         animator = GetComponent<Animator>();
         aiManager = FindObjectOfType<AIManager>();
     }
+
+    public override void SetAnimalStatus(float Attack, float Health)
+    {
+        MaxHealth = Health;
+        AttackDamage = Attack;
+    }
+
+    public override float AnimalDamage() { return AttackDamage; }
+
 
     public override void Move()
     {

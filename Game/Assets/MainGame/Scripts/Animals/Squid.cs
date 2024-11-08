@@ -13,6 +13,7 @@ public class Squid : Animal
     [SerializeField] float duration = 2.0f;
     [SerializeField] float Health = 3;
     private float MaxHealth = 3;
+    public float AttackDamage = 0;
     private Animator animator;
     public bool attackable = false;
     public bool hitable = false;
@@ -29,6 +30,15 @@ public class Squid : Animal
         animator = GetComponent<Animator>();
         aiManager = FindObjectOfType<AIManager>();
     }
+
+
+    public override void SetAnimalStatus(float Attack, float Health)
+    {
+        MaxHealth = Health;
+        AttackDamage = Attack;
+    }
+
+    public override float AnimalDamage() { return AttackDamage; }
 
     public override void Move()
     {

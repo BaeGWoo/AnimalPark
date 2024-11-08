@@ -13,6 +13,7 @@ public class mole : Animal
     [SerializeField] float duration = 3.5f;
     [SerializeField] float Health = 2;
     private float MaxHealth = 2;
+    public float AttackDamage = 0;
     public bool attackable = false;
     public bool hitable = false;
 
@@ -48,6 +49,16 @@ public class mole : Animal
         }
 
     }
+
+
+    public override void SetAnimalStatus(float Attack, float Health)
+    {
+        MaxHealth = Health;
+        AttackDamage = Attack;
+    }
+
+    public override float AnimalDamage() { return AttackDamage; }
+
 
     public override void Move()
     {

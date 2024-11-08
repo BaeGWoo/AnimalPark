@@ -120,7 +120,7 @@ public class Hunter : MonoBehaviour
         else if (other.CompareTag("banana"))
         {
             StartCoroutine(BananaMotion());
-            Health--;
+            Health -= aiManager.animalStatus["Colobus"][0];
             other.gameObject.SetActive(false);
             HPSlider.value = Health / MaxHealth;
         }
@@ -327,7 +327,8 @@ public class Hunter : MonoBehaviour
         
         aiManager.ResetAnimalList();
         AIManager.SetActive(false);
-       
+
+        tileManager.HintPanelOff();
         TileManager.SetActive(false);
         
         LevelManager.SetActive(true);

@@ -12,7 +12,6 @@ public class Animal : MonoBehaviour
 
     public virtual void Move() { }
     public virtual void JumpAnimaition() { }
-
         
     public virtual void Attack() {  }
 
@@ -24,6 +23,11 @@ public class Animal : MonoBehaviour
     public virtual bool GetAttackAble() { return true; }
 
     public  virtual void SparrowAttack() { }
+
+    public  virtual float AnimalDamage() { return 0; }
+
+    public virtual void SetAnimalStatus(float attack, float health) { }
+
 
     public virtual void ColobusAttack() { }
     public virtual void ActiveAttackBox() { }

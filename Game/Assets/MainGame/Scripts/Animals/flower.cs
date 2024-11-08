@@ -12,6 +12,7 @@ public class flower : Animal
     [SerializeField] float Health = 2;
     private float MaxHealth = 2;
     public bool attackable = false;
+    public float AttackDamage = 0;
     public bool hitable = false;
     private Vector3 startSize;
 
@@ -23,8 +24,14 @@ public class flower : Animal
         startSize = transform.localScale;
     }
 
-   
-    
+    public override void SetAnimalStatus(float Attack, float Health)
+    {
+        MaxHealth = Health;
+        AttackDamage = Attack;
+    }
+
+    public override float AnimalDamage() { return AttackDamage; }
+
 
 
 

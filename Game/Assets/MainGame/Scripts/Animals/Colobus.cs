@@ -19,6 +19,9 @@ public class Colobus :Animal
     private Vector3 bananaPosition;
     public bool attackable = false;
     public bool hitable = false;
+    public float AttackDamage = 0;
+    
+
     private void Awake()
     {
         moveDirection[0] = new Vector3(-2, 0, 0);
@@ -32,6 +35,14 @@ public class Colobus :Animal
         animator = GetComponent<Animator>();
         aiManager = FindObjectOfType<AIManager>();
     }
+
+    public override void SetAnimalStatus(float Attack, float Health)
+    {
+        MaxHealth= Health;
+        AttackDamage= Attack;
+    }
+
+    public override float  AnimalDamage() { return AttackDamage; }
 
     public override void Move()
     {

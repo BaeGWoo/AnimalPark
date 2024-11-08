@@ -7,9 +7,28 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 using UnityEngine.SceneManagement;
 using System.Text.RegularExpressions;
 using UnityEngine.Windows;
+using static UnityEngine.EventSystems.EventTrigger;
+
+[System.Serializable]
+public class AnimalData
+{
+    public string name;   // 동물의 이름
+    public float Health;    // 체력
+    public float Attack;  // 공격력
+}
+
+[System.Serializable]
+public class AnimalDataList
+{
+    public List<AnimalData> animal;  // 여러 동물 데이터 리스트
+}
+
+
 
 public class AIManager : MonoBehaviour
 {
+    public AnimalData animalData;
+    public Dictionary<string, List<float>> animalStatus=new Dictionary<string, List<float>>();
     [SerializeField] GameObject[] Animals;
     public static int[,] TileMap = new int[8, 8];
     [SerializeField] Hunter hunter;
@@ -27,8 +46,8 @@ public class AIManager : MonoBehaviour
 
     private void Awake()
     {
-       
-        if(instance == null)
+
+        if (instance == null)
         {
             instance = this;
             animalArray = new Dictionary<string, GameObject[]>();
@@ -39,6 +58,23 @@ public class AIManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+
+        TextAsset StatusList = Resources.Load<TextAsset>("AnimalStatus");
+
+        if (animalStatus != null)
+        {
+            AnimalDataList dataList = JsonUtility.FromJson<AnimalDataList>(StatusList.text);
+
+            // 동물 데이터 리스트를 Dictionary에 저장
+            foreach (var animal in dataList.animal)
+            {
+                // 각 동물의 이름을 키로, 체력과 공격력을 리스트로 저장
+                List<float> status = new List<float> { animal.Attack, animal.Health };
+                animalStatus[animal.name] = status; // 이름을 키로 사용하여 상태 정보를 저장
+            }
+
+           
+        }
     }
 
     public void ActiveHintPanel()
@@ -321,6 +357,7 @@ public class AIManager : MonoBehaviour
         for(int i = 0; i <array.Length; i++)
         {
             Animals[i]=array[i];
+            Animals[i].GetComponent<Animal>().SetAnimalStatus(animalStatus[Animals[i].name][0], animalStatus[Animals[i].name][1]);
         }
         UpdateAnimalList();
     }
