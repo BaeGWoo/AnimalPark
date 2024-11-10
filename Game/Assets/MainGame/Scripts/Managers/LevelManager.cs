@@ -53,6 +53,14 @@ public class LevelManager : MonoBehaviour
         LinkMaps();
     }
 
+    private void Update()
+    {
+        if (Level[Maps.Length - 1])
+        {
+            Hunter.GetComponent<Hunter>().MoveEndingScene();
+        }
+    }
+
 
     // 버튼 클릭 시 버튼 이름에 해당하는 씬으로 이동
     // 씬으로 완전히 이동하기 전에 loadManager를 이용해서 페이크 로딩을 이용해

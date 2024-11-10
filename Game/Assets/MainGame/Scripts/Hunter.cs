@@ -361,4 +361,14 @@ public class Hunter : MonoBehaviour
     {
         MenuPanel.SetActive(false);
     }
+
+    public void MoveEndingScene()
+    {
+        Destroy(LevelManager);
+        Destroy(AIManager);
+        Destroy(TileManager);
+        Destroy(LoadManager);
+        SceneManager.LoadScene("End");
+        Destroy(gameObject);
+    }
 }

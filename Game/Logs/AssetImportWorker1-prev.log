@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.30f1 (70558241b701) revision 7361922'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19045) 64bit Education' Language: 'ko' Physical Memory: 16297 MB
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'ko' Physical Memory: 32433 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2022.3.30f1\Editor\Unity.exe
+D:\ë°°ê±´ìš°\Unity\2022.3.30f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker1
 -projectPath
-C:/Users/Administrator/Desktop/AnimalPark/Game
+C:/Users/USER/Desktop/AnimalPark/Game
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-57673
-Successfully changed project path to: C:/Users/Administrator/Desktop/AnimalPark/Game
-C:/Users/Administrator/Desktop/AnimalPark/Game
+52147
+Successfully changed project path to: C:/Users/USER/Desktop/AnimalPark/Game
+C:/Users/USER/Desktop/AnimalPark/Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,67 +49,65 @@ C:/Users/Administrator/Desktop/AnimalPark/Game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [4192] Host "[IP] 192.168.0.62 [Port] 0 [Flags] 2 [Guid] 3929363558 [EditorId] 3929363558 [Version] 1048832 [Id] WindowsEditor(7,I-06) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [15648] Host "[IP] 172.30.1.16 [Port] 0 [Flags] 2 [Guid] 974562108 [EditorId] 974562108 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-RP4F926) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [4192] Host "[IP] 192.168.0.62 [Port] 0 [Flags] 2 [Guid] 3929363558 [EditorId] 3929363558 [Version] 1048832 [Id] WindowsEditor(7,I-06) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [15648] Host "[IP] 172.30.1.16 [Port] 0 [Flags] 2 [Guid] 974562108 [EditorId] 974562108 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-RP4F926) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-[Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 7.78 ms, found 3 plugins.
+[Physics::Module] Initialized MultithreadedJobDispatcher with 19 workers.
+Refreshing native plugins compatible for Editor in 15.54 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.30f1 (70558241b701)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Administrator/Desktop/AnimalPark/Game/Assets
+[Subsystems] Discovering subsystems at path D:/ë°°ê±´ìš°/Unity/2022.3.30f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/USER/Desktop/AnimalPark/Game/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1660 (ID=0x2184)
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
     Vendor:   NVIDIA
-    VRAM:     5980 MB
-    Driver:   31.0.15.3623
+    VRAM:     5996 MB
+    Driver:   32.0.15.5613
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56924
+Mono path[0] = 'D:/ë°°ê±´ìš°/Unity/2022.3.30f1/Editor/Data/Managed'
+Mono path[1] = 'D:/ë°°ê±´ìš°/Unity/2022.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/ë°°ê±´ìš°/Unity/2022.3.30f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56532
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.30f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.006594 seconds.
-- Loaded All Assemblies, in  0.359 seconds
-Native extension for UWP target not found
+Register platform support module: D:/ë°°ê±´ìš°/Unity/2022.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002339 seconds.
+- Loaded All Assemblies, in  0.304 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.272 seconds
-Domain Reload Profiling: 631ms
-	BeginReloadAssembly (113ms)
+- Finished resetting the current domain, in  0.248 seconds
+Domain Reload Profiling: 552ms
+	BeginReloadAssembly (103ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (33ms)
+	RebuildCommonClasses (30ms)
 	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (52ms)
-	LoadAllAssembliesAndSetupDomain (151ms)
-		LoadAssemblies (113ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (118ms)
+		LoadAssemblies (103ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (148ms)
-			TypeCache.Refresh (147ms)
-				TypeCache.ScanAssembly (128ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
+		AnalyzeDomain (116ms)
+			TypeCache.Refresh (115ms)
+				TypeCache.ScanAssembly (104ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (273ms)
+	FinalizeReload (248ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (216ms)
+		SetupLoadedEditorAssemblies (197ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (144ms)
-			ProcessInitializeOnLoadMethodAttributes (57ms)
+			ProcessInitializeOnLoadAttributes (131ms)
+			ProcessInitializeOnLoadMethodAttributes (51ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -117,59 +115,456 @@ Domain Reload Profiling: 631ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.758 seconds
-Refreshing native plugins compatible for Editor in 2.75 ms, found 3 plugins.
-Native extension for UWP target not found
+- Loaded All Assemblies, in  0.702 seconds
+Refreshing native plugins compatible for Editor in 7.46 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.692 seconds
-Domain Reload Profiling: 1449ms
-	BeginReloadAssembly (145ms)
+- Finished resetting the current domain, in  0.651 seconds
+Domain Reload Profiling: 1349ms
+	BeginReloadAssembly (135ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (19ms)
-	RebuildCommonClasses (34ms)
-	RebuildNativeTypeToScriptingClass (10ms)
+		CreateAndSetChildDomain (16ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (9ms)
 	initialDomainReloadingComplete (35ms)
-	LoadAllAssembliesAndSetupDomain (533ms)
-		LoadAssemblies (377ms)
+	LoadAllAssembliesAndSetupDomain (488ms)
+		LoadAssemblies (346ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (246ms)
-			TypeCache.Refresh (212ms)
-				TypeCache.ScanAssembly (194ms)
-			ScanForSourceGeneratedMonoScriptInfo (23ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (693ms)
+		AnalyzeDomain (228ms)
+			TypeCache.Refresh (197ms)
+				TypeCache.ScanAssembly (183ms)
+			ScanForSourceGeneratedMonoScriptInfo (21ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (651ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (513ms)
+		SetupLoadedEditorAssemblies (493ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (78ms)
+			ProcessInitializeOnLoadAttributes (350ms)
+			ProcessInitializeOnLoadMethodAttributes (56ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 7.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5647 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 72 unused Assets / (1.5 MB). Loaded Objects now: 6112.
+Memory consumption went from 219.4 MB to 217.9 MB.
+Total: 3.829500 ms (FindLiveObjects: 0.308700 ms CreateObjectMapping: 0.199600 ms MarkObjects: 2.814700 ms  DeleteObjects: 0.505300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.841 seconds
+Refreshing native plugins compatible for Editor in 14.58 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.806 seconds
+Domain Reload Profiling: 2622ms
+	BeginReloadAssembly (230ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (53ms)
+	LoadAllAssembliesAndSetupDomain (484ms)
+		LoadAssemblies (558ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (62ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (35ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1807ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (438ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (78ms)
+			ProcessInitializeOnLoadAttributes (296ms)
+			ProcessInitializeOnLoadMethodAttributes (55ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 5.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5544 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 6116.
+Memory consumption went from 194.1 MB to 192.7 MB.
+Total: 3.211400 ms (FindLiveObjects: 0.300100 ms CreateObjectMapping: 0.164200 ms MarkObjects: 2.236100 ms  DeleteObjects: 0.510100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.943 seconds
+Refreshing native plugins compatible for Editor in 11.13 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.850 seconds
+Domain Reload Profiling: 3776ms
+	BeginReloadAssembly (214ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (42ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (50ms)
+	LoadAllAssembliesAndSetupDomain (606ms)
+		LoadAssemblies (670ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (59ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (32ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (2851ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (677ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (5ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (66ms)
-			ProcessInitializeOnLoadAttributes (372ms)
-			ProcessInitializeOnLoadMethodAttributes (63ms)
-			AfterProcessingInitializeOnLoad (3ms)
+			BeforeProcessingInitializeOnLoad (186ms)
+			ProcessInitializeOnLoadAttributes (409ms)
+			ProcessInitializeOnLoadMethodAttributes (72ms)
+			AfterProcessingInitializeOnLoad (2ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 2.71 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (17ms)
+Refreshing native plugins compatible for Editor in 7.34 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5647 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 72 unused Assets / (1.5 MB). Loaded Objects now: 6112.
-Memory consumption went from 223.7 MB to 222.2 MB.
-Total: 3.919800 ms (FindLiveObjects: 0.612900 ms CreateObjectMapping: 0.473700 ms MarkObjects: 2.383000 ms  DeleteObjects: 0.449500 ms)
+Unloading 5544 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 6119.
+Memory consumption went from 194.2 MB to 192.7 MB.
+Total: 3.647500 ms (FindLiveObjects: 0.292100 ms CreateObjectMapping: 0.171300 ms MarkObjects: 2.798900 ms  DeleteObjects: 0.384300 ms)
 
+Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.999 seconds
+Refreshing native plugins compatible for Editor in 6.84 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.977 seconds
+Domain Reload Profiling: 3968ms
+	BeginReloadAssembly (237ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (661ms)
+		LoadAssemblies (744ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (56ms)
+			TypeCache.Refresh (15ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (31ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (2978ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (741ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (9ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (149ms)
+			ProcessInitializeOnLoadAttributes (492ms)
+			ProcessInitializeOnLoadMethodAttributes (79ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (21ms)
+Script is not up to date after domain reload: guid(70be390c2f262f64ab45a95bdedb348b) path("Assets/MainGame/Scripts/EndingAnima.cs") state(2)
+Refreshing native plugins compatible for Editor in 11.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5543 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 6121.
+Memory consumption went from 194.1 MB to 192.6 MB.
+Total: 6.297600 ms (FindLiveObjects: 0.419500 ms CreateObjectMapping: 1.936300 ms MarkObjects: 3.477100 ms  DeleteObjects: 0.463500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.834 seconds
+Refreshing native plugins compatible for Editor in 47.54 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.997 seconds
+Domain Reload Profiling: 2822ms
+	BeginReloadAssembly (217ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (44ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (512ms)
+		LoadAssemblies (572ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (67ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (40ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1997ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (356ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (61ms)
+			ProcessInitializeOnLoadAttributes (241ms)
+			ProcessInitializeOnLoadMethodAttributes (46ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 5.17 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5544 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 6125.
+Memory consumption went from 194.2 MB to 192.7 MB.
+Total: 3.163500 ms (FindLiveObjects: 0.272000 ms CreateObjectMapping: 0.280700 ms MarkObjects: 2.278200 ms  DeleteObjects: 0.331800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.451 seconds
+Refreshing native plugins compatible for Editor in 9.15 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.175 seconds
+Domain Reload Profiling: 1623ms
+	BeginReloadAssembly (122ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (2ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (26ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (273ms)
+		LoadAssemblies (288ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (52ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (28ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1175ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (356ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (65ms)
+			ProcessInitializeOnLoadAttributes (242ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 5.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5544 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 6128.
+Memory consumption went from 194.2 MB to 192.7 MB.
+Total: 2.940300 ms (FindLiveObjects: 0.259200 ms CreateObjectMapping: 0.140600 ms MarkObjects: 2.226900 ms  DeleteObjects: 0.312800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.409 seconds
+Refreshing native plugins compatible for Editor in 6.15 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.352 seconds
+Domain Reload Profiling: 1756ms
+	BeginReloadAssembly (122ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (2ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (231ms)
+		LoadAssemblies (281ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (17ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1353ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (408ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (73ms)
+			ProcessInitializeOnLoadAttributes (276ms)
+			ProcessInitializeOnLoadMethodAttributes (51ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 6.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5544 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 6131.
+Memory consumption went from 194.2 MB to 192.7 MB.
+Total: 3.200100 ms (FindLiveObjects: 0.439400 ms CreateObjectMapping: 0.137100 ms MarkObjects: 2.238200 ms  DeleteObjects: 0.384600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
@@ -183,390 +578,47 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 2087.582555 seconds.
-  path: Assets/Resources/Gecko.png
-  artifactKey: Guid(653fe069d464c5247b1ec65abbffa02a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Gecko.png using Guid(653fe069d464c5247b1ec65abbffa02a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7ae92281d7b2d49e6dd88c909423a38') in 0.081752 seconds
+  Time since last request: 4568.506772 seconds.
+  path: Assets/MainGame/Prefabs/Islands/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/snowman.prefab
+  artifactKey: Guid(33e0229781589094db520ae4fecfde0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Islands/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/snowman.prefab using Guid(33e0229781589094db520ae4fecfde0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa4ae86bbc087c88bf3f1e9ed57b76b1') in 0.079182 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 2608.772891 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Spring biome/trees/tree(1).png
-  artifactKey: Guid(0e839f0458eee0048bfb70d395c8cbf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Spring biome/trees/tree(1).png using Guid(0e839f0458eee0048bfb70d395c8cbf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e733f5a483c445ed0cee8af52475bde') in 0.053191 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Winter biome/trees/tree_winter(1).png
-  artifactKey: Guid(b63ab69d690879a4c80794a7952b8f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Winter biome/trees/tree_winter(1).png using Guid(b63ab69d690879a4c80794a7952b8f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '600615fddc565c1655911bb2ee1c936b') in 0.015529 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.519729 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Spring biome/stones/stone_ground(2).png
-  artifactKey: Guid(ea98c696b5f31dd4abae777b98cac369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Spring biome/stones/stone_ground(2).png using Guid(ea98c696b5f31dd4abae777b98cac369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c7b2a093d1c9db32b9c535d22773c57') in 0.014009 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Desert biome/stones/stone_sand(1).png
-  artifactKey: Guid(af695afdb53f7844185f6cab953a64c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Desert biome/stones/stone_sand(1).png using Guid(af695afdb53f7844185f6cab953a64c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f552cce51125555b33d446eb1c8b40f') in 0.015275 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Desert biome/stones/stone_sand(3).png
-  artifactKey: Guid(4e3b3ce7bafca2c40a4960a455182fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Desert biome/stones/stone_sand(3).png using Guid(4e3b3ce7bafca2c40a4960a455182fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b94cd5566c083c8ad4ebf90fedafa05') in 0.028968 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Spring biome/stones/stone_ground(3).png
-  artifactKey: Guid(8e9b3acd3360e924087bfe0d4b2b14ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Spring biome/stones/stone_ground(3).png using Guid(8e9b3acd3360e924087bfe0d4b2b14ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a781490d925068f6605dcc206cd1a513') in 0.023510 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.048983 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Spring biome/stones/stone(4).png
-  artifactKey: Guid(9b6a9f7ca5a036a47afe1a5185b0137a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Spring biome/stones/stone(4).png using Guid(9b6a9f7ca5a036a47afe1a5185b0137a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '841ad73f6d370aaaad94d4c53a694231') in 0.029243 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 1.155187 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Winter biome/road_winter(10).png
-  artifactKey: Guid(90b05767c233208479f8c4ca186c0917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Winter biome/road_winter(10).png using Guid(90b05767c233208479f8c4ca186c0917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '992809ee82f8c56a8a26dcf88c55ac2d') in 0.014353 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.452139 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Winter biome/road_winter(2).png
-  artifactKey: Guid(09d7db8f7c2e52c48b0419ece80c4703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Winter biome/road_winter(2).png using Guid(09d7db8f7c2e52c48b0419ece80c4703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfcf766e80cdcfb052d6e255cee70915') in 0.014656 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Winter biome/road_winter(4).png
-  artifactKey: Guid(a0063b84c33397e4ca9e8d4d715366ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Winter biome/road_winter(4).png using Guid(a0063b84c33397e4ca9e8d4d715366ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89d261eb9a2a4ee702d7c40ce4634dac') in 0.014420 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Winter biome/road_winter(8).png
-  artifactKey: Guid(d56e52c42058ea44c8568ca6ecd9931a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Winter biome/road_winter(8).png using Guid(d56e52c42058ea44c8568ca6ecd9931a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92798c48592827eaff89edbdc1da92e2') in 0.015097 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Winter biome/road_winter(6).png
-  artifactKey: Guid(fa5f67f8b8d177e47a824af2cf3de863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Winter biome/road_winter(6).png using Guid(fa5f67f8b8d177e47a824af2cf3de863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df281e3ff9fb78b5c9f91832a6f13d76') in 0.013969 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.028966 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Spring biome/road_spring(5).png
-  artifactKey: Guid(48ba3c132d70e2e41b00cb1557d701e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Spring biome/road_spring(5).png using Guid(48ba3c132d70e2e41b00cb1557d701e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c66378b1a6896229e26626acdc11299') in 0.013395 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Spring biome/road_spring(8).png
-  artifactKey: Guid(535b45c1659b53c4d84c54088636a683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Spring biome/road_spring(8).png using Guid(535b45c1659b53c4d84c54088636a683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cc84878c61dca5f7ed802a7e607c690') in 0.013168 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Spring biome/road_spring(6).png
-  artifactKey: Guid(f31c72aa92f107642ac5c6192956cb8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Spring biome/road_spring(6).png using Guid(f31c72aa92f107642ac5c6192956cb8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1830bc7495225de2516aac1260db6588') in 0.015081 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Spring biome/road_spring(11).png
-  artifactKey: Guid(f864340429691c84cafff4c1f145c348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Spring biome/road_spring(11).png using Guid(f864340429691c84cafff4c1f145c348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebaae219ceb2be738ff39a2bf138d77e') in 0.014976 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.520520 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Desert biome/road_desert(8).png
-  artifactKey: Guid(742b91f2a81a80c48b0e0a356830feb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Desert biome/road_desert(8).png using Guid(742b91f2a81a80c48b0e0a356830feb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f49234acfc4e9faac84b5cdc3326e87') in 0.013320 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Desert biome/road_desert(10).png
-  artifactKey: Guid(9135521be01f01342bc6ea70bedd9826) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Desert biome/road_desert(10).png using Guid(9135521be01f01342bc6ea70bedd9826) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7c2cb6276255cae207360e3615b7816') in 0.013306 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Spring biome/road_spring(2).png
-  artifactKey: Guid(f4016d2acf0bd63469e07edfda434125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Spring biome/road_spring(2).png using Guid(f4016d2acf0bd63469e07edfda434125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00bd845d9c8a7cfd7735cd9d307a83a3') in 0.016124 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Spring biome/road_spring(1).png
-  artifactKey: Guid(6102f52ad94a3dc42bdbf392fd7b16e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Spring biome/road_spring(1).png using Guid(6102f52ad94a3dc42bdbf392fd7b16e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9838b91db42dba10cd30b50246372364') in 0.015117 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.008159 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Desert biome/road_desert(2).png
-  artifactKey: Guid(4d4b2fae58625334db37eb6c8ba40aef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Desert biome/road_desert(2).png using Guid(4d4b2fae58625334db37eb6c8ba40aef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7f8acbc52b0a5865b6102c78c786eb6') in 0.013938 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Desert biome/road_desert(4).png
-  artifactKey: Guid(3e47169f918d1974894ac6a6fbbce64b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Desert biome/road_desert(4).png using Guid(3e47169f918d1974894ac6a6fbbce64b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0d83c9b48fdab711f4c3bef8c7faf98') in 0.017898 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Desert biome/road_desert(6).png
-  artifactKey: Guid(3fdcb8f6fbe9c7a45ad2538e6702a575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Road tiles/Desert biome/road_desert(6).png using Guid(3fdcb8f6fbe9c7a45ad2538e6702a575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05687a5b544b4befca4ab5bcfc248e70') in 0.017688 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 1.767480 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Towers/Barrack/knight_level_3.png
-  artifactKey: Guid(73a1d7491fe2d2341b29c8e4f3ad1818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Towers/Barrack/knight_level_3.png using Guid(73a1d7491fe2d2341b29c8e4f3ad1818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76217e659da0e84eb122b79013eeb51c') in 0.015370 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 1.992903 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Spring biome/grass decoration/grass_decoration(5).png
-  artifactKey: Guid(f211161b443b9414e898e7879dcaa0e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Spring biome/grass decoration/grass_decoration(5).png using Guid(f211161b443b9414e898e7879dcaa0e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5c1e0c642c3468b4f0f010dc624b49b') in 0.013176 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Spring biome/grass decoration/grass_decoration(8).png
-  artifactKey: Guid(3146ba189cf72774dbacd04c54957ab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/Spring biome/grass decoration/grass_decoration(8).png using Guid(3146ba189cf72774dbacd04c54957ab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90146115693481d28cde9d88771b19ac') in 0.028314 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.599548 seconds.
-  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/crystal(3).png
-  artifactKey: Guid(d4ec7e84c7000ab41b12d57df92bc6e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/crystal(3).png using Guid(d4ec7e84c7000ab41b12d57df92bc6e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a449d766837c8db1218001a83a7353ac') in 0.013510 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 1557.124195 seconds.
-  path: Assets/MainGame/Prefabs/Interface/colobusMove.png
-  artifactKey: Guid(01c4bbfde2f96124896c563c271624ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/colobusMove.png using Guid(01c4bbfde2f96124896c563c271624ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9c6f7fb5f49347781182d91f5b740e4') in 0.028230 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/MainGame/Prefabs/Interface/taipanMove.png
-  artifactKey: Guid(961e2a88cbe0747459278d84dcf35531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/taipanMove.png using Guid(961e2a88cbe0747459278d84dcf35531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ed1938a100c6653a3ad95bc01526c36') in 0.021737 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/MainGame/Prefabs/Interface/puduMove.png
-  artifactKey: Guid(07bc307ee53e23c46a6155021685cd6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/puduMove.png using Guid(07bc307ee53e23c46a6155021685cd6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3266ef81e4a6a329f92b9ad67b456a4') in 0.012537 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/MainGame/Prefabs/Interface/herringMove.png
-  artifactKey: Guid(eefa9dc14e9e2fa449ec73de9c862780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/herringMove.png using Guid(eefa9dc14e9e2fa449ec73de9c862780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f62b1fbf7da644e67fd0f7f58b0ec31') in 0.013913 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/MainGame/Prefabs/Interface/sparrowMove.png
-  artifactKey: Guid(b1a9a70af117d7a4aa35b5b80b917d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/sparrowMove.png using Guid(b1a9a70af117d7a4aa35b5b80b917d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0778ffe3a1d272eb35f51845f21e688d') in 0.012817 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/MainGame/Prefabs/Interface/geckoAttack.png
-  artifactKey: Guid(890e1b424189dd944bac6ce13ccffc9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/geckoAttack.png using Guid(890e1b424189dd944bac6ce13ccffc9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7518219f54d323d66f7a2cabc86bd6dd') in 0.012567 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/MainGame/Prefabs/Interface/sheepAttack.png
-  artifactKey: Guid(b003ae0e9251ec64285d5af6aaac9bf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/sheepAttack.png using Guid(b003ae0e9251ec64285d5af6aaac9bf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '542ab668cb35c80301543e99d1fa5711') in 0.011520 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/MainGame/Prefabs/Interface/moleMove.png
-  artifactKey: Guid(b46940e94e860df43a7b2f8b85c04f0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/moleMove.png using Guid(b46940e94e860df43a7b2f8b85c04f0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2f3dc84d218bd4ad17256f04eec87c8') in 0.011558 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/MainGame/Prefabs/Interface/sheepMove 1.png
-  artifactKey: Guid(9f9c1de08b107314c9acb0ba8865185b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/sheepMove 1.png using Guid(9f9c1de08b107314c9acb0ba8865185b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '363a76a737976babe69228149826ae00') in 0.006531 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/MainGame/Prefabs/Interface/taipanAttack.png
-  artifactKey: Guid(5bc33982b07b7414e8c3c9734275168c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/taipanAttack.png using Guid(5bc33982b07b7414e8c3c9734275168c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58e0f77bf8df9f62c193896f18c315b4') in 0.013228 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/MainGame/Prefabs/Interface/penguinAttack.png
-  artifactKey: Guid(d7c5ded3ab1b95a4fab824333a7e8a67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/penguinAttack.png using Guid(d7c5ded3ab1b95a4fab824333a7e8a67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c62910ef686565196621b678b830491') in 0.015861 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/MainGame/Prefabs/Interface/penguinMove.png
-  artifactKey: Guid(25fd1df8dfa760545916eb36b1a8d09b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/penguinMove.png using Guid(25fd1df8dfa760545916eb36b1a8d09b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7daf4c387eab11dd5a0e584ea8b0b10d') in 0.013002 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 17.706090 seconds.
-  path: Assets/MainGame/Prefabs/Interface/colobusMove.png
-  artifactKey: Guid(01c4bbfde2f96124896c563c271624ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/colobusMove.png using Guid(01c4bbfde2f96124896c563c271624ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40038c0161bf9788aadfadd100c685ca') in 0.045978 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/MainGame/Prefabs/Interface/squidMove.png
-  artifactKey: Guid(ad4f277306d2084448e38a9e410849dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/squidMove.png using Guid(ad4f277306d2084448e38a9e410849dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd72f0a075e5f15c6dc35958da8c14fa3') in 0.019865 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/MainGame/Prefabs/Interface/flowerMove.png
-  artifactKey: Guid(8455bfdaf67d98242a13140969585042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/flowerMove.png using Guid(8455bfdaf67d98242a13140969585042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afc5f95e307a58047329500d3e8fb507') in 0.026655 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/MainGame/Prefabs/Interface/sparrowMove.png
-  artifactKey: Guid(b1a9a70af117d7a4aa35b5b80b917d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/sparrowMove.png using Guid(b1a9a70af117d7a4aa35b5b80b917d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17a5b8e7f2a9cca84c62b7d9e1d18dbf') in 0.021167 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 10
 ========================================================================
 Received Import Request.
   Time since last request: 0.000013 seconds.
-  path: Assets/MainGame/Prefabs/Interface/squidAttack.png
-  artifactKey: Guid(542a3f5a2c7aa4b4b8daa4e75c717086) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/squidAttack.png using Guid(542a3f5a2c7aa4b4b8daa4e75c717086) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef7ba5230708b527bc96a6cb1a3a25fa') in 0.040479 seconds
+  path: Assets/MainGame/Prefabs/Islands/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/winter well.prefab
+  artifactKey: Guid(9255ef51eba781941b9ee7753301ffa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Islands/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/winter well.prefab using Guid(9255ef51eba781941b9ee7753301ffa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2203c6bdc7946e7bd99132cc8ad1e7b6') in 0.006714 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 10
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/MainGame/Prefabs/Interface/puduAttack.png
-  artifactKey: Guid(d823d3fe450e5324598bf0e9e47f99b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/puduAttack.png using Guid(d823d3fe450e5324598bf0e9e47f99b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11d9308f4da4e06e598c964e6e2bc8a1') in 0.014396 seconds
+  Time since last request: 0.370114 seconds.
+  path: Assets/MainGame/Prefabs/Islands/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Sports environment/soccer goal.prefab
+  artifactKey: Guid(0778b0a253b1f2642bdc0fe098542888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Islands/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Sports environment/soccer goal.prefab using Guid(0778b0a253b1f2642bdc0fe098542888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eea5ae6c196e23235078e9c100d36e05') in 0.011366 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/MainGame/Prefabs/Islands/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Sports environment/soccer grandstand 2.prefab
+  artifactKey: Guid(aa5a9015e16c5d54787eef47d6fbfd26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Islands/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Sports environment/soccer grandstand 2.prefab using Guid(aa5a9015e16c5d54787eef47d6fbfd26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2149186f7b3f75dd34927f343c8887d2') in 0.008428 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
 ========================================================================
 Received Import Request.
   Time since last request: 0.000020 seconds.
-  path: Assets/MainGame/Prefabs/Interface/taipanAttack.png
-  artifactKey: Guid(5bc33982b07b7414e8c3c9734275168c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/taipanAttack.png using Guid(5bc33982b07b7414e8c3c9734275168c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c21db372e0e26d426f9b77ee7a1333d') in 0.014403 seconds
+  path: Assets/MainGame/Prefabs/Islands/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Sports environment/stadium lighting.prefab
+  artifactKey: Guid(7d63a77374fc398439c1a897b8a72f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Islands/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Sports environment/stadium lighting.prefab using Guid(7d63a77374fc398439c1a897b8a72f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '651e196067ed5d30ea218254553ef442') in 0.006746 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/MainGame/Prefabs/Interface/penguinMove.png
-  artifactKey: Guid(25fd1df8dfa760545916eb36b1a8d09b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Interface/penguinMove.png using Guid(25fd1df8dfa760545916eb36b1a8d09b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caffa3ab750085834b8cffd2ac16f908') in 0.015284 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 10
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: ½º·¹µå Á¾·á ¶Ç´Â ÀÀ¿ë ÇÁ·Î±×·¥ ¿äÃ» ¶§¹®¿¡ I/O ÀÛ¾÷ÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.
+TcpMessagingSession - receive error
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
 AssetImportWorker is now disconnected from the server
 Process exiting
 Exiting without the bug reporter. Application will terminate with return code 0
