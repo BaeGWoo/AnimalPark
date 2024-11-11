@@ -108,6 +108,7 @@ public class Hunter : MonoBehaviour
         if (other.CompareTag("Attack"))
         {
             other.transform.root.GetComponent<Animal>().Attack();
+            //AttackSound재생
             Health--;
             HPSlider.value = Health / MaxHealth;
         }
@@ -115,11 +116,13 @@ public class Hunter : MonoBehaviour
         else if (other.CompareTag("colobusAttack"))
         {
             other.transform.root.GetComponent<Animal>().Attack();
+            //AttackSound재생
         }
 
         else if (other.CompareTag("banana"))
         {
             StartCoroutine(BananaMotion());
+            // 바나나 터지는 Sound 재생
             Health -= aiManager.animalStatus["Colobus"][0];
             other.gameObject.SetActive(false);
             HPSlider.value = Health / MaxHealth;
@@ -128,6 +131,7 @@ public class Hunter : MonoBehaviour
         if (Health <= 0)
         {
             Die();
+            //HunterDeathSound
         }
 
     }
@@ -198,6 +202,7 @@ public class Hunter : MonoBehaviour
 
 
         animator.SetTrigger("Attack" + (WeaponNumber+1));
+        //WeaponNumber에 맞는 Sound 재생
         AttackWeapon[WeaponNumber].SetActive(true);
         StartCoroutine(HunterAttackMotion());
 
@@ -238,6 +243,7 @@ public class Hunter : MonoBehaviour
     IEnumerator Move(Vector3 target)
     {
         Running = true;
+        //RunningSound
         Vector3 startPosition = transform.position;
         Vector3 currentPosition = startPosition;
         Vector3 targetPosition = new Vector3(target.x, startPosition.y, currentPosition.z);
@@ -331,6 +337,8 @@ public class Hunter : MonoBehaviour
         tileManager.HintPanelOff();
         TileManager.SetActive(false);
         
+        SceneManager.LoadScene("Lobby");
+        
         LevelManager.SetActive(true);
         levelManager.LinkMaps();
 
@@ -340,7 +348,6 @@ public class Hunter : MonoBehaviour
         HunterPosition = transform.position;
         animator.SetTrigger("Reset");
         gameObject.SetActive(false);
-        SceneManager.LoadScene("Lobby");
         
     }
     #endregion
@@ -349,12 +356,14 @@ public class Hunter : MonoBehaviour
     {
         levelManager.LevelUp();
         ExitScene();
-        transform.position= new Vector3(8,0,0);
+        transform.position = new Vector3(8, 0, 0);
         Health = MaxHealth;
         HPSlider.value = Health / MaxHealth;
         HunterPosition = transform.position;
         levelManager.LinkMaps();
         //버튼 이벤트를 헌터에 주고 씬 이동전에 LevelUp호출
+
+
     }
 
     public void PanelOff()
@@ -364,11 +373,12 @@ public class Hunter : MonoBehaviour
 
     public void MoveEndingScene()
     {
+        SceneManager.LoadScene("End");
+        //Destroy(mainCamera);
         Destroy(LevelManager);
         Destroy(AIManager);
         Destroy(TileManager);
         Destroy(LoadManager);
-        SceneManager.LoadScene("End");
         Destroy(gameObject);
     }
 }

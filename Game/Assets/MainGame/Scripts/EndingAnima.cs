@@ -17,6 +17,7 @@ public class EndingAnima : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        DestroyAll();
     }
 
    public void OnEnable()
@@ -69,6 +70,18 @@ public class EndingAnima : MonoBehaviour
             train.GetComponent<Train>().TrainStart();
             Destroy(gameObject);
             
+        }
+    }
+
+
+    public void DestroyAll()
+    {
+        // 씬 전환 이후에도 살아남은 모든 객체를 찾아서 삭제
+        GameObject[] dontDestroyObjects = GameObject.FindGameObjectsWithTag("DontDestroyObject");
+
+        foreach (GameObject obj in dontDestroyObjects)
+        {
+            Destroy(obj);
         }
     }
 }

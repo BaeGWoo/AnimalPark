@@ -45,7 +45,7 @@ public class Animal : MonoBehaviour
         Vector3 target = Hunter.HunterPosition;
         
 
-        float distance = 100;
+        float distance = Mathf.Abs((movePoint[0].x - target.x) + (movePoint[0].z - target.z)); ;
         int minDirection = 0;
 
       
@@ -54,8 +54,7 @@ public class Animal : MonoBehaviour
         for (int i = 0; i < movePoint.Length; i++)
         {
             float temp;
-            temp = Mathf.Abs((movePoint[i].x - target.x) + (movePoint[i].z - target.z));
-
+            temp = Mathf.Abs(movePoint[i].x - target.x) + Mathf.Abs(movePoint[i].z - target.z);
             if (movePoint[i].x >= -0.01f && movePoint[i].x <= 14 && movePoint[i].z >= -0.01f && movePoint[i].z <= 14)
             {
                 if (AIManager.TileMap[(int)(movePoint[i].x / 2), (int)(movePoint[i].z / 2)] != 1)

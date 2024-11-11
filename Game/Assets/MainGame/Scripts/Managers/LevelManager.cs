@@ -22,6 +22,7 @@ public class LevelManager : MonoBehaviour
     private AnimalManager animalManager;
     private static LevelManager instance;
     public static string SceneName;
+    public bool MaxLevel = false;
 
    
     private void Awake()
@@ -55,10 +56,7 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
-        if (Level[Maps.Length - 1])
-        {
-            Hunter.GetComponent<Hunter>().MoveEndingScene();
-        }
+       
     }
 
 
@@ -93,6 +91,11 @@ public class LevelManager : MonoBehaviour
             }
         }
 
+        if (Level[Maps.Length - 1])
+        {
+            mapPanel.SetActive(false);
+            Hunter.GetComponent<Hunter>().MoveEndingScene();
+        }
     }
 
     // 씬 넘버를 이용하여 각 단계의 이전 단계 성공시 레벨리스트에 반영
