@@ -13,11 +13,13 @@ public class EndingAnima : MonoBehaviour
    
     [SerializeField] GameObject trainCamera;
     [SerializeField] GameObject Smoke;
+    private AudioSource backgroundAudioSource;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         DestroyAll();
+       backgroundAudioSource =Camera.main.GetComponent<AudioSource>();
     }
 
    public void OnEnable()
@@ -32,6 +34,7 @@ public class EndingAnima : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        backgroundAudioSource.clip = Resources.Load<AudioClip>("Sounds/BGM/Ending");
         StartCoroutine(EndingStart());
     }
 

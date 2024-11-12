@@ -96,7 +96,9 @@ public class Hunter : MonoBehaviour
         Huntercollider.enabled = !Moveable;
 
         animator.SetBool("Run", Running);
+       
 
+        
         
 
         if (Moveable && moveAbleBlock != null)
@@ -266,7 +268,7 @@ public class Hunter : MonoBehaviour
             float newX = Mathf.MoveTowards(currentPosition.x, target.x, speed * Time.deltaTime);
             transform.position = new Vector3(newX, startPosition.y, startPosition.z);
             currentPosition = transform.position;
-            soundManager.SoundPlay("HunterWalk");
+            
 
             yield return null;
         }
