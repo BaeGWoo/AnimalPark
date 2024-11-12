@@ -32,6 +32,15 @@ public class SoundManager : MonoBehaviour
         BGMPlay();
     }
 
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 7)
+        {
+            BGMPlay();
+            Destroy(gameObject);
+        }
+    }
+
     public void SoundPlay(string name)
     {
         effectAudioSource.clip = Resources.Load<AudioClip>("Sounds/"+name);
