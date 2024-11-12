@@ -16,6 +16,7 @@ public class Sparrow : Animal
     public float AttackDamage = 0;
     public bool attackable = false;
     public bool hitable = false;
+    private AudioSource audioSource;
 
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class Sparrow : Animal
 
         animator = GetComponent<Animator>();
         aiManager = FindObjectOfType<AIManager>();
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public override void SetAnimalStatus(float Attack, float Health)
@@ -51,6 +53,8 @@ public class Sparrow : Animal
     public override void JumpAnimaition()
     {
         animator.SetTrigger("Jump");
+        audioSource.clip = Resources.Load<AudioClip>("Sounds/Jump");
+        audioSource.Play();
     }
 
 
@@ -71,6 +75,8 @@ public class Sparrow : Animal
     public override void Attack()
     {
         animator.SetTrigger("Attack");
+        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/" + gameObject.name + "Attack");
+        audioSource.Play();
         Attack(AttackMotion, duration);
     }
 
@@ -108,6 +114,8 @@ public class Sparrow : Animal
     {
         Health--;
         animator.SetTrigger("Damage");
+        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/Damage");
+        audioSource.Play();
         if (Health <= 0)
         {
             aiManager.RemoveAnimal(gameObject);

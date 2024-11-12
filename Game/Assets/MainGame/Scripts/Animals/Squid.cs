@@ -17,6 +17,7 @@ public class Squid : Animal
     private Animator animator;
     public bool attackable = false;
     public bool hitable = false;
+    private AudioSource audioSource;
 
     private void Awake()
     {
@@ -29,6 +30,7 @@ public class Squid : Animal
 
         animator = GetComponent<Animator>();
         aiManager = FindObjectOfType<AIManager>();
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
 
@@ -38,7 +40,11 @@ public class Squid : Animal
         AttackDamage = Attack;
     }
 
-    public override float AnimalDamage() { return AttackDamage; }
+    public override float AnimalDamage()
+    {
+       
+        return AttackDamage;
+    }
 
     public override void Move()
     {
@@ -50,12 +56,16 @@ public class Squid : Animal
         base.Move(transform.position,transform.rotation,movePoint);
     }
 
-    public override void JumpAnimaition(){animator.SetTrigger("Jump");}
+    public override void JumpAnimaition(){animator.SetTrigger("Jump"); audioSource.clip = Resources.Load<AudioClip>("Sounds/Jump");
+        audioSource.Play();
+    }
 
     
     public override void Attack()
     {
         animator.SetTrigger("Attack");
+        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/" + gameObject.name + "Attack");
+        audioSource.Play();
         Attack(AttackMotion, duration);
     }
 
@@ -74,6 +84,8 @@ public class Squid : Animal
     {
         Health--;
         animator.SetTrigger("Damage");
+        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/Damage");
+        audioSource.Play();
         if (Health <= 0)
         {
             aiManager.RemoveAnimal(gameObject);

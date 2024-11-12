@@ -40,8 +40,10 @@ public class AIManager : MonoBehaviour
 
     public static bool animalHintPanelActive = false;
 
+    [SerializeField] GameObject SoundManager;
 
     private static AIManager instance;
+    private SoundManager soundManager;
     public static Dictionary<string, GameObject[]> animalArray;
 
     private void Awake()
@@ -60,6 +62,7 @@ public class AIManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         TextAsset StatusList = Resources.Load<TextAsset>("AnimalStatus");
+        soundManager = SoundManager.GetComponent<SoundManager>();
 
         if (animalStatus != null)
         {
@@ -101,6 +104,9 @@ public class AIManager : MonoBehaviour
         }
        
     }
+
+
+    
 
     IEnumerator ActiveAiManager()
     {
@@ -300,6 +306,7 @@ public class AIManager : MonoBehaviour
 
   IEnumerator PopUpClearPanel()
     {
+        soundManager.SoundPlay("LevelUp");
         yield return new WaitForSeconds(1.5f);
         clearPanel.SetActive(true);
     }

@@ -15,7 +15,7 @@ public class Normal : Animal
     public float AttackDamage = 0;
     public bool attackable = false;
     public bool hitable = false;
-
+    private AudioSource audioSource;
 
 
     private void Awake()
@@ -33,6 +33,7 @@ public class Normal : Animal
 
         animator = GetComponent<Animator>();
         aiManager = FindObjectOfType<AIManager>();
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public override void SetAnimalStatus(float Attack, float Health)
@@ -54,7 +55,9 @@ public class Normal : Animal
         }
         base.Move(transform.position, transform.rotation, movePoint);
     }
-    public override void JumpAnimaition() { animator.SetTrigger("Jump"); }
+    public override void JumpAnimaition() { animator.SetTrigger("Jump"); audioSource.clip = Resources.Load<AudioClip>("Sounds/Jump");
+        audioSource.Play();
+    }
 
 
 
@@ -75,6 +78,8 @@ public class Normal : Animal
     {
         base.Attack();
         animator.SetTrigger("Attack");
+        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/" + gameObject.name + "Attack");
+        audioSource.Play();
         Attack(AttackMotion, duration);
     }
 
@@ -82,7 +87,8 @@ public class Normal : Animal
     {
         Health--;
         animator.SetTrigger("Damage");
-
+        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/Damage");
+        audioSource.Play();
 
         if (Health <= 0)
         {

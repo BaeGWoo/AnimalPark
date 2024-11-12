@@ -10,6 +10,7 @@ public class Animal : MonoBehaviour
     public bool moveable = false;
     protected AIManager aiManager;
 
+    
     public virtual void Move() { }
     public virtual void JumpAnimaition() { }
         

@@ -67,7 +67,7 @@ public class LevelManager : MonoBehaviour
     {
         Hunter.SetActive(true);
         mapPanel.SetActive(false);
-
+        
         TileManager.SetActive(true);
         AIManager.SetActive(true);
         SceneName = button.name;

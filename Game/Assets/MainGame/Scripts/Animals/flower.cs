@@ -15,13 +15,14 @@ public class flower : Animal
     public float AttackDamage = 0;
     public bool hitable = false;
     private Vector3 startSize;
-
+    private AudioSource audioSource;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         aiManager = FindObjectOfType<AIManager>();
         startSize = transform.localScale;
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public override void SetAnimalStatus(float Attack, float Health)
@@ -54,6 +55,8 @@ public class flower : Animal
     {
         base.Attack();
         animator.SetTrigger("Attack");
+        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/" + gameObject.name + "Attack");
+        audioSource.Play();
         Attack(AttackMotion, duration);
         SizeUp();
     }
@@ -62,7 +65,8 @@ public class flower : Animal
     {
         Health--;
 
-
+        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/Damage");
+        audioSource.Play();
 
         if (Health <= 0)
         {

@@ -1,0 +1,275 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.30f1 (70558241b701) revision 7361922'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'ko' Physical Memory: 32433 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\배건우\Unity\2022.3.30f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker8
+-projectPath
+C:/Users/USER/Desktop/AnimalPark/Game
+-logFile
+Logs/AssetImportWorker8.log
+-srvPort
+59285
+Successfully changed project path to: C:/Users/USER/Desktop/AnimalPark/Game
+C:/Users/USER/Desktop/AnimalPark/Game
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [10456] Host "[IP] 172.30.1.16 [Port] 0 [Flags] 2 [Guid] 30557531 [EditorId] 30557531 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-RP4F926) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [10456] Host "[IP] 172.30.1.16 [Port] 0 [Flags] 2 [Guid] 30557531 [EditorId] 30557531 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-RP4F926) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 19 workers.
+Refreshing native plugins compatible for Editor in 16.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.30f1 (70558241b701)
+[Subsystems] Discovering subsystems at path D:/배건우/Unity/2022.3.30f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/USER/Desktop/AnimalPark/Game/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     5996 MB
+    Driver:   32.0.15.5613
+Initialize mono
+Mono path[0] = 'D:/배건우/Unity/2022.3.30f1/Editor/Data/Managed'
+Mono path[1] = 'D:/배건우/Unity/2022.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/배건우/Unity/2022.3.30f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56796
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/배건우/Unity/2022.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002326 seconds.
+- Loaded All Assemblies, in  0.247 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.200 seconds
+Domain Reload Profiling: 448ms
+	BeginReloadAssembly (84ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (97ms)
+		LoadAssemblies (84ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (95ms)
+			TypeCache.Refresh (94ms)
+				TypeCache.ScanAssembly (84ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (201ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (159ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (102ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.632 seconds
+Refreshing native plugins compatible for Editor in 6.46 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.565 seconds
+Domain Reload Profiling: 1193ms
+	BeginReloadAssembly (120ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (15ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (445ms)
+		LoadAssemblies (335ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (187ms)
+			TypeCache.Refresh (159ms)
+				TypeCache.ScanAssembly (147ms)
+			ScanForSourceGeneratedMonoScriptInfo (20ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (566ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (423ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (67ms)
+			ProcessInitializeOnLoadAttributes (296ms)
+			ProcessInitializeOnLoadMethodAttributes (52ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 5.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5652 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 72 unused Assets / (1.5 MB). Loaded Objects now: 6118.
+Memory consumption went from 220.2 MB to 218.7 MB.
+Total: 3.410800 ms (FindLiveObjects: 0.291700 ms CreateObjectMapping: 0.165200 ms MarkObjects: 2.601700 ms  DeleteObjects: 0.351500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 123131.230426 seconds.
+  path: Assets/FastUiSounds/SFX_FastUiClick_Impact_03_wav.wav
+  artifactKey: Guid(f24bc911ef81ec64fb77e8906d859eb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastUiSounds/SFX_FastUiClick_Impact_03_wav.wav using Guid(f24bc911ef81ec64fb77e8906d859eb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f5f2c836d9bd09d4913b2f8b3f72a4c') in 0.087613 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 22.955972 seconds.
+  path: Assets/FastUiSounds/SFX_FastUiClick_Mechanical_05_wav.wav
+  artifactKey: Guid(31843d0601c713d46849626403745044) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastUiSounds/SFX_FastUiClick_Mechanical_05_wav.wav using Guid(31843d0601c713d46849626403745044) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e991631295641fdcd76bbcdbd1964d29') in 0.027925 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastUiSounds/SFX_FastUiClick_MultipleImpacts_02_wav.wav
+  artifactKey: Guid(cc7b92c0960d10a4586dde72e408040f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastUiSounds/SFX_FastUiClick_MultipleImpacts_02_wav.wav using Guid(cc7b92c0960d10a4586dde72e408040f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8a555440ce6e6a46b1f35e6636b8aba') in 0.024705 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastUiSounds/SFX_FastUiClick_Tonal_01_wav.wav
+  artifactKey: Guid(c19574cbbe9cceb4b984563b47b0be04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastUiSounds/SFX_FastUiClick_Tonal_01_wav.wav using Guid(c19574cbbe9cceb4b984563b47b0be04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db233743f409dcbbbae0ef0eedc1405b') in 0.014969 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.673043 seconds.
+  path: Assets/FastUiSounds/SFX_FastUiClick_Tonal_03_wav.wav
+  artifactKey: Guid(328bb7cd8b953b947b97e5dd9f8410be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastUiSounds/SFX_FastUiClick_Tonal_03_wav.wav using Guid(328bb7cd8b953b947b97e5dd9f8410be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1612e25849f010759f81a5a9a8e04c7') in 0.030094 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FastUiSounds/SFX_FastUiClick_Wood_02_wav.wav
+  artifactKey: Guid(f0d6d8340a1594e488e2b255689cb9ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastUiSounds/SFX_FastUiClick_Wood_02_wav.wav using Guid(f0d6d8340a1594e488e2b255689cb9ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9cf52ec714ab9c43b6388b5779ca5da') in 0.008911 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000376 seconds.
+  path: Assets/FastUiSounds/SFX_FastUiDenied_03_wav.wav
+  artifactKey: Guid(bd464bb530048e940803c981aaa755ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastUiSounds/SFX_FastUiDenied_03_wav.wav using Guid(bd464bb530048e940803c981aaa755ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7587edbe0bba3ee7295bfc3bd6f50af3') in 0.010610 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastUiSounds/SFX_FastUiDenied_01_wav.wav
+  artifactKey: Guid(04413df67ceb74e4a8780df4de282317) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastUiSounds/SFX_FastUiDenied_01_wav.wav using Guid(04413df67ceb74e4a8780df4de282317) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff0179c070b045ad425e3023e5f6a789') in 0.012460 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/FastUiSounds/SFX_FastUiClick_Wood_05_wav.wav
+  artifactKey: Guid(284ed0b38502e524d8c11385e292ef01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastUiSounds/SFX_FastUiClick_Wood_05_wav.wav using Guid(284ed0b38502e524d8c11385e292ef01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '642c5abe2ad2364701da536f1ed1fa54') in 0.009462 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastUiSounds/SFX_FastUiClick_Wood_03_wav.wav
+  artifactKey: Guid(35472ceab79445e409c8ec8182d3ae23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastUiSounds/SFX_FastUiClick_Wood_03_wav.wav using Guid(35472ceab79445e409c8ec8182d3ae23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '760e9f6a38cef416022efbbfa2199d11') in 0.010541 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.371716 seconds.
+  path: Assets/FastUiSounds/SFX_FastUiSound_Musical_01_wav.wav
+  artifactKey: Guid(10a01f8f13d44ef4197380dfc05c15db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastUiSounds/SFX_FastUiSound_Musical_01_wav.wav using Guid(10a01f8f13d44ef4197380dfc05c15db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7d51220990cde29623b9c1dbe9b35e8') in 0.013036 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

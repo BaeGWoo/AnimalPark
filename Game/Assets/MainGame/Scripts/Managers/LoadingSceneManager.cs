@@ -17,11 +17,13 @@ public class LoadingSceneManager : MonoBehaviour
 
     [SerializeField] GameObject AIManager;
     [SerializeField] GameObject TileManager;
+    [SerializeField] GameObject SoundManager;
 
     [SerializeField] Texture2D[] mouseImage;
 
     private AIManager aiManager;
     private TileManager tileManager;
+    private SoundManager soundManager;
 
     private static LoadingSceneManager instance;
     private void Awake()
@@ -40,6 +42,7 @@ public class LoadingSceneManager : MonoBehaviour
         Cursor.SetCursor(mouseImage[0], Vector2.zero, CursorMode.Auto);
         aiManager = AIManager.GetComponent<AIManager>();
         tileManager = TileManager.GetComponent<TileManager>();
+        soundManager = SoundManager.GetComponent<SoundManager>();
     }
 
    
@@ -73,8 +76,9 @@ public class LoadingSceneManager : MonoBehaviour
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(next);
         asyncLoad.allowSceneActivation = false;
-
-
+        soundManager.MoveStage();
+        //soundManager.BGMOff();
+         
         while (elapsedTime < loadTime)
         {
             yield return null;
@@ -110,6 +114,7 @@ public class LoadingSceneManager : MonoBehaviour
                 aiManager.StartTurn();
                 loadingBar.value = 0;
                 loadingCanvas.SetActive(false);
+                soundManager.BGMPlay();
             }
         }
     }

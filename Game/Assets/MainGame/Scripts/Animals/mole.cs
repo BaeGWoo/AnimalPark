@@ -16,14 +16,14 @@ public class mole : Animal
     public float AttackDamage = 0;
     public bool attackable = false;
     public bool hitable = false;
-
+    private AudioSource audioSource;
 
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         aiManager = FindObjectOfType<AIManager>();
-
+        audioSource = gameObject.AddComponent<AudioSource>();
         Vector3 target = Hunter.HunterPosition;
        
         int index = 0;
@@ -59,6 +59,11 @@ public class mole : Animal
 
     public override float AnimalDamage() { return AttackDamage; }
 
+    public override void JumpAnimaition()
+    {
+        audioSource.clip = Resources.Load<AudioClip>("Sounds/Jump");
+        audioSource.Play();
+    }
 
     public override void Move()
     {
@@ -89,15 +94,19 @@ public class mole : Animal
 
     public override void Attack()
     {
+
         base.Attack();
         animator.SetTrigger("Attack");
+        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/" + gameObject.name + "Attack");
+        audioSource.Play();
         Attack(AttackMotion, duration);
     }
 
     public override void Damaged()
     {
         Health--;
-
+        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/Damage");
+        audioSource.Play();
 
 
         if (Health <= 0)

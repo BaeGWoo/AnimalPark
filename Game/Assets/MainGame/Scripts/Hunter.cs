@@ -29,6 +29,7 @@ public class Hunter : MonoBehaviour
     [SerializeField] GameObject LevelManager;
     [SerializeField] GameObject TileManager;
     [SerializeField] GameObject LoadManager;
+    [SerializeField] GameObject SoundManager;
 
     [SerializeField] BoxCollider Huntercollider;
     [SerializeField] Slider HPSlider;
@@ -42,11 +43,13 @@ public class Hunter : MonoBehaviour
     private int keyInput;
     private int WeaponNumber = 0;
     [SerializeField] GameObject[] AttackBox;
+    [SerializeField] AudioClip[] AttackSound; 
 
     private AIManager aiManager;
     private LevelManager levelManager;
     private TileManager tileManager;
     private LoadingSceneManager loadManager;
+    private SoundManager soundManager;
 
 
     public static GameObject moveAbleBlock;
@@ -78,6 +81,7 @@ public class Hunter : MonoBehaviour
         levelManager =LevelManager.GetComponent<LevelManager>();
         tileManager =TileManager.GetComponent<TileManager>();
         loadManager=LoadManager.GetComponent<LoadingSceneManager>();
+        soundManager =SoundManager.GetComponent<SoundManager>();
       
         HPPosition = HPSlider.transform.position;
         Health = 5;
@@ -108,7 +112,7 @@ public class Hunter : MonoBehaviour
         if (other.CompareTag("Attack"))
         {
             other.transform.root.GetComponent<Animal>().Attack();
-            //AttackSound재생
+            //soundManager.SoundPlay(other.transform.root.name+ "Attack");
             Health--;
             HPSlider.value = Health / MaxHealth;
         }
@@ -116,13 +120,13 @@ public class Hunter : MonoBehaviour
         else if (other.CompareTag("colobusAttack"))
         {
             other.transform.root.GetComponent<Animal>().Attack();
-            //AttackSound재생
+            soundManager.SoundPlay("ColobusAttack");
         }
 
         else if (other.CompareTag("banana"))
         {
             StartCoroutine(BananaMotion());
-            // 바나나 터지는 Sound 재생
+            soundManager.SoundPlay("Banana");
             Health -= aiManager.animalStatus["Colobus"][0];
             other.gameObject.SetActive(false);
             HPSlider.value = Health / MaxHealth;
@@ -158,6 +162,7 @@ public class Hunter : MonoBehaviour
     public void Die()
     {
         animator.SetTrigger("Die");
+        soundManager.SoundPlay("GameOver");
         MenuPanel.SetActive(true);
     }
     #endregion
@@ -202,7 +207,14 @@ public class Hunter : MonoBehaviour
 
 
         animator.SetTrigger("Attack" + (WeaponNumber+1));
-        //WeaponNumber에 맞는 Sound 재생
+        if (WeaponNumber == 0)
+        {
+            soundManager.SoundPlay("HunterAttack");
+        }
+        else if (WeaponNumber == 1)
+        {
+            soundManager.SoundPlay("FireBall");
+        }
         AttackWeapon[WeaponNumber].SetActive(true);
         StartCoroutine(HunterAttackMotion());
 
@@ -243,7 +255,6 @@ public class Hunter : MonoBehaviour
     IEnumerator Move(Vector3 target)
     {
         Running = true;
-        //RunningSound
         Vector3 startPosition = transform.position;
         Vector3 currentPosition = startPosition;
         Vector3 targetPosition = new Vector3(target.x, startPosition.y, currentPosition.z);
@@ -255,6 +266,8 @@ public class Hunter : MonoBehaviour
             float newX = Mathf.MoveTowards(currentPosition.x, target.x, speed * Time.deltaTime);
             transform.position = new Vector3(newX, startPosition.y, startPosition.z);
             currentPosition = transform.position;
+            soundManager.SoundPlay("HunterWalk");
+
             yield return null;
         }
 
@@ -290,7 +303,11 @@ public class Hunter : MonoBehaviour
 
     public void PanelActive()
     {
-        MenuPanel.SetActive(true);
+        if (!MenuPanel.activeSelf)
+        {
+            soundManager.SoundPlay("PausePanel");
+            MenuPanel.SetActive(true);
+        }
     }
 
     public void ReLoadScene()
@@ -338,6 +355,7 @@ public class Hunter : MonoBehaviour
         TileManager.SetActive(false);
         
         SceneManager.LoadScene("Lobby");
+        soundManager.EnterLobby();
         
         LevelManager.SetActive(true);
         levelManager.LinkMaps();

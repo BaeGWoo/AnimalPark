@@ -7,15 +7,15 @@ using UnityEngine.SceneManagement;
 
 public class TileManager : MonoBehaviour
 {
-    [SerializeField] static int[,] TileMap=new int[8,8];
+    //[SerializeField] static int[,] TileMap=new int[8,8];
     [SerializeField] GameObject[] Blocks;
     
     public Dictionary<string, int> SceneNumber;
     private int sceneNumber = -1;
     string[] SceneName = new string[7] { "Nature", "Island", "Desert", "City", "Winter", "Space", "Lobby" };
 
-    [SerializeField] GameObject BlackTile;
-    [SerializeField] GameObject WhiteTile;
+    //[SerializeField] GameObject BlackTile;
+    //[SerializeField] GameObject WhiteTile;
     [SerializeField] GameObject[] HintPanel;
     private static TileManager instance;
 
