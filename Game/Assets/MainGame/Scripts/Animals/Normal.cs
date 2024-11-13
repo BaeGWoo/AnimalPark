@@ -28,7 +28,7 @@ public class Normal : Animal
         moveDirection[4] = new Vector3(2, 0, 2);
         moveDirection[5] = new Vector3(-2, 0, 2);
         moveDirection[6] = new Vector3(2, 0, -2);
-        moveDirection[7] = new Vector3(-2, 0, 2);
+        moveDirection[7] = new Vector3(-2, 0, -2);
 
 
         animator = GetComponent<Animator>();

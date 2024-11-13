@@ -44,10 +44,11 @@ public class Animal : MonoBehaviour
         moveable = true;
         AIManager.TileMap[(int)(curPosition.x / 2), (int)(curPosition.z / 2)] = 0;
         Vector3 target = Hunter.HunterPosition;
-        
 
-        float distance = Mathf.Abs((movePoint[0].x - target.x) + (movePoint[0].z - target.z)); ;
-        int minDirection = 0;
+
+        //float distance = Mathf.Abs((movePoint[0].x - target.x) + (movePoint[0].z - target.z)); 
+        float distance = 20;
+        int minDirection = -1;
 
       
 
@@ -56,7 +57,8 @@ public class Animal : MonoBehaviour
         {
             float temp;
             temp = Mathf.Abs(movePoint[i].x - target.x) + Mathf.Abs(movePoint[i].z - target.z);
-            if (movePoint[i].x >= -0.01f && movePoint[i].x <= 14 && movePoint[i].z >= -0.01f && movePoint[i].z <= 14)
+            if (movePoint[i].x >= 0 && movePoint[i].x <= 14 && movePoint[i].z >= 0 && movePoint[i].z <= 14)
+            //if((int)(movePoint[minDirection].x / 2)>=0&& (int)(movePoint[minDirection].x / 2)<=7&& (int)(movePoint[minDirection].z / 2)>=0&& (int)(movePoint[minDirection].z / 2)<=7)
             {
                 if (AIManager.TileMap[(int)(movePoint[i].x / 2), (int)(movePoint[i].z / 2)] != 1)
                 {
@@ -68,6 +70,7 @@ public class Animal : MonoBehaviour
                 }
             }
         }
+        Debug.Log(gameObject.name+(int)(movePoint[minDirection].x / 2) + "," + (int)(movePoint[minDirection].z / 2));
         AIManager.TileMap[(int)(movePoint[minDirection].x / 2), (int)(movePoint[minDirection].z) / 2] = 1;
         StartCoroutine(JumpToPosition(curPosition, curRotation, new Vector3(movePoint[minDirection].x, 0, movePoint[minDirection].z)));
     }

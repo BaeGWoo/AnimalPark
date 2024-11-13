@@ -62,7 +62,6 @@ public class SoundManager : MonoBehaviour
     public void BGMPlay()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log(index);
         backgroundAudioSource.loop = true;
         backgroundAudioSource.clip = bgm[index];
         backgroundAudioSource.Play();
