@@ -32,7 +32,7 @@ public class Hunter : MonoBehaviour
     [SerializeField] GameObject SoundManager;
 
     [SerializeField] BoxCollider Huntercollider;
-    [SerializeField] Slider HPSlider;
+    [SerializeField] Image HPSlider;
     [SerializeField] GameObject bananaMotion;
     [SerializeField] GameObject[] AttackWeapon;
     [SerializeField] GameObject MenuPanel;
@@ -115,8 +115,9 @@ public class Hunter : MonoBehaviour
         {
             other.transform.root.GetComponent<Animal>().Attack();
             //soundManager.SoundPlay(other.transform.root.name+ "Attack");
+            animator.SetTrigger("Damage");
             Health--;
-            HPSlider.value = Health / MaxHealth;
+            HPSlider.fillAmount = Health / MaxHealth;
         }
 
         else if (other.CompareTag("colobusAttack"))
@@ -131,7 +132,7 @@ public class Hunter : MonoBehaviour
             soundManager.SoundPlay("Banana");
             Health -= aiManager.animalStatus["Colobus"][0];
             other.gameObject.SetActive(false);
-            HPSlider.value = Health / MaxHealth;
+            HPSlider.fillAmount = Health / MaxHealth;
         }
 
         if (Health <= 0)
@@ -321,7 +322,7 @@ public class Hunter : MonoBehaviour
         gameObject.SetActive(true);
         animator.SetTrigger("Reset");
         Health = MaxHealth;
-        HPSlider.value = Health / MaxHealth;
+        HPSlider.fillAmount = Health / MaxHealth;
         StartCoroutine(LoadScene(sceneName));
         transform.position = new Vector3(8,0,0);
         HunterPosition=transform.position;
@@ -363,7 +364,7 @@ public class Hunter : MonoBehaviour
         levelManager.LinkMaps();
 
         Health = MaxHealth;
-        HPSlider.value = Health / MaxHealth;
+        HPSlider.fillAmount = Health / MaxHealth;
         transform.position = new Vector3(8, 0, 0);
         HunterPosition = transform.position;
         animator.SetTrigger("Reset");
@@ -378,7 +379,7 @@ public class Hunter : MonoBehaviour
         ExitScene();
         transform.position = new Vector3(8, 0, 0);
         Health = MaxHealth;
-        HPSlider.value = Health / MaxHealth;
+        HPSlider.fillAmount = Health / MaxHealth;
         HunterPosition = transform.position;
         levelManager.LinkMaps();
         //버튼 이벤트를 헌터에 주고 씬 이동전에 LevelUp호출

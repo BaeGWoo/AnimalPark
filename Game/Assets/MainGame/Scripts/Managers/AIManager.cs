@@ -133,8 +133,6 @@ public class AIManager : MonoBehaviour
        
         while (Hunter.Health>=0) 
         {
-            // 동물의 이동
-
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
@@ -145,7 +143,7 @@ public class AIManager : MonoBehaviour
             yield return null;
 
             AnimalMove();
-            yield return new WaitForSeconds(1.0f); // 필요에 따라 시간 조정
+            yield return new WaitForSeconds(1.0f); 
 
             AnimalAttack();
             yield return new WaitForSeconds(1.0f);
@@ -156,29 +154,19 @@ public class AIManager : MonoBehaviour
 
             AnimalUnAttackBox();
           
-            // Hunter의 이동
+            
             HunterMove();
-
             while (Hunter.Moveable) {  yield return null;}
+        
 
-           
-
-            // Hunter의 공격           
             hunter.Attack();
+            while (Hunter.Attackable) { yield return null; }
 
-            // Hunter의 이동이 끝나기를 대기
-            while (Hunter.Attackable)
-            {
-                yield return null;
-            }
 
             if (Animals.Length <= 0||Hunter.Health<=0)
             {
                 break;
             }
-
-          
-
         }
     }
 

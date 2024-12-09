@@ -71,14 +71,14 @@ public class LoadingSceneManager : MonoBehaviour
         float loadTime = 2f;
         float elapsedTime = 0f;
 
-        float changeInterval = 0.1f; // 0.5초마다 이미지 교체
-        float nextChangeTime = changeInterval; // 다음 이미지 교체 시간
+        float changeInterval = 0.1f; //로딩 시 이미지 전환 속도
+        float nextChangeTime = changeInterval; 
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(next);
         asyncLoad.allowSceneActivation = false;
-        soundManager.MoveStage();
-        //soundManager.BGMOff();
+        soundManager.MoveStage(); // 로딩BGM 설정
          
+        // 로딩 시 사용할 움직이는 이미지 설정
         while (elapsedTime < loadTime)
         {
             yield return null;
@@ -87,7 +87,6 @@ public class LoadingSceneManager : MonoBehaviour
             MoveDucks((int)(elapsedTime / changeInterval) % loadingImages.Length);
             nextChangeTime += changeInterval;
 
-            
             loadingBar.value = Mathf.Lerp(loadingBar.value, elapsedTime / loadTime, Time.deltaTime); 
         }
 

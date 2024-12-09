@@ -90,7 +90,7 @@ public class Block : MonoBehaviour
     {
         float distance;
         distance = Math.Abs(Hunter.HunterPosition.x - curPostiion.x) + Math.Abs(Hunter.HunterPosition.z - curPostiion.z);
-        if (distance <= 2)
+        if (distance <= 2&&distance>=1)
         {
             if (this.gameObject != targetblock)
             {
