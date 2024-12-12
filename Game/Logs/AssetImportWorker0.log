@@ -15,7 +15,7 @@ D:/ë°°ê±´ìš°/AnimalPark/Game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54531
+54291
 Successfully changed project path to: D:/ë°°ê±´ìš°/AnimalPark/Game
 D:/ë°°ê±´ìš°/AnimalPark/Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ D:/ë°°ê±´ìš°/AnimalPark/Game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [34720] Host "[IP] 59.28.64.137 [Port] 0 [Flags] 2 [Guid] 3021919221 [EditorId] 3021919221 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [7648] Host "[IP] 183.103.60.49 [Port] 0 [Flags] 2 [Guid] 1372086419 [EditorId] 1372086419 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [34720] Host "[IP] 59.28.64.137 [Port] 0 [Flags] 2 [Guid] 3021919221 [EditorId] 3021919221 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [7648] Host "[IP] 183.103.60.49 [Port] 0 [Flags] 2 [Guid] 1372086419 [EditorId] 1372086419 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 11.65 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 874.41 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.30f1 (70558241b701)
 [Subsystems] Discovering subsystems at path C:/Users/User/2022.3.30f1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'C:/Users/User/2022.3.30f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56856
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56064
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Users/User/2022.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.016757 seconds.
-- Loaded All Assemblies, in  0.451 seconds
+Registered in 0.016189 seconds.
+- Loaded All Assemblies, in  0.513 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.308 seconds
-Domain Reload Profiling: 755ms
-	BeginReloadAssembly (144ms)
+- Finished resetting the current domain, in  0.317 seconds
+Domain Reload Profiling: 825ms
+	BeginReloadAssembly (210ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (44ms)
+	RebuildCommonClasses (41ms)
 	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (89ms)
-	LoadAllAssembliesAndSetupDomain (159ms)
-		LoadAssemblies (140ms)
+	initialDomainReloadingComplete (84ms)
+	LoadAllAssembliesAndSetupDomain (162ms)
+		LoadAssemblies (203ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (156ms)
-			TypeCache.Refresh (155ms)
-				TypeCache.ScanAssembly (140ms)
+		AnalyzeDomain (160ms)
+			TypeCache.Refresh (159ms)
+				TypeCache.ScanAssembly (137ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (308ms)
+	FinalizeReload (317ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (249ms)
+		SetupLoadedEditorAssemblies (255ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
+			InitializePlatformSupportModulesInManaged (12ms)
 			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (168ms)
-			ProcessInitializeOnLoadMethodAttributes (60ms)
+			ProcessInitializeOnLoadAttributes (166ms)
+			ProcessInitializeOnLoadMethodAttributes (67ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,55 +115,55 @@ Domain Reload Profiling: 755ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.967 seconds
-Refreshing native plugins compatible for Editor in 5.67 ms, found 3 plugins.
+- Loaded All Assemblies, in  2.284 seconds
+Refreshing native plugins compatible for Editor in 4.62 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.819 seconds
-Domain Reload Profiling: 1780ms
-	BeginReloadAssembly (199ms)
+- Finished resetting the current domain, in  4.720 seconds
+Domain Reload Profiling: 6998ms
+	BeginReloadAssembly (202ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (23ms)
-	RebuildCommonClasses (43ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (55ms)
-	LoadAllAssembliesAndSetupDomain (647ms)
-		LoadAssemblies (447ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (56ms)
+	LoadAllAssembliesAndSetupDomain (1966ms)
+		LoadAssemblies (1777ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (329ms)
-			TypeCache.Refresh (284ms)
-				TypeCache.ScanAssembly (260ms)
+		AnalyzeDomain (319ms)
+			TypeCache.Refresh (273ms)
+				TypeCache.ScanAssembly (251ms)
 			ScanForSourceGeneratedMonoScriptInfo (29ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (819ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (4720ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (615ms)
+		SetupLoadedEditorAssemblies (4518ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
+			InitializePlatformSupportModulesInManaged (8ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (87ms)
-			ProcessInitializeOnLoadAttributes (423ms)
-			ProcessInitializeOnLoadMethodAttributes (76ms)
-			AfterProcessingInitializeOnLoad (15ms)
+			BeforeProcessingInitializeOnLoad (86ms)
+			ProcessInitializeOnLoadAttributes (4334ms)
+			ProcessInitializeOnLoadMethodAttributes (70ms)
+			AfterProcessingInitializeOnLoad (16ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 4.97 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (16ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 5.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5652 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 72 unused Assets / (1.5 MB). Loaded Objects now: 6118.
 Memory consumption went from 219.9 MB to 218.4 MB.
-Total: 3.901500 ms (FindLiveObjects: 0.451600 ms CreateObjectMapping: 0.455500 ms MarkObjects: 2.520100 ms  DeleteObjects: 0.473400 ms)
+Total: 4.347600 ms (FindLiveObjects: 0.504200 ms CreateObjectMapping: 0.563000 ms MarkObjects: 2.748000 ms  DeleteObjects: 0.531500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -180,17 +180,1209 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1541897.008552 seconds.
-  path: Assets/MainGame/Scene/Nature.unity
-  artifactKey: Guid(ccd6663fc05202d499e5c0fc39b6bf74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Nature.unity using Guid(ccd6663fc05202d499e5c0fc39b6bf74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c196ba7acab547d6526a158582e26ab2') in 0.001927 seconds
+  Time since last request: 76712.480253 seconds.
+  path: Assets/MainGame/Scene/Start.unity
+  artifactKey: Guid(ed7f4f8c2d52cab45b89c436eaf89fe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Scene/Start.unity using Guid(ed7f4f8c2d52cab45b89c436eaf89fe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96a63c3b14cf1556811b5d8c52201c38') in 0.001814 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 1717.176456 seconds.
-  path: Assets/MainGame/Scene/Start.unity
-  artifactKey: Guid(ed7f4f8c2d52cab45b89c436eaf89fe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Start.unity using Guid(ed7f4f8c2d52cab45b89c436eaf89fe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49cf6d5a95aec8c1cd7f49f04d42546b') in 0.000731 seconds
+  Time since last request: 9.749283 seconds.
+  path: Assets/MainGame/Prefabs/RPG Swords/cutter01.FBX
+  artifactKey: Guid(5b6a76c08928d1940a2a12754f822d48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/RPG Swords/cutter01.FBX using Guid(5b6a76c08928d1940a2a12754f822d48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27b3390fe05c8cef188543290c236730') in 0.277715 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/MainGame/Prefabs/RPG Swords/sword02.FBX
+  artifactKey: Guid(3bd1b773913e1a3428b48ca4b9f9248f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/RPG Swords/sword02.FBX using Guid(3bd1b773913e1a3428b48ca4b9f9248f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd1abf2efa570d3509fc8c3b74a7a5cc') in 0.024938 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/MainGame/Prefabs/RPG Swords/sword_epic.FBX
+  artifactKey: Guid(90c25ff0db82bf64cbc6b8e405018824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/RPG Swords/sword_epic.FBX using Guid(90c25ff0db82bf64cbc6b8e405018824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '022feced8b3bd92c14ca8372a062aa68') in 0.013399 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/MainGame/Prefabs/RPG Swords/Rapier.FBX
+  artifactKey: Guid(c1ac58f958fd93b49a10161ce774a18e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/RPG Swords/Rapier.FBX using Guid(c1ac58f958fd93b49a10161ce774a18e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '534d2e9dc15f602558c0917b8aab767a') in 0.035766 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/MainGame/Prefabs/RPG Swords/sword01.FBX
+  artifactKey: Guid(dd0682cd55d7f8342b8026ebb1cfc4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/RPG Swords/sword01.FBX using Guid(dd0682cd55d7f8342b8026ebb1cfc4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f7716e9709dd49019782dc5ee545d1f') in 0.022718 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 20.724696 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/DesertBoxlarge_Empty.prefab
+  artifactKey: Guid(37c25e9662e80a84cb820dba19e41528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/DesertBoxlarge_Empty.prefab using Guid(37c25e9662e80a84cb820dba19e41528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37f968e92317d347069e39fb84007aae') in 0.175647 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/DesertBoxSmall_Green.prefab
+  artifactKey: Guid(586bd0539903da04f93ceb71bbd5be83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/DesertBoxSmall_Green.prefab using Guid(586bd0539903da04f93ceb71bbd5be83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ddcc58dbdaa3b38ec4b4d8ee5948b34') in 0.018030 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/DesertBridgeExtra01W.prefab
+  artifactKey: Guid(6645d5e35cec19845b6986bfd7e45747) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/DesertBridgeExtra01W.prefab using Guid(6645d5e35cec19845b6986bfd7e45747) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7d2bd6ac04b497ac8742d16e4b2a148') in 0.051604 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/DesertCactus01.prefab
+  artifactKey: Guid(1c24e320d47d7fe45ab0adceb6ad319e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/DesertCactus01.prefab using Guid(1c24e320d47d7fe45ab0adceb6ad319e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c45c27522058cb7bbc3bda91b3fa057') in 0.022252 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/DesertBridgeExtra01.prefab
+  artifactKey: Guid(fd08503763d4b8c448e8f1b3bffdff5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/DesertBridgeExtra01.prefab using Guid(fd08503763d4b8c448e8f1b3bffdff5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e68391402c8e75bccdcdfa7b4aad98dc') in 0.020804 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/DesertBridgeExtra02.prefab
+  artifactKey: Guid(4a6f1bcc96a69fb4ab984a67496aff32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/DesertBridgeExtra02.prefab using Guid(4a6f1bcc96a69fb4ab984a67496aff32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c456229c66daf0c0b3ae52ec29901cf') in 0.025781 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/DesertLadder.prefab
+  artifactKey: Guid(0763a19602566d245849607be40cd87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/DesertLadder.prefab using Guid(0763a19602566d245849607be40cd87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9406e4967dba90389a02240067b3535') in 0.016555 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/Fire.prefab
+  artifactKey: Guid(0dc45914d072c07408655ded1490cd62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/Fire.prefab using Guid(0dc45914d072c07408655ded1490cd62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e63ff07c1352494c46f4b3716e80c165') in 0.038653 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/Prefabs BLUE/DesertBannerHolder_Blue.prefab
+  artifactKey: Guid(ed3d3f151c89c344d9072cec0e46f0e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/Prefabs BLUE/DesertBannerHolder_Blue.prefab using Guid(ed3d3f151c89c344d9072cec0e46f0e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d09a412c11e8a0bca1b5208ebc88ec2') in 0.087168 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 35
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/DesertCactus02.prefab
+  artifactKey: Guid(b42196a03d96beb4d95a742d57c5f5f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/DesertCactus02.prefab using Guid(b42196a03d96beb4d95a742d57c5f5f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b7d75e7e0d026f7ff1358b852d0a0d7') in 0.040896 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/DesertBoxSmall_Red.prefab
+  artifactKey: Guid(c6687ed4632e8724b838eb54d9604123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/DesertBoxSmall_Red.prefab using Guid(c6687ed4632e8724b838eb54d9604123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f1950ecc35e1f62c8d9877207a684a1') in 0.010641 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/SandRiverQuad .prefab
+  artifactKey: Guid(896e3356165758d4e834134fb0152e87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/SandRiverQuad .prefab using Guid(896e3356165758d4e834134fb0152e87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08e83b5c776bd6b5603b728bf4ff567e') in 0.061764 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/Prefabs BLUE/DesertTower_Blue.prefab
+  artifactKey: Guid(28ce22920feff1844b50e113bdb9d126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/Prefabs BLUE/DesertTower_Blue.prefab using Guid(28ce22920feff1844b50e113bdb9d126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db618a7f97147a6b25fbcbef596c0182') in 0.123568 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 129
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/DesertBoxSmall_Empty.prefab
+  artifactKey: Guid(7741c983f1500314384ff91311ee2b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/DesertBoxSmall_Empty.prefab using Guid(7741c983f1500314384ff91311ee2b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b15d84c100a7998c87c2f6cb5c645893') in 0.007387 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.225526 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertBrazzier_Red.prefab
+  artifactKey: Guid(6ff5b40e1b370ce45aa41f0f2596643a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertBrazzier_Red.prefab using Guid(6ff5b40e1b370ce45aa41f0f2596643a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85e7be1b78bdaec3d2173eef2d930774') in 0.112317 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 19
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertFlag_Red.prefab
+  artifactKey: Guid(ccac12a2e6b66794abbf6271a4045ce5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Prefabs/Prefabs RED/DesertFlag_Red.prefab using Guid(ccac12a2e6b66794abbf6271a4045ce5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4385e6aa587c093fc8d8b355bb69ee19') in 0.038824 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 2.474114 seconds.
+  path: Assets/AurynSky/Desert Pack/Textures/ColorPaletteNOTEAM.png
+  artifactKey: Guid(adbe2eb4bcbe7a64a977d8c50e49b0a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Textures/ColorPaletteNOTEAM.png using Guid(adbe2eb4bcbe7a64a977d8c50e49b0a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11856e5b14dbe528c94dc3092cf53b9f') in 0.062028 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1.486148 seconds.
+  path: Assets/AurynSky/Forest Pack/Materials/ColorPaletteNormal.mat
+  artifactKey: Guid(f731a2ae89bef7a47a008811dfbd4680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Materials/ColorPaletteNormal.mat using Guid(f731a2ae89bef7a47a008811dfbd4680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '786046e77d2fda15bdd3dac9142557b0') in 0.146590 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1.264676 seconds.
+  path: Assets/AurynSky/Forest Pack/Models/ForestBarrel.fbx
+  artifactKey: Guid(0e448df1bb3fe6d44ae7119bf0d484aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Models/ForestBarrel.fbx using Guid(0e448df1bb3fe6d44ae7119bf0d484aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07f1146811dad8537f2521f74199e564') in 0.024509 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/AurynSky/Forest Pack/Models/ForestTreeDTall.fbx
+  artifactKey: Guid(a2c5addf9682ab24d8a7163ed106e4e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Models/ForestTreeDTall.fbx using Guid(a2c5addf9682ab24d8a7163ed106e4e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e062bcdd151f2027b8b417b84359ad9a') in 0.040311 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/AurynSky/Forest Pack/Models/ForestGround02.fbx
+  artifactKey: Guid(caca2dfcd7da619408439605ff0667a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Models/ForestGround02.fbx using Guid(caca2dfcd7da619408439605ff0667a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44f3924554fa640456cb9b6e09e6dcc3') in 0.011598 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AurynSky/Forest Pack/Models/ForestGround01.fbx
+  artifactKey: Guid(f9fc7ec022f09a6418b1b6f97f0c887b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Models/ForestGround01.fbx using Guid(f9fc7ec022f09a6418b1b6f97f0c887b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4273e8ce282b1db75ea7f94086a8925') in 0.012371 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AurynSky/Forest Pack/Models/ForestBridgeWide.fbx
+  artifactKey: Guid(fe63f0532f7ca0b47b859b94db3dff06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Models/ForestBridgeWide.fbx using Guid(fe63f0532f7ca0b47b859b94db3dff06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c491727f157bc10955baeed24b7e68a0') in 0.013116 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AurynSky/Forest Pack/Models/ForestChestBottom.fbx
+  artifactKey: Guid(0e5f540077da33c4eab7f0f7f1121747) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Models/ForestChestBottom.fbx using Guid(0e5f540077da33c4eab7f0f7f1121747) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9e150855527330fc850b79efa7f93d6') in 0.028175 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/AurynSky/Forest Pack/Models/ForestCastleWindow.fbx
+  artifactKey: Guid(1eab687d6dbcf7847ab55b00b3c9c91b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Models/ForestCastleWindow.fbx using Guid(1eab687d6dbcf7847ab55b00b3c9c91b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3238c90e414be8282bfde22262b8ab03') in 0.029713 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/AurynSky/Forest Pack/Models/ForestBrazzier.fbx
+  artifactKey: Guid(d6810d6654be8544f9195fa0f6d1121a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Models/ForestBrazzier.fbx using Guid(d6810d6654be8544f9195fa0f6d1121a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d69e8bad32fc05cb7f44ad0d02ab9b2') in 0.014377 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/AurynSky/Forest Pack/Models/ForestLadder.fbx
+  artifactKey: Guid(063e70de915dd8843afde64c2c744ef5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Models/ForestLadder.fbx using Guid(063e70de915dd8843afde64c2c744ef5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82d984bcd855afe0f831f4a03c8f6d66') in 0.012326 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 4.108045 seconds.
+  path: Assets/AurynSky/Forest Pack/Textures/ColorPaletteNormal.png
+  artifactKey: Guid(5d607b30e410f964a9389dfbb7223cdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Textures/ColorPaletteNormal.png using Guid(5d607b30e410f964a9389dfbb7223cdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88dfa467ea11fce31010212e073aebd2') in 0.029255 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1.607440 seconds.
+  path: Assets/AurynSky/Desert Pack/Models/DesertBannerHolder.fbx
+  artifactKey: Guid(98302ede6a6e2ae4081eb04a2073598f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Models/DesertBannerHolder.fbx using Guid(98302ede6a6e2ae4081eb04a2073598f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da8cb4edfdf7af13467d2b8e139d6483') in 0.019627 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AurynSky/Desert Pack/Models/DesertBoxSmall.fbx
+  artifactKey: Guid(8c197dc12c50d284198e9b2ef331f670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Models/DesertBoxSmall.fbx using Guid(8c197dc12c50d284198e9b2ef331f670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b12dd3a9fef682c062a56b247c970feb') in 0.039850 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/Desert Pack/Models/DesertCastle.fbx
+  artifactKey: Guid(37f7476af8f447b42b3d4beef9b2c469) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Models/DesertCastle.fbx using Guid(37f7476af8f447b42b3d4beef9b2c469) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce35f10db4762d4b30f33e2749499af1') in 0.035600 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/AurynSky/Desert Pack/Models/DesertCactus02.fbx
+  artifactKey: Guid(5091909aabc8480429db3a0419f90edf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Models/DesertCactus02.fbx using Guid(5091909aabc8480429db3a0419f90edf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dae6833efc2b8e962896ceb021ab36b8') in 0.042660 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/AurynSky/Desert Pack/Models/DesertDoorRight.fbx
+  artifactKey: Guid(2ecf61b24ed19d54a917c84ef9d9872f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Models/DesertDoorRight.fbx using Guid(2ecf61b24ed19d54a917c84ef9d9872f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd2f9f98df009c9f3461d1f80eb5682a') in 0.020172 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/AurynSky/Desert Pack/Models/DesertLadder.fbx
+  artifactKey: Guid(33b076beca5cd8446bb9f98722781ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Models/DesertLadder.fbx using Guid(33b076beca5cd8446bb9f98722781ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3454aeb9ed4bf519b9200fcea9bef34a') in 0.040759 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/Desert Pack/Models/DesertGround01.fbx
+  artifactKey: Guid(516c2d64e347c524f8bff38c1edbd265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Models/DesertGround01.fbx using Guid(516c2d64e347c524f8bff38c1edbd265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7a1d5a2c06cd2192be280eb125b158e') in 0.013781 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AurynSky/Desert Pack/Models/DesertCowSkull.fbx
+  artifactKey: Guid(c5e27c7ced043cd4780b64d9de601725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Models/DesertCowSkull.fbx using Guid(c5e27c7ced043cd4780b64d9de601725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5cff34090bcef74701a934499dd19b1') in 0.012970 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/AurynSky/Desert Pack/Models/DesertBridgeExtra01W.fbx
+  artifactKey: Guid(9130f02e21e18bf47b7a857a08b3c888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Models/DesertBridgeExtra01W.fbx using Guid(9130f02e21e18bf47b7a857a08b3c888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3616db4003ba79648a83b97f329ab13a') in 0.013278 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/AurynSky/Desert Pack/Models/DesertBoxFillerYellow.fbx
+  artifactKey: Guid(080d60a23c0be1a47a8bc99699ba4e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Models/DesertBoxFillerYellow.fbx using Guid(080d60a23c0be1a47a8bc99699ba4e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6e8f42530ebb4b924fff4a162481927') in 0.013187 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AurynSky/Desert Pack/Models/Desertjar2.fbx
+  artifactKey: Guid(4d68ba28d3bbede4383ecdcedebd71a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Models/Desertjar2.fbx using Guid(4d68ba28d3bbede4383ecdcedebd71a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1100812195c9e91629e4689c4b9288e6') in 0.015151 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AurynSky/Desert Pack/Models/DesertBoxFillerRed.fbx
+  artifactKey: Guid(af710ddf6d43ecd48bcbc7ca8ddffe3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Models/DesertBoxFillerRed.fbx using Guid(af710ddf6d43ecd48bcbc7ca8ddffe3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9929b2f893d9303dcb16c48fd43cc986') in 0.012252 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AurynSky/Desert Pack/Models/DesertGround02.fbx
+  artifactKey: Guid(9a904a45434ee2648b5c6cfcfc7ba3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Desert Pack/Models/DesertGround02.fbx using Guid(9a904a45434ee2648b5c6cfcfc7ba3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54c7f58d2bc30b2eef4ce9d036d6c0a1') in 0.011872 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 6.186162 seconds.
+  path: Assets/AurynSky/WinterArena/Materials/ColorPaletteNormal.mat
+  artifactKey: Guid(a289c7f765c09e74186a09dce58104d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Materials/ColorPaletteNormal.mat using Guid(a289c7f765c09e74186a09dce58104d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '913517e8c3efa467ee7b1f9b898c1263') in 0.007266 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1.652973 seconds.
+  path: Assets/AurynSky/WinterArena/Models/BannerHolder_v2.fbx
+  artifactKey: Guid(4168370b6320ade4eb4cf642f01a10e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/BannerHolder_v2.fbx using Guid(4168370b6320ade4eb4cf642f01a10e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '295ad66ef7b18df6402090bfcfcbf219') in 0.023747 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/Fire&Smoke.prefab
+  artifactKey: Guid(4a8fc365f726ad54693945c87f027798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/Fire&Smoke.prefab using Guid(4a8fc365f726ad54693945c87f027798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9d30a1844cbfcd0a325c27f1bd9bc92') in 0.026041 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/AurynSky/WinterArena/Models/WinterBridge_Section.fbx
+  artifactKey: Guid(4fe47052fe4d4434da8e9bd6104dc23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/WinterBridge_Section.fbx using Guid(4fe47052fe4d4434da8e9bd6104dc23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32d0d1c8372b356b9d6d62cb5f080173') in 0.013444 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AurynSky/WinterArena/Models/WinterChestBottom_v2.fbx
+  artifactKey: Guid(8223cded31394424ab47abd1fd6a2873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/WinterChestBottom_v2.fbx using Guid(8223cded31394424ab47abd1fd6a2873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f3fc4a2c61c2f2c414454e4663fd8ce') in 0.014432 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/Fire.prefab
+  artifactKey: Guid(8e83fd7c6161f7943b4f5b81970ac712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/Fire.prefab using Guid(8e83fd7c6161f7943b4f5b81970ac712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ce9558b6bf40681c2872c0aef7124f6') in 0.006756 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/AurynSky/WinterArena/Models/WinterCastle_v2.fbx
+  artifactKey: Guid(648498381b2b86740b13fcd28c3e047e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/WinterCastle_v2.fbx using Guid(648498381b2b86740b13fcd28c3e047e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47332a6333e7404239c2eeebcbc4a908') in 0.012746 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/WinterArena/Models/WinterCastleWindow.fbx
+  artifactKey: Guid(e72cd5d9ca8a31c439d64409a820e614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/WinterCastleWindow.fbx using Guid(e72cd5d9ca8a31c439d64409a820e614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad079d6ce7bd5ae22542997065caa0da') in 0.012532 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AurynSky/WinterArena/Models/SnowEnd.fbx
+  artifactKey: Guid(b0afcbbf94f580d49bb606b0d50b7f2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/SnowEnd.fbx using Guid(b0afcbbf94f580d49bb606b0d50b7f2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e058e5ea249609ba0482017fdfd6f1a') in 0.011825 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AurynSky/WinterArena/Models/WinterGroundDirtSnow_v2.fbx
+  artifactKey: Guid(b149e8403a24bdb47a1be98afcbc803c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/WinterGroundDirtSnow_v2.fbx using Guid(b149e8403a24bdb47a1be98afcbc803c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a282a1aa0bc8b09d05e4e0ed80c095aa') in 0.010941 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/AurynSky/WinterArena/Models/WinterCannonBall.fbx
+  artifactKey: Guid(3ac86b5d48b1c49478cdc2d039a1d595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/WinterCannonBall.fbx using Guid(3ac86b5d48b1c49478cdc2d039a1d595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd342de0f004f4d495793f977207af96e') in 0.013881 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/WinterArena/Models/WinterGrass03.fbx
+  artifactKey: Guid(97b68e2f2f28a2d4b84e3a5beb338e8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/WinterGrass03.fbx using Guid(97b68e2f2f28a2d4b84e3a5beb338e8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce846a83d7704e40b9a92a13a3b69d3d') in 0.017168 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AurynSky/WinterArena/Models/WinterCubeLarge_v2.fbx
+  artifactKey: Guid(66e145569ad6d434cbd1b8b6628775bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/WinterCubeLarge_v2.fbx using Guid(66e145569ad6d434cbd1b8b6628775bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70f74ef60edcbbe633bc5111bb25001d') in 0.011721 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/AurynSky/WinterArena/Models/WinterCatapultWheel.fbx
+  artifactKey: Guid(41c1d6b0e7c0b884fa2018d178c70433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/WinterCatapultWheel.fbx using Guid(41c1d6b0e7c0b884fa2018d178c70433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48a76f4e9a3d70cadc71e0b97f966ca4') in 0.012533 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/Smoke.prefab
+  artifactKey: Guid(ed488ac10aefc794eb9d16dd3719e791) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/Smoke.prefab using Guid(ed488ac10aefc794eb9d16dd3719e791) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '713825d5e624f617bc88520be685158f') in 0.007478 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AurynSky/WinterArena/Models/SnowEnd_v2.fbx
+  artifactKey: Guid(25a7a2e0e4b37e845b922aa6deab4d69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/SnowEnd_v2.fbx using Guid(25a7a2e0e4b37e845b922aa6deab4d69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0df4b7807cfc2022e731e4a4cc526acd') in 0.017539 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/WinterBrazier.prefab
+  artifactKey: Guid(92484f07dac8f2342af273b0bc4d24ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/WinterBrazier.prefab using Guid(92484f07dac8f2342af273b0bc4d24ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ce5f0b52d236ae2606432a116af021') in 0.011438 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 45
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AurynSky/WinterArena/Models/WinterGroundRockSnow_v2.fbx
+  artifactKey: Guid(bd173fa504295db4f99d8e0d36e458d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/WinterGroundRockSnow_v2.fbx using Guid(bd173fa504295db4f99d8e0d36e458d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f0f72f7351558f51dee1aa6ccf6a2cc') in 0.015066 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/AurynSky/WinterArena/Models/SnowCorner.fbx
+  artifactKey: Guid(c09aee234eb4c264983466aa6fe75c41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/SnowCorner.fbx using Guid(c09aee234eb4c264983466aa6fe75c41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd98f80f92f2bc72ab3a778af4549125') in 0.012200 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/WinterCubeLarge_v2.prefab
+  artifactKey: Guid(01dd818fb945da74490ada314c52a16e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/WinterCubeLarge_v2.prefab using Guid(01dd818fb945da74490ada314c52a16e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9988798b14a63d86cc8ece08aa5aa92b') in 0.007251 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/WinterCubeMedium.prefab
+  artifactKey: Guid(7ea2dd0fb00473449b677259eba93ea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/WinterCubeMedium.prefab using Guid(7ea2dd0fb00473449b677259eba93ea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad6b81e812cfd8dda2cf33d12bbef068') in 0.013322 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/WinterCubeMedium_v2.prefab
+  artifactKey: Guid(92d606e97beec3941abbdb60fc8a3f90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/WinterCubeMedium_v2.prefab using Guid(92d606e97beec3941abbdb60fc8a3f90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9603b6fc2bb3313052e74b87daeb64bc') in 0.006435 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/WinterCatapult_v2.prefab
+  artifactKey: Guid(e09c43c4dd9ac80499cd9faa1dfb3d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/WinterCatapult_v2.prefab using Guid(e09c43c4dd9ac80499cd9faa1dfb3d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29f56b9b9d58def03a43c4678a1a98ec') in 0.008699 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 64
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/WinterCubeSmall.prefab
+  artifactKey: Guid(ca82f072d2f3d05478ee75b36046a757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/WinterCubeSmall.prefab using Guid(ca82f072d2f3d05478ee75b36046a757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74b074a1f8b02c665bac6ef0c43eced9') in 0.007273 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AurynSky/WinterArena/Models/WinterGrass04.fbx
+  artifactKey: Guid(2c1d584bdf0d86644962a92568011503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Models/WinterGrass04.fbx using Guid(2c1d584bdf0d86644962a92568011503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b31b55d1e947e97fc182923adbd43593') in 0.012091 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/WinterChest.prefab
+  artifactKey: Guid(115720bd171d59440b9e96d883e33e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/WinterChest.prefab using Guid(115720bd171d59440b9e96d883e33e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2241f7555b69f34766485b6b491fcbda') in 0.008678 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 38
+========================================================================
+Received Import Request.
+  Time since last request: 0.013321 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/WinterGrass04.prefab
+  artifactKey: Guid(dbe32a1b9b03b2f40bd79b61157edf80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/WinterGrass04.prefab using Guid(dbe32a1b9b03b2f40bd79b61157edf80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e53e192b1616512a4660d8812c225af') in 0.006890 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.026439 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/WinterLadderExtra.prefab
+  artifactKey: Guid(ecc7a7b66c2705d4bb88d7a153a2b238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/WinterLadderExtra.prefab using Guid(ecc7a7b66c2705d4bb88d7a153a2b238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f145d0efbec2faf0433959c47e55c999') in 0.007810 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.019762 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/Ground/WinterGroundDirtSnow.prefab
+  artifactKey: Guid(263e1010ccdb64b48a7d9fe9a570589f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/Ground/WinterGroundDirtSnow.prefab using Guid(263e1010ccdb64b48a7d9fe9a570589f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '557ace6ec6e5be199d8b1a5bbe4a234e') in 0.007225 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.033414 seconds.
+  path: Assets/AurynSky/WinterArena/Prefabs/Ground/WinterGroundRockSnow.prefab
+  artifactKey: Guid(bad351c878112904cbbc404a34243224) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/WinterArena/Prefabs/Ground/WinterGroundRockSnow.prefab using Guid(bad351c878112904cbbc404a34243224) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da8ce82f54e94586c85fb5e1a87a8bb2') in 0.007187 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 1734.205571 seconds.
+  path: Assets/MainGame/Scene/New Scene.unity
+  artifactKey: Guid(9560cd7da34bce44a9bb070dbfc59e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Scene/New Scene.unity using Guid(9560cd7da34bce44a9bb070dbfc59e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2fa8f5f13020327e7b45fcfa421a73b') in 0.000831 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 51.841530 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Materials/ColorPaletteBLUE.mat
+  artifactKey: Guid(87b4f5e88fc2f854c9313b90039fe33b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Materials/ColorPaletteBLUE.mat using Guid(87b4f5e88fc2f854c9313b90039fe33b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b07cde993cd94d16747059f7f3cf9a13') in 0.129759 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Materials/Grey.mat
+  artifactKey: Guid(18e0c23b3ae1ab24a94f61d82f8a53b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Materials/Grey.mat using Guid(18e0c23b3ae1ab24a94f61d82f8a53b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5df5c601b766b1b3979fc58efe4fa37f') in 0.010969 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Materials/FireCube.mat
+  artifactKey: Guid(2ef39c184abf89848ba6b8a836f919fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Materials/FireCube.mat using Guid(2ef39c184abf89848ba6b8a836f919fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d8cf2d1fdc22bb859ba6f7bf01a12c4') in 0.019298 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Materials/DemoGround.mat
+  artifactKey: Guid(1f3518228ef95614e819aafeeee47833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Materials/DemoGround.mat using Guid(1f3518228ef95614e819aafeeee47833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02f43d4c4f6a85f962c7d463d50252b1') in 0.009251 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.538929 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/BannerD.fbx
+  artifactKey: Guid(fbbfcd251acb5824798ec6df5aafe31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/BannerD.fbx using Guid(fbbfcd251acb5824798ec6df5aafe31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b3b6615fe54f3c977e651ed73f4e74c') in 0.021034 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/CageD.fbx
+  artifactKey: Guid(83d4354d94f1f1443b3fa423f4639a94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/CageD.fbx using Guid(83d4354d94f1f1443b3fa423f4639a94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e23a9166683c66d4a326fb896d72eb5d') in 0.016768 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/ChainTopD.fbx
+  artifactKey: Guid(1e44e54d82a52904fbd7fca1d4f9e74f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/ChainTopD.fbx using Guid(1e44e54d82a52904fbd7fca1d4f9e74f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4313bb6524e466dd90484ccfce106a8d') in 0.013809 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/BlockSpike01D.fbx
+  artifactKey: Guid(1a5dcf5c28e4b4049941bd2c8cb7b878) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/BlockSpike01D.fbx using Guid(1a5dcf5c28e4b4049941bd2c8cb7b878) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4474c186f87c66bf2a3d5b4b162e8610') in 0.014139 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/BrazzierD.fbx
+  artifactKey: Guid(e474ac24e4a142743b1d193bce55e295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/BrazzierD.fbx using Guid(e474ac24e4a142743b1d193bce55e295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7efcb9f95486658515ad03d7ab349479') in 0.013697 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/Blade01D.fbx
+  artifactKey: Guid(5ced8aeb49e1ee3418b6badab445c36a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/Blade01D.fbx using Guid(5ced8aeb49e1ee3418b6badab445c36a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a14d829473da3c50ebba1c1a477148b1') in 0.014501 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/SkullOpenD.fbx
+  artifactKey: Guid(b9236b4abd7c4514ea211709ab40f9c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/SkullOpenD.fbx using Guid(b9236b4abd7c4514ea211709ab40f9c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4140e9d4c44486b90349135834419d25') in 0.014783 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/ChainD.fbx
+  artifactKey: Guid(41a0ec3261bfe4745b912d53e367ab20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/ChainD.fbx using Guid(41a0ec3261bfe4745b912d53e367ab20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04351efcd8ceed62b9d8bdb8bbaa71ef') in 0.016853 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/BridgeD.fbx
+  artifactKey: Guid(ada6e50a1265db04a9cbc25cc77e0e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/BridgeD.fbx using Guid(ada6e50a1265db04a9cbc25cc77e0e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13ad66647bfd7c62e4b1f452b519d88f') in 0.014174 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/Pillar01D.fbx
+  artifactKey: Guid(cc9aa7f92b832314cb6792844df56284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/Pillar01D.fbx using Guid(cc9aa7f92b832314cb6792844df56284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c08f5920c43cd1d695e09deb253e59b') in 0.014118 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/BlockSpike02D.fbx
+  artifactKey: Guid(b9097d52891570045adcbab7d591a13c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/BlockSpike02D.fbx using Guid(b9097d52891570045adcbab7d591a13c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c5e775ae5516ec507632e9f738f999d') in 0.015502 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/BannerHolderSD.fbx
+  artifactKey: Guid(0b998829fc4451645b3c1f726c213dff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/BannerHolderSD.fbx using Guid(0b998829fc4451645b3c1f726c213dff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88c6d7102b619f3dad1d4eef238f19cd') in 0.012391 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/Pole02D.fbx
+  artifactKey: Guid(8f96c8f1bf816094a9be5b62a1ca2e0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/Pole02D.fbx using Guid(8f96c8f1bf816094a9be5b62a1ca2e0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf186e9db2e8e04e51b94bb534983dfa') in 0.015813 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/SpearD.fbx
+  artifactKey: Guid(5395c56e03889384398da83042f0b46e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/SpearD.fbx using Guid(5395c56e03889384398da83042f0b46e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f0626a7902bc32fbbce52e7683e1362') in 0.015409 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/TrapDoorLD.fbx
+  artifactKey: Guid(3e4ac32a4fae8c84e8974bd48741d3b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/TrapDoorLD.fbx using Guid(3e4ac32a4fae8c84e8974bd48741d3b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e102f956a9cf33f74c9f45309c85ce0d') in 0.014564 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/TrapDoorRD.fbx
+  artifactKey: Guid(93ddb3ca1b3250f4a80cb786ac68931d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/TrapDoorRD.fbx using Guid(93ddb3ca1b3250f4a80cb786ac68931d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cda4cd48daaaf6da5210b4ea1c492614') in 0.014018 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/LadderD.fbx
+  artifactKey: Guid(807ebce0ec93c9544ab0b281fff1cdab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/LadderD.fbx using Guid(807ebce0ec93c9544ab0b281fff1cdab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea50e0fd4998a9ebe41115e8230d89c7') in 0.014868 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/BlockS01D.fbx
+  artifactKey: Guid(5508321447dce6a4da3a291372934e34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/BlockS01D.fbx using Guid(5508321447dce6a4da3a291372934e34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efb1f94ac2cf11d5126e1c98efbbe8db') in 0.015363 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/Skull0ClosedD.fbx
+  artifactKey: Guid(f1d659279c108dd42a0daf60d45ab077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/Skull0ClosedD.fbx using Guid(f1d659279c108dd42a0daf60d45ab077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '464645fd36600d2fe50bfd514b1e6dc2') in 0.015108 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Models/DoorLD.fbx
+  artifactKey: Guid(01a913c2e88a083438054c513b2cd798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Models/DoorLD.fbx using Guid(01a913c2e88a083438054c513b2cd798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f0fd8ab91490328ba4b5a3eecfa2317') in 0.015168 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.319470 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Particles/FireD.prefab
+  artifactKey: Guid(78f0d01015650cc49bf665d463795ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Particles/FireD.prefab using Guid(78f0d01015650cc49bf665d463795ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2482d7d6654e89eceeb1510f0289a403') in 0.006829 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Particles/WaterFallSlime.prefab
+  artifactKey: Guid(a81d55466162f4e468ace94352031b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Particles/WaterFallSlime.prefab using Guid(a81d55466162f4e468ace94352031b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e62b5d4acf0613f792e23cc814485f26') in 0.006619 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 3.707122 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Blue/BannerStandingBlue.prefab
+  artifactKey: Guid(4b403a38653c14e42bf3b31c0b7af879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Blue/BannerStandingBlue.prefab using Guid(4b403a38653c14e42bf3b31c0b7af879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94de372fb05dad903bbabf4ed4d9db89') in 0.028661 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 45
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Blue/Pillar02Blue.prefab
+  artifactKey: Guid(c44079fbf7091444bb884a0ccf7d84ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Blue/Pillar02Blue.prefab using Guid(c44079fbf7091444bb884a0ccf7d84ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75eadaebcecb99a598d388fd4643015f') in 0.024713 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.433990 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/BannerHolderSD.prefab
+  artifactKey: Guid(72f4d9ce894021048b78fa5504c55393) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/BannerHolderSD.prefab using Guid(72f4d9ce894021048b78fa5504c55393) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8dde524be3ed092de659beac6f90f95') in 0.008969 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/TowerD.prefab
+  artifactKey: Guid(c428cce7819544e43825d891347548d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/TowerD.prefab using Guid(c428cce7819544e43825d891347548d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ad2fe5503041f98e8f0dc0a1c51d187') in 0.012918 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/SkullOpenD.prefab
+  artifactKey: Guid(ff9a53b324f9aa54a88bbffc8aa95b27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/SkullOpenD.prefab using Guid(ff9a53b324f9aa54a88bbffc8aa95b27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e500b8d43993b9a6f86d0e37c9092c28') in 0.010851 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/ChainD.prefab
+  artifactKey: Guid(64825d6cefec54e4cb33751b82e00e74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/ChainD.prefab using Guid(64825d6cefec54e4cb33751b82e00e74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '834ef44b9b230b9e5f648daa3a67771b') in 0.019141 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/Window.prefab
+  artifactKey: Guid(1e79dbc17f432da4bbadfe8f90200c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/Window.prefab using Guid(1e79dbc17f432da4bbadfe8f90200c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc2939e24f644f4e22b7df23daa228f3') in 0.007134 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/TowerWindows.prefab
+  artifactKey: Guid(a735d73378e828641b3e7441c8fcfa09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/TowerWindows.prefab using Guid(a735d73378e828641b3e7441c8fcfa09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9995489ba6d9d2c6f9941189b93a0a91') in 0.008099 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 18
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/Skull0ClosedD.prefab
+  artifactKey: Guid(07428cfeb07f41144b70e1d7145d2ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/Skull0ClosedD.prefab using Guid(07428cfeb07f41144b70e1d7145d2ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6c6304b218285746dbdb46ac98de810') in 0.007899 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/General/CageCompleteD.prefab
+  artifactKey: Guid(3bfc6ea068c5de043b3245865ec6ed69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/General/CageCompleteD.prefab using Guid(3bfc6ea068c5de043b3245865ec6ed69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fac2806b431ce283ebeb0102d04d6994') in 0.008309 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 34
+========================================================================
+Received Import Request.
+  Time since last request: 0.955238 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Red/BannerStandingRed.prefab
+  artifactKey: Guid(429669ea6f874eb43bbf97470c68fb12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Red/BannerStandingRed.prefab using Guid(429669ea6f874eb43bbf97470c68fb12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd7618ceba0c30f1c128b098d514901b') in 0.009578 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 43
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Red/Pillar02RedD.prefab
+  artifactKey: Guid(9495754c709bff341a2836b50fd2469e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Red/Pillar02RedD.prefab using Guid(9495754c709bff341a2836b50fd2469e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd56328cc994e5774c197412079658620') in 0.007161 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 97.848476 seconds.
+  path: Assets/AurynSky/Forest Pack/Prefabs/Prefabs_Blue/ForestBrazzierBlue.prefab
+  artifactKey: Guid(a29d452ee24577e46b40bd1b5396acc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Prefabs/Prefabs_Blue/ForestBrazzierBlue.prefab using Guid(a29d452ee24577e46b40bd1b5396acc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ab345e21412a16fc5861bcbe358499c') in 0.031996 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 19
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/Forest Pack/Prefabs/Prefabs_Blue/ForestCastleDoorL_Blue.prefab
+  artifactKey: Guid(dcbdac72f171da241abd88df31a61142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Prefabs/Prefabs_Blue/ForestCastleDoorL_Blue.prefab using Guid(dcbdac72f171da241abd88df31a61142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '558574270dbfb738350b52c8d50b4f40') in 0.008092 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.014692 seconds.
+  path: Assets/AurynSky/Forest Pack/Prefabs/Prefabs_Blue/ForestCatapult_Blue.prefab
+  artifactKey: Guid(43739d3c57ae2ba4cbe919f44dba1d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Prefabs/Prefabs_Blue/ForestCatapult_Blue.prefab using Guid(43739d3c57ae2ba4cbe919f44dba1d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14c933121ab1a5c91c1aae5dfd79635a') in 0.010862 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 56
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AurynSky/Forest Pack/Prefabs/Prefabs_Blue/ForestTower_Blue.prefab
+  artifactKey: Guid(1cace56ba420dd64c9171c422c8e9aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Prefabs/Prefabs_Blue/ForestTower_Blue.prefab using Guid(1cace56ba420dd64c9171c422c8e9aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5b46d116f4cdf3e8f2cd6a8b1bf91a6') in 0.013278 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 118
+========================================================================
+Received Import Request.
+  Time since last request: 0.407443 seconds.
+  path: Assets/AurynSky/Forest Pack/Prefabs/Prefabs_Red/ForestBrazzierRed.prefab
+  artifactKey: Guid(b8cd47ec0ed55ef4a81e264386f6aee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Prefabs/Prefabs_Red/ForestBrazzierRed.prefab using Guid(b8cd47ec0ed55ef4a81e264386f6aee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08ae76dc35b3bb41166d411792ba2071') in 0.008968 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 19
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AurynSky/Forest Pack/Prefabs/Prefabs_Red/ForestCastle_Red.prefab
+  artifactKey: Guid(fb6e45a6010fdae4b91b4ccbac21425e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Prefabs/Prefabs_Red/ForestCastle_Red.prefab using Guid(fb6e45a6010fdae4b91b4ccbac21425e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '861ff08fe36e2b455cf3560d3aabf0aa') in 0.012255 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 0.035032 seconds.
+  path: Assets/AurynSky/Forest Pack/Prefabs/Prefabs_Red/ForestCatapult_Red.prefab
+  artifactKey: Guid(1c646272db9f13f40a1cc8d87b080552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Forest Pack/Prefabs/Prefabs_Red/ForestCatapult_Red.prefab using Guid(1c646272db9f13f40a1cc8d87b080552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '478d03d70a98b7183249fd37892720ad') in 0.010123 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 55
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.581 seconds
+Refreshing native plugins compatible for Editor in 4.34 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.622 seconds
+Domain Reload Profiling: 2198ms
+	BeginReloadAssembly (194ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (290ms)
+		LoadAssemblies (380ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (21ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1622ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (602ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (97ms)
+			ProcessInitializeOnLoadAttributes (399ms)
+			ProcessInitializeOnLoadMethodAttributes (74ms)
+			AfterProcessingInitializeOnLoad (18ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (19ms)
+Refreshing native plugins compatible for Editor in 4.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5546 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (1.5 MB). Loaded Objects now: 6172.
+Memory consumption went from 200.8 MB to 199.3 MB.
+Total: 5.034400 ms (FindLiveObjects: 0.583400 ms CreateObjectMapping: 0.614000 ms MarkObjects: 3.253500 ms  DeleteObjects: 0.582400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.562 seconds
+Refreshing native plugins compatible for Editor in 4.58 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.763 seconds
+Domain Reload Profiling: 2321ms
+	BeginReloadAssembly (193ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (46ms)
+	LoadAllAssembliesAndSetupDomain (271ms)
+		LoadAssemblies (360ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (21ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (1764ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (667ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (103ms)
+			ProcessInitializeOnLoadAttributes (445ms)
+			ProcessInitializeOnLoadMethodAttributes (85ms)
+			AfterProcessingInitializeOnLoad (18ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (18ms)
+Refreshing native plugins compatible for Editor in 5.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5546 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (1.5 MB). Loaded Objects now: 6175.
+Memory consumption went from 200.8 MB to 199.3 MB.
+Total: 4.228000 ms (FindLiveObjects: 0.488700 ms CreateObjectMapping: 0.535200 ms MarkObjects: 2.675400 ms  DeleteObjects: 0.528000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.566 seconds
+Refreshing native plugins compatible for Editor in 4.64 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.616 seconds
+Domain Reload Profiling: 2178ms
+	BeginReloadAssembly (185ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (278ms)
+		LoadAssemblies (365ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (21ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1617ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (602ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (105ms)
+			ProcessInitializeOnLoadAttributes (392ms)
+			ProcessInitializeOnLoadMethodAttributes (76ms)
+			AfterProcessingInitializeOnLoad (17ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (18ms)
+Refreshing native plugins compatible for Editor in 5.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5546 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (1.5 MB). Loaded Objects now: 6178.
+Memory consumption went from 200.8 MB to 199.3 MB.
+Total: 4.786800 ms (FindLiveObjects: 0.442000 ms CreateObjectMapping: 0.518100 ms MarkObjects: 3.300400 ms  DeleteObjects: 0.525200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 3460.968877 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Traps/SpearD.prefab
+  artifactKey: Guid(52885593799113a428a7ed330ad57782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Traps/SpearD.prefab using Guid(52885593799113a428a7ed330ad57782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '101a7cabe91fe8b9ed8f956954775887') in 0.136313 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Traps/TrapDoorRD.prefab
+  artifactKey: Guid(7dcc9bd984107894e833a54743b41a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Traps/TrapDoorRD.prefab using Guid(7dcc9bd984107894e833a54743b41a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c965c8e46e8df75cc1e689c3588fbbf') in 0.015277 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Prefabs/Traps/TrapDoor.prefab
+  artifactKey: Guid(a1644dd8880d0594d970514153034e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Prefabs/Traps/TrapDoor.prefab using Guid(a1644dd8880d0594d970514153034e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be3a998a822b087d71d415f998ca18cb') in 0.016889 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: ½º·¹µå Á¾·á ¶Ç´Â ÀÀ¿ë ÇÁ·Î±×·¥ ¿äÃ» ¶§¹®¿¡ I/O ÀÛ¾÷ÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
