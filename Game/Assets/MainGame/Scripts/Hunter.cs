@@ -1,5 +1,7 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -9,22 +11,33 @@ public class Hunter : MonoBehaviour
     public static Vector3 HunterPosition;
     public static Transform HunterRotation;
 
-    public static bool Moveable = false;
-    public static bool Running = false;
-    public static bool Attackable = false;
-    public static bool fireball = false;
-    public static bool chooseDirection = false;
-    public static float Health;
-    private float MaxHealth;
+    [SerializeField] public static bool Moveable = false;
+    [SerializeField] public static bool Running = false;
+    [SerializeField] public static bool Attackable = false;
+    [SerializeField] public static bool fireball = false;
+    [SerializeField] public static bool chooseDirection = false;
+    
+   [SerializeField] public static float Health;
+   [SerializeField] public float MaxHealth;
 
 
     public bool herringDebuff = false;
     public bool squidDebuff = false;
 
-
+    //로비에서 움직임 제한을 위한 변수
+    [SerializeField] Vector3 stagePosition;
+    [SerializeField] GameObject[] cameraTriggers;
+    [SerializeField] GameObject[] cameraPosition;
+    [SerializeField] public bool onStage = true;
+    [SerializeField] public bool onStair = false;
+    
+    private float curX;
+    private float curY;
+    private float curZ;
+    private float stageSpeed = 3.0f;
 
     [SerializeField] GameObject AIManager;
-    [SerializeField] GameObject LevelManager;
+    //[SerializeField] GameObject LevelManager;
     [SerializeField] GameObject TileManager;
     [SerializeField] GameObject LoadManager;
     [SerializeField] GameObject SoundManager;
@@ -42,13 +55,6 @@ public class Hunter : MonoBehaviour
     private int WeaponNumber = 0;
     [SerializeField] GameObject[] AttackBox;
     [SerializeField] AudioClip[] AttackSound; 
-
-    private AIManager aiManager;
-    private LevelManager levelManager;
-    private TileManager tileManager;
-    private LoadingSceneManager loadManager;
-    private SoundManager soundManager;
-
 
     public static GameObject moveAbleBlock;
     public static Vector3 attackAbleDirection;
@@ -68,41 +74,62 @@ public class Hunter : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
+        stagePosition = transform.position;
+        mainCamera = Camera.main;
+
         HunterPosition = new Vector3(8, 0, 0);
         Huntercollider = GetComponent<BoxCollider>();
         HunterRotation = GetComponent<Transform>();
         animator = GetComponent<Animator>();
 
 
-        aiManager =AIManager.GetComponent<AIManager>();
-        levelManager =LevelManager.GetComponent<LevelManager>();
-        tileManager =TileManager.GetComponent<TileManager>();
-        loadManager=LoadManager.GetComponent<LoadingSceneManager>();
-        soundManager =SoundManager.GetComponent<SoundManager>();
       
-        HPPosition = HPSlider.transform.position;
+        //HPPosition = HPSlider.transform.position;
         Health = 5;
         MaxHealth = 5;
     }
 
-   
+
 
 
     void Update()
     {
-        Huntercollider.enabled = !Moveable;
-
-        animator.SetBool("Run", Running);
-       
-
-        
         
 
-        if (Moveable && moveAbleBlock != null)
+
+        if (onStage)
         {
-            moveHunterPosition();
+            Vector3 moveDirection = Vector3.zero;
+
+            curX = Input.GetAxisRaw("Horizontal");
+            curZ = Input.GetAxisRaw("Vertical");
+            moveDirection = new Vector3(curX, 0f, curZ).normalized;
+
+            Vector3 targetDirection = new Vector3(moveDirection.x, 0f, moveDirection.z);
+            transform.LookAt(transform.position + targetDirection);
+
+            animator.SetBool("Run", moveDirection != Vector3.zero);
+            //transform.Translate(-moveDirection * stageSpeed * Time.deltaTime);
+
+            if (moveDirection != Vector3.zero)
+                transform.Translate(Vector3.forward * stageSpeed * Time.deltaTime);
+
+
+            stagePosition = transform.position;
         }
+
+
+        else
+        {
+            Huntercollider.enabled = !Moveable;
+            animator.SetBool("Run", Running);
+
+            if (Moveable && moveAbleBlock != null)
+            {
+                moveHunterPosition();
+            }
+        }
+       
     }
 
     
@@ -121,17 +148,37 @@ public class Hunter : MonoBehaviour
         else if (other.CompareTag("colobusAttack"))
         {
             other.transform.root.GetComponent<Animal>().Attack();
-            soundManager.SoundPlay("ColobusAttack");
+            //soundManager.SoundPlay("ColobusAttack");
         }
 
         else if (other.CompareTag("banana"))
         {
             StartCoroutine(BananaMotion());
-            soundManager.SoundPlay("Banana");
-            Health -= aiManager.animalStatus["Colobus"][0];
+            //soundManager.SoundPlay("Banana");
+            //Health -= aiManager.animalStatus["Colobus"][0];
             other.gameObject.SetActive(false);
             HPSlider.fillAmount = Health / MaxHealth;
         }
+
+       
+
+       
+
+     
+        if (other.name == "CameraMove")
+        {
+            other.gameObject.SetActive(false);
+            for(int i = cameraTriggers.Length - 1; i >= 0; i--)
+            {
+                if (!cameraTriggers[i].gameObject.activeSelf)
+                {
+                    mainCamera.transform.position = cameraPosition[i].transform.localPosition;
+                    break;
+                }
+            }
+        }
+
+        
 
         if (Health <= 0)
         {
@@ -140,6 +187,9 @@ public class Hunter : MonoBehaviour
         }
 
     }
+
+    
+
 
     IEnumerator BananaMotion()
     {
@@ -163,9 +213,27 @@ public class Hunter : MonoBehaviour
     public void Die()
     {
         animator.SetTrigger("Die");
-        soundManager.SoundPlay("GameOver");
+       // soundManager.SoundPlay("GameOver");
         MenuPanel.SetActive(true);
     }
+
+    public void SetInitialState()
+    {
+        Moveable = false;
+        Running = false;
+        Attackable = false;
+
+        Health = MaxHealth;
+        HPSlider.fillAmount = Health / MaxHealth;
+        HunterPosition = new Vector3(8, 0, 0);
+    }
+
+    public void SetLobbyState()
+    {
+        onStage = true;
+        transform.position = stagePosition;
+    }
+
     #endregion
 
 
@@ -201,7 +269,7 @@ public class Hunter : MonoBehaviour
 
     public void ActiveHunterAttack()
     {
-        aiManager.AnimalActiveCollider(true);
+        //aiManager.AnimalActiveCollider(true);
         Quaternion curRotation = transform.rotation;
         transform.LookAt(attackAbleDirection);
         transform.rotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
@@ -210,11 +278,11 @@ public class Hunter : MonoBehaviour
         animator.SetTrigger("Attack" + (WeaponNumber+1));
         if (WeaponNumber == 0)
         {
-            soundManager.SoundPlay("HunterAttack");
+            //soundManager.SoundPlay("HunterAttack");
         }
         else if (WeaponNumber == 1)
         {
-            soundManager.SoundPlay("FireBall");
+            //soundManager.SoundPlay("FireBall");
         }
         AttackWeapon[WeaponNumber].SetActive(true);
         StartCoroutine(HunterAttackMotion());
@@ -306,80 +374,23 @@ public class Hunter : MonoBehaviour
     {
         if (!MenuPanel.activeSelf)
         {
-            soundManager.SoundPlay("PausePanel");
+            //soundManager.SoundPlay("PausePanel");
             MenuPanel.SetActive(true);
         }
     }
 
-    public void ReLoadScene()
-    {
-        string sceneName = SceneManager.GetActiveScene().name;
-        ExitScene();
-
-        MenuPanel.SetActive(false);
-        gameObject.SetActive(true);
-        animator.SetTrigger("Reset");
-        Health = MaxHealth;
-        HPSlider.fillAmount = Health / MaxHealth;
-        StartCoroutine(LoadScene(sceneName));
-        transform.position = new Vector3(8,0,0);
-        HunterPosition=transform.position;
-    }
-    IEnumerator LoadScene(string name)
-    {
-        yield return null;
-        AIManager.SetActive(true);
-
-
-        LevelManager.SetActive(false);
-        levelManager.SetSceneName(name);
-
-
-        TileManager.SetActive(true);
-        loadManager.LoadScene(name);
-        
-    }
-
-    public void ExitScene()
-    {
-        Moveable = false;
-        Running = false;
-        Attackable = false;
-
-        MenuPanel.SetActive(false);
-        Moveable = false;
-        
-        aiManager.ResetAnimalList();
-        AIManager.SetActive(false);
-
-        tileManager.HintPanelOff();
-        TileManager.SetActive(false);
-        
-        SceneManager.LoadScene("Lobby");
-        soundManager.EnterLobby();
-        
-        LevelManager.SetActive(true);
-        levelManager.LinkMaps();
-
-        Health = MaxHealth;
-        HPSlider.fillAmount = Health / MaxHealth;
-        transform.position = new Vector3(8, 0, 0);
-        HunterPosition = transform.position;
-        animator.SetTrigger("Reset");
-        gameObject.SetActive(false);
-        
-    }
+    
     #endregion
 
     public void LevelUp()
     {
-        levelManager.LevelUp();
-        ExitScene();
+        //levelManager.LevelUp();
+        //ExitScene();
         transform.position = new Vector3(8, 0, 0);
         Health = MaxHealth;
         HPSlider.fillAmount = Health / MaxHealth;
         HunterPosition = transform.position;
-        levelManager.LinkMaps();
+        //levelManager.LinkMaps();
         //버튼 이벤트를 헌터에 주고 씬 이동전에 LevelUp호출
 
 
@@ -394,7 +405,7 @@ public class Hunter : MonoBehaviour
     {
         SceneManager.LoadScene("End");
         //Destroy(mainCamera);
-        Destroy(LevelManager);
+        //Destroy(LevelManager);
         Destroy(AIManager);
         Destroy(TileManager);
         Destroy(LoadManager);
