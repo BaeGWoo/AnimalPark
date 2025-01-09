@@ -41,7 +41,7 @@ public class CameraManager : MonoBehaviour
                 {
                     if (clickedObject.CompareTag("MoveAbleBlock"))
                     {
-                        Hunter.moveAbleBlock=clickedObject;
+                        //Hunter.moveAbleBlock=clickedObject;
                     }
                 }
 

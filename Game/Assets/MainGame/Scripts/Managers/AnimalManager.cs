@@ -10,18 +10,6 @@ public class AnimalManager : MonoBehaviour
 
     public GameObject[] GetCurrentAnimals() { return curAnimals; }
 
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += SceneOnLoaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= SceneOnLoaded;
-    }
-
-    private void SceneOnLoaded(Scene scene, LoadSceneMode mode)
-    {
-        FindAnyObjectByType<AIManager>().GetComponent<AIManager>().getAnimalList(curAnimals);
-    }
+   
+    
 }

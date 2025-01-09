@@ -20,7 +20,7 @@ public class SceneTrigger : MonoBehaviour
 
     private void SceneOnLoaded(Scene scene, LoadSceneMode mode)
     {
-        curLevel = FindAnyObjectByType<LevelManager>().GetComponent<LevelManager>().GetCurLevel();
+        //curLevel = FindAnyObjectByType<LevelManager>().GetComponent<LevelManager>().GetCurLevel();
 
         for(int i = 0; i < curLevel; i++)
         {

@@ -10,13 +10,9 @@ public class LoadManager : MonoBehaviour
     [SerializeField] Slider loadingBar;
     [SerializeField] GameObject loadingCanvas;
 
-    [SerializeField] GameObject AIManager;
-    [SerializeField] GameObject SoundManager;
-
     [SerializeField] Texture2D[] mouseImage;
-
-    private AIManager aiManager;
-    private SoundManager soundManager;
+    [SerializeField] SoundManager soundManager;
+  
 
     private static LoadManager instance;
     private void Awake()
@@ -33,8 +29,7 @@ public class LoadManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         Cursor.SetCursor(mouseImage[0], Vector2.zero, CursorMode.Auto);
-        aiManager = AIManager.GetComponent<AIManager>();
-        soundManager = SoundManager.GetComponent<SoundManager>();
+        
     }
 
    
@@ -66,9 +61,9 @@ public class LoadManager : MonoBehaviour
         float changeInterval = 0.1f; //로딩 시 이미지 전환 속도
         float nextChangeTime = changeInterval; 
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(next);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Island");
         asyncLoad.allowSceneActivation = false;
-        soundManager.MoveStage(); // 로딩BGM 설정
+        //soundManager.MoveStage(); // 로딩BGM 설정
          
         // 로딩 시 사용할 움직이는 이미지 설정
         while (elapsedTime < loadTime)
@@ -99,18 +94,20 @@ public class LoadManager : MonoBehaviour
 
                 // 씬 전환 허용
                 asyncLoad.allowSceneActivation = true;
-                aiManager.ActiveHintPanel();
+                //aiManager.ActiveHintPanel();
                 yield return new WaitForSeconds(0.5f);
 
 
-                //tileManager.CreateTileMap();
                 FindAnyObjectByType<TileManager>().GetComponent<TileManager>().CreateTileMap();
                 FindAnyObjectByType<Hunter>().GetComponent<Hunter>().SetInitialState();
-
-                aiManager.StartTurn();
+                FindAnyObjectByType<Hunter>().GetComponent<Hunter>().setCamera(Camera.main);
+                //aiManager.StartTurn();
+                FindAnyObjectByType<AIManager>().GetComponent<AIManager>().StartTurn();
+                FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().MoveStage();
+                FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().SetBGMPlayer();
                 loadingBar.value = 0;
                 loadingCanvas.SetActive(false);
-                soundManager.BGMPlay();
+                FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().BGMPlay();
             }
         }
     }
@@ -126,11 +123,11 @@ public class LoadManager : MonoBehaviour
 
     public void ExitScene()
     {
-        aiManager.ResetAnimalList();
-        AIManager.SetActive(false);
+        //aiManager.ResetAnimalList();
+        //AIManager.SetActive(false);
 
         SceneManager.LoadScene("Lobby");
-        soundManager.EnterLobby();
+        //soundManager.EnterLobby();
 
         // Hunter 초기화
         FindAnyObjectByType<Hunter>().GetComponent<Hunter>().SetInitialState();

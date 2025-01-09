@@ -24,19 +24,12 @@ public class Herring : Animal
         moveDirection[2] = new Vector3(-4, 0, -4);
         moveDirection[3] = new Vector3(4, 0, -4);
 
-
-       
-
         animator = GetComponent<Animator>();
         aiManager = FindObjectOfType<AIManager>();
         audioSource = gameObject.AddComponent<AudioSource>();
     }
 
-    public override void SetAnimalStatus(float Attack, float Health)
-    {
-        MaxHealth = Health;
-        AttackDamage = Attack;
-    }
+   
 
     public override float AnimalDamage() { return AttackDamage; }
 

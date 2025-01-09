@@ -33,39 +33,39 @@ public class Block : MonoBehaviour
 
     void Update()
     {
-        if (Hunter.Moveable || Hunter.fireball)
-        {
-            if (!Hunter.Running)
-            {
-                if (Hunter.Moveable)
-                {
-                    StartCoroutine(MoveableArea());
-
-                }
-
-                else if (Hunter.fireball)
-                {
-                    StartCoroutine(AttackAbleDirection());
-                }
-
-                else
-                {
-                    StartCoroutine(ReturnArea());
-                }
-            }
-
-            else
-            {
-                StartCoroutine(ReturnArea());
-            }
-        }
-
-        else
-        {
-            StartCoroutine(ReturnArea());
-        }
-        
-
+       // if (Hunter.Moveable || Hunter.fireball)
+       // {
+       //     if (!Hunter.Running)
+       //     {
+       //         if (Hunter.Moveable)
+       //         {
+       //             StartCoroutine(MoveableArea());
+       //
+       //         }
+       //
+       //         else if (Hunter.fireball)
+       //         {
+       //             StartCoroutine(AttackAbleDirection());
+       //         }
+       //
+       //         else
+       //         {
+       //             StartCoroutine(ReturnArea());
+       //         }
+       //     }
+       //
+       //     else
+       //     {
+       //         StartCoroutine(ReturnArea());
+       //     }
+       // }
+       //
+       // else
+       // {
+       //     StartCoroutine(ReturnArea());
+       // }
+       // 
+       //
     }
 
     public IEnumerator MoveableArea()
@@ -73,7 +73,9 @@ public class Block : MonoBehaviour
         float distance;
         distance = Math.Abs(Hunter.HunterPosition.x - curPostiion.x) + Math.Abs(Hunter.HunterPosition.z - curPostiion.z);
 
-        if (distance <= 6&&distance>=1)
+
+        if (distance <= 6&&distance>=1 &&
+            FindAnyObjectByType<TileManager>().GetComponent<TileManager>().CheckTileMap((int)(curPostiion.x/2),(int)(curPostiion.z/2)))
         {
             if (gameObject != targetblock)
             {
@@ -90,12 +92,14 @@ public class Block : MonoBehaviour
     {
         float distance;
         distance = Math.Abs(Hunter.HunterPosition.x - curPostiion.x) + Math.Abs(Hunter.HunterPosition.z - curPostiion.z);
-        if (distance <= 2&&distance>=1)
+        if (distance <= 4 && distance >= 1 &&
+            FindAnyObjectByType<TileManager>().GetComponent<TileManager>().CheckTileMap((int)(curPostiion.x / 2), (int)(curPostiion.z / 2)))
         {
-            if (this.gameObject != targetblock)
+            if (gameObject != targetblock)
             {
                 objectRenderer.material = redMaterial;
-                gameObject.tag = "AttackAbleDirection";
+                moveableArea = true;
+                gameObject.tag = "MoveAbleBlock";
             }
 
         }
@@ -108,6 +112,24 @@ public class Block : MonoBehaviour
         gameObject.tag = "Block";
         moveableArea = false;
         yield return null; 
+    }
+
+
+    public void SetMaterial(bool value)
+    {
+        if (value)
+        {
+            objectRenderer.material = originalMaterial;
+            moveableArea = false;
+            gameObject.tag = "Block";
+        }
+
+        else
+        {
+            objectRenderer.material = redMaterial;
+            moveableArea = true;
+            gameObject.tag = "MoveAbleBlock";
+        }
     }
 
 }

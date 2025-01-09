@@ -8,7 +8,7 @@ public class SoundManager : MonoBehaviour
 {
     public AudioClip[] bgm;
     public AudioClip[] audioClip;
-    private AudioSource backgroundAudioSource;  // 배경음악을 위한 AudioSource
+    [SerializeField] private AudioSource backgroundAudioSource;  // 배경음악을 위한 AudioSource
     private AudioSource effectAudioSource;      // 효과음을 위한 AudioSource
     private static SoundManager instance;
     private void Awake()
@@ -47,8 +47,15 @@ public class SoundManager : MonoBehaviour
         effectAudioSource.Play();
     }
 
+    public void SetBGMPlayer()
+    {
+        backgroundAudioSource = Camera.main.GetComponent<AudioSource>();
+    }
+
+
     public void MoveStage()
     {
+        backgroundAudioSource = Camera.main.GetComponent<AudioSource>();
         backgroundAudioSource.loop = false;
         backgroundAudioSource.clip= Resources.Load<AudioClip>("Sounds/UISound/MouseClick");
         backgroundAudioSource.Play();
@@ -64,6 +71,7 @@ public class SoundManager : MonoBehaviour
         int index = SceneManager.GetActiveScene().buildIndex;
         backgroundAudioSource.loop = true;
         backgroundAudioSource.clip = bgm[index];
+        //Debug.Log(index);
         backgroundAudioSource.Play();
     }
 

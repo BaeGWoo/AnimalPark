@@ -10,24 +10,28 @@ public class Animal : MonoBehaviour
     public bool moveable = false;
     protected AIManager aiManager;
 
+   public virtual void AnimalAct() { }
+    public virtual void ActiveBombCollider() { }
+
     
+    public virtual void SetAttackAble(bool check) { }
     public virtual void Move() { }
+
+    public virtual void Skill() { }
     public virtual void JumpAnimaition() { }
         
     public virtual void Attack() {  }
 
-    public virtual void Damaged() { aiManager.UpdateAnimalHp(); }
+    public virtual void Damaged() { aiManager.UpdateAnimalList(); }
 
     public virtual float GetHP() { return 0; }
     public virtual float GetMaxHp() { return 0; }
 
     public virtual bool GetAttackAble() { return true; }
 
-    public  virtual void SparrowAttack() { }
-
     public  virtual float AnimalDamage() { return 0; }
 
-    public virtual void SetAnimalStatus(float attack, float health) { }
+    public virtual void SetAnimalStatus(float attack, float health, int skillCount) { }
 
 
     public virtual void ColobusAttack() { }
@@ -39,18 +43,34 @@ public class Animal : MonoBehaviour
         aiManager = FindObjectOfType<AIManager>();
     }
 
+    public void AnimalAct(int skillcount, bool attackAble, bool moveAble)
+    {
+        if (skillcount == 0)
+        {
+            Debug.Log(gameObject.name + "Skill");
+            Skill();
+        }
+        else if (attackAble)
+        {
+            Debug.Log(gameObject.name + "Attack");
+            Attack();
+        }
+
+        else if (moveAble)
+        {
+            Debug.Log(gameObject.name + "Move");
+            Move();
+        }
+
+       
+    }
+
     public void Move(Vector3 curPosition,Quaternion curRotation, Vector3[] movePoint)
     {
-        moveable = true;
-        AIManager.TileMap[(int)(curPosition.x / 2), (int)(curPosition.z / 2)] = 0;
+        FindAnyObjectByType<TileManager>().GetComponent<TileManager>().insertTileMap((int)(curPosition.x / 2), (int)(curPosition.z / 2),0);
         Vector3 target = Hunter.HunterPosition;
-
-
-        //float distance = Mathf.Abs((movePoint[0].x - target.x) + (movePoint[0].z - target.z)); 
         float distance = 20;
         int minDirection = -1;
-
-      
 
         // 이동할 위치 중 target과 가장 인접한 위치 찾기
         for (int i = 0; i < movePoint.Length; i++)
@@ -58,9 +78,8 @@ public class Animal : MonoBehaviour
             float temp;
             temp = Mathf.Abs(movePoint[i].x - target.x) + Mathf.Abs(movePoint[i].z - target.z);
             if (movePoint[i].x >= 0 && movePoint[i].x <= 14 && movePoint[i].z >= 0 && movePoint[i].z <= 14)
-            //if((int)(movePoint[minDirection].x / 2)>=0&& (int)(movePoint[minDirection].x / 2)<=7&& (int)(movePoint[minDirection].z / 2)>=0&& (int)(movePoint[minDirection].z / 2)<=7)
             {
-                if (AIManager.TileMap[(int)(movePoint[i].x / 2), (int)(movePoint[i].z / 2)] != 1)
+                if (FindAnyObjectByType<TileManager>().GetComponent<TileManager>().CheckTileMap((int)(curPosition.x / 2), (int)(curPosition.z / 2)))
                 {
                     if (temp <= distance)
                     {
@@ -70,8 +89,8 @@ public class Animal : MonoBehaviour
                 }
             }
         }
-        Debug.Log(gameObject.name+(int)(movePoint[minDirection].x / 2) + "," + (int)(movePoint[minDirection].z / 2));
-        AIManager.TileMap[(int)(movePoint[minDirection].x / 2), (int)(movePoint[minDirection].z) / 2] = 1;
+        FindAnyObjectByType<TileManager>().GetComponent<TileManager>().insertTileMap(
+            ((int)movePoint[minDirection].x / 2), (int)(movePoint[minDirection].z) / 2, 1);
         StartCoroutine(JumpToPosition(curPosition, curRotation, new Vector3(movePoint[minDirection].x, 0, movePoint[minDirection].z)));
     }
 
@@ -98,9 +117,7 @@ public class Animal : MonoBehaviour
         transform.LookAt(Hunter.HunterPosition);
 
 
-        float targetYRotation = transform.rotation.eulerAngles.y;
-
-        // 새로운 회전을 적용 (x, z는 0으로 고정, y만 45의 배수로 설정)
+        float targetYRotation = (int)(transform.rotation.eulerAngles.y/90)*90.0f;
         transform.rotation = Quaternion.Euler(0, targetYRotation%360, 0);
 
 
@@ -117,18 +134,7 @@ public class Animal : MonoBehaviour
         {
             attackMotion[i].SetActive(true);
             StartCoroutine(DeactivateAfterDuration(attackMotion, duration));
-        }
-
-       
-        if (gameObject.name == "Sparrow")
-        {
-            SparrowAttack();
-        }
-
-        if (gameObject.name == "Colobus")
-        {
-            ColobusAttack();
-        }
+        }      
     }
 
    
@@ -140,19 +146,17 @@ public class Animal : MonoBehaviour
         {
             attackMotion[i].SetActive(false);
         }
-        UnActiveAttackBox();
-
-       
+        //UnActiveAttackBox();   
     }
 
     public void Die()
     { 
-        Destroy(gameObject, 1.0f);
+        FindAnyObjectByType<TileManager>().GetComponent<TileManager>().insertTileMap((int)transform.position.x / 2, (int)transform.position.z / 2, 0);
+        aiManager.RemoveAnimal(gameObject);
         aiManager.UpdateAnimalList();
-        if (aiManager.GetAnimalsCount() <= 0)
-        {
-            aiManager.ShowNext();
+        Destroy(gameObject, 1.0f);
 
-        }
     }
+
+
 }

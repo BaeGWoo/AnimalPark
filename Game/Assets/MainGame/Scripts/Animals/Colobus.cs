@@ -36,7 +36,7 @@ public class Colobus :Animal
         aiManager = FindObjectOfType<AIManager>();
     }
 
-    public override void SetAnimalStatus(float Attack, float Health)
+    public override void SetAnimalStatus(float Attack, float Health, int skillCount)
     {
         MaxHealth= Health;
         AttackDamage= Attack;

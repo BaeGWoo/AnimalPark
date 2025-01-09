@@ -15,6 +15,8 @@ public class mole : Animal
     private float MaxHealth = 2;
     public float AttackDamage = 0;
     public bool attackable = false;
+    [SerializeField] int skillCount;
+    public int totalSkillCount;
     public bool hitable = false;
     private AudioSource audioSource;
 
@@ -51,10 +53,13 @@ public class mole : Animal
     }
 
 
-    public override void SetAnimalStatus(float Attack, float Health)
+    public override void SetAnimalStatus(float Attack, float Health, int skillCount)
     {
         MaxHealth = Health;
         AttackDamage = Attack;
+
+        this.skillCount = skillCount;
+        totalSkillCount = skillCount;
     }
 
     public override float AnimalDamage() { return AttackDamage; }

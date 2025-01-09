@@ -31,11 +31,7 @@ public class Sparrow : Animal
         audioSource = gameObject.AddComponent<AudioSource>();
     }
 
-    public override void SetAnimalStatus(float Attack, float Health)
-    {
-        MaxHealth = Health;
-        AttackDamage = Attack;
-    }
+    
 
     public override float AnimalDamage() { return AttackDamage; }
 
@@ -80,10 +76,7 @@ public class Sparrow : Animal
         Attack(AttackMotion, duration);
     }
 
-    public override void SparrowAttack()
-    {
-        StartCoroutine(MoveTowardsTarget());
-    }
+  
 
     private IEnumerator MoveTowardsTarget()
     {

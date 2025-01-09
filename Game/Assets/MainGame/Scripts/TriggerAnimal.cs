@@ -9,8 +9,8 @@ public class TriggerAnimal : MonoBehaviour
     {
         if (other.name == "Hunter")
         {
-            //FindAnyObjectByType<LoadManager>().GetComponent<LoadManager>().LoadScene(gameObject.name);
-            SceneManager.LoadScene(gameObject.name);
+            FindAnyObjectByType<LoadManager>().GetComponent<LoadManager>().LoadScene(gameObject.name);
+            //SceneManager.LoadScene(gameObject.name);
         }
     } 
 }

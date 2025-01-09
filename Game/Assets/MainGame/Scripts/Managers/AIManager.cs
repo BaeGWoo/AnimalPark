@@ -2,24 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using System.Text.RegularExpressions;
-using UnityEngine.Windows;
-using static UnityEngine.EventSystems.EventTrigger;
+using static UnityEditor.Progress;
 
 [System.Serializable]
 public class AnimalData
 {
     public string name;   // 동물의 이름
     public float Health;    // 체력
-    public float Attack;  // 공격력
+    public float AttackDMG;  // 공격력
+    public int SkillCount;
 }
 
 [System.Serializable]
-public class AnimalDataList
+public class AnimalDataArray
 {
-    public List<AnimalData> animal;  // 여러 동물 데이터 리스트
+    public AnimalData[] animal;
 }
 
 
@@ -28,100 +27,92 @@ public class AIManager : MonoBehaviour
 {
     public AnimalData animalData;
     public Dictionary<string, List<float>> animalStatus=new Dictionary<string, List<float>>();
-    [SerializeField] GameObject[] Animals;
-    public static int[,] TileMap = new int[8, 8];
+    public static Dictionary<string, GameObject[]> animalArray;
+    private Dictionary<string, AnimalData> animalDictionary;
+
+    [SerializeField] GameObject[] Animals;   
+    
     [SerializeField] Hunter hunter;
+
     [SerializeField] GameObject animalImagePrefab;
     [SerializeField] Canvas animalCanvas;
     [SerializeField] GameObject clearPanel;
-    [SerializeField] int MaxAnimalHP = 3;
 
-
-    public static bool animalHintPanelActive = false;
 
     [SerializeField] GameObject SoundManager;
-
-    private static AIManager instance;
     private SoundManager soundManager;
-    public static Dictionary<string, GameObject[]> animalArray;
+ 
 
     private void Awake()
     {
+       //soundManager = SoundManager.GetComponent<SoundManager>();
+    }
 
-        if (instance == null)
-        {
-            instance = this;
-            animalArray = new Dictionary<string, GameObject[]>();
-        }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += SceneOnLoaded;
+    }
 
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= SceneOnLoaded;
+    }
 
+    private void SceneOnLoaded(Scene scene, LoadSceneMode mode)
+    {
+        StartCoroutine("SetStageData");
+    }
+
+    public void SetStageData(){
         TextAsset StatusList = Resources.Load<TextAsset>("AnimalStatus");
-        soundManager = SoundManager.GetComponent<SoundManager>();
 
         if (animalStatus != null)
         {
-            AnimalDataList dataList = JsonUtility.FromJson<AnimalDataList>(StatusList.text);
-
+            //AnimalDataList dataList = JsonUtility.FromJson<AnimalDataList>(StatusList.text);
+            AnimalData[] animals = JsonUtility.FromJson<AnimalDataArray>(StatusList.ToString()).animal;
             // 동물 데이터 리스트를 Dictionary에 저장
-            foreach (var animal in dataList.animal)
+            animalDictionary = new Dictionary<string, AnimalData>();
+
+            foreach (var animal in animals)
             {
-                // 각 동물의 이름을 키로, 체력과 공격력을 리스트로 저장
-                List<float> status = new List<float> { animal.Attack, animal.Health };
-                animalStatus[animal.name] = status; // 이름을 키로 사용하여 상태 정보를 저장
+                animalDictionary.Add(animal.name, animal);
+                //Debug.Log(animal.name);
             }
 
-           
+            foreach (var animal in Animals)
+            {
+                Debug.Log(animal.name);
+                if (animalDictionary.ContainsKey(animal.name))
+                {
+                    AnimalData animalData = animalDictionary[animal.name];
+                    animal.GetComponent<Monster>().SetAnimalStatus(
+                        animalData.AttackDMG,
+                        animalData.Health,
+                        animalData.SkillCount
+                        );
+
+                    Debug.Log($"Found: {animalData.name}, Health: {animalData.Health}, Attack: {animalData.AttackDMG}, Skills: {animalData.SkillCount}");
+                }
+                Vector3 animalPosition=animal.transform.position;
+                FindAnyObjectByType<TileManager>().GetComponent<TileManager>().insertTileMap(
+                    (int)animalPosition.x / 2, (int)animalPosition.z / 2, 1);               
+            }
+
+
         }
     }
 
-    public void ActiveHintPanel()
+    public void StartTurn()
     {
-        animalHintPanelActive = true;
+        StartCoroutine(ActiveAiManager());
     }
 
-    public void HintPanelOff(GameObject panel)
-    {
-        animalHintPanelActive = false;
-        panel.SetActive(false);
-    }
-
-    public void StartTurn(){StartCoroutine(ActiveAiManager());}
-
-
-
-    private void Update()
-    {
-     
-        if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
-        {
-            hunter.PanelActive();
-        }
-       
-    }
-
-
-    
 
     IEnumerator ActiveAiManager()
-    {
-        while (animalHintPanelActive)
-        {
-            yield return null;
-        }
-
-        for (int i = 0; i < 8; i++)
-        {
-            for (int j = 0; j < 8; j++)
-            {
-                TileMap[i, j] = 0;
-            }
-        }
+    {      
+        FindAnyObjectByType<TileManager>().GetComponent<TileManager>().InitialLizeTileMap();
         yield return null;
+
         UpdateAnimalList();
         StartCoroutine(TurnManager());
     }
@@ -129,39 +120,23 @@ public class AIManager : MonoBehaviour
     
     private IEnumerator TurnManager()
     {
-       
-       
         while (Hunter.Health>=0) 
         {
-            for (int i = 0; i < 8; i++)
-            {
-                for (int j = 0; j < 8; j++)
-                {
-                    TileMap[i, j] = 0;
-                }
-            }
-            yield return null;
-
-            AnimalMove();
-            yield return new WaitForSeconds(1.0f); 
-
-            AnimalAttack();
+            AnimalAct();
             yield return new WaitForSeconds(1.0f);
-            
-            if (CheckAniamlAttack()){yield return new WaitForSeconds(3.0f);}
 
+            if (CheckAniamlAttack()) { yield return new WaitForSeconds(3.0f); }
             else{ yield return new WaitForSeconds(1.5f); }
 
-            AnimalUnAttackBox();
-          
-            
-            HunterMove();
-            while (Hunter.Moveable) {  yield return null;}
-        
+           
+            yield return new WaitForSeconds(0.5f);
+
+            hunter.Move();
+            while (Hunter.Moveable) { yield return null; }
 
             hunter.Attack();
             while (Hunter.Attackable) { yield return null; }
-
+            
 
             if (Animals.Length <= 0||Hunter.Health<=0)
             {
@@ -170,89 +145,34 @@ public class AIManager : MonoBehaviour
         }
     }
 
-    public void HunterMove()
+
+
+
+   
+
+    public void AnimalAct()
     {
         for (int i = 0; i < Animals.Length; i++)
         {
-            Animals[i].GetComponent<BoxCollider>().enabled = false;
-        }
-        hunter.Move();
-    }
-
-
-
-    #region 동물 동작 제어
-    public void AnimalMove()
-    {
-        int AnimalSize=GetAnimalsCount();
-        for (int i = 0; i < AnimalSize; i++)
-        {
-            StartCoroutine(AnimalMoveTurn(i));
-        }
-    }
-
-    IEnumerator AnimalMoveTurn(int index)
-    {
-        yield return null;
-
-        if(index< Animals.Length)
-        {
-            Animals[index].GetComponent<Animal>().Move();
-            Animals[index].GetComponent<BoxCollider>().enabled = true;
-            while (index<Animals.Length&&Animals[index].GetComponent<Animal>().moveable)
-            {
-               
-                yield return null;
-            }
-        }
-        
-
-        
-
-    }
-
-    public void AnimalUnAttackBox()
-    {
-        for (int i = 0; i < Animals.Length; i++)
-        {
-            Animals[i].GetComponent<Animal>().UnActiveAttackBox();
-        }
-    }
-
-    public void AnimalActiveCollider(bool state)
-    {
-        for (int i = 0; i < Animals.Length; i++)
-        {
-            Animals[i].GetComponent<BoxCollider>().enabled = state;
-        }
-    }
-
-    public void AnimalAttack()
-    {
-        for (int i = 0; i < Animals.Length; i++)
-        {
-            Animals[i].GetComponent<Animal>().ActiveAttackBox();
+            Animals[i].GetComponent<Monster>().GetAttackAble();
+            Animals[i].GetComponent<Monster>().AnimalAct();
         }
     }
 
 
-    // 현재 공격가능한 개체 탐색
     public bool CheckAniamlAttack()
     {
         bool check = true;
 
         for (int i = 0; i < Animals.Length; i++)
         {
-            if (Animals[i].GetComponent<Animal>().GetAttackAble())
-                check = false;
+            if (Animals[i].GetComponent<Monster>().GetAttackAble())
+                return false;
         }
 
         return check;
     }
-    #endregion
 
-
-    #region AnimalCanvasUpdate
 
     public void UpdateAnimalList()
     {
@@ -280,39 +200,12 @@ public class AIManager : MonoBehaviour
             animalThumbnail.GetComponent<RectTransform>().localPosition += thumbnailPosition * i;
 
             Slider hpSlider = animalThumbnail.GetComponentInChildren<Slider>();
-            hpSlider.value = Animals[i].GetComponent<Animal>().GetHP()/ Animals[i].GetComponent<Animal>().GetMaxHp();
-        }
-
-        
-    }
-
-    public void ShowNext()
-    {
-        StartCoroutine(PopUpClearPanel());
-    }
-
-  IEnumerator PopUpClearPanel()
-    {
-        soundManager.SoundPlay("LevelUp");
-        yield return new WaitForSeconds(1.5f);
-        clearPanel.SetActive(true);
+            hpSlider.value = Animals[i].GetComponent<Monster>().GetHP()/ Animals[i].GetComponent<Monster>().GetMaxHp();
+        }    
     }
 
 
-    public void UpdateAnimalHp()
-    {
-        UpdateAnimalList();
-        int index = 0;
-        if(Animals.Length <= 0) { return; }
-        foreach (Transform child in animalCanvas.transform)
-        {
-            if (child.CompareTag("Animal")&&index<Animals.Length)
-            {
-                Slider hpSlider = child.gameObject.GetComponentInChildren<Slider>();
-                hpSlider.value = Animals[index++].GetComponent<Animal>().GetHP()/ MaxAnimalHP;
-            }
-        }
-    }
+
 
     public void RemoveAnimal(GameObject animal)
     {
@@ -329,36 +222,33 @@ public class AIManager : MonoBehaviour
         Animals = animalList.ToArray();
     }
 
-    public int GetAnimalsCount()
+    public void AddAnimal(GameObject animal)
     {
-        Debug.Log(Animals.Length);
-        return Animals.Length;
-    }
+        List<GameObject> animalList = new List<GameObject>(Animals);
+        //animal.GetComponent<Animal>().SetAnimalStatus(animalStatus[animal.name][0], animalStatus[animal.name][1], (int)animalStatus[animal.name][2]);
 
-    #endregion
-
-   
-    public void getAnimalList(GameObject[] array)
-    {
-        string sceneName = LevelManager.SceneName;
-        if (sceneName == "Lobby") return;
-       
-
-      
-        Animals = null;
-        Animals=new GameObject[array.Length];
-
-        for(int i = 0; i <array.Length; i++)
+        if (animalDictionary.ContainsKey(animal.name))
         {
-            Animals[i]=array[i];
-            Animals[i].GetComponent<Animal>().SetAnimalStatus(animalStatus[Animals[i].name][0], animalStatus[Animals[i].name][1]);
+            AnimalData animalData = animalDictionary[animal.name];
+            animal.GetComponent<Monster>().SetAnimalStatus(
+                animalData.Health,
+                animalData.AttackDMG,
+                animalData.SkillCount
+                );
+
+            //Debug.Log($"Found: {animalData.name}, Health: {animalData.Health}, Attack: {animalData.AttackDMG}, Skills: {animalData.SkillCount}");
         }
+
+
+        animalList.Add(animal);
+
+        Animals = animalList.ToArray();
         UpdateAnimalList();
     }
 
-    public void ResetAnimalList()
-    {
-        Animals = null; Animals = new GameObject[0];
-    }
+
+
+   
+
 
 }

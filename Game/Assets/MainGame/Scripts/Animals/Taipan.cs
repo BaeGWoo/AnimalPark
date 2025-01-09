@@ -32,11 +32,7 @@ public class Taipan : Animal
     }
 
 
-    public override void SetAnimalStatus(float Attack, float Health)
-    {
-        MaxHealth = Health;
-        AttackDamage = Attack;
-    }
+  
 
     public override float AnimalDamage(){return AttackDamage;}
 

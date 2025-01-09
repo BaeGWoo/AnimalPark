@@ -26,12 +26,7 @@ public class Pudu : Animal
         audioSource=gameObject.AddComponent<AudioSource>();
     }
 
-    public override void SetAnimalStatus(float Attack, float Health)
-    {
-        MaxHealth = Health;
-        AttackDamage = Attack;
-        this.Health = MaxHealth;
-    }
+   
 
     public override float AnimalDamage() { return AttackDamage; }
 

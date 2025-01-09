@@ -1,81 +1,71 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class flower : Animal
+public class flower : Monster
 {
-    private Vector3[] movePoint = new Vector3[1];
-    private Animator animator;
-    [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject[] AttackMotion;
+    [SerializeField] Vector3[] attackBox=new Vector3[8];
     [SerializeField] float duration = 3.5f;
     [SerializeField] float Health = 2;
-    private float MaxHealth = 2;
+    [SerializeField] float MaxHealth = 2;
+    [SerializeField] int skillCount;
+    [SerializeField] int totalSkillCount;
+
     public bool attackable = false;
     public float AttackDamage = 0;
-    public bool hitable = false;
     private Vector3 startSize;
-    private AudioSource audioSource;
-
+  
     private void Awake()
-    {
-        animator = GetComponent<Animator>();
-        aiManager = FindObjectOfType<AIManager>();
+    {    
         startSize = transform.localScale;
-        audioSource = gameObject.AddComponent<AudioSource>();
+        attackBox[0] = new Vector3(0, 0, 2);
+        attackBox[1] = new Vector3(0, 0, -2);
+        attackBox[2] = new Vector3(-2, 0, 0);
+        attackBox[3] = new Vector3(2, 0, 0);
+        attackBox[4] = new Vector3(2, 0, 2);
+        attackBox[5] = new Vector3(2, 0, -2);
+        attackBox[6] = new Vector3(-2, 0, 2);
+        attackBox[7] = new Vector3(-2, 0, -2);
     }
 
-    public override void SetAnimalStatus(float Attack, float Health)
+    public override void SetAnimalStatus(float Attack, float Health, int skillCount)
     {
+        this.Health = Health;
         MaxHealth = Health;
         AttackDamage = Attack;
+
+        this.skillCount = skillCount;
+        totalSkillCount = skillCount;
     }
 
-    public override float AnimalDamage() { return AttackDamage; }
-
-
-
-
-
-    public override void ActiveAttackBox()
+    public override void AnimalAct()
     {
-        attackable = true;
-        AttackBox.SetActive(true);
-        Attack();
+        skillCount--;
+        if (skillCount < 0) { skillCount = totalSkillCount; }
+
+        base.AnimalAct(-1, true, false);
     }
 
-    public override void UnActiveAttackBox()
-    {
-        ResetSize();
-        attackable = false;
-        AttackBox.SetActive(false);
-    }
+
 
     public override void Attack()
     {
         base.Attack();
-        animator.SetTrigger("Attack");
-        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/" + gameObject.name + "Attack");
-        audioSource.Play();
-        Attack(AttackMotion, duration);
+        if(attackable)
+            Attack(AttackMotion, duration, AttackDamage);
+        else
+            Attack(AttackMotion, duration, -1);
+
         SizeUp();
     }
 
-    public override void Damaged()
+    public override void Damaged(float dmg)
     {
-        Health--;
-
-        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/Damage");
-        audioSource.Play();
-
-        if (Health <= 0)
-        {
-            aiManager.RemoveAnimal(gameObject);
-            animator.SetTrigger("Die");
-            base.Die();
-        }
-
-        base.Damaged();
+        Health-=dmg;
+        base.Damaged(dmg);
+        if (Health <= 0) base.Die();
     }
 
     public override float GetHP()
@@ -89,19 +79,30 @@ public class flower : Animal
 
     public override bool GetAttackAble()
     {
+        attackable = false;
+        base.GetAttackAble(attackBox);
         return attackable;
     }
 
-    public void SizeUp()
-    {
-      
-        Vector3 targetSize = startSize * 3;
 
-        transform.localScale = targetSize;
+    public override void SetAttackAble(bool value, Vector3 cur)
+    {      
+        attackable = value;
     }
 
-    public void ResetSize()
+
+    public void SizeUp()
     {
+        Vector3 targetSize = startSize * 3;
+        transform.localScale = targetSize;
+        StartCoroutine(ResetSize());
+
+
+    }
+
+    IEnumerator ResetSize()
+    {
+        yield return new WaitForSeconds(1.5f);
         transform.localScale = startSize;
     }
 }

@@ -557,6 +557,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 03b28d4c7405e4fa3864377a171cf308, type: 3}
   - {fileID: 8300000, guid: 01b0e0369b9d548bdb5bf561d71e5eb5, type: 3}
   audioClip: []
+  backgroundAudioSource: {fileID: 0}
 --- !u!82 &27852168
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9880,9 +9881,6 @@ MonoBehaviour:
   - {fileID: 1838358217}
   loadingBar: {fileID: 1137383310}
   loadingCanvas: {fileID: 322218802}
-  AIManager: {fileID: 283961536}
-  TileManager: {fileID: 1398636742}
-  SoundManager: {fileID: 27852165}
   mouseImage:
   - {fileID: 2800000, guid: c0762f5c32ae738428f60d537be08554, type: 3}
   - {fileID: 2800000, guid: 5f417697b29fe0940b7e3519d363c7d9, type: 3}
@@ -13572,7 +13570,6 @@ MonoBehaviour:
   Level: 
   Hunter: {fileID: 867037031}
   AIManager: {fileID: 283961536}
-  TileManager: {fileID: 1398636742}
   LoadManger: {fileID: 385718949}
   clearPanel: {fileID: 785649877}
   mapPanel: {fileID: 963891581}
@@ -17042,7 +17039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &842802623
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17511,14 +17508,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ff572e217cd1a44ac2ebca63de7ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHealth: 0
   herringDebuff: 0
   squidDebuff: 0
-  AIManager: {fileID: 283961536}
-  LevelManager: {fileID: 600487440}
-  TileManager: {fileID: 1398636742}
-  LoadManager: {fileID: 385718949}
-  SoundManager: {fileID: 27852165}
-  Huntercollider: {fileID: 0}
+  stagePosition: {x: 0, y: 0, z: 0}
+  levelPosition: {x: 8, y: 0, z: 0}
+  cameraTriggers: []
+  cameraPosition: []
+  onStage: 1
+  onStair: 0
+  LevelCollider: {fileID: 0}
+  stageCollider: {fileID: 0}
   HPSlider: {fileID: 1381352404}
   bananaMotion: {fileID: 167173750}
   AttackWeapon:
@@ -17530,6 +17530,7 @@ MonoBehaviour:
   - {fileID: 1969740316}
   - {fileID: 842802622}
   AttackSound: []
+  moveAbleBlock: {fileID: 0}
 --- !u!65 &867037033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24309,13 +24310,6 @@ MonoBehaviour:
   - {fileID: 2480830249581196319, guid: 1aca29776ceb9064b8649c6ade889718, type: 3}
   - {fileID: 2384998989500822691, guid: 3cea0b96dd71ff74abee1f569383115c, type: 3}
   - {fileID: 7898553801141457248, guid: b7d01337d5999654991c0a77fc21b804, type: 3}
-  HintPanel:
-  - {fileID: 1812330618}
-  - {fileID: 665556102}
-  - {fileID: 1502878178}
-  - {fileID: 1398440526}
-  - {fileID: 1615325685}
-  - {fileID: 162847653}
 --- !u!4 &1398636744
 Transform:
   m_ObjectHideFlags: 0
@@ -36879,7 +36873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1969740317
 MonoBehaviour:
   m_ObjectHideFlags: 0

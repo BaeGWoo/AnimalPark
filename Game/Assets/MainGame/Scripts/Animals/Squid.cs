@@ -4,108 +4,72 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Squid : Animal
+public class Squid : Monster
 {
-    private Vector3[] movePoint = new Vector3[4];
-    private Vector3[] moveDirection = new Vector3[4];
-    [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject[] AttackMotion;
+    private Vector3[] attackBox = new Vector3[8];
+    [SerializeField] bool attackable = false;
+
     [SerializeField] float duration = 2.0f;
-    [SerializeField] float Health = 3;
-    private float MaxHealth = 3;
+
     public float AttackDamage = 0;
-    private Animator animator;
-    public bool attackable = false;
-    public bool hitable = false;
-    private AudioSource audioSource;
+ 
 
-    private void Awake()
-    {
-        moveDirection[0] = new Vector3(0, 0, 4);
-        moveDirection[1] = new Vector3(0, 0, -4);
-        moveDirection[2] = new Vector3(-4, 0, 0);
-        moveDirection[3] = new Vector3(4, 0, 0);
-
-        
-
-        animator = GetComponent<Animator>();
-        aiManager = FindObjectOfType<AIManager>();
-        audioSource = gameObject.AddComponent<AudioSource>();
-    }
+    [SerializeField] int skillCount;
+    public int totalSkillCount;
+    
 
 
-    public override void SetAnimalStatus(float Attack, float Health)
-    {
-        MaxHealth = Health;
-        AttackDamage = Attack;
-    }
-
-    public override float AnimalDamage()
+    public override void SetAnimalStatus(float Attack, float Health,int skillCount)
     {
        
-        return AttackDamage;
+        AttackDamage = Attack;
+
+        this.skillCount = skillCount;
+        totalSkillCount = skillCount;
     }
 
-    public override void Move()
+    public override void AnimalAct()
     {
-        for (int i = 0; i < movePoint.Length; i++)
-        {
-            movePoint[i] = moveDirection[i] + transform.position;
-        }
+        skillCount--;
+        if (skillCount < 0) { skillCount = totalSkillCount; }
 
-        base.Move(transform.position,transform.rotation,movePoint);
+        base.AnimalAct(skillCount, false, false);
     }
 
-    public override void JumpAnimaition(){animator.SetTrigger("Jump"); audioSource.clip = Resources.Load<AudioClip>("Sounds/Jump");
-        audioSource.Play();
-    }
 
-    
-    public override void Attack()
-    {
-        animator.SetTrigger("Attack");
-        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/" + gameObject.name + "Attack");
-        audioSource.Play();
-        Attack(AttackMotion, duration);
-    }
-
-    public override void ActiveAttackBox() {
-        attackable = true;
-        AttackBox.SetActive(true);
-    }
-
-    public override void UnActiveAttackBox()
+    public override bool GetAttackAble()
     {
         attackable = false;
-        AttackBox.SetActive(false);
+        base.GetAttackAble(attackBox);
+        return attackable;
     }
 
-    public override void Damaged()
+
+    public override void SetAttackAble(bool value, Vector3 cur)
     {
-        Health--;
-        animator.SetTrigger("Damage");
-        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/Damage");
-        audioSource.Play();
-        if (Health <= 0)
-        {
-            aiManager.RemoveAnimal(gameObject);
-            animator.SetTrigger("Die");
-            base.Die();
-        }
-        base.Damaged();
+        attackable = value;
+    }
+
+    public override void Skill()
+    {
+        base.Attack();
+
+        if (attackable)
+            Attack(AttackMotion, duration, AttackDamage);
+        else
+            Attack(AttackMotion, duration, -1);
+        base.Die();
     }
 
     public override float GetHP()
     {
-        return Health;
+        return 1;
     }
 
     public override float GetMaxHp()
     {
-        return MaxHealth;
+        return 1;
     }
-    public override bool GetAttackAble()
-    {
-        return attackable;
-    }
+   
 }
