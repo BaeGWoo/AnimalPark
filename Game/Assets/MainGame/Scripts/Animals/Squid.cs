@@ -17,12 +17,22 @@ public class Squid : Monster
 
     [SerializeField] int skillCount;
     public int totalSkillCount;
-    
+
+    private void Start()
+    {
+        attackBox[0] = new Vector3(0, 0, 2);
+        attackBox[1] = new Vector3(0, 0, -2);
+        attackBox[2] = new Vector3(-2, 0, 0);
+        attackBox[3] = new Vector3(2, 0, 0);
+        attackBox[4] = new Vector3(2, 0, 2);
+        attackBox[5] = new Vector3(2, 0, -2);
+        attackBox[6] = new Vector3(-2, 0, 2);
+        attackBox[7] = new Vector3(-2, 0, -2);
+    }
 
 
     public override void SetAnimalStatus(float Attack, float Health,int skillCount)
-    {
-       
+    {     
         AttackDamage = Attack;
 
         this.skillCount = skillCount;
@@ -40,6 +50,7 @@ public class Squid : Monster
 
     public override bool GetAttackAble()
     {
+        base.Iced(false);
         attackable = false;
         base.GetAttackAble(attackBox);
         return attackable;
@@ -56,9 +67,9 @@ public class Squid : Monster
         base.Attack();
 
         if (attackable)
-            Attack(AttackMotion, duration, AttackDamage);
+            base.Attack(AttackMotion, duration, AttackDamage);
         else
-            Attack(AttackMotion, duration, -1);
+            base.Attack(AttackMotion, duration, -1);
         base.Die();
     }
 

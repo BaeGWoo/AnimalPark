@@ -49,7 +49,7 @@ public class CameraManager : MonoBehaviour
                 {
                     if (clickedObject.CompareTag("AttackAbleDirection"))
                     {
-                        Hunter.attackAbleDirection=clickedObject.transform.position;
+                        //Hunter.attackAbleDirection=clickedObject.transform.position;
                         Hunter.chooseDirection = true;
                     }
                 }

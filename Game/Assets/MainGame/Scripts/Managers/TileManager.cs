@@ -100,6 +100,30 @@ public class TileManager : MonoBehaviour
         }        
     }
 
+    public void SetAttackableTile(Vector3 hunter)
+    {
+        float distance;
+
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                distance = Math.Abs(hunter.x - i * 2) + Math.Abs(hunter.z - j * 2);
+                if (distance <= 4 && distance >= 1 && CheckTileMap(i, j))
+                {
+                    if (gameObject != targetBlock)
+                    {
+                        TileBlocks[j, i].GetComponent<Block>().SetMaterial(false);
+
+                    }
+                }
+
+            }
+        }
+    }
+
+
+
     public void TileBlockReset()
     {
         for (int i = 0; i < 8; i++)

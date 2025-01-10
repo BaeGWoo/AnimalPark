@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MushRoom : Animal
+public class MushRoom : Monster
 {
     [SerializeField] float Health;
     [SerializeField] int skillCount;
@@ -48,8 +48,13 @@ public class MushRoom : Animal
         totalSkillCount = skillCount;
 }
 
-    public override float AnimalDamage() { return AttackDamage; }
+    public override void AnimalAct()
+    {
+        skillCount--;
+        if (skillCount < 0) { skillCount = totalSkillCount; }
 
+        base.AnimalAct(skillCount, attackable, false);
+    }
 
     public override void Skill()
     {
@@ -58,11 +63,21 @@ public class MushRoom : Animal
         animationComponent.Play("BombAttack");
         prefab = Instantiate(BombPrefab);
         prefab.name = BombPrefab.name;
+        prefab.GetComponent<Monster>().SetInitialSetting();
         Vector3 targetPosition = transform.position + bombPosition[randomNumber];
         StartCoroutine(JumpToPosition(prefab, targetPosition));
         FindAnyObjectByType<AIManager>().GetComponent<AIManager>().AddAnimal(prefab);
     }
 
+    public override float GetHP()
+    {
+        return Health;
+    }
+
+    public override float GetMaxHp()
+    {
+        return MaxHealth;
+    }
 
     IEnumerator JumpToPosition(GameObject prefab, Vector3 targetPosition)
     {
@@ -84,46 +99,17 @@ public class MushRoom : Animal
 
         prefab.transform.position = new Vector3(targetPosition.x, startPosition.y, targetPosition.z);
     }
+    
 
 
-    public override void AnimalAct()
+    public override void Damaged(float dmg)
     {
-        skillCount--;
-        if (skillCount < 0) { skillCount = totalSkillCount; }
-
-        base.AnimalAct(skillCount, attackable, false);     
+        Health -= dmg;
+        base.Damaged(dmg);
+        if (Health <= 0) base.Die();
     }
 
+ 
 
-
-    public override void Damaged()
-    {
-        Health--;
-        animationComponent.Play("Damage");
-        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/Damage");
-        audioSource.Play();
-
-        if (Health <= 0)
-        {
-            animationComponent.Play("Die");
-            base.Die();
-        }
-
-        base.Damaged();
-    }
-
-    public override float GetHP()
-    {
-        return Health;
-    }
-
-    public override float GetMaxHp()
-    {
-        return MaxHealth;
-    }
-
-    public override bool GetAttackAble()
-    {
-        return attackable;
-    }
+  
 }

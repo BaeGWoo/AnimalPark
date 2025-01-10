@@ -90,6 +90,7 @@ public class Elegator : Monster
         prefab = Instantiate(SquidBomb);
         prefab.name = SquidBomb.name;
        prefab.transform.position = transform.position;
+        prefab.GetComponent<Monster>().SetInitialSetting();
         FindAnyObjectByType<AIManager>().GetComponent<AIManager>().AddAnimal(prefab);
        
     }

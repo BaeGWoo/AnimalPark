@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -27,6 +28,7 @@ public class Hunter : MonoBehaviour
     [SerializeField] Image HPSlider;
     [SerializeField] GameObject bananaMotion;
     [SerializeField] GameObject[] AttackWeapon;
+    [SerializeField] Button[] AttackButton;
     [SerializeField] GameObject MenuPanel;
     [SerializeField] Camera mainCamera;
 
@@ -38,7 +40,7 @@ public class Hunter : MonoBehaviour
     [SerializeField] AudioClip[] AttackSound; 
 
     [SerializeField] public GameObject moveAbleBlock;
-    public static Vector3 attackAbleDirection;
+    [SerializeField] Vector3 attackAbleDirection;
 
 
     [SerializeField] TileManager tileManager;
@@ -90,6 +92,11 @@ public class Hunter : MonoBehaviour
         if (Moveable && moveAbleBlock != null)
         {
             moveHunterPosition();
+        }
+
+        if(Attackable && moveAbleBlock == null)
+        {
+            ClickPosition();
         }
 
 
@@ -224,8 +231,9 @@ public class Hunter : MonoBehaviour
 
                 if (Attackable)
                 {
-                    if (clickedObject.CompareTag("AttackAbleDirection"))
+                    if (clickedObject.CompareTag("MoveAbleBlock"))
                     {
+                        moveAbleBlock = clickedObject;
                         attackAbleDirection = clickedObject.transform.position;
                         chooseDirection = true;
                     }
@@ -252,6 +260,10 @@ public class Hunter : MonoBehaviour
     public void Attack()
     {
         Attackable = true;
+        for (int i = 0; i < AttackButton.Length; i++)
+        {
+            AttackButton[i].interactable = true;
+        }
     }
 
     public void Die()
@@ -287,6 +299,10 @@ public class Hunter : MonoBehaviour
         int num = int.Parse(button.name.Substring("Attack".Length));
         WeaponNumber = num-1;
 
+        for (int i = 0; i < AttackButton.Length; i++)
+        {
+            AttackButton[i].interactable = false;
+        }
         StartCoroutine(HunterWeaponAttack());
 
 
@@ -297,10 +313,12 @@ public class Hunter : MonoBehaviour
         if (WeaponNumber == 1)
         {           
             chooseDirection = false;
+            tileManager.SetAttackableTile(transform.position);
             while (!chooseDirection)
             {
                 yield return null;
             }
+            tileManager.TileBlockReset();
             ActiveHunterAttack();
         }
 
@@ -312,9 +330,9 @@ public class Hunter : MonoBehaviour
     {
         //FindAnyObjectByType<AIManager>().GetComponent<AIManager>().AnimalActiveCollider(true);
         Quaternion curRotation = transform.rotation;
-        transform.LookAt(attackAbleDirection);
+        
         transform.rotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
-
+        float attackTime = 0.5f;
 
         animator.SetTrigger("Attack" + (WeaponNumber+1));
         if (WeaponNumber == 0)
@@ -323,19 +341,40 @@ public class Hunter : MonoBehaviour
         }
         else if (WeaponNumber == 1)
         {
-            //soundManager.SoundPlay("FireBall");
+            attackTime = 0;
         }
         AttackWeapon[WeaponNumber].SetActive(true);
-        StartCoroutine(HunterAttackMotion());
-
+        StartCoroutine(HunterAttackMotion(attackTime));
+        if (WeaponNumber == 1)
+        {
+            transform.LookAt(attackAbleDirection);
+            StartCoroutine(IceMove(attackAbleDirection));
+        }
         StartCoroutine(HunterAttackEnd());
         
     }
 
-    IEnumerator HunterAttackMotion()
+    IEnumerator HunterAttackMotion(float time)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(time);
         AttackBox[WeaponNumber].SetActive(true);
+    }
+
+    IEnumerator IceMove(Vector3 attackDir)
+    {
+        transform.LookAt(attackDir);
+        float step = 2.0f * Time.deltaTime;
+        while (Vector3.Distance(transform.position, attackDir) > 0.1f)  // 0.1f는 허용 오차
+        {
+            // 목표 위치로 서서히 이동
+            transform.position = Vector3.MoveTowards(transform.position, attackDir, step);
+
+            // 한 프레임 대기
+            yield return null;
+        }
+
+        transform.position = new Vector3(attackDir.x, transform.position.y, attackDir.z);
+        moveAbleBlock = null;
     }
 
     IEnumerator HunterAttackEnd()

@@ -52,6 +52,14 @@ public class Monster : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
     }
 
+    public void SetInitialSetting()
+    {
+        tileManager = GameObject.Find("TileManager").GetComponent<TileManager>();
+        aiManager = FindAnyObjectByType<AIManager>().GetComponent<AIManager>();
+        animator = gameObject.GetComponent<Animator>();
+        audioSource = gameObject.AddComponent<AudioSource>();
+    }
+
 
 
     public void AnimalAct(int skillcount, bool attackAble, bool moveAble)
@@ -168,13 +176,15 @@ public class Monster : MonoBehaviour
         ice = value;
         if (ice)
         {
-            IceObject.SetActive(true);
+            if (IceObject != null)
+                IceObject.SetActive(true);
             transform.tag = "IceAnimal";
         }
 
         else
         {
-            IceObject.SetActive(false);
+            if (IceObject != null)
+                IceObject.SetActive(false);
             transform.tag = "Animal";
         }
     }
