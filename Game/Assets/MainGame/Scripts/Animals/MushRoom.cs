@@ -17,10 +17,6 @@ public class MushRoom : Monster
     public bool attackable = false;
 
     private Vector3[] bombPosition = new Vector3[5];
-
-
-    private Animator animator;
-    private AudioSource audioSource;
     private Animation animationComponent;
 
     private void Awake()
@@ -32,9 +28,7 @@ public class MushRoom : Monster
         bombPosition[4] = new Vector3(2, 0, -2);
 
        
-        animator = GetComponent<Animator>();
         aiManager = FindObjectOfType<AIManager>();
-        audioSource = gameObject.AddComponent<AudioSource>();
         animationComponent = GetComponent<Animation>();
     }
 
@@ -53,7 +47,7 @@ public class MushRoom : Monster
         skillCount--;
         if (skillCount < 0) { skillCount = totalSkillCount; }
 
-        base.AnimalAct(skillCount, attackable, false);
+        base.AnimalAct(skillCount, false, false);
     }
 
     public override void Skill()
@@ -63,9 +57,11 @@ public class MushRoom : Monster
         animationComponent.Play("BombAttack");
         prefab = Instantiate(BombPrefab);
         prefab.name = BombPrefab.name;
+        prefab.transform.position = transform.position;
         prefab.GetComponent<Monster>().SetInitialSetting();
-        Vector3 targetPosition = transform.position + bombPosition[randomNumber];
-        StartCoroutine(JumpToPosition(prefab, targetPosition));
+        prefab.GetComponent<Monster>().Move();
+        //Vector3 targetPosition = transform.position + bombPosition[randomNumber];
+        //StartCoroutine(JumpToPosition(prefab, targetPosition));
         FindAnyObjectByType<AIManager>().GetComponent<AIManager>().AddAnimal(prefab);
     }
 
@@ -81,7 +77,7 @@ public class MushRoom : Monster
 
     IEnumerator JumpToPosition(GameObject prefab, Vector3 targetPosition)
     {
-        base.JumpAnimaition();
+        //base.JumpAnimaition();
         Vector3 startPosition = transform.position;
         float elapsedTime = 0f;
 
@@ -105,6 +101,7 @@ public class MushRoom : Monster
     public override void Damaged(float dmg)
     {
         Health -= dmg;
+        animationComponent.Play("Damage");
         base.Damaged(dmg);
         if (Health <= 0) base.Die();
     }

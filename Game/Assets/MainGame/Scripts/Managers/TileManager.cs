@@ -78,7 +78,7 @@ public class TileManager : MonoBehaviour
         TileMap[x, y] = value;
     }
 
-    public void SetMoveableTile(Vector3 hunter)
+    public void SetMoveableTile(Vector3 hunter,float moveDebuff)
     {
         float distance;
        
@@ -87,12 +87,11 @@ public class TileManager : MonoBehaviour
             for(int j = 0; j < 8; j++)
             {
                 distance = Math.Abs(hunter.x - i*2) + Math.Abs(hunter.z - j*2);
-                if (distance <= 6 && distance >= 1 && CheckTileMap(i, j))
+                if (distance <= (6-moveDebuff) && distance >= 1 && CheckTileMap(i, j))
                 {
                     if (gameObject != targetBlock)
                     {
-                        TileBlocks[j, i].GetComponent<Block>().SetMaterial(false);
-                        
+                        TileBlocks[j, i].GetComponent<Block>().SetMaterial(false);                  
                     }
                 }
 

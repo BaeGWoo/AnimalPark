@@ -19,14 +19,16 @@ public class Monster : MonoBehaviour
     public virtual void Skill() { }
     public virtual void Attack()
     {
-        animator.SetTrigger("Attack");
+        if (animator != null)
+            animator.SetTrigger("Attack");
         audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/" + gameObject.name + "Attack");
         audioSource.Play();
     }
     public virtual void Move() { }
     public virtual void Damaged(float dmg) 
     {
-        animator.SetTrigger("Damage");
+        if (animator != null)
+            animator.SetTrigger("Damage");
         audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/Damage");
         audioSource.Play();
        aiManager.UpdateAnimalList();
@@ -119,7 +121,8 @@ public class Monster : MonoBehaviour
 
     IEnumerator JumpToPosition(Vector3 curPosition, Vector3 targetPosition)
     {
-        animator.SetTrigger("Jump");
+        if (animator != null)
+            animator.SetTrigger("Jump");
         audioSource.clip = Resources.Load<AudioClip>("Sounds/Jump");
         audioSource.Play();
 
@@ -191,7 +194,8 @@ public class Monster : MonoBehaviour
 
     public void Die()
     {
-        animator.SetTrigger("Dead");
+        if (animator != null)
+            animator.SetTrigger("Dead");
         tileManager.insertTileMap((int)transform.position.x / 2, (int)transform.position.z / 2, 0);
         aiManager.RemoveAnimal(gameObject);
         aiManager.UpdateAnimalList();

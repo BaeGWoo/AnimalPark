@@ -6,7 +6,6 @@ public class Bomb : Monster
 {
     private Vector3[] movePoint = new Vector3[8];
     private Vector3[] moveDirection = new Vector3[8];
-    private Animator animator;
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject[] AttackMotion;
     [SerializeField] float duration = 3.5f;
@@ -18,7 +17,6 @@ public class Bomb : Monster
     public float AttackDamage = 0;
     public bool attackable = false;
     public bool hitable = false;
-    private AudioSource audioSource;
     private Animation animationComponent;
 
     private void Awake()
@@ -32,9 +30,7 @@ public class Bomb : Monster
         moveDirection[6] = new Vector3(0, 0, -4);
         moveDirection[7] = new Vector3(0, 0, 4);
 
-        animator = GetComponent<Animator>();
         aiManager = FindObjectOfType<AIManager>();
-        audioSource = gameObject.AddComponent<AudioSource>();
         animationComponent = GetComponent<Animation>();
     }
 
@@ -51,16 +47,16 @@ public class Bomb : Monster
     {
         skillCount--;
         if (skillCount < 0) { skillCount = totalSkillCount; }
-
-        base.AnimalAct(-1, true, false);
+        AttackBox.SetActive(false);
+        base.AnimalAct(-1, false, true);
     }
+
 
     public override void Attack()
     {
-        AttackMotion[0].SetActive(true);
-        FindAnyObjectByType<AIManager>().GetComponent<AIManager>().RemoveAnimal(gameObject);
-        FindAnyObjectByType<AIManager>().GetComponent<AIManager>().UpdateAnimalList();
-        Destroy(gameObject, 0.5f);
+        base.Attack();
+        Attack(AttackMotion, duration, AttackDamage);
+        base.Die();
     }
 
 
@@ -70,24 +66,16 @@ public class Bomb : Monster
         {
             movePoint[i] = moveDirection[i] + transform.position;
         }
-
+        animationComponent.Play("Run");
         base.Move(transform.position, movePoint);
+        AttackBox.SetActive(true);
     }
 
-    
-
-
-
-  
-
- 
-
-
-   
 
     public override void Damaged(float dmg)
     {
         Health -= dmg;
+        animationComponent.Play("Damage");
         base.Damaged(dmg);
         if (Health <= 0) base.Die();
     }
@@ -102,8 +90,16 @@ public class Bomb : Monster
         return MaxHealth;
     }
 
-  
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "Hunter")
+        {
+            Attack();
+            other.GetComponent<Hunter>().OnReachedDestination();
+            other.GetComponent<Hunter>().StopPosition(new Vector3(transform.position.x,0,transform.position.z));
+        }
+    }
 
-    
+
 
 }

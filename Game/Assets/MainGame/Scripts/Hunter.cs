@@ -41,7 +41,10 @@ public class Hunter : MonoBehaviour
 
     [SerializeField] public GameObject moveAbleBlock;
     [SerializeField] Vector3 attackAbleDirection;
-
+    [SerializeField] float moveDebuff = 0;
+    [SerializeField] bool attackDebuff = false;
+    [SerializeField] int healthDebuffCount = 0;
+    [SerializeField] float healthDebuffDMG = 0;
 
     [SerializeField] TileManager tileManager;
     private static Hunter instance;
@@ -210,6 +213,12 @@ public class Hunter : MonoBehaviour
         }
     }
 
+    public void GetHealthDebuff(int count, float dmg)
+    {
+        healthDebuffCount = count;
+        healthDebuffDMG = dmg;
+    }
+
     public void ClickPosition()
     {
         if (Input.GetMouseButtonDown(0))
@@ -253,17 +262,45 @@ public class Hunter : MonoBehaviour
     #region Hunter State
     public void Move()
     {
-        Moveable = true;
-        tileManager.SetMoveableTile(transform.position);
+        if (healthDebuffCount > 0)
+        {
+            healthDebuffCount--;
+            getDamaged(healthDebuffDMG);
+            if(healthDebuffCount == 0)
+            {
+                healthDebuffDMG = 0;
+            }
+        }
+
+        if (moveDebuff >= 6)
+        {
+            moveDebuff=0;
+        }
+
+        else
+        {
+            Moveable = true;
+            tileManager.SetMoveableTile(transform.position, moveDebuff);
+        }
+       
     }
 
     public void Attack()
     {
-        Attackable = true;
-        for (int i = 0; i < AttackButton.Length; i++)
+        if (attackDebuff)
         {
-            AttackButton[i].interactable = true;
+            attackDebuff = false;
         }
+
+        else
+        {
+            Attackable = true;
+            for (int i = 0; i < AttackButton.Length; i++)
+            {
+                AttackButton[i].interactable = true;
+            }
+        }
+        
     }
 
     public void Die()
@@ -391,6 +428,11 @@ public class Hunter : MonoBehaviour
 
 
     #region HunterMove
+    public void GetMoveDebuff(float value)
+    {
+        moveDebuff = value;
+    }
+
     public void moveHunterPosition()
     {
         if (moveAbleBlock != null)
@@ -410,7 +452,7 @@ public class Hunter : MonoBehaviour
         transform.LookAt(targetPosition);
         float speed = 3.0f;
 
-        while (Mathf.Abs(currentPosition.x - target.x) > Mathf.Epsilon)
+        while (Mathf.Abs(currentPosition.x - target.x) > Mathf.Epsilon&&Moveable)
         {
             float newX = Mathf.MoveTowards(currentPosition.x, target.x, speed * Time.deltaTime);
             transform.position = new Vector3(newX, startPosition.y, startPosition.z);
@@ -424,7 +466,7 @@ public class Hunter : MonoBehaviour
         targetPosition = new Vector3(currentPosition.x, startPosition.y, target.z);
         transform.LookAt(targetPosition);
 
-        while (Mathf.Abs(currentPosition.z - target.z) > Mathf.Epsilon)
+        while (Mathf.Abs(currentPosition.z - target.z) > Mathf.Epsilon && Moveable)
         {
             float newZ = Mathf.MoveTowards(currentPosition.z, target.z, speed * Time.deltaTime);
             transform.position = new Vector3(startPosition.x, startPosition.y, newZ);
@@ -436,7 +478,7 @@ public class Hunter : MonoBehaviour
     }
 
 
-    private void OnReachedDestination()
+    public void OnReachedDestination()
     {
         //currentStage = MoveStage.Done;
         Moveable = false;
@@ -444,6 +486,19 @@ public class Hunter : MonoBehaviour
        
         HunterPosition = transform.position;
         moveAbleBlock = null;
+    }
+
+    public void StopPosition(Vector3 position)
+    {
+        Vector3 tempPosition=new Vector3
+            (
+            (int)((position.x+1)/2)*2,
+            transform.position.y,
+             (int)((position.z+1) / 2) * 2
+            );
+
+        transform.position = tempPosition;
+        HunterPosition = transform.position;
     }
 
     #endregion

@@ -61,7 +61,7 @@ public class LoadManager : MonoBehaviour
         float changeInterval = 0.1f; //로딩 시 이미지 전환 속도
         float nextChangeTime = changeInterval; 
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Island");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Nature");
         asyncLoad.allowSceneActivation = false;
         //soundManager.MoveStage(); // 로딩BGM 설정
          
