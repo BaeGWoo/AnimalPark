@@ -3,125 +3,85 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class mole : Animal
+public class mole : Monster
 {
     private Vector3[] movePoint = new Vector3[12];
     private Vector3[] moveDirection = new Vector3[12];
-    private Animator animator;
     [SerializeField] GameObject AttackBox;
     [SerializeField] GameObject[] AttackMotion;
     [SerializeField] float duration = 3.5f;
     [SerializeField] float Health = 2;
-    private float MaxHealth = 2;
+    [SerializeField] float MaxHealth = 2;
+    [SerializeField] int skillCount;
+    [SerializeField] int totalSkillCount;
+
     public float AttackDamage = 0;
     public bool attackable = false;
-    [SerializeField] int skillCount;
-    public int totalSkillCount;
     public bool hitable = false;
-    private AudioSource audioSource;
-
+    private Animation animationComponent;
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        moveDirection[0] = new Vector3(2, 0, 2);
+        moveDirection[1] = new Vector3(4, 0, 4);
+        moveDirection[2] = new Vector3(6, 0, 6);
+        moveDirection[3] = new Vector3(-2, 0, 2);
+        moveDirection[4] = new Vector3(-4, 0, 4);
+        moveDirection[5] = new Vector3(-6, 0, 6);
+        moveDirection[6] = new Vector3(2, 0, -2);
+        moveDirection[7] = new Vector3(4, 0, -4);
+        moveDirection[8] = new Vector3(6, 0, -6);
+        moveDirection[9] = new Vector3(-2, 0, -2);
+        moveDirection[10] = new Vector3(-4, 0, -4);
+        moveDirection[11] = new Vector3(-6, 0, -6);
+
         aiManager = FindObjectOfType<AIManager>();
-        audioSource = gameObject.AddComponent<AudioSource>();
-        Vector3 target = Hunter.HunterPosition;
-       
-        int index = 0;
-        // ¿ì»ó(2,0,2)
-        for (int i = 1; i <= 3; i++)
-        {
-            moveDirection[index++] = new Vector3(2 * i, 0.5f, 2 * i);
-        }
-        //¿ìÇÏ(2,0,-2)
-        for (int i = 1; i <= 3; i++)
-        {
-            moveDirection[index++] = new Vector3(2 * i, 0.5f, - 2 * i);
-        }
-        //ÁÂ»ó(-2,0,2)
-        for (int i = 1; i <= 3; i++)
-        {
-            moveDirection[index++] = new Vector3(-2 * i, 0.5f,  2 * i);
-        }
-        //ÁÂÇÏ(-2,0,-2)
-        for (int i = 1; i <= 3; i++)
-        {
-            moveDirection[index++] = new Vector3(- 2 * i, 0.5f,  - 2 * i);
-        }
-
+        animationComponent = GetComponent<Animation>();
     }
-
 
     public override void SetAnimalStatus(float Attack, float Health, int skillCount)
     {
+        this.Health = Health;
         MaxHealth = Health;
         AttackDamage = Attack;
 
-        this.skillCount = skillCount;
         totalSkillCount = skillCount;
     }
 
-    public override float AnimalDamage() { return AttackDamage; }
-
-    public override void JumpAnimaition()
+    public override void AnimalAct()
     {
-        audioSource.clip = Resources.Load<AudioClip>("Sounds/Jump");
-        audioSource.Play();
-    }
-
-    public override void Move()
-    {
-       for(int i = 0; i < movePoint.Length; i++)
-        {
-            movePoint[i] = transform.position + moveDirection[i];
-        }
-
-
-        base.Move(transform.position, transform.rotation, movePoint);
-    }
-    
-
-
-
-
-    public override void ActiveAttackBox()
-    {
-        attackable = true;
-        AttackBox.SetActive(true);
-    }
-
-    public override void UnActiveAttackBox()
-    {
-        attackable = false;
+        skillCount--;
+        if (skillCount < 0) { skillCount = totalSkillCount; }
         AttackBox.SetActive(false);
+        base.AnimalAct(-1, false, true);
     }
+
 
     public override void Attack()
     {
-
         base.Attack();
-        animator.SetTrigger("Attack");
-        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/" + gameObject.name + "Attack");
-        audioSource.Play();
-        Attack(AttackMotion, duration);
+        Attack(AttackMotion, duration, AttackDamage);
     }
 
-    public override void Damaged()
+
+    public override void Move()
     {
-        Health--;
-        audioSource.clip = Resources.Load<AudioClip>("Sounds/AnimalAttack/Damage");
-        audioSource.Play();
-
-
-        if (Health <= 0)
+        for (int i = 0; i < movePoint.Length; i++)
         {
-            aiManager.RemoveAnimal(gameObject);
-            animator.SetTrigger("Die");
-            base.Die();
+            movePoint[i] = moveDirection[i] + transform.position;
         }
+        animationComponent.Play("Run");
+        base.Move(transform.position, movePoint);
+        AttackBox.SetActive(true);
+    }
 
-        base.Damaged();
+
+    public override void Damaged(float dmg)
+    {
+        Health -= dmg;
+        animationComponent.Play("Damage");
+        base.Damaged(dmg);
+        if (Health <= 0) base.Die();
     }
 
     public override float GetHP()
@@ -134,8 +94,14 @@ public class mole : Animal
         return MaxHealth;
     }
 
-    public override bool GetAttackAble()
+    private void OnTriggerEnter(Collider other)
     {
-        return attackable;
+        if (other.name == "Hunter")
+        {
+            Attack();
+            other.GetComponent<Hunter>().OnReachedDestination();
+            other.GetComponent<Hunter>().StopPosition(new Vector3(transform.position.x, 0, transform.position.z));
+        }
     }
+
 }
