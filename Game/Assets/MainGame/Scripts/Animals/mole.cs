@@ -70,7 +70,7 @@ public class mole : Monster
         {
             movePoint[i] = moveDirection[i] + transform.position;
         }
-        animationComponent.Play("Run");
+        //animationComponent.Play("Run");
         base.Move(transform.position, movePoint);
         AttackBox.SetActive(true);
     }
@@ -79,7 +79,7 @@ public class mole : Monster
     public override void Damaged(float dmg)
     {
         Health -= dmg;
-        animationComponent.Play("Damage");
+       // animationComponent.Play("Damage");
         base.Damaged(dmg);
         if (Health <= 0) base.Die();
     }

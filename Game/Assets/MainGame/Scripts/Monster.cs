@@ -114,6 +114,7 @@ public class Monster : MonoBehaviour
                 }
             }
         }
+        Debug.Log(gameObject.name+" : ( " + movePoint[minDirection].x / 2 + " , " + movePoint[minDirection].z / 2 + " ) ");
         tileManager.insertTileMap(
             ((int)movePoint[minDirection].x / 2), (int)(movePoint[minDirection].z) / 2, 1);
         StartCoroutine(JumpToPosition(curPosition, new Vector3(movePoint[minDirection].x, 0, movePoint[minDirection].z)));

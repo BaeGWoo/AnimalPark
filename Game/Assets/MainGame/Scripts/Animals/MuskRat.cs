@@ -78,7 +78,7 @@ public class MuskRat : Monster
             }
             
         }
-        animationComponent.Play("Run");
+        //animationComponent.Play("Run");
         base.Move(transform.position, movePoint);      
     }
 
@@ -86,7 +86,7 @@ public class MuskRat : Monster
     public override void Damaged(float dmg)
     {
         Health -= dmg;
-        animationComponent.Play("Damage");
+        //animationComponent.Play("Damage");
         base.Damaged(dmg);
         if (Health <= 0) base.Die();
     }

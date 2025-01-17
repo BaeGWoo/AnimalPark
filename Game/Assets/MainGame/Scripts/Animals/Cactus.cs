@@ -8,15 +8,17 @@ public class Cactus : Monster
     private Vector3[] moveDirection = new Vector3[4];
     [SerializeField] GameObject[] AttackMotion;
     [SerializeField] GameObject magicSpell;
-   
+
+    [SerializeField] float taipanCount=3;
+    [SerializeField] GameObject[] Taipans;
   
     [SerializeField] float duration = 1.5f;
     [SerializeField] float Health = 2;
     [SerializeField] float MaxHealth = 2;
     [SerializeField] int skillCount;
     [SerializeField] int totalSkillCount;
-    [SerializeField] int TaipanCount=2;
-    [SerializeField] GameObject[] Taipans;
+  
+   
     public float AttackDamage = 0;
     public bool attackable = false;
     public bool hitable = false;
@@ -45,14 +47,14 @@ public class Cactus : Monster
     public override void AnimalAct()
     {
         skillCount--;
-        TaipanCount--;
-        if (TaipanCount == 0)
+        taipanCount--;
+        if (taipanCount < 0) 
         {
-            TaipanCount = 2;
             for (int i = 0; i < Taipans.Length; i++) 
             {
                 Taipans[i].GetComponent<Taipan>().ActiveAttackBox();
             }
+            taipanCount = 3;
         }
         if (skillCount < 0) { skillCount = totalSkillCount; }
         base.AnimalAct(skillCount, false, true);
@@ -62,6 +64,7 @@ public class Cactus : Monster
     {
         magicSpell.SetActive(true);
         StartCoroutine(UnActiveSkillBox());
+        FindAnyObjectByType<Hunter>().GetComponent<Hunter>().GetMoveDebuff(6);
     }
 
     private IEnumerator UnActiveSkillBox()
@@ -82,7 +85,11 @@ public class Cactus : Monster
             float temp = Mathf.Abs(HunterPosition.x - (moveDirection[i].x+transform.position.x))+
                   Mathf.Abs(HunterPosition.z - (moveDirection[i].z + transform.position.z));
 
-            if (dir < temp)
+
+            if (dir < temp&&
+                (moveDirection[i].x + transform.position.x)>=0 && (moveDirection[i].x + transform.position.x) <= 14&&
+                (moveDirection[i].z + transform.position.z) >= 0 && (moveDirection[i].z + transform.position.z) <= 14
+                )
             {
                 dir = temp;
                 index = i;
@@ -90,7 +97,7 @@ public class Cactus : Monster
         }
         movePoint[0] = moveDirection[index]+transform.position;
 
-        animationComponent.Play("Run");
+        //animationComponent.Play("Jump");
         base.Move(transform.position, movePoint);
     }
 
@@ -99,7 +106,7 @@ public class Cactus : Monster
     public override void Damaged(float dmg)
     {
         Health -= dmg;
-        animationComponent.Play("Damage");
+        //animationComponent.Play("Damage");
         base.Damaged(dmg);
         if (Health <= 0) base.Die();
     }

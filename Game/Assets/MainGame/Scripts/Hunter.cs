@@ -27,6 +27,7 @@ public class Hunter : MonoBehaviour
 
     [SerializeField] Image HPSlider;
     [SerializeField] GameObject bananaMotion;
+    [SerializeField] GameObject magic;
     [SerializeField] GameObject[] AttackWeapon;
     [SerializeField] Button[] AttackButton;
     [SerializeField] GameObject MenuPanel;
@@ -137,6 +138,11 @@ public class Hunter : MonoBehaviour
             //Health -= aiManager.animalStatus["Colobus"][0];
             other.gameObject.SetActive(false);
             HPSlider.fillAmount = Health / MaxHealth;
+        }
+
+        else if (other.CompareTag("Magic"))
+        {
+            magic.SetActive(true);
         }
 
   
@@ -275,6 +281,7 @@ public class Hunter : MonoBehaviour
         if (moveDebuff >= 6)
         {
             moveDebuff=0;
+            magic.SetActive(false);
         }
 
         else

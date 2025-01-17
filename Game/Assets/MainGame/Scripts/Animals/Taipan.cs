@@ -6,7 +6,7 @@ public class Taipan : MonoBehaviour
 {  
     private Animator animator;
     [SerializeField] GameObject AttackBox;
-    [SerializeField] GameObject AttackMotion;
+    //[SerializeField] GameObject AttackMotion;
     [SerializeField] GameObject FireWall;
     [SerializeField] float duration = 2.0f;
    
@@ -28,7 +28,7 @@ public class Taipan : MonoBehaviour
         audioSource.Play();
 
         AttackBox.SetActive(true);
-        AttackMotion.SetActive(true);
+        //AttackMotion.SetActive(true);
         FireWall.SetActive(true);
 
         StartCoroutine(UnActiveAttackBox());
@@ -41,7 +41,7 @@ public class Taipan : MonoBehaviour
         yield return new WaitForSeconds(duration);
 
         AttackBox.SetActive(false);
-        AttackMotion.SetActive(false);
+        //AttackMotion.SetActive(false);
         FireWall.SetActive(false);
     }
 

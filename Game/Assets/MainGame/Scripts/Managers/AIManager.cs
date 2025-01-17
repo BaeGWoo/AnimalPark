@@ -81,7 +81,7 @@ public class AIManager : MonoBehaviour
 
             foreach (var animal in Animals)
             {
-                Debug.Log(animal.name);
+                //Debug.Log(animal.name);
                 if (animalDictionary.ContainsKey(animal.name))
                 {
                     AnimalData animalData = animalDictionary[animal.name];
@@ -91,7 +91,7 @@ public class AIManager : MonoBehaviour
                         animalData.SkillCount
                         );
 
-                    Debug.Log($"Found: {animalData.name}, Health: {animalData.Health}, Attack: {animalData.AttackDMG}, Skills: {animalData.SkillCount}");
+                    //Debug.Log($"Found: {animalData.name}, Health: {animalData.Health}, Attack: {animalData.AttackDMG}, Skills: {animalData.SkillCount}");
                 }
                 Vector3 animalPosition=animal.transform.position;
                 FindAnyObjectByType<TileManager>().GetComponent<TileManager>().insertTileMap(
