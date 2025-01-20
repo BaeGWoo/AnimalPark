@@ -27,6 +27,7 @@ public class Hunter : MonoBehaviour
 
     [SerializeField] Image HPSlider;
     [SerializeField] GameObject bananaMotion;
+    [SerializeField] GameObject posionMotion;
     [SerializeField] GameObject magic;
     [SerializeField] GameObject[] AttackWeapon;
     [SerializeField] Button[] AttackButton;
@@ -133,18 +134,34 @@ public class Hunter : MonoBehaviour
 
         if (other.CompareTag("banana"))
         {
-            StartCoroutine(BananaMotion());
-            //soundManager.SoundPlay("Banana");
-            //Health -= aiManager.animalStatus["Colobus"][0];
-            other.gameObject.SetActive(false);
+            animator.SetTrigger("Damage");
+            getDamaged(0.5f);
+            StartCoroutine(BananaMotion(bananaMotion));          
+            FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().SoundPlay("Banana");
+            Destroy(other.gameObject);
+            HPSlider.fillAmount = Health / MaxHealth;
+        }
+
+        else if (other.CompareTag("Posion"))
+        {
+            animator.SetTrigger("Damage");
+            getDamaged(0.5f);
+            StartCoroutine(BananaMotion(posionMotion));
+            Destroy(other.gameObject);
             HPSlider.fillAmount = Health / MaxHealth;
         }
 
         else if (other.CompareTag("Magic"))
         {
+            moveDebuff = 6;
             magic.SetActive(true);
         }
 
+
+        else if (other.CompareTag("FireWall"))
+        {
+            getDamaged(10);
+        }
   
        
 
@@ -258,11 +275,11 @@ public class Hunter : MonoBehaviour
     }
 
 
-    IEnumerator BananaMotion()
+    IEnumerator BananaMotion(GameObject motion)
     {
-        bananaMotion.SetActive(true);
+        motion.SetActive(true);
         yield return new WaitForSeconds(1.0f);
-        bananaMotion.SetActive(false);
+        motion.SetActive(false);
     }
 
     #region Hunter State
@@ -281,7 +298,6 @@ public class Hunter : MonoBehaviour
         if (moveDebuff >= 6)
         {
             moveDebuff=0;
-            magic.SetActive(false);
         }
 
         else
@@ -289,6 +305,7 @@ public class Hunter : MonoBehaviour
             Moveable = true;
             tileManager.SetMoveableTile(transform.position, moveDebuff);
         }
+
        
     }
 
@@ -355,14 +372,18 @@ public class Hunter : MonoBehaviour
     IEnumerator HunterWeaponAttack()
     {
         if (WeaponNumber == 1)
-        {           
-            chooseDirection = false;
-            tileManager.SetAttackableTile(transform.position);
-            while (!chooseDirection)
+        {
+            if (magic==null||!magic.activeSelf)
             {
-                yield return null;
+                chooseDirection = false;
+                tileManager.SetAttackableTile(transform.position);
+                while (!chooseDirection)
+                {
+                    yield return null;
+                }
+                tileManager.TileBlockReset();
             }
-            tileManager.TileBlockReset();
+           
             ActiveHunterAttack();
         }
 
@@ -391,8 +412,14 @@ public class Hunter : MonoBehaviour
         StartCoroutine(HunterAttackMotion(attackTime));
         if (WeaponNumber == 1)
         {
-            transform.LookAt(attackAbleDirection);
-            StartCoroutine(IceMove(attackAbleDirection));
+            if (magic==null||!magic.activeSelf)
+            {
+                transform.LookAt(attackAbleDirection);
+                StartCoroutine(IceMove(attackAbleDirection));
+                if (magic != null)
+                    magic.SetActive(false);
+            }
+            
         }
         StartCoroutine(HunterAttackEnd());
         
@@ -418,6 +445,7 @@ public class Hunter : MonoBehaviour
         }
 
         transform.position = new Vector3(attackDir.x, transform.position.y, attackDir.z);
+        HunterPosition= transform.position;
         moveAbleBlock = null;
     }
 
@@ -493,6 +521,7 @@ public class Hunter : MonoBehaviour
        
         HunterPosition = transform.position;
         moveAbleBlock = null;
+        moveDebuff = 0;
     }
 
     public void StopPosition(Vector3 position)

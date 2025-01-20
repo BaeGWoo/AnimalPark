@@ -6,9 +6,9 @@ using UnityEngine.EventSystems;
 public class Colobus :Monster
 {
     private Vector3[] movePoint = new Vector3[1];
-    private Vector3[] moveDirection = new Vector3[4];
+    private Vector3[] moveDirection = new Vector3[6];
     [SerializeField] GameObject[] AttackMotion;
-
+    [SerializeField] GameObject Banana;
 
 
     [SerializeField] float duration = 1.5f;
@@ -49,33 +49,41 @@ public class Colobus :Monster
 
 
         if (skillCount < 0) { skillCount = totalSkillCount; }
-        base.AnimalAct(-1, true, true);
+        base.AnimalAct(-1, true, false);
     }
 
     public override void Attack()
     {
         base.Attack();
-        BananaMove();
-        Attack(AttackMotion, duration, AttackDamage);
+        StartCoroutine(BananaMove());
+        //base.Attack(AttackMotion, duration, AttackDamage);
         Move();
     }
 
     IEnumerator BananaMove()
     {
-        float speed = 2.0f * Time.deltaTime;
-        float distance = Mathf.Abs(AttackMotion[0].transform.position.x - Hunter.HunterPosition.x) +
-            Mathf.Abs(AttackMotion[0].transform.position.z - Hunter.HunterPosition.z);
-        while (distance > 0.1f)  // 0.1f는 허용 오차
-        {
-            // 목표 위치로 서서히 이동
-            AttackMotion[0].transform.position = Vector3.MoveTowards(transform.position, Hunter.HunterPosition, speed);
+        GameObject banana = Instantiate(Banana);
+        banana.transform.position = transform.position;
+        banana.tag = "banana";
 
+        bool reached = false;
+        float speed = 5.0f * Time.deltaTime;
+        while (!reached||banana!=null)  // 0.1f는 허용 오차
+        {
+            if (banana == null)
+                yield return null;
+            // 목표 위치로 서서히 이동
+            banana.transform.position = Vector3.MoveTowards(banana.transform.position, Hunter.HunterPosition, speed);
+            if(banana.transform.position.x== Hunter.HunterPosition.x && banana.transform.position.z == Hunter.HunterPosition.z)
+            {
+                reached = true;
+                yield return null;
+            }
+
+            
             // 한 프레임 대기
             yield return null;
         }
-
-        AttackMotion[0].transform.position = Hunter.HunterPosition;
-
     }
 
     public override void Move()

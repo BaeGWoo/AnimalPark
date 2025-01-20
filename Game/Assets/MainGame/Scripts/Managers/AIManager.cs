@@ -154,8 +154,17 @@ public class AIManager : MonoBehaviour
     {
         for (int i = 0; i < Animals.Length; i++)
         {
+            UpdateAnimalPosition();
             Animals[i].GetComponent<Monster>().GetAttackAble();
             Animals[i].GetComponent<Monster>().AnimalAct();
+        }
+    }
+
+    public void UpdateAnimalPosition()
+    {
+        for (int i = 0; i < Animals.Length; i++)
+        {
+            Animals[i].GetComponent<Monster>().UpdateAnimalPosition();
         }
     }
 

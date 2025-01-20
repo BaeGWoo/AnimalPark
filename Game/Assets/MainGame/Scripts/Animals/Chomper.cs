@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Chomper : Monster
 {
-    private Vector3[] movePoint = new Vector3[1];
+    private Vector3[] movePoint = new Vector3[4];
     private Vector3[] moveDirection = new Vector3[4];
     [SerializeField] GameObject[] AttackMotion;
     private Vector3[] attackBox = new Vector3[12];
 
-
+    [SerializeField] GameObject Posion;
     [SerializeField] float duration = 1.5f;
     [SerializeField] float Health = 2;
     [SerializeField] float MaxHealth = 2;
@@ -55,53 +55,53 @@ public class Chomper : Monster
 
     public override void AnimalAct()
     {
-        skillCount--;
        
-       
-        if (skillCount < 0) { skillCount = totalSkillCount; }
-        base.AnimalAct(skillCount, false, true);
+        base.AnimalAct(-1, attackable, true);
     }
 
     public override void Attack()
     {
         base.Attack();
-        PosionMove();
-        Attack(AttackMotion, duration, AttackDamage);
+        StartCoroutine(PosionMove());
+        //Attack(AttackMotion, duration, AttackDamage);
         FindAnyObjectByType<Hunter>().GetComponent<Hunter>().GetMoveDebuff(4);
     }
 
     IEnumerator PosionMove()
-    {      
-        float speed = 2.0f * Time.deltaTime;
-        float distance = Mathf.Abs(AttackMotion[0].transform.position.x - Hunter.HunterPosition.x) + 
-            Mathf.Abs(AttackMotion[0].transform.position.z - Hunter.HunterPosition.z);
-        while (distance > 0.1f)  // 0.1f는 허용 오차
+    {
+        GameObject posion = Instantiate(Posion);
+        posion.transform.position = transform.position;
+        posion.tag = "Posion";
+
+        bool reached = false;
+        float speed = 3.0f * Time.deltaTime;
+        while (!reached)  // 0.1f는 허용 오차
         {
             // 목표 위치로 서서히 이동
-            AttackMotion[0].transform.position = Vector3.MoveTowards(transform.position, Hunter.HunterPosition, speed);
-
+            posion.transform.position = Vector3.MoveTowards(posion.transform.position, Hunter.HunterPosition, speed);
+            if (posion.transform.position.x == Hunter.HunterPosition.x && posion.transform.position.z == Hunter.HunterPosition.z)
+            {
+                reached = true;
+                break;
+            }
             // 한 프레임 대기
             yield return null;
         }
 
-        AttackMotion[0].transform.position = Hunter.HunterPosition;
-       
     }
 
     public override void Move()
     {
-        int index = 0;
         for (int i = 0; i < movePoint.Length; i++)
         {
-            for (int j = 0; j < attackBox.Length; j++)
-            {
-                movePoint[index++] = moveDirection[i] + transform.position + attackBox[j];
-            }
-
+            movePoint[i] = moveDirection[i] + transform.position;
         }
         //animationComponent.Play("Run");
         base.Move(transform.position, movePoint);
+       
     }
+
+
 
 
 

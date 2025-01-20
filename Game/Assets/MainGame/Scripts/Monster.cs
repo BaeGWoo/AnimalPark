@@ -104,7 +104,7 @@ public class Monster : MonoBehaviour
             temp = Mathf.Abs(movePoint[i].x - target.x) + Mathf.Abs(movePoint[i].z - target.z);
             if (movePoint[i].x >= 0 && movePoint[i].x <= 14 && movePoint[i].z >= 0 && movePoint[i].z <= 14)
             {
-                if (tileManager.CheckTileMap(movePositionX, movePositionZ))
+                if (tileManager.CheckTileMap((int)movePoint[i].x/2, (int)movePoint[i].z/2))
                 {
                     if (temp <= distance)
                     {
@@ -114,10 +114,21 @@ public class Monster : MonoBehaviour
                 }
             }
         }
-        Debug.Log(gameObject.name+" : ( " + movePoint[minDirection].x / 2 + " , " + movePoint[minDirection].z / 2 + " ) ");
-        tileManager.insertTileMap(
-            ((int)movePoint[minDirection].x / 2), (int)(movePoint[minDirection].z) / 2, 1);
-        StartCoroutine(JumpToPosition(curPosition, new Vector3(movePoint[minDirection].x, 0, movePoint[minDirection].z)));
+        if (minDirection >= 0)
+        {
+            //Debug.Log(gameObject.name + " : ( " + movePoint[minDirection].x / 2 + " , " + movePoint[minDirection].z / 2 + " ) ");
+            tileManager.insertTileMap(
+                ((int)movePoint[minDirection].x / 2), (int)(movePoint[minDirection].z) / 2, 1);
+            StartCoroutine(JumpToPosition(curPosition, new Vector3(movePoint[minDirection].x, 0, movePoint[minDirection].z)));
+        }
+        else
+        {
+            tileManager.insertTileMap(
+                ((int)transform.position.x / 2), (int)transform.position.z / 2, 1);
+            StartCoroutine(JumpToPosition(curPosition, new Vector3(transform.position.x, 0, transform.position.z)));
+        }
+
+
     }
 
     IEnumerator JumpToPosition(Vector3 curPosition, Vector3 targetPosition)
@@ -160,7 +171,7 @@ public class Monster : MonoBehaviour
             StartCoroutine(DeactivateAfterDuration(attackMotion, duration));
         }
 
-        if (dmg != -1)
+        if (dmg != -1&&transform.name!="Colobus")
             FindAnyObjectByType<Hunter>().GetComponent<Hunter>().getDamaged(dmg);
     }
 
@@ -216,5 +227,15 @@ public class Monster : MonoBehaviour
             }
         }
        
+    }
+
+    public void UpdateAnimalPosition()
+    {
+        tileManager.insertTileMap
+            (
+               (int)transform.position.x / 2,
+               (int)transform.position.z / 2, 
+               1
+            );
     }
 }
