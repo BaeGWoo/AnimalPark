@@ -1,0 +1,545 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.30f1 (70558241b701) revision 7361922'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ko' Physical Memory: 16314 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Users\User\2022.3.30f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker6
+-projectPath
+D:/ë°°ê±´ìš°/AnimalPark/Game
+-logFile
+Logs/AssetImportWorker6.log
+-srvPort
+51324
+Successfully changed project path to: D:/ë°°ê±´ìš°/AnimalPark/Game
+D:/ë°°ê±´ìš°/AnimalPark/Game
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [2392] Host "[IP] 211.193.185.145 [Port] 0 [Flags] 2 [Guid] 2205710875 [EditorId] 2205710875 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [2392] Host "[IP] 211.193.185.145 [Port] 0 [Flags] 2 [Guid] 2205710875 [EditorId] 2205710875 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
+Refreshing native plugins compatible for Editor in 12.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.30f1 (70558241b701)
+[Subsystems] Discovering subsystems at path C:/Users/User/2022.3.30f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/ë°°ê±´ìš°/AnimalPark/Game/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 SUPER (ID=0x2187)
+    Vendor:   NVIDIA
+    VRAM:     3930 MB
+    Driver:   32.0.15.6094
+Initialize mono
+Mono path[0] = 'C:/Users/User/2022.3.30f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56492
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Users/User/2022.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.012957 seconds.
+- Loaded All Assemblies, in  0.411 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.283 seconds
+Domain Reload Profiling: 690ms
+	BeginReloadAssembly (132ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (69ms)
+	LoadAllAssembliesAndSetupDomain (153ms)
+		LoadAssemblies (128ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (150ms)
+			TypeCache.Refresh (149ms)
+				TypeCache.ScanAssembly (134ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (284ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (227ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (148ms)
+			ProcessInitializeOnLoadMethodAttributes (58ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.820 seconds
+Refreshing native plugins compatible for Editor in 4.65 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.780 seconds
+Domain Reload Profiling: 1595ms
+	BeginReloadAssembly (172ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (544ms)
+		LoadAssemblies (384ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (271ms)
+			TypeCache.Refresh (230ms)
+				TypeCache.ScanAssembly (212ms)
+			ScanForSourceGeneratedMonoScriptInfo (25ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (780ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (594ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (85ms)
+			ProcessInitializeOnLoadAttributes (410ms)
+			ProcessInitializeOnLoadMethodAttributes (71ms)
+			AfterProcessingInitializeOnLoad (16ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 6.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5687 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 72 unused Assets / (1.5 MB). Loaded Objects now: 6158.
+Memory consumption went from 302.2 MB to 300.7 MB.
+Total: 4.169100 ms (FindLiveObjects: 0.423300 ms CreateObjectMapping: 0.481300 ms MarkObjects: 2.454900 ms  DeleteObjects: 0.808700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 486881.385864 seconds.
+  path: Assets/Belevich/Hyper casual mobile GUI/Sprites/buttons.png
+  artifactKey: Guid(156ec492e516ccb4099add479601d65e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Belevich/Hyper casual mobile GUI/Sprites/buttons.png using Guid(156ec492e516ccb4099add479601d65e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0ec0d62592099c5581720e19431a913') in 0.479492 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 61
+========================================================================
+Received Import Request.
+  Time since last request: 74.176189 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/popup_3.png
+  artifactKey: Guid(8a0e05617bcede04d9e26dd3b1e166da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/popup_3.png using Guid(8a0e05617bcede04d9e26dd3b1e166da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80c1a01f515b2d56cdc360a6f3cf2c2b') in 0.010176 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 126.031483 seconds.
+  path: Assets/DefaceGames/fonts/Crimson-Bold SDF.asset
+  artifactKey: Guid(955b552f3d646514da87c880813d91ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DefaceGames/fonts/Crimson-Bold SDF.asset using Guid(955b552f3d646514da87c880813d91ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6e439e6ebd85acba787a88aae12c3f4') in 0.090823 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 29.368063 seconds.
+  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/crystal(2).png
+  artifactKey: Guid(fa557cc1aab73db40aa5037e9c0cb506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Enviroument tiles/crystal(2).png using Guid(fa557cc1aab73db40aa5037e9c0cb506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f533ea47636ae4f705bc341536f84a2') in 0.010561 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.451376 seconds.
+  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Landscape tiles/buildingPlaceSand.png
+  artifactKey: Guid(39f80beeca022434dadf51ca1d222049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Landscape tiles/buildingPlaceSand.png using Guid(39f80beeca022434dadf51ca1d222049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c29f88bae031d283fd4921866163f829') in 0.011499 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Landscape tiles/grass.png
+  artifactKey: Guid(eacd4446c407b60449a24ca05c29e0ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Lobby Tiles/Isometric Tower Defense Pack/Sprites/Landscape tiles/grass.png using Guid(eacd4446c407b60449a24ca05c29e0ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '335cf92d58a340bae1998d39204b04ca') in 0.013846 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 11.823610 seconds.
+  path: Assets/MainGame/Zololgo/FlatPoly Chess and Checkers/Materials/Chess board edge.mat
+  artifactKey: Guid(3e51e8c6f1e4b5a43b833f724dda2287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Zololgo/FlatPoly Chess and Checkers/Materials/Chess board edge.mat using Guid(3e51e8c6f1e4b5a43b833f724dda2287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '664552fc4f3132a766d2b840fb4218f4') in 0.012504 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.017574 seconds.
+  path: Assets/MainGame/Zololgo/FlatPoly Chess and Checkers/Materials/Chess environment.mat
+  artifactKey: Guid(e4684a765ffa43d4caa4ec942f89f91d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Zololgo/FlatPoly Chess and Checkers/Materials/Chess environment.mat using Guid(e4684a765ffa43d4caa4ec942f89f91d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a72afe428253d1e8988b0014fc0ea318') in 0.007296 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.009882 seconds.
+  path: Assets/MainGame/Zololgo/FlatPoly Chess and Checkers/Materials/Chess figures white.mat
+  artifactKey: Guid(c0165960283e5604ca3ddec04c50a367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Zololgo/FlatPoly Chess and Checkers/Materials/Chess figures white.mat using Guid(c0165960283e5604ca3ddec04c50a367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af27ba3bb90a9384ed0bc11a11a3978c') in 0.007120 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/MainGame/Zololgo/FlatPoly Chess and Checkers/Materials/Ground cyan.mat
+  artifactKey: Guid(487b7a403a4dc194c82cb2822edf07a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Zololgo/FlatPoly Chess and Checkers/Materials/Ground cyan.mat using Guid(487b7a403a4dc194c82cb2822edf07a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18c6d0bf87f1031f4468519fb2f31ac4') in 0.039953 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.471309 seconds.
+  path: Assets/MainGame/Zololgo/FlatPoly Chess and Checkers/Models/chess_and_checkers_environment.obj
+  artifactKey: Guid(8e41ee0932dc55b4e9fdaa392d3bf25e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Zololgo/FlatPoly Chess and Checkers/Models/chess_and_checkers_environment.obj using Guid(8e41ee0932dc55b4e9fdaa392d3bf25e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c69099fff2dcf9144f56e3303a4be57') in 0.213476 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 39
+========================================================================
+Received Import Request.
+  Time since last request: 13.888611 seconds.
+  path: Assets/SpellEffect/Spell Area of Effect FREE/Textures/2-Crit_.tiff
+  artifactKey: Guid(b4a4ea0174b013b49a47e00384e39a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpellEffect/Spell Area of Effect FREE/Textures/2-Crit_.tiff using Guid(b4a4ea0174b013b49a47e00384e39a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42ed07c97b68d42dc56376fd634b14e2') in 0.007602 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.148402 seconds.
+  path: Assets/SpellEffect/Spell Area of Effect FREE/Textures/2-Impact.tiff
+  artifactKey: Guid(969260d81704d2948825857f9ffa7297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpellEffect/Spell Area of Effect FREE/Textures/2-Impact.tiff using Guid(969260d81704d2948825857f9ffa7297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9450bad835d2ac38e11738e668d3f234') in 0.008029 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.209726 seconds.
+  path: Assets/SpellEffect/Spell Area of Effect FREE/Textures/2-Point.png
+  artifactKey: Guid(3f85bd65a1d1ccf47bbc7f7a03017c14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpellEffect/Spell Area of Effect FREE/Textures/2-Point.png using Guid(3f85bd65a1d1ccf47bbc7f7a03017c14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ed789ccc13cee611667044b2b51b277') in 0.007659 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.027018 seconds.
+  path: Assets/SpellEffect/Spell Area of Effect FREE/Textures/2-Shockwave 2.png
+  artifactKey: Guid(1797bfe8852b6c442a0054bb1538998c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpellEffect/Spell Area of Effect FREE/Textures/2-Shockwave 2.png using Guid(1797bfe8852b6c442a0054bb1538998c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0b326e15610889d5f404383b303cb30') in 0.006789 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 7.654775 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/FONT/clear_2.png
+  artifactKey: Guid(cb14256f254afc142bb005a98f13fcc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/FONT/clear_2.png using Guid(cb14256f254afc142bb005a98f13fcc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7284bb0bc0f8c24184fe69dc29132a31') in 0.022267 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.024336 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/FONT/credit.png
+  artifactKey: Guid(2d5c1ca41c05dc24384254252c9d9b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/FONT/credit.png using Guid(2d5c1ca41c05dc24384254252c9d9b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1105368caa95eb03ecf67803149864f6') in 0.008792 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/FONT/go_1.png
+  artifactKey: Guid(b99c290ceb4f8c043a9f99bda85874b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/FONT/go_1.png using Guid(b99c290ceb4f8c043a9f99bda85874b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a5981224546b8d3623d44418d003917') in 0.009031 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/FONT/map.png
+  artifactKey: Guid(b58f931946f0e724094723c4e35c5e3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/FONT/map.png using Guid(b58f931946f0e724094723c4e35c5e3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '273d611d6fb2830af4dd0d8ba25bd6af') in 0.008975 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/FONT/move.png
+  artifactKey: Guid(45c5ea5a49c7ea3428215a832daa0dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/FONT/move.png using Guid(45c5ea5a49c7ea3428215a832daa0dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fdaf538b5e7edffcae5d875bd39ce0e') in 0.009014 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.145256 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/FONT/unlock.png
+  artifactKey: Guid(ace3c4673c3a13841bf44041a950cb53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/FONT/unlock.png using Guid(ace3c4673c3a13841bf44041a950cb53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '664ff1bb48f850194e1db4bf993ee31f') in 0.040872 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 5.252001 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/BG/BG_02.png
+  artifactKey: Guid(d11ae4435fc555644870924c8d24fd81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/BG/BG_02.png using Guid(d11ae4435fc555644870924c8d24fd81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2793522a38519378c2f2b3aca189d9d') in 0.010650 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.047729 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/BG/BG_04.png
+  artifactKey: Guid(ae99675b5e1176749b8550ab5198ed01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/BG/BG_04.png using Guid(ae99675b5e1176749b8550ab5198ed01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4de47f27c46f4bd5a88d0d6564ad8e1') in 0.026123 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.013017 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/BG/BG_06.png
+  artifactKey: Guid(cf99ea2f0d4fe3a4d809e79cf70bc464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/BG/BG_06.png using Guid(cf99ea2f0d4fe3a4d809e79cf70bc464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab5c59be604bd66f8b0ca650083e10ca') in 0.010117 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.834871 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/arrow1.png
+  artifactKey: Guid(af731a16700034a449bc16768edac8e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/arrow1.png using Guid(af731a16700034a449bc16768edac8e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '756d4d67db200afe4f9d04b37fd5a1a7') in 0.009895 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/arrow3.png
+  artifactKey: Guid(7304070ac334d0140a8711f1e7bfa2a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/arrow3.png using Guid(7304070ac334d0140a8711f1e7bfa2a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '510fe01bf9d948d07feb49e4987ccdaf') in 0.009007 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.010434 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/arrow5.psd
+  artifactKey: Guid(f63d0c5b03a7c3749a8f9ae8036802ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/arrow5.psd using Guid(f63d0c5b03a7c3749a8f9ae8036802ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3273b4df08b3b21079563d50f321eb4') in 0.009976 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/box_1.png
+  artifactKey: Guid(8a21598daa79a934288b6f73d59f27e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/box_1.png using Guid(8a21598daa79a934288b6f73d59f27e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8bbb1192218b3c597f5a0140d37e0f5') in 0.009937 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/box_4.png
+  artifactKey: Guid(931f85b672d6b494da6d70d46a590890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/box_4.png using Guid(931f85b672d6b494da6d70d46a590890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d58531fb98d8bc1db76e3e7db4df751') in 0.015088 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.016540 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/box_6.png
+  artifactKey: Guid(7a0cd6618653a6640b9244d39b8bc2a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/box_6.png using Guid(7a0cd6618653a6640b9244d39b8bc2a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4673794c61f0ca401bb1463f6f1354fc') in 0.010778 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/box_5.png
+  artifactKey: Guid(8ac2f321730d6634594fa8ec4a114e5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/box_5.png using Guid(8ac2f321730d6634594fa8ec4a114e5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14d1a8e6e845ed6576959f33ef3de56f') in 0.011227 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/box_8.png
+  artifactKey: Guid(1a89cbc1d86ef3f4f98b82cfaa715ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/box_8.png using Guid(1a89cbc1d86ef3f4f98b82cfaa715ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f69124df55a43fd5b18b64513fb89dff') in 0.014723 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/box_13.psd
+  artifactKey: Guid(4b77e05236b9b8941b32543a9560e4b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/box_13.psd using Guid(4b77e05236b9b8941b32543a9560e4b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fc68f6866915b3b3055d7bb9ba06084') in 0.011468 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/circle_1.psd
+  artifactKey: Guid(c1b85ea29e29ca848a3392d9e32a7c42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/circle_1.psd using Guid(c1b85ea29e29ca848a3392d9e32a7c42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '389ef0d866a1f045881b39e5e5fe6296') in 0.033037 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/box_12.psd
+  artifactKey: Guid(e43146d4b1f10034ebd07684aec608e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Arrow/box_12.psd using Guid(e43146d4b1f10034ebd07684aec608e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee791d348fd95654ef645713f5962662') in 0.029323 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 4.045820 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Character/charactor_menu.png
+  artifactKey: Guid(d2bec2b24e515724f84ff157eca844ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Character/charactor_menu.png using Guid(d2bec2b24e515724f84ff157eca844ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77558043ba093d77a1832bcaaf241ed8') in 0.010487 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Character/duck_icon.png
+  artifactKey: Guid(a44d7e6618020b2489a1a56ccae28478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Character/duck_icon.png using Guid(a44d7e6618020b2489a1a56ccae28478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9292f8720ed6d4ffd7337419de890723') in 0.032426 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 2.504043 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/ICON/door.psd
+  artifactKey: Guid(6d3f4971f4c6bf846b432a5b77750dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/ICON/door.psd using Guid(6d3f4971f4c6bf846b432a5b77750dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3da8ec302c6774245563443a2ccae63') in 0.025027 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.066298 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/ICON/music.png
+  artifactKey: Guid(7bd54938d199db544b8e3ac7112b3148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/ICON/music.png using Guid(7bd54938d199db544b8e3ac7112b3148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f592049060530a6acd256ab0146098da') in 0.010370 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.004749 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/ICON/x.png
+  artifactKey: Guid(632c45048af3cff41a21bce8f8bb9867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/ICON/x.png using Guid(632c45048af3cff41a21bce8f8bb9867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b74277576b29da81c453b31ba06315e') in 0.009220 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.204363 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Loding/loding03.png
+  artifactKey: Guid(bdb9773a4d093484d855a4d1bf7e71a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Loding/loding03.png using Guid(bdb9773a4d093484d855a4d1bf7e71a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e26469532ee216e9a543876155be41ed') in 0.021925 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Loding/loding09.png
+  artifactKey: Guid(d32a71cd30b917248bd9b512bd63234a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Loding/loding09.png using Guid(d32a71cd30b917248bd9b512bd63234a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '380c094545e67d90ffbe9b6be56c1eb5') in 0.103462 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Loding/loding10.png
+  artifactKey: Guid(d129168c603cb7e4d995de5e74e9aabf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Loding/loding10.png using Guid(d129168c603cb7e4d995de5e74e9aabf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d2884f960de3001bee89e2bed447db8') in 0.030916 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.517054 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Number/number8.png
+  artifactKey: Guid(58a5725ac28fcae40b0e58afc06ebd2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Number/number8.png using Guid(58a5725ac28fcae40b0e58afc06ebd2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f0206cdd95edc2d67bf31e2ef692f48') in 0.009733 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 4.859648 seconds.
+  path: Assets/MainGame/Prefabs/Maps/Island Map.prefab
+  artifactKey: Guid(dc94936f63b589647a91cd207719fdc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Maps/Island Map.prefab using Guid(dc94936f63b589647a91cd207719fdc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cae9ec353e793e7a53f1192f537e252') in 0.636952 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 429
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: ½º·¹µå Á¾·á ¶Ç´Â ÀÀ¿ë ÇÁ·Î±×·¥ ¿äÃ» ¶§¹®¿¡ I/O ÀÛ¾÷ÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

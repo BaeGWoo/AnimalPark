@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,8 +13,16 @@ public class LoadManager : MonoBehaviour
 
     [SerializeField] Texture2D[] mouseImage;
     [SerializeField] SoundManager soundManager;
-  
 
+    [SerializeField] GameObject LobbyCanvas;
+    [SerializeField] GameObject PausePanel;
+    [SerializeField] int curLevel;
+    [SerializeField] int imageNumber;
+    [SerializeField] Sprite[] stageImage;
+    [SerializeField] Image levelImage;
+    [SerializeField] GameObject[] state;
+    [SerializeField] string[] sceneName;
+    
     private static LoadManager instance;
     private void Awake()
     {
@@ -29,10 +38,20 @@ public class LoadManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         Cursor.SetCursor(mouseImage[0], Vector2.zero, CursorMode.Auto);
-        
+        levelImage.sprite=stageImage[0];
+        curLevel = 0;
+        imageNumber = curLevel;
+        state[1].SetActive(true);
+        sceneName =new string[]{ "GameStart","Nature","Island","Dessert","City","Space"};
     }
 
-   
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PausePanel.SetActive(true);
+        }
+    }
 
     // 각 씬이 불완전하게 보여지는 것을 방지하기 위해 페이크로딩을 이용
     // 캔버스를 활성화 후 코루틴 함수 호출
@@ -43,14 +62,45 @@ public class LoadManager : MonoBehaviour
         
         if (sceneName== "Lobby")
         {
+            LobbyCanvas.SetActive(true);
             Cursor.SetCursor(mouseImage[0], Vector2.zero, CursorMode.Auto);
+            levelImage.sprite = stageImage[curLevel];
+            imageNumber = curLevel;
+            state[1].SetActive(true);
         }
 
         else
         {
+            LobbyCanvas.SetActive(false);
             Cursor.SetCursor(mouseImage[1], Vector2.zero, CursorMode.Auto);
         }
     }
+
+    public void curStage(int level)
+    {
+        // 로비로 이동
+        if (level == 0)
+        {
+            LobbyCanvas.SetActive(true);
+            Cursor.SetCursor(mouseImage[0], Vector2.zero, CursorMode.Auto);
+            levelImage.sprite = stageImage[curLevel];
+            imageNumber = curLevel;
+            state[1].SetActive(true);
+            PausePanel.SetActive(false);
+        }
+
+        else
+        {
+            loadingCanvas.SetActive(true);
+            Cursor.SetCursor(mouseImage[1], Vector2.zero, CursorMode.Auto);
+            StartCoroutine(LoadNextScene(sceneName[curLevel+1]));
+
+            LobbyCanvas.SetActive(false);
+        }
+       
+    }
+
+
 
 
     IEnumerator LoadNextScene(string next)
@@ -61,7 +111,7 @@ public class LoadManager : MonoBehaviour
         float changeInterval = 0.1f; //로딩 시 이미지 전환 속도
         float nextChangeTime = changeInterval; 
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Space");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(next);
         asyncLoad.allowSceneActivation = false;
         //soundManager.MoveStage(); // 로딩BGM 설정
          
@@ -113,6 +163,51 @@ public class LoadManager : MonoBehaviour
     }
 
 
+    public void stageImageChange(Button button)
+    {
+        for (int i = 0; i < state.Length; i++)
+        {
+            state[i].SetActive(false);
+        }
+
+        if (button.name == "Left")
+        {
+            if (imageNumber > 0)
+                levelImage.sprite = stageImage[--imageNumber];
+        }
+
+        else if (button.name == "Right")
+        {
+            if (imageNumber < stageImage.Length-1)
+                levelImage.sprite = stageImage[++imageNumber];
+        }
+
+        if (imageNumber < curLevel)
+        {
+            state[0].SetActive(true);
+        }
+
+        else if (imageNumber == curLevel)
+        {
+            state[1].SetActive(true);
+        }
+
+        else
+        {
+            state[2].SetActive(true);
+        }
+
+    }
+
+    public void ClosePausePanel()
+    {
+        PausePanel.SetActive(false);
+    }
+
+    
+
+
+
     public void ReLoadScene()
     {
         string sceneName = SceneManager.GetActiveScene().name;
@@ -125,7 +220,6 @@ public class LoadManager : MonoBehaviour
     {
         //aiManager.ResetAnimalList();
         //AIManager.SetActive(false);
-
         SceneManager.LoadScene("Lobby");
         //soundManager.EnterLobby();
 
@@ -142,5 +236,19 @@ public class LoadManager : MonoBehaviour
             ducks[i].sprite = loadingImages[index];
         }
     }
-   
+
+    public int GetCurLevel()
+    {
+        return curLevel;
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#endif
+    }
+
 }

@@ -15,7 +15,7 @@ D:/ë°°ê±´ìš°/AnimalPark/Game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55681
+58521
 Successfully changed project path to: D:/ë°°ê±´ìš°/AnimalPark/Game
 D:/ë°°ê±´ìš°/AnimalPark/Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ D:/ë°°ê±´ìš°/AnimalPark/Game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [19204] Host "[IP] 118.39.41.99 [Port] 0 [Flags] 2 [Guid] 3217017816 [EditorId] 3217017816 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [22728] Host "[IP] 211.193.184.155 [Port] 0 [Flags] 2 [Guid] 1163860865 [EditorId] 1163860865 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [19204] Host "[IP] 118.39.41.99 [Port] 0 [Flags] 2 [Guid] 3217017816 [EditorId] 3217017816 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [22728] Host "[IP] 211.193.184.155 [Port] 0 [Flags] 2 [Guid] 1163860865 [EditorId] 1163860865 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 15.78 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 11.79 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.30f1 (70558241b701)
 [Subsystems] Discovering subsystems at path C:/Users/User/2022.3.30f1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'C:/Users/User/2022.3.30f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56288
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56408
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Users/User/2022.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.014099 seconds.
-- Loaded All Assemblies, in  0.490 seconds
+Registered in 0.012947 seconds.
+- Loaded All Assemblies, in  0.436 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.312 seconds
-Domain Reload Profiling: 799ms
-	BeginReloadAssembly (171ms)
+- Finished resetting the current domain, in  0.289 seconds
+Domain Reload Profiling: 721ms
+	BeginReloadAssembly (148ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (51ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (85ms)
-	LoadAllAssembliesAndSetupDomain (165ms)
-		LoadAssemblies (166ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (75ms)
+	LoadAllAssembliesAndSetupDomain (160ms)
+		LoadAssemblies (144ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (163ms)
-			TypeCache.Refresh (161ms)
-				TypeCache.ScanAssembly (145ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
+		AnalyzeDomain (158ms)
+			TypeCache.Refresh (156ms)
+				TypeCache.ScanAssembly (136ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (313ms)
+	FinalizeReload (290ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (248ms)
+		SetupLoadedEditorAssemblies (230ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
+			InitializePlatformSupportModulesInManaged (11ms)
 			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (157ms)
-			ProcessInitializeOnLoadMethodAttributes (69ms)
+			ProcessInitializeOnLoadAttributes (155ms)
+			ProcessInitializeOnLoadMethodAttributes (56ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,55 +115,55 @@ Domain Reload Profiling: 799ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.045 seconds
-Refreshing native plugins compatible for Editor in 6.16 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.841 seconds
+Refreshing native plugins compatible for Editor in 4.57 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.908 seconds
-Domain Reload Profiling: 1947ms
-	BeginReloadAssembly (222ms)
+- Finished resetting the current domain, in  0.788 seconds
+Domain Reload Profiling: 1625ms
+	BeginReloadAssembly (181ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (23ms)
-	RebuildCommonClasses (50ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (59ms)
-	LoadAllAssembliesAndSetupDomain (696ms)
-		LoadAssemblies (484ms)
+		CreateAndSetChildDomain (22ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (50ms)
+	LoadAllAssembliesAndSetupDomain (557ms)
+		LoadAssemblies (385ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (357ms)
-			TypeCache.Refresh (307ms)
-				TypeCache.ScanAssembly (279ms)
-			ScanForSourceGeneratedMonoScriptInfo (34ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (909ms)
+		AnalyzeDomain (288ms)
+			TypeCache.Refresh (246ms)
+				TypeCache.ScanAssembly (228ms)
+			ScanForSourceGeneratedMonoScriptInfo (25ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (789ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (688ms)
+		SetupLoadedEditorAssemblies (598ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
+			InitializePlatformSupportModulesInManaged (8ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (104ms)
-			ProcessInitializeOnLoadAttributes (466ms)
-			ProcessInitializeOnLoadMethodAttributes (84ms)
-			AfterProcessingInitializeOnLoad (18ms)
+			BeforeProcessingInitializeOnLoad (89ms)
+			ProcessInitializeOnLoadAttributes (413ms)
+			ProcessInitializeOnLoadMethodAttributes (68ms)
+			AfterProcessingInitializeOnLoad (15ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (16ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.16 seconds
-Refreshing native plugins compatible for Editor in 6.15 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (15ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 4.61 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5673 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 72 unused Assets / (1.5 MB). Loaded Objects now: 6144.
-Memory consumption went from 298.1 MB to 296.6 MB.
-Total: 4.516100 ms (FindLiveObjects: 0.477900 ms CreateObjectMapping: 0.484600 ms MarkObjects: 3.032700 ms  DeleteObjects: 0.519700 ms)
+Memory consumption went from 298.2 MB to 296.7 MB.
+Total: 4.007300 ms (FindLiveObjects: 0.414600 ms CreateObjectMapping: 0.431700 ms MarkObjects: 2.517700 ms  DeleteObjects: 0.642300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -180,44 +180,341 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 387103.535550 seconds.
-  path: Assets/Resources/charactor_menu.png
-  artifactKey: Guid(152ec62b66342b64f8ae96dfeb38c8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/charactor_menu.png using Guid(152ec62b66342b64f8ae96dfeb38c8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eadf042e48db63437e88179ee6383cac') in 0.111446 seconds
+  Time since last request: 424357.737215 seconds.
+  path: Assets/NewGameResource/3D Game Kit - Character Pack/Characters/Chomper/ChomperController.controller
+  artifactKey: Guid(009af5f6730e5894186edb87b76490c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NewGameResource/3D Game Kit - Character Pack/Characters/Chomper/ChomperController.controller using Guid(009af5f6730e5894186edb87b76490c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '464364c8c38ce8b13eadd887c2c544d2') in 0.014028 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 11
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Resources/Colobus.PNG
-  artifactKey: Guid(6dfdae5df8cef404c9771485890526a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Colobus.PNG using Guid(6dfdae5df8cef404c9771485890526a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd404678802abb748fb7f4e43421b9d59') in 0.035868 seconds
+  Time since last request: 83.721090 seconds.
+  path: Assets/NewGameResource/3D Game Kit - Character Pack/Characters/Chomper/Prefabs/Chomper.prefab
+  artifactKey: Guid(cbbcf6e267045b043ae0a5d0debc8280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NewGameResource/3D Game Kit - Character Pack/Characters/Chomper/Prefabs/Chomper.prefab using Guid(cbbcf6e267045b043ae0a5d0debc8280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edd1d4c8fea1b121e44d0a86eda9f470') in 0.138831 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 485
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.566 seconds
+Refreshing native plugins compatible for Editor in 4.61 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.566 seconds
+Domain Reload Profiling: 2127ms
+	BeginReloadAssembly (189ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (37ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (282ms)
+		LoadAssemblies (372ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (23ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1566ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (571ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (100ms)
+			ProcessInitializeOnLoadAttributes (360ms)
+			ProcessInitializeOnLoadMethodAttributes (81ms)
+			AfterProcessingInitializeOnLoad (16ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 4.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5560 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 49 unused Assets / (1.5 MB). Loaded Objects now: 6156.
+Memory consumption went from 276.5 MB to 275.0 MB.
+Total: 3.928500 ms (FindLiveObjects: 0.433600 ms CreateObjectMapping: 0.429900 ms MarkObjects: 2.585300 ms  DeleteObjects: 0.478800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 97.129404 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr aura rays.png
+  artifactKey: Guid(4ece64fbaa1a3d14091abf505199104e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr aura rays.png using Guid(4ece64fbaa1a3d14091abf505199104e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01510db777cf6637d4ff8287e8877322') in 0.059265 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr aura runic hdr ab nosp.mat
+  artifactKey: Guid(cbb6f419bbe7c6e4d9ce7e0322aa267d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr aura runic hdr ab nosp.mat using Guid(cbb6f419bbe7c6e4d9ce7e0322aa267d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6136aed4058eb0c807bf2fb4c8cbbc3') in 0.071357 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr blood splash dissolve.png
+  artifactKey: Guid(66389432937edf24a943c3944a78bd01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr blood splash dissolve.png using Guid(66389432937edf24a943c3944a78bd01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c83f6df4cbec21d642fa1a891797eec') in 0.008026 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr blood dissolve.png
+  artifactKey: Guid(0611efd272757c345a8ded5f38dd3f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr blood dissolve.png using Guid(0611efd272757c345a8ded5f38dd3f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4adb59edcb7d7947e42c80ac1256655c') in 0.007334 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr blood splash mesh.asset
+  artifactKey: Guid(03b90fa8ed1d4104abc8b7431ab290e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr blood splash mesh.asset using Guid(03b90fa8ed1d4104abc8b7431ab290e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91682ba3f2ab5254e21cc1d76033fd17') in 0.023158 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr aura runic.png
+  artifactKey: Guid(ccb58def4933d4e46b7a1fc023bf6259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr aura runic.png using Guid(ccb58def4933d4e46b7a1fc023bf6259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bd701eb23ba209b22f6ac7e5c53c5a7') in 0.007113 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr blood.png
+  artifactKey: Guid(a29f55dbea218ca4fbd94deb36027aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr blood.png using Guid(a29f55dbea218ca4fbd94deb36027aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e153f113deb7cd71226b5abf4cbd0b62') in 0.006488 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr bubble hdr ab.mat
+  artifactKey: Guid(92f3f05a0e6f8e840b8e4367b2c7713b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr bubble hdr ab.mat using Guid(92f3f05a0e6f8e840b8e4367b2c7713b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ecee4f8d9963a35bf2a8546e0251689') in 0.009685 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr card club.png
+  artifactKey: Guid(d92fa0efcefbc2e4db627980b9abdb4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr card club.png using Guid(d92fa0efcefbc2e4db627980b9abdb4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '768f2b47623a07506cc421cd765a59a3') in 0.007225 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr card diamond.png
+  artifactKey: Guid(d8c4f60c4d65b1d40a18db39349c9439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr card diamond.png using Guid(d8c4f60c4d65b1d40a18db39349c9439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74a464c069033bc4a7b0484ecb63f3be') in 0.005995 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr bubble.png
+  artifactKey: Guid(c78c2071651a73d4db16ad0155af4dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr bubble.png using Guid(c78c2071651a73d4db16ad0155af4dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97148de675ff554de3c7a9d96f5a411e') in 0.006209 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr card heart ab.mat
+  artifactKey: Guid(56dcdb394ebaf9841bfd56db0f1ea05c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr card heart ab.mat using Guid(56dcdb394ebaf9841bfd56db0f1ea05c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dc9062503eb55e07ab7aecf91374a91') in 0.009141 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr card spade ab.mat
+  artifactKey: Guid(fdebe8f9090761f44a629442b2b5cf57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr card spade ab.mat using Guid(fdebe8f9090761f44a629442b2b5cf57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecd3d334e9586b7d622065efefd53872') in 0.008107 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris 3x3.png
+  artifactKey: Guid(c77bd9e350bb29b47bf79c281d43f52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris 3x3.png using Guid(c77bd9e350bb29b47bf79c281d43f52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c3eed936abd7c3aebd4dc57dbb2f648') in 0.007418 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000013 seconds.
-  path: Assets/Resources/Sparrow.PNG
-  artifactKey: Guid(556336632c95792408cc5de6e0dca671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Sparrow.PNG using Guid(556336632c95792408cc5de6e0dca671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '433244d98024de73c4759c35e0ad9aaf') in 0.042037 seconds
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr card diamond mesh.asset
+  artifactKey: Guid(215b94bafc110894881bb24975d050ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr card diamond mesh.asset using Guid(215b94bafc110894881bb24975d050ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a536e80e84af1b9640655279954bad6e') in 0.006281 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris 3x3 ab lit emission.mat
+  artifactKey: Guid(f7ffbf43e28f7014d968ef0d50836718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris 3x3 ab lit emission.mat using Guid(f7ffbf43e28f7014d968ef0d50836718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '173010faddffcf39cd7090af4bddeea8') in 0.067055 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
   Time since last request: 0.000017 seconds.
-  path: Assets/Resources/Gecko.png
-  artifactKey: Guid(653fe069d464c5247b1ec65abbffa02a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Gecko.png using Guid(653fe069d464c5247b1ec65abbffa02a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7ae92281d7b2d49e6dd88c909423a38') in 0.018159 seconds
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris flat unlit 3x3.png
+  artifactKey: Guid(f0fc63002361baf4a903d44ab024b19b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris flat unlit 3x3.png using Guid(f0fc63002361baf4a903d44ab024b19b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b129fbdd8a1c21e777bcf71f77de77c') in 0.029687 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris flat unlit 3x3 ab hdr.mat
+  artifactKey: Guid(a6b83a8798dc3f748822ba3b239a8728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris flat unlit 3x3 ab hdr.mat using Guid(a6b83a8798dc3f748822ba3b239a8728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c49ac21f36ff6c9a86514d0a371e42fc') in 0.016218 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris ice 2x2 normal.png
+  artifactKey: Guid(19748a8ba2114654bbdc0e540f47baba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris ice 2x2 normal.png using Guid(19748a8ba2114654bbdc0e540f47baba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd084e4ab6b18abb3356cd24a78de3c0d') in 0.010422 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris unlit 3x3 ab.mat
+  artifactKey: Guid(0ab14112d95c069419bd90ef39fba9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris unlit 3x3 ab.mat using Guid(0ab14112d95c069419bd90ef39fba9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6f55e76f95f05113efe0f53eff7a04b') in 0.044247 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris wood 3x3 normal.png
+  artifactKey: Guid(2becb40852344304cb0ba0dae53f5dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris wood 3x3 normal.png using Guid(2becb40852344304cb0ba0dae53f5dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '926c67c06189c822834fa28ae3dbcc17') in 0.007548 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr electric arc anim x4.png
+  artifactKey: Guid(0badb2586ed1fe64db1a9fc0e2776e10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr electric arc anim x4.png using Guid(0badb2586ed1fe64db1a9fc0e2776e10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00934ab9e2a0971535af279b53d82e98') in 0.006497 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr electric arcs fade x4 hdr ab.mat
+  artifactKey: Guid(df4afccabf3812f4eb84570337f5bcd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr electric arcs fade x4 hdr ab.mat using Guid(df4afccabf3812f4eb84570337f5bcd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32d2ca445b4f51a8044311617794b3ff') in 0.009418 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr electric arc anim x4.mat
+  artifactKey: Guid(21ce22ee4a68b854f8df2b3f4de750e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr electric arc anim x4.mat using Guid(21ce22ee4a68b854f8df2b3f4de750e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b40e65d891a799e05b4920ead39563a0') in 0.081899 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr electric small anim 4x2 hdr.mat
+  artifactKey: Guid(b41c12b9e8d21c442affcda9d5c050f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr electric small anim 4x2 hdr.mat using Guid(b41c12b9e8d21c442affcda9d5c050f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f559c80d3dca953838b644e337f0a48') in 0.007195 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr electric small anim2 7x2 ab.mat
+  artifactKey: Guid(db8a5b9ece13e724aa993174dc3c6843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr electric small anim2 7x2 ab.mat using Guid(db8a5b9ece13e724aa993174dc3c6843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4398096d8f5e70755d15632df47bb99c') in 0.009691 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris ice 2x2 ab lit.mat
+  artifactKey: Guid(d7db40b0f0e0ac045b7b14e8f37ade3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr debris ice 2x2 ab lit.mat using Guid(d7db40b0f0e0ac045b7b14e8f37ade3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8d8e225af3b588648cbe8d8e7515d00') in 0.011168 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Resources/flower.png
-  artifactKey: Guid(2dd8d273921a4d14880849f62b714f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/flower.png using Guid(2dd8d273921a4d14880849f62b714f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab770df35d30a076187f2373446b4313') in 0.022409 seconds
+  Time since last request: 0.000017 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr electric spark.png
+  artifactKey: Guid(3cc6081aa8e628d49bc8c5fcbc8d6a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr electric spark.png using Guid(3cc6081aa8e628d49bc8c5fcbc8d6a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f565aa45ffadaf4016b54d36858c1c1e') in 0.007666 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr ember blur hdr ab.mat
+  artifactKey: Guid(6cd2d08f4a4d93542aa0004bdac91566) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr ember blur hdr ab.mat using Guid(6cd2d08f4a4d93542aa0004bdac91566) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a9e306b2b9ad3f4a1bdc0e8bb937b30') in 0.025780 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr electric sparks hdr ab.mat
+  artifactKey: Guid(0aed4f47f3bcce64b83be8b64904bab4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr electric sparks hdr ab.mat using Guid(0aed4f47f3bcce64b83be8b64904bab4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83c6203d66d67e0baf4d675f8ad0ab58') in 0.022976 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr card diamond ab.mat
+  artifactKey: Guid(f4814d2dd466a574d8746a53e0ab0443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr card diamond ab.mat using Guid(f4814d2dd466a574d8746a53e0ab0443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fd5cc8e1044cdf3bebd824c5595ddcd') in 0.022916 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 41.308473 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/CFX3 Prefabs/Magic Misc/CFX3_MagicAura_D_Runic.prefab
+  artifactKey: Guid(e3d819d8722fa1f47a3f68574b56dfb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/CFX3 Prefabs/Magic Misc/CFX3_MagicAura_D_Runic.prefab using Guid(e3d819d8722fa1f47a3f68574b56dfb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9acc1050d85dac7ba503faa09b77006d') in 0.106726 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: ½º·¹µå Á¾·á ¶Ç´Â ÀÀ¿ë ÇÁ·Î±×·¥ ¿äÃ» ¶§¹®¿¡ I/O ÀÛ¾÷ÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.
 AssetImportWorker is now disconnected from the server

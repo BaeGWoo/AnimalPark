@@ -91,7 +91,7 @@ public class Monster : MonoBehaviour
         int movePositionX = (int)curPosition.x / 2;
         int movePositionZ = (int) curPosition.z / 2;
 
-        tileManager.insertTileMap(movePositionX, movePositionZ, 0);
+        tileManager.insertTileMap((int)(transform.position.x/2), (int)(transform.position.z/2), 0);
         Vector3 target = FindAnyObjectByType<Hunter>().GetComponent<Hunter>().GetHunterPosition();
 
         float distance = 20;
@@ -104,7 +104,7 @@ public class Monster : MonoBehaviour
             temp = Mathf.Abs(movePoint[i].x - target.x) + Mathf.Abs(movePoint[i].z - target.z);
             if (movePoint[i].x >= 0 && movePoint[i].x <= 14 && movePoint[i].z >= 0 && movePoint[i].z <= 14)
             {
-                if (tileManager.CheckTileMap((int)movePoint[i].x/2, (int)movePoint[i].z/2))
+                if (tileManager.CheckTileMap((int)(movePoint[i].x/2), (int)(movePoint[i].z/2)))
                 {
                     if (temp <= distance)
                     {
@@ -118,13 +118,13 @@ public class Monster : MonoBehaviour
         {
             //Debug.Log(gameObject.name + " : ( " + movePoint[minDirection].x / 2 + " , " + movePoint[minDirection].z / 2 + " ) ");
             tileManager.insertTileMap(
-                ((int)movePoint[minDirection].x / 2), (int)(movePoint[minDirection].z) / 2, 1);
+                ((int)(movePoint[minDirection].x / 2)), (int)(movePoint[minDirection].z / 2), 1);
             StartCoroutine(JumpToPosition(curPosition, new Vector3(movePoint[minDirection].x, 0, movePoint[minDirection].z)));
         }
-        else
+        else if(minDirection==-1)
         {
             tileManager.insertTileMap(
-                ((int)transform.position.x / 2), (int)transform.position.z / 2, 1);
+                ((int)(transform.position.x / 2)), (int)(transform.position.z / 2), 1);
             StartCoroutine(JumpToPosition(curPosition, new Vector3(transform.position.x, 0, transform.position.z)));
         }
 
@@ -235,7 +235,7 @@ public class Monster : MonoBehaviour
             (
                (int)transform.position.x / 2,
                (int)transform.position.z / 2, 
-               1
+               0
             );
     }
 }

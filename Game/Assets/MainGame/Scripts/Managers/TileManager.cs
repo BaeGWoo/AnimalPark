@@ -38,7 +38,7 @@ public class TileManager : MonoBehaviour
     // 각 씬에 맞는 블록타일을 찾아서 맵을 구성합니다.
     public void CreateTileMap()
     {
-        int BlockNumber = FindAnyObjectByType<Hunter>().GetComponent<Hunter>().getCurLevel() * 2;
+        int BlockNumber = FindAnyObjectByType<LoadManager>().GetComponent<LoadManager>().GetCurLevel() * 2;
         
         GameObject curTile = Blocks[BlockNumber];
         for (int i = 0; i < 8; i++)

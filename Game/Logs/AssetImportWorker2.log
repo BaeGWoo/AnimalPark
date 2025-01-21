@@ -15,7 +15,7 @@ D:/ë°°ê±´ìš°/AnimalPark/Game
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-58521
+51324
 Successfully changed project path to: D:/ë°°ê±´ìš°/AnimalPark/Game
 D:/ë°°ê±´ìš°/AnimalPark/Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ D:/ë°°ê±´ìš°/AnimalPark/Game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [25712] Host "[IP] 211.193.184.155 [Port] 0 [Flags] 2 [Guid] 902534583 [EditorId] 902534583 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [5788] Host "[IP] 211.193.185.145 [Port] 0 [Flags] 2 [Guid] 1059412774 [EditorId] 1059412774 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [25712] Host "[IP] 211.193.184.155 [Port] 0 [Flags] 2 [Guid] 902534583 [EditorId] 902534583 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [5788] Host "[IP] 211.193.185.145 [Port] 0 [Flags] 2 [Guid] 1059412774 [EditorId] 1059412774 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 13.89 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 12.04 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.30f1 (70558241b701)
 [Subsystems] Discovering subsystems at path C:/Users/User/2022.3.30f1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'C:/Users/User/2022.3.30f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56644
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56160
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Users/User/2022.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.014557 seconds.
-- Loaded All Assemblies, in  0.425 seconds
+Registered in 0.012802 seconds.
+- Loaded All Assemblies, in  0.383 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.283 seconds
-Domain Reload Profiling: 703ms
-	BeginReloadAssembly (142ms)
+- Finished resetting the current domain, in  0.286 seconds
+Domain Reload Profiling: 665ms
+	BeginReloadAssembly (128ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (37ms)
+	RebuildCommonClasses (35ms)
 	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (77ms)
-	LoadAllAssembliesAndSetupDomain (152ms)
-		LoadAssemblies (138ms)
+	initialDomainReloadingComplete (70ms)
+	LoadAllAssembliesAndSetupDomain (136ms)
+		LoadAssemblies (124ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (150ms)
-			TypeCache.Refresh (149ms)
-				TypeCache.ScanAssembly (134ms)
+		AnalyzeDomain (134ms)
+			TypeCache.Refresh (132ms)
+				TypeCache.ScanAssembly (118ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (283ms)
+	FinalizeReload (286ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (226ms)
+		SetupLoadedEditorAssemblies (227ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
+			InitializePlatformSupportModulesInManaged (10ms)
 			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (151ms)
-			ProcessInitializeOnLoadMethodAttributes (54ms)
+			ProcessInitializeOnLoadAttributes (150ms)
+			ProcessInitializeOnLoadMethodAttributes (58ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,55 +115,55 @@ Domain Reload Profiling: 703ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.867 seconds
-Refreshing native plugins compatible for Editor in 4.90 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.831 seconds
+Refreshing native plugins compatible for Editor in 4.45 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.816 seconds
-Domain Reload Profiling: 1679ms
-	BeginReloadAssembly (177ms)
+- Finished resetting the current domain, in  0.764 seconds
+Domain Reload Profiling: 1590ms
+	BeginReloadAssembly (172ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (19ms)
-	RebuildCommonClasses (40ms)
+		CreateAndSetChildDomain (18ms)
+	RebuildCommonClasses (42ms)
 	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (51ms)
-	LoadAllAssembliesAndSetupDomain (582ms)
-		LoadAssemblies (408ms)
+	initialDomainReloadingComplete (55ms)
+	LoadAllAssembliesAndSetupDomain (546ms)
+		LoadAssemblies (368ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (290ms)
-			TypeCache.Refresh (250ms)
-				TypeCache.ScanAssembly (232ms)
-			ScanForSourceGeneratedMonoScriptInfo (27ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (817ms)
+		AnalyzeDomain (286ms)
+			TypeCache.Refresh (244ms)
+				TypeCache.ScanAssembly (227ms)
+			ScanForSourceGeneratedMonoScriptInfo (28ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (764ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (633ms)
+		SetupLoadedEditorAssemblies (575ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
+			InitializePlatformSupportModulesInManaged (8ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (84ms)
-			ProcessInitializeOnLoadAttributes (446ms)
-			ProcessInitializeOnLoadMethodAttributes (76ms)
-			AfterProcessingInitializeOnLoad (15ms)
+			BeforeProcessingInitializeOnLoad (85ms)
+			ProcessInitializeOnLoadAttributes (400ms)
+			ProcessInitializeOnLoadMethodAttributes (64ms)
+			AfterProcessingInitializeOnLoad (14ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 4.64 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (13ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 5.24 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5673 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 72 unused Assets / (1.5 MB). Loaded Objects now: 6144.
-Memory consumption went from 298.1 MB to 296.6 MB.
-Total: 3.752000 ms (FindLiveObjects: 0.423000 ms CreateObjectMapping: 0.428000 ms MarkObjects: 2.405200 ms  DeleteObjects: 0.495000 ms)
+Memory consumption went from 298.3 MB to 296.8 MB.
+Total: 3.970000 ms (FindLiveObjects: 0.581700 ms CreateObjectMapping: 0.472900 ms MarkObjects: 2.455600 ms  DeleteObjects: 0.458900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -180,449 +180,1541 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 424547.902145 seconds.
-  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/CFX3 Prefabs/Magic Dark/CFX3_DarkMagicAura_A.prefab
-  artifactKey: Guid(7b56cd9b663f23f429e131a54ec87db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/CFX3 Prefabs/Magic Dark/CFX3_DarkMagicAura_A.prefab using Guid(7b56cd9b663f23f429e131a54ec87db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42cfc5cd0fd5c7d57ef66f99ccb4d985') in 0.157859 seconds
+  Time since last request: 483608.885133 seconds.
+  path: Assets/Assets/UI Elements/Black/2x/share.png
+  artifactKey: Guid(d53cde6e47405044c873b656fe62d63c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/UI Elements/Black/2x/share.png using Guid(d53cde6e47405044c873b656fe62d63c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50379558848836f54c68a57a59dfccff') in 0.087508 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 21
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.769524 seconds.
-  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/Materials/Light/CFX3_AuraRays MULT.mat
-  artifactKey: Guid(63729df9e952c1f4b8fe34b9cd435a79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/Materials/Light/CFX3_AuraRays MULT.mat using Guid(63729df9e952c1f4b8fe34b9cd435a79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78a6efef90e11e9a37c9d8f6cfbfed8c') in 0.026612 seconds
+  Time since last request: 0.035717 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/Animals/sheep/Materials/sheep.tif
+  artifactKey: Guid(47a93771c6ce30c4bacd97eb2643b32d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/Animals/sheep/Materials/sheep.tif using Guid(47a93771c6ce30c4bacd97eb2643b32d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78d69b64f41fecf1877cd891dc7f1cca') in 0.025361 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 32.347673 seconds.
-  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/CFX3 Prefabs/Magic Misc/CFX3_MagicAura_B_Runic.prefab
-  artifactKey: Guid(60bc526f4be1e044ab9e46340b82ffb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/CFX3 Prefabs/Magic Misc/CFX3_MagicAura_B_Runic.prefab using Guid(60bc526f4be1e044ab9e46340b82ffb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3efa153737d56d5d2dd46794550efeda') in 0.053428 seconds
+  Time since last request: 0.159941 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/UI/Character/sheep_icon.png
+  artifactKey: Guid(0bd2ee4293bb6934f93f75052784b75c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/UI/Character/sheep_icon.png using Guid(0bd2ee4293bb6934f93f75052784b75c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd0040d5cb78620b6e75e271352b945d') in 0.040003 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 26
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.773351 seconds.
-  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/Materials/Light/CFX3_AuraRunic ADD.mat
-  artifactKey: Guid(5bf91ad953f78d54baebb31d5f5ae4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/Materials/Light/CFX3_AuraRunic ADD.mat using Guid(5bf91ad953f78d54baebb31d5f5ae4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cc3dce6c7eeadfd7539edcb2f423a52') in 0.007060 seconds
+  Time since last request: 0.011900 seconds.
+  path: Assets/Assets/UI Elements/Black/2x/sign1.png
+  artifactKey: Guid(268ebca04f683fa4c91705d99d3d8186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/UI Elements/Black/2x/sign1.png using Guid(268ebca04f683fa4c91705d99d3d8186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '786a461873716dd84b16ac7bdb9bf8bb') in 0.008495 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.008165 seconds.
+  path: Assets/Assets/UI Elements/Black/1x/sign1.png
+  artifactKey: Guid(6c2f508c2c8885b48a9633a0775ae4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/UI Elements/Black/1x/sign1.png using Guid(6c2f508c2c8885b48a9633a0775ae4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1980a0af6780a8000bf03a297ce321b1') in 0.023832 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.224359 seconds.
+  path: Assets/Assets/UI Elements/White/1x/sign2.png
+  artifactKey: Guid(df199e17abfbe134d9cca069a7ac9248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/UI Elements/White/1x/sign2.png using Guid(df199e17abfbe134d9cca069a7ac9248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eb7640b0925bab1e388ae6de3dd2286') in 0.023062 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/MainGame/Hovl Studio/Magic effects pack/Textures/Slash.png
+  artifactKey: Guid(52eef6aa133a854489e620987374b364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Hovl Studio/Magic effects pack/Textures/Slash.png using Guid(52eef6aa133a854489e620987374b364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc96d5a9afa62a60dd4e6f33bd532c14') in 0.006666 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 1.260876 seconds.
-  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/Materials/Light/CFX3_SmallRay ADDSOFT.mat
-  artifactKey: Guid(d9f8ab332ba6f4a45bd1913a9ff33b10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/Materials/Light/CFX3_SmallRay ADDSOFT.mat using Guid(d9f8ab332ba6f4a45bd1913a9ff33b10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83fab2c20c9e81c15619866bed30d66c') in 0.006543 seconds
+  Time since last request: 0.018580 seconds.
+  path: Assets/MainGame/Prefabs/NormalAnimals/Animals/mole_monster/Materials/Smoke.psd
+  artifactKey: Guid(2fed69295ca74204a895ad89f24dfea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/NormalAnimals/Animals/mole_monster/Materials/Smoke.psd using Guid(2fed69295ca74204a895ad89f24dfea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '367de8ad9ce73a0c417a2db5fbec483e') in 0.021826 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 2.122440 seconds.
-  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/Materials/Water/CFX_Ripple_AddSoft.mat
-  artifactKey: Guid(aae5c8d1fd84746428a2239fd95e4b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/Materials/Water/CFX_Ripple_AddSoft.mat using Guid(aae5c8d1fd84746428a2239fd95e4b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f82bfdc7770c52a38cdb35f203742464') in 0.006259 seconds
+  Time since last request: 0.198978 seconds.
+  path: Assets/MainGame/Hovl Studio/Magic effects pack/Textures/Smoke26.png
+  artifactKey: Guid(08b3912bdc0a5ed4d9a27125425a97f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Hovl Studio/Magic effects pack/Textures/Smoke26.png using Guid(08b3912bdc0a5ed4d9a27125425a97f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f1679863d223dff30eb044e1feb9eca') in 0.008832 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 137.037510 seconds.
-  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/Materials/Symbols/CFX2_SkullStretched Add.mat
-  artifactKey: Guid(219882489a1df4042823f03b5b903103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/Materials/Symbols/CFX2_SkullStretched Add.mat using Guid(219882489a1df4042823f03b5b903103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2c4a1255e1dd000c5237bf7704b3a7c') in 0.007186 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.637 seconds
-Refreshing native plugins compatible for Editor in 6.37 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.540 seconds
-Domain Reload Profiling: 2172ms
-	BeginReloadAssembly (192ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (39ms)
-	RebuildCommonClasses (44ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (342ms)
-		LoadAssemblies (392ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (65ms)
-			TypeCache.Refresh (14ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (36ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (1540ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (557ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (84ms)
-			ProcessInitializeOnLoadAttributes (375ms)
-			ProcessInitializeOnLoadMethodAttributes (66ms)
-			AfterProcessingInitializeOnLoad (20ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (16ms)
-Refreshing native plugins compatible for Editor in 7.18 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5560 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 6188.
-Memory consumption went from 275.0 MB to 273.5 MB.
-Total: 4.295200 ms (FindLiveObjects: 0.475700 ms CreateObjectMapping: 0.439700 ms MarkObjects: 2.685600 ms  DeleteObjects: 0.693100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.566 seconds
-Refreshing native plugins compatible for Editor in 5.17 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.617 seconds
-Domain Reload Profiling: 2178ms
-	BeginReloadAssembly (187ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (35ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (284ms)
-		LoadAssemblies (376ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (22ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (1618ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (571ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (92ms)
-			ProcessInitializeOnLoadAttributes (379ms)
-			ProcessInitializeOnLoadMethodAttributes (67ms)
-			AfterProcessingInitializeOnLoad (20ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (21ms)
-Refreshing native plugins compatible for Editor in 5.14 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5560 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 6191.
-Memory consumption went from 275.0 MB to 273.5 MB.
-Total: 5.297400 ms (FindLiveObjects: 0.745000 ms CreateObjectMapping: 0.541800 ms MarkObjects: 3.382000 ms  DeleteObjects: 0.623300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 277.329761 seconds.
-  path: Assets/NewGameResource/3D Game Kit - Character Pack/Characters/Chomper/ChomperController.controller
-  artifactKey: Guid(009af5f6730e5894186edb87b76490c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NewGameResource/3D Game Kit - Character Pack/Characters/Chomper/ChomperController.controller using Guid(009af5f6730e5894186edb87b76490c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efbd791ab0c8dcb84c12f4189022982c') in 0.018501 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 20
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.609 seconds
-Refreshing native plugins compatible for Editor in 5.04 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.492 seconds
-Domain Reload Profiling: 2095ms
-	BeginReloadAssembly (198ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (45ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (317ms)
-		LoadAssemblies (374ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (56ms)
-			TypeCache.Refresh (12ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (30ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (1492ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (537ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (90ms)
-			ProcessInitializeOnLoadAttributes (357ms)
-			ProcessInitializeOnLoadMethodAttributes (60ms)
-			AfterProcessingInitializeOnLoad (18ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 5.19 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5560 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 6194.
-Memory consumption went from 275.0 MB to 273.5 MB.
-Total: 4.435200 ms (FindLiveObjects: 0.488600 ms CreateObjectMapping: 0.491300 ms MarkObjects: 2.953800 ms  DeleteObjects: 0.500600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.686 seconds
-Refreshing native plugins compatible for Editor in 5.01 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.569 seconds
-Domain Reload Profiling: 2250ms
-	BeginReloadAssembly (243ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (57ms)
-	RebuildCommonClasses (53ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (49ms)
-	LoadAllAssembliesAndSetupDomain (321ms)
-		LoadAssemblies (406ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (56ms)
-			TypeCache.Refresh (12ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (31ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (1570ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (579ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (83ms)
-			ProcessInitializeOnLoadAttributes (396ms)
-			ProcessInitializeOnLoadMethodAttributes (70ms)
-			AfterProcessingInitializeOnLoad (18ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (19ms)
-Refreshing native plugins compatible for Editor in 5.24 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5560 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 6197.
-Memory consumption went from 275.0 MB to 273.5 MB.
-Total: 4.151500 ms (FindLiveObjects: 0.510200 ms CreateObjectMapping: 0.462300 ms MarkObjects: 2.523000 ms  DeleteObjects: 0.655100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.590 seconds
-Refreshing native plugins compatible for Editor in 4.94 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.756 seconds
-Domain Reload Profiling: 2340ms
-	BeginReloadAssembly (198ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (45ms)
-	RebuildCommonClasses (37ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (42ms)
-	LoadAllAssembliesAndSetupDomain (296ms)
-		LoadAssemblies (386ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (25ms)
-			TypeCache.Refresh (8ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (15ms)
-	FinalizeReload (1756ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (627ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (100ms)
-			ProcessInitializeOnLoadAttributes (415ms)
-			ProcessInitializeOnLoadMethodAttributes (78ms)
-			AfterProcessingInitializeOnLoad (19ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (19ms)
-Refreshing native plugins compatible for Editor in 6.60 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5560 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 6200.
-Memory consumption went from 275.0 MB to 273.5 MB.
-Total: 5.165300 ms (FindLiveObjects: 0.690600 ms CreateObjectMapping: 0.598300 ms MarkObjects: 3.249400 ms  DeleteObjects: 0.625900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 323.939322 seconds.
-  path: Assets/MainGame/Scene/Space.unity
-  artifactKey: Guid(ed01618fd273afa4cbdd415dfc9e6cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Scene/Space.unity using Guid(ed01618fd273afa4cbdd415dfc9e6cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56bdf1d3c2421b3a568a7424ddc7cc4e') in 0.010875 seconds
+  Time since last request: 239.694806 seconds.
+  path: Assets/MainGame/Scene/Nature.unity
+  artifactKey: Guid(ccd6663fc05202d499e5c0fc39b6bf74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Scene/Nature.unity using Guid(ccd6663fc05202d499e5c0fc39b6bf74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e09e9b9eadc0b3f974b78390f3022e63') in 0.000566 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 6.409635 seconds.
-  path: Assets/MainGame/Animator/Hunter.controller
-  artifactKey: Guid(660cd8eea5db6fb458427b2ccfe70475) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Animator/Hunter.controller using Guid(660cd8eea5db6fb458427b2ccfe70475) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4de6be66eebc40f1515649a02bb33017') in 0.015409 seconds
+  Time since last request: 127.866547 seconds.
+  path: Assets/MainGame/Scene/Island.unity
+  artifactKey: Guid(388cb24ba5a696542a203f9885c7dde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Scene/Island.unity using Guid(388cb24ba5a696542a203f9885c7dde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f00fff0d4fe736fca30d5c3d115a5888') in 0.000612 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 7.644754 seconds.
-  path: Assets/MainGame/Animations/kaya@Head Hit.fbx
-  artifactKey: Guid(6b1d469899e6f1846be40040db48051e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Animations/kaya@Head Hit.fbx using Guid(6b1d469899e6f1846be40040db48051e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd32e1bd9f2058f5f6ab1c21a9bfef7eb') in 0.018760 seconds
+  Time since last request: 35.970299 seconds.
+  path: Assets/MainGame/Scene/City.unity
+  artifactKey: Guid(2fc0e132ca4b8ec47a2a68bcfd2f6ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Scene/City.unity using Guid(2fc0e132ca4b8ec47a2a68bcfd2f6ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f4d1ddb954d2487eb1b1f37bb515a8c') in 0.000467 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 181
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.017162 seconds.
-  path: Assets/MainGame/Animations/Vampire A Lusth@Standing 1H Magic Attack 01.fbx
-  artifactKey: Guid(ae27e0014d05fff439f751e62c747ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Animations/Vampire A Lusth@Standing 1H Magic Attack 01.fbx using Guid(ae27e0014d05fff439f751e62c747ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3282ebda36ee9313f5c51fcf02aa843d') in 0.006232 seconds
+  Time since last request: 33.157876 seconds.
+  path: Assets/MainGame/Scene/Desert.unity
+  artifactKey: Guid(dfea9094d65153d408c16eba8a85f962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Scene/Desert.unity using Guid(dfea9094d65153d408c16eba8a85f962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '239e633217d5b465db085e5f6e120851') in 0.004326 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 203
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1569.534677 seconds.
+  path: Assets/MainGame/Scene/End.unity
+  artifactKey: Guid(cb9b165b7f2157046a44bcc2bc1fa2d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Scene/End.unity using Guid(cb9b165b7f2157046a44bcc2bc1fa2d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9c070e936cbf61b0fe64f451b3d30a5') in 0.000836 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 11.172239 seconds.
+  path: Assets/MainGame/Scene
+  artifactKey: Guid(a663ecb55bc75924fbc1ff9b20b93f7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Scene using Guid(a663ecb55bc75924fbc1ff9b20b93f7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '408821ee4a157fac6b775f0126d6ce6d') in 0.000489 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 9.032705 seconds.
+  path: Assets/MainGame/Scene/LoadMap.unity
+  artifactKey: Guid(62a1d0cd57852864ca03daeb82f4d4ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Scene/LoadMap.unity using Guid(62a1d0cd57852864ca03daeb82f4d4ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de93cab98f2cf9f01b4b5dba48686fa4') in 0.000508 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.616486 seconds.
+  path: Assets/MainGame/Scene/RoadMap.unity
+  artifactKey: Guid(62a1d0cd57852864ca03daeb82f4d4ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Scene/RoadMap.unity using Guid(62a1d0cd57852864ca03daeb82f4d4ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7147fa4f368bf2b758af67acb5fd7105') in 0.000426 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.637 seconds
+Refreshing native plugins compatible for Editor in 4.29 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.426 seconds
+Domain Reload Profiling: 2058ms
+	BeginReloadAssembly (193ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (39ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (351ms)
+		LoadAssemblies (405ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (54ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (29ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (1426ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (504ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (85ms)
+			ProcessInitializeOnLoadAttributes (333ms)
+			ProcessInitializeOnLoadMethodAttributes (59ms)
+			AfterProcessingInitializeOnLoad (15ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 4.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5561 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 6162.
+Memory consumption went from 274.9 MB to 273.4 MB.
+Total: 4.466900 ms (FindLiveObjects: 0.498800 ms CreateObjectMapping: 0.530600 ms MarkObjects: 2.943600 ms  DeleteObjects: 0.493100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 219.168090 seconds.
+  path: Assets/DefaceGames/LiteMapScene.unity
+  artifactKey: Guid(e8b8b1d6c848d514197aa695ebeb564e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DefaceGames/LiteMapScene.unity using Guid(e8b8b1d6c848d514197aa695ebeb564e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16cf745569ed9c45209be647067bc32d') in 0.010254 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 181.076218 seconds.
+  path: Assets/MainGame/Scene/RoadMap.unity
+  artifactKey: Guid(62a1d0cd57852864ca03daeb82f4d4ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Scene/RoadMap.unity using Guid(62a1d0cd57852864ca03daeb82f4d4ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c84ac12c89ea16bd6575f886eb7126b9') in 0.000626 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 269.711775 seconds.
+  path: Assets/TextMesh Pro/Documentation
+  artifactKey: Guid(8e7e8f5a82a3a134e91c54efd2274ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Documentation using Guid(8e7e8f5a82a3a134e91c54efd2274ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '097ee97484745b541abb5aabd54e2ae1') in 0.000460 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.142236 seconds.
+  path: Assets/TextMesh Pro/Resources/TMP Settings.asset
+  artifactKey: Guid(3f5b5dff67a942289a9defa416b206f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/TMP Settings.asset using Guid(3f5b5dff67a942289a9defa416b206f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67dad185b586f63e47ea3042fdf1c68b') in 0.043550 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 2.606113 seconds.
+  path: Assets/TextMesh Pro/Resources/Sprite Assets
+  artifactKey: Guid(512a49d95c0c4332bdd98131869c23c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Sprite Assets using Guid(512a49d95c0c4332bdd98131869c23c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9022e1130fa0f6a3c30e29e54e09e73') in 0.000502 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.512018 seconds.
+  path: Assets/TextMesh Pro/Resources/Style Sheets
+  artifactKey: Guid(4aecb92fff08436c8303b10eab8da368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Style Sheets using Guid(4aecb92fff08436c8303b10eab8da368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7177ed8b9e64d6f961a4dba0965c9388') in 0.000421 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.077618 seconds.
+  path: Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+  artifactKey: Guid(f952c082cb03451daed3ee968ac6c63e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset using Guid(f952c082cb03451daed3ee968ac6c63e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a4a535f0c8369ad622695c42259c11d') in 0.001227 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.960450 seconds.
+  path: Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset
+  artifactKey: Guid(c41005c129ba4d66911b75229fd70b45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset using Guid(c41005c129ba4d66911b75229fd70b45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77e024dcd111caf583b0b4b9ba9adc9a') in 0.002400 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 1.459206 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMPro.cginc
+  artifactKey: Guid(407bc68d299748449bbf7f48ee690f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Shaders/TMPro.cginc using Guid(407bc68d299748449bbf7f48ee690f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02bb6cf8c4cb0c8ea34a23e574e96b0b') in 0.001045 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
   Time since last request: 0.000014 seconds.
-  path: Assets/MainGame/Animations/Skeletonzombie T Avelange@Falling Forward Death.fbx
-  artifactKey: Guid(7d87f73fdbc93744e8316068f7b313a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Animations/Skeletonzombie T Avelange@Falling Forward Death.fbx using Guid(7d87f73fdbc93744e8316068f7b313a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf8131114ff885a2e301451f6dbee920') in 0.004313 seconds
+  path: Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc
+  artifactKey: Guid(d930090c0cd643c7b55f19a38538c162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc using Guid(d930090c0cd643c7b55f19a38538c162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f349ec83474fb73325d9a3d8c9b58b5') in 0.001005 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 151
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc
+  artifactKey: Guid(3997e2241185407d80309a82f9148466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc using Guid(3997e2241185407d80309a82f9148466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3530579b36a83720cf87e6057e84ee04') in 0.001226 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.495246 seconds.
+  path: Assets/TextMesh Pro/Sprites/EmojiOne.png
+  artifactKey: Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Sprites/EmojiOne.png using Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '156294cd5635d3fd9b047d8d6e0d5660') in 0.036658 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 3.008753 seconds.
+  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc0b5300b8e0f983116f46e186ac1a94') in 0.052413 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 14.310052 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes
+  artifactKey: Guid(109e9bdd0fcc649c5bc59085c35bdc83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes using Guid(109e9bdd0fcc649c5bc59085c35bdc83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dda7bb0e58568e85bd45f963b923fbe') in 0.000777 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.801574 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/SampleScene.unity
+  artifactKey: Guid(8c9cfa26abfee488c85f1582747f6a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/SampleScene.unity using Guid(8c9cfa26abfee488c85f1582747f6a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ad301bfe84a5ba37438b42a18efac21') in 0.000459 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 21.542627 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles
+  artifactKey: Guid(2c6afe00fee897f4cb9e5884baa9d0ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles using Guid(2c6afe00fee897f4cb9e5884baa9d0ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '160ac6a1ab88c72eb7250096a0b5335b') in 0.000455 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.028185 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_0.asset
+  artifactKey: Guid(f3d6b69b606c63a408520524fcfac7c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_0.asset using Guid(f3d6b69b606c63a408520524fcfac7c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0ce53f6e59a9781f43e618aa2dd8c4f') in 0.022662 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.017469 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_2.asset
+  artifactKey: Guid(4f132c9d6ef5b6f49aea394e6d6d9de8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_2.asset using Guid(4f132c9d6ef5b6f49aea394e6d6d9de8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1583c1f3ea54b66e1e0764859600c8dc') in 0.007525 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_7.asset
+  artifactKey: Guid(48a3a14907cc44043be149ff7bc8df9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_7.asset using Guid(48a3a14907cc44043be149ff7bc8df9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e236f6da437ee256a7474d0902d045e') in 0.007582 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_34.asset
+  artifactKey: Guid(f172c3f1c1449b74fb7f040b5535cedc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_34.asset using Guid(f172c3f1c1449b74fb7f040b5535cedc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0d622e6fa6f2ae85440aaca91b883be') in 0.006920 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_19.asset
+  artifactKey: Guid(cff8aa15e48103e4d95107dd5f80ad51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_19.asset using Guid(cff8aa15e48103e4d95107dd5f80ad51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5830ebc86ab26488cbb315f4a28066ee') in 0.006406 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_11.asset
+  artifactKey: Guid(f174c0027abea344fa4adce1bee4cd02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_11.asset using Guid(f174c0027abea344fa4adce1bee4cd02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '206e6fce1951377503afe603c2ed4ab6') in 0.006915 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_13.asset
+  artifactKey: Guid(10840ef6e3a7dd441820690957fe41d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_13.asset using Guid(10840ef6e3a7dd441820690957fe41d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1e37eb159b61426dfe78029a19d2e84') in 0.006419 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_4.asset
+  artifactKey: Guid(34b66e18e6fbd9249a556923a3e79c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_4.asset using Guid(34b66e18e6fbd9249a556923a3e79c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e640596e7a1fd94e91f880b17b632d5') in 0.006205 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_49.asset
+  artifactKey: Guid(d508cbe966c396747802b24fb618ba9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_49.asset using Guid(d508cbe966c396747802b24fb618ba9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e7bc8fb600894c89f3b381f3a3f7083') in 0.020284 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_21.asset
+  artifactKey: Guid(d4531391caf1a83468d0a8d7b97acf7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_21.asset using Guid(d4531391caf1a83468d0a8d7b97acf7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03fbb34ad363e062653671c66e06428e') in 0.007837 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_15.asset
+  artifactKey: Guid(4461f2004a60e7a4cb7f4077d313e42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_15.asset using Guid(4461f2004a60e7a4cb7f4077d313e42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44aa7c2470460cbda4c15e1e41ffb4f6') in 0.007124 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_55.asset
+  artifactKey: Guid(614884df40f6d654082bcb79c272fdf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_55.asset using Guid(614884df40f6d654082bcb79c272fdf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcb7cc282d2bc7c57f018ac9c6c5003a') in 0.008505 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_45.asset
+  artifactKey: Guid(588eb06bd0e96e842862bd103d9e0997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_45.asset using Guid(588eb06bd0e96e842862bd103d9e0997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '061e3bdefd4c746c4d2a4c34ab5d397d') in 0.015538 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
   Time since last request: 0.000016 seconds.
-  path: Assets/MainGame/Animations/Vampire A Lusth@Standing Melee Attack 360 Low.fbx
-  artifactKey: Guid(1cfe71cfb3c49024aa1f6edb46a9b4f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Animations/Vampire A Lusth@Standing Melee Attack 360 Low.fbx using Guid(1cfe71cfb3c49024aa1f6edb46a9b4f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9338721d53dde3cc000b1d7b0c47b18') in 0.005644 seconds
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_30.asset
+  artifactKey: Guid(80aa1626dbac4ff49b0b3be25b70fa3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_30.asset using Guid(80aa1626dbac4ff49b0b3be25b70fa3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dcef7ab568f0e68ee625e15a825c744') in 0.013284 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 203
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_23.asset
+  artifactKey: Guid(a59078767ebe21d4592a2c6c13d6947a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_23.asset using Guid(a59078767ebe21d4592a2c6c13d6947a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eacad29b817c90ed720561ebecf8ecc5') in 0.009020 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_57.asset
+  artifactKey: Guid(422d9893e4146e446b99bedde526e31f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_57.asset using Guid(422d9893e4146e446b99bedde526e31f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '701283ba72317ff0ff61f6b34698fc0f') in 0.007095 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_48.asset
+  artifactKey: Guid(b9347913132565c439ba717b34d2c50b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_48.asset using Guid(b9347913132565c439ba717b34d2c50b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51cf8533bb1708d35d0d46727749a505') in 0.020782 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_44.asset
+  artifactKey: Guid(a5bd066619229ad439c918267758c606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_44.asset using Guid(a5bd066619229ad439c918267758c606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17b125c838abe064a246502800d9c7e5') in 0.009830 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_16.asset
+  artifactKey: Guid(1f97db2862751fd4ab3d4f55f750ea3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_16.asset using Guid(1f97db2862751fd4ab3d4f55f750ea3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4afe4b0b1eab0403c74d6181624a25a1') in 0.006419 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_18.asset
+  artifactKey: Guid(b6cdf6c1709fee64da734b798ace8966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_18.asset using Guid(b6cdf6c1709fee64da734b798ace8966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc4e36f468055072bcd0167ab17deb43') in 0.006302 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_20.asset
+  artifactKey: Guid(20da457a9f6b7324e828f517db7ebacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_20.asset using Guid(20da457a9f6b7324e828f517db7ebacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97854dec76901bd1802c8f8bc19fdbd1') in 0.005384 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_59.asset
+  artifactKey: Guid(b55f24113b93e8d48888cf43a07a2694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_59.asset using Guid(b55f24113b93e8d48888cf43a07a2694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86301c98ce4ede8f56aa7ecc44e44617') in 0.005672 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_39.asset
+  artifactKey: Guid(7e6fa9e551f83e94099527df2ed86fb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_39.asset using Guid(7e6fa9e551f83e94099527df2ed86fb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37acd67b502c2df4ca615ebc30352232') in 0.005456 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_5.asset
+  artifactKey: Guid(9d3d70723be1f7c499bf5cce27c7e9d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_5.asset using Guid(9d3d70723be1f7c499bf5cce27c7e9d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1ab68b0ed3873e26146ee191d63908f') in 0.005239 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_9.asset
+  artifactKey: Guid(0150965b8a9ed2b4fb2675044a22d798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_9.asset using Guid(0150965b8a9ed2b4fb2675044a22d798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d164b38a95a9f9c0868e8008105d5f7') in 0.006276 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_14.asset
+  artifactKey: Guid(efcb0a1988e35d74f9e4a9328dd8ed21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_14.asset using Guid(efcb0a1988e35d74f9e4a9328dd8ed21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b163610121133c6dd71637e73fbde72f') in 0.006416 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_27.asset
+  artifactKey: Guid(49a5c1f042a37b940abb3993eba7a0c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_27.asset using Guid(49a5c1f042a37b940abb3993eba7a0c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd103b126e31d7407086a8a6330ea9053') in 0.005962 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_3.asset
+  artifactKey: Guid(9bfe57d47da0db14dab56c522a93b96d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_3.asset using Guid(9bfe57d47da0db14dab56c522a93b96d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d407785e61ff178aa1c8210da90b6bd') in 0.006773 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_33.asset
+  artifactKey: Guid(55cf852d333a3aa43856f3184a5bc788) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_33.asset using Guid(55cf852d333a3aa43856f3184a5bc788) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc1928427edb4fd6e10a79df1fd18da5') in 0.005668 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_22.asset
+  artifactKey: Guid(a455901a1a7f90646b31759001803f76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_22.asset using Guid(a455901a1a7f90646b31759001803f76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a26c6c9acedf2b0ed59e4fab581bef1a') in 0.006588 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_42.asset
+  artifactKey: Guid(429ebe71f745ed04bba82d7640802855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_42.asset using Guid(429ebe71f745ed04bba82d7640802855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9744e504529c24a8d6fc7001f35b325e') in 0.006755 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.886056 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_61.asset
+  artifactKey: Guid(4363aa63c8164ca4f908d39e1f95354f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_61.asset using Guid(4363aa63c8164ca4f908d39e1f95354f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff0cfe4aeb823076d47160de34e233fb') in 0.006484 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_63.asset
+  artifactKey: Guid(3cb8e7b82c9354441bfb9b20982c938d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_63.asset using Guid(3cb8e7b82c9354441bfb9b20982c938d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '280276a445c2434fed681a223cae44a1') in 0.005974 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_70.asset
+  artifactKey: Guid(c93626dcd11d70643a54250f2eaeedf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_70.asset using Guid(c93626dcd11d70643a54250f2eaeedf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51518ffa9a67913e8073ad95faeb7dfc') in 0.005852 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
   Time since last request: 0.000014 seconds.
-  path: Assets/MainGame/Animations/Vampire A Lusth@Walking.fbx
-  artifactKey: Guid(8ba2b617fec7f3b4ab46195e81d3b127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Animations/Vampire A Lusth@Walking.fbx using Guid(8ba2b617fec7f3b4ab46195e81d3b127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6c975b2563f22acc3c51df9347ec0e4') in 0.004590 seconds
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_64.asset
+  artifactKey: Guid(188a8c0bbe2c21f4bb742978e2075f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_64.asset using Guid(188a8c0bbe2c21f4bb742978e2075f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38e0f1522fd8d81bc8ec8633fef1a6b1') in 0.006425 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 203
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_68.asset
+  artifactKey: Guid(abdc5ab878d958d4f9de15607c78d9de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_68.asset using Guid(abdc5ab878d958d4f9de15607c78d9de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a492d389fde300d1169627f8e3cdcbe7') in 0.005404 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_66.asset
+  artifactKey: Guid(41c897a2f4a824740a16b6528d79a43b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_66.asset using Guid(41c897a2f4a824740a16b6528d79a43b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d775d8ad8eb372dc250b8591df508c4') in 0.005209 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_75.asset
+  artifactKey: Guid(2bd4f1b67f3eb5940b2513666894b981) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_75.asset using Guid(2bd4f1b67f3eb5940b2513666894b981) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4692d6b2f3d7fa6113dbff86aba1653') in 0.005164 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.341348 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_76.asset
+  artifactKey: Guid(adec0557d0f4ea847ad121ebddb44898) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_76.asset using Guid(adec0557d0f4ea847ad121ebddb44898) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94ecdba27e5b55a869a82752b850d84c') in 0.005874 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_82.asset
+  artifactKey: Guid(a557252f7769d434d9fa8fb8a474def5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_82.asset using Guid(a557252f7769d434d9fa8fb8a474def5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '240cae7ac2160a73f88d3ff0e058605f') in 0.005858 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_81.asset
+  artifactKey: Guid(9bcf845648abb06468fb172e662b76b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_81.asset using Guid(9bcf845648abb06468fb172e662b76b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '979602fc1e83a9b51683a354ac115010') in 0.005594 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_83.asset
+  artifactKey: Guid(271afc45aa700aa43a3ab1877be3b408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_83.asset using Guid(271afc45aa700aa43a3ab1877be3b408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52c0335319f4e690c008fb206be92b47') in 0.004995 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_90.asset
+  artifactKey: Guid(9c198cd572a51294aaf5f337ec7242f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_90.asset using Guid(9c198cd572a51294aaf5f337ec7242f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97f34a2135070c2436b609e79451071a') in 0.005918 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_80.asset
+  artifactKey: Guid(84629e8634820714ca725e5f067fcb0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_80.asset using Guid(84629e8634820714ca725e5f067fcb0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84aadb18e7fce4b41b307ecfa64138ad') in 0.005075 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_89.asset
+  artifactKey: Guid(6a32fcdfe983ac34f86aafc21e0fa236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_89.asset using Guid(6a32fcdfe983ac34f86aafc21e0fa236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23f4abbebfb2e3fc6c38453afa7429f9') in 0.004919 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_85.asset
+  artifactKey: Guid(652a07e820b0f68468a6cf95da0b9119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_85.asset using Guid(652a07e820b0f68468a6cf95da0b9119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce225fbd2b91d13acf9ee16dcb2ab860') in 0.005597 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.252511 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_91.asset
+  artifactKey: Guid(9af4ebc4d6b95f9499fae476a0e40271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_91.asset using Guid(9af4ebc4d6b95f9499fae476a0e40271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87b4c76c11aa89e77929958fbe497912') in 0.004952 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_95.asset
+  artifactKey: Guid(c985a3dc29d3f114299c78204489a7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_95.asset using Guid(c985a3dc29d3f114299c78204489a7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f63830bfeae4c6cf96283f62579a0e7') in 0.005456 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_97.asset
+  artifactKey: Guid(17b44301140dbb84594a98b32f61e183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_97.asset using Guid(17b44301140dbb84594a98b32f61e183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d39d42eda7b3faa79cfc608fc8cfba8') in 0.006381 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_93.asset
+  artifactKey: Guid(589ece9fc1b1be247877016bb7689bc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_93.asset using Guid(589ece9fc1b1be247877016bb7689bc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9ea7fb0ff534c3267e6bcb56efb5a0a') in 0.005331 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_102.asset
+  artifactKey: Guid(297b8c33a657c4f429e65aab9a126280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_102.asset using Guid(297b8c33a657c4f429e65aab9a126280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ff95107e1d6e8a61aeec004deb88fd') in 0.006092 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_104.asset
+  artifactKey: Guid(69bee0666e52e6640b556e13d1cff2ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_104.asset using Guid(69bee0666e52e6640b556e13d1cff2ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '410b02124882fcc974588d4c6b463bcc') in 0.005197 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadoes.prefab
+  artifactKey: Guid(b62b204c34c57bc4e8490ecf2b3d1589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadoes.prefab using Guid(b62b204c34c57bc4e8490ecf2b3d1589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54419d7bd9c3da77a51f72966a5fbae5') in 0.093276 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 100
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_111.asset
+  artifactKey: Guid(68cb799322fe14a48a57578ae24ccd2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_111.asset using Guid(68cb799322fe14a48a57578ae24ccd2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46da89e4dc275f6629f11e9b39b9b2ca') in 0.005441 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_109.asset
+  artifactKey: Guid(093eed332cb54a2419399784d04ef139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld type 2_109.asset using Guid(093eed332cb54a2419399784d04ef139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62e11022cbd6c976d29736c814322b78') in 0.005746 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_0.asset
+  artifactKey: Guid(2220641d8f1a6f14d85a6532892e1980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_0.asset using Guid(2220641d8f1a6f14d85a6532892e1980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89c97ddeabf814435bb9fc39e84416bc') in 0.005120 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_5.asset
+  artifactKey: Guid(14a75e14112feb9488c77e63a5db733d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_5.asset using Guid(14a75e14112feb9488c77e63a5db733d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2e98e8d89d3d5ab9443fcfb34be6994') in 0.004952 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_6.asset
+  artifactKey: Guid(6e81bd8bab28d7646b736bed94715ade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_6.asset using Guid(6e81bd8bab28d7646b736bed94715ade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8257e530d0bf5bf90ebe13dd3524653a') in 0.005435 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_2.asset
+  artifactKey: Guid(22ff4e5e9737d3647bf4c74c8a5bc8fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_2.asset using Guid(22ff4e5e9737d3647bf4c74c8a5bc8fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b49f8476493609313db994483484b82') in 0.005045 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_21.asset
+  artifactKey: Guid(1981dc59fc27f9f4ea7bc01bfd012162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_21.asset using Guid(1981dc59fc27f9f4ea7bc01bfd012162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b23b8695d657b7d39ca4ac0d49194f17') in 0.005679 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_11.asset
+  artifactKey: Guid(3b449973c84550e43bb50b4fa4d2f359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_11.asset using Guid(3b449973c84550e43bb50b4fa4d2f359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89922d6b08a2f31dd260d8f63dd8ac93') in 0.005349 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_1.asset
+  artifactKey: Guid(7e8d27f61a7bf554d9308847c336d78f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_1.asset using Guid(7e8d27f61a7bf554d9308847c336d78f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb8d4e4045c7ac70047eb60aa4ca4096') in 0.005620 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_7.asset
+  artifactKey: Guid(1fd659b901e3c5c4cb154580b29eb005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_7.asset using Guid(1fd659b901e3c5c4cb154580b29eb005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '405741c4909cab7a7c0d06f988c70224') in 0.005432 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_3.asset
+  artifactKey: Guid(f96f4319725dba341b2af358c2cacd23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_3.asset using Guid(f96f4319725dba341b2af358c2cacd23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dd608133380e1bf5bc9800227d2d2dc') in 0.006354 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_18.asset
+  artifactKey: Guid(2b64885c7c56de745aa4d56f710add7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_18.asset using Guid(2b64885c7c56de745aa4d56f710add7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d52c1d800f39338dac566604f0c3f00') in 0.005417 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.337816 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_22.asset
+  artifactKey: Guid(c6dedb4d94886a049a52e165782a40c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_22.asset using Guid(c6dedb4d94886a049a52e165782a40c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb9f3a5e5f89d1a81d83728ae3a1664c') in 0.006359 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_31.asset
+  artifactKey: Guid(7633aab61ed50bf4783c4d94e77e8cc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_31.asset using Guid(7633aab61ed50bf4783c4d94e77e8cc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dd48f6dda4949451dc9ad63b725766c') in 0.008444 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_28.asset
+  artifactKey: Guid(67347f4ab52eaaa498d89612ce7182f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_28.asset using Guid(67347f4ab52eaaa498d89612ce7182f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f99074dc08bbc14a773e958d498337c9') in 0.007133 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_5.asset
+  artifactKey: Guid(15b722ec0f6d85d4d82d5192a88e2d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_5.asset using Guid(15b722ec0f6d85d4d82d5192a88e2d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd4fa10ce97898d6a969f766873111be') in 0.007056 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_41.asset
+  artifactKey: Guid(6d5ca060609240449baca30145696a2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_41.asset using Guid(6d5ca060609240449baca30145696a2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b107eb0a7287f31c50cc1e4886270ec3') in 0.009859 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_37.asset
+  artifactKey: Guid(8e60a561c207d4146befce0b1035c3a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_37.asset using Guid(8e60a561c207d4146befce0b1035c3a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e7d08a03b929bd7121eb022b7d6b620') in 0.006240 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_12.asset
+  artifactKey: Guid(c5cd6101aecfa0942b4c9e0295756da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_12.asset using Guid(c5cd6101aecfa0942b4c9e0295756da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faae7d58863e8b19ccabc0e39a0c9e4d') in 0.010996 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_19.asset
+  artifactKey: Guid(c13128ac87368dd40822ca5f8e5d0e52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_19.asset using Guid(c13128ac87368dd40822ca5f8e5d0e52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ffbc2fdf54448f318b46e39df01fe72') in 0.005037 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_20.asset
+  artifactKey: Guid(c0f3715d9304b614ea6a1457deff0ad7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_20.asset using Guid(c0f3715d9304b614ea6a1457deff0ad7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3294ccedcdddce546184842b1bd46ef2') in 0.005342 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_13.asset
+  artifactKey: Guid(9e3857aa0de11f64ebaac10cd1829281) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_13.asset using Guid(9e3857aa0de11f64ebaac10cd1829281) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '739c83f4ad321be45f63b1bd7a10c83d') in 0.005247 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_16.asset
+  artifactKey: Guid(a379f2be8efb2d4439d695d0281c49e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_16.asset using Guid(a379f2be8efb2d4439d695d0281c49e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14e6574dfd2f2a90ae2d6cecbbd49eaf') in 0.005142 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_14.asset
+  artifactKey: Guid(b33b85d96f2b4f44d91d56ec7a7f0e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_14.asset using Guid(b33b85d96f2b4f44d91d56ec7a7f0e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07a8ad4a112f8413e3f7e63fe2eee141') in 0.004812 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_42.asset
+  artifactKey: Guid(9c05a6c6f1c6d584e856887358d1d3ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_42.asset using Guid(9c05a6c6f1c6d584e856887358d1d3ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edb63b2d6a3ebe4f18eb394f89b320c0') in 0.005631 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_22.asset
+  artifactKey: Guid(e13a80108f048cb418cd529b60b8f91c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_22.asset using Guid(e13a80108f048cb418cd529b60b8f91c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51c8633b7130577195c4abcca6d92d0c') in 0.007512 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_26.asset
+  artifactKey: Guid(bf26374dfbf8a024d8f9cf103dab59ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_26.asset using Guid(bf26374dfbf8a024d8f9cf103dab59ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ddd3b0d7f5829003e56baa9403b415a') in 0.006332 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_2.asset
+  artifactKey: Guid(5cdd1234c6e1a3948a66219dd6ae0fc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_2.asset using Guid(5cdd1234c6e1a3948a66219dd6ae0fc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f3f3cc1562734749dcc0f333384bd27') in 0.005968 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_27.asset
+  artifactKey: Guid(a23665ce30235d64ca03d3d45ea56ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_27.asset using Guid(a23665ce30235d64ca03d3d45ea56ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d5938f689447a59a141fa338a4979c6') in 0.005000 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_35.asset
+  artifactKey: Guid(ac3f386ced791b04085ebe017f9f230e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_35.asset using Guid(ac3f386ced791b04085ebe017f9f230e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca1fea58fe77d2dc0f1393ac034bb5c4') in 0.009014 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_29.asset
+  artifactKey: Guid(2fe3f1af37333f44abe4eee4c83a9144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_29.asset using Guid(2fe3f1af37333f44abe4eee4c83a9144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4bb1a922788b56ef8c44fa1409f9f6c') in 0.006846 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_25.asset
+  artifactKey: Guid(01e6ce37f7a10e041a6e914c0abf7efd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_25.asset using Guid(01e6ce37f7a10e041a6e914c0abf7efd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e130a06d25dc352a7dc7bcc5c1b3f4fd') in 0.006214 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_28.asset
+  artifactKey: Guid(71cb8a0578cbd9c469dfbfb7e717f2ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_28.asset using Guid(71cb8a0578cbd9c469dfbfb7e717f2ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96e13f2ca07d0bef5d6e3914068b1f57') in 0.029919 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_17.asset
+  artifactKey: Guid(10b80e1ed08f8a74c9bbd514e5faff32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_17.asset using Guid(10b80e1ed08f8a74c9bbd514e5faff32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '011085d5fb6df7c512178214a8d63e62') in 0.006583 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_8.asset
+  artifactKey: Guid(134e0468124a42d49a59f60a7d972509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_8.asset using Guid(134e0468124a42d49a59f60a7d972509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86b4ef87251c977455f6162e1531f41c') in 0.005256 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld2.prefab
+  artifactKey: Guid(d64add98108d65841ac30bac25b3195d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld2.prefab using Guid(d64add98108d65841ac30bac25b3195d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e2bc4ef783e6ac1ec69cbf99465481c') in 0.052446 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 214
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_3.asset
+  artifactKey: Guid(638387ccbdca2cd429bde4ed26f3a438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_3.asset using Guid(638387ccbdca2cd429bde4ed26f3a438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e21774024736f918ac37131430b8d47') in 0.006168 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_24.asset
+  artifactKey: Guid(03e6a8f6e31f0c74f9a6fa9f0728f3f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_24.asset using Guid(03e6a8f6e31f0c74f9a6fa9f0728f3f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b73e47682f7cce8a104733201cbb1eba') in 0.005212 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_0.asset
+  artifactKey: Guid(cd0f803438233fa46b74a1047689c635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_0.asset using Guid(cd0f803438233fa46b74a1047689c635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcea6e87febb423d084a839247c41c0d') in 0.005215 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_4.asset
+  artifactKey: Guid(da823ecbff4ae9540bd17ba243a814a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_4.asset using Guid(da823ecbff4ae9540bd17ba243a814a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eef490a6e9104ab09b1d5baaf27b5ab7') in 0.006289 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_33.asset
+  artifactKey: Guid(d724ab2a7f0561f4da552c6eb2fe4db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_33.asset using Guid(d724ab2a7f0561f4da552c6eb2fe4db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3edeb7127da195ab9679d3ef303db63') in 0.005633 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_29.asset
+  artifactKey: Guid(f9ff5cbc26631c940a2ddbc8a7b08a2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_29.asset using Guid(f9ff5cbc26631c940a2ddbc8a7b08a2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8df7444c19414ad6d0ae77c4758f69bc') in 0.004876 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_7.asset
+  artifactKey: Guid(87416dd85c5c8ef44ba9750d048e0e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_7.asset using Guid(87416dd85c5c8ef44ba9750d048e0e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '678bebf50c37cb71263601635c92bf0a') in 0.005392 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_36.asset
+  artifactKey: Guid(d04c51f0312090843920a40c2a72d713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld with shadows_36.asset using Guid(d04c51f0312090843920a40c2a72d713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4b9cca6391d6f80550d3a877f6d7cff') in 0.005344 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.366346 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_36.asset
+  artifactKey: Guid(f2d8ef04662877349899055bccb99fd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_36.asset using Guid(f2d8ef04662877349899055bccb99fd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94e61547df8b063cb197ac6e42c65fef') in 0.006614 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_49.asset
+  artifactKey: Guid(bf13a4627532376479df93d75192326c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_49.asset using Guid(bf13a4627532376479df93d75192326c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b608b8dd1a64eaa70d4b0a5208f6676') in 0.014353 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_39.asset
+  artifactKey: Guid(8a97ae838df885341beb9fcbeb431009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_39.asset using Guid(8a97ae838df885341beb9fcbeb431009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae3ec18c154dbd40948f86db0efb833b') in 0.006498 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_46.asset
+  artifactKey: Guid(9bd67510c4e93d14993634336c342147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_46.asset using Guid(9bd67510c4e93d14993634336c342147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f56663779c397f0d1ea19aae2408188b') in 0.008585 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_40.asset
+  artifactKey: Guid(ac68050e20297694296cd6d0f98ff749) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_40.asset using Guid(ac68050e20297694296cd6d0f98ff749) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c483871a569ad166c9770f7ccc34c9c') in 0.005639 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_45.asset
+  artifactKey: Guid(ae5866866701307438a57ff16b2f311e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_45.asset using Guid(ae5866866701307438a57ff16b2f311e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a27e982eefdd03cafaa4cdbe783b174') in 0.006334 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_59.asset
+  artifactKey: Guid(b880e5659044b3342b078ae1cd35147f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_59.asset using Guid(b880e5659044b3342b078ae1cd35147f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e2e321c260db8d3dfcbe235ebe117df') in 0.005124 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_60.asset
+  artifactKey: Guid(79694961d1f3ecb46b44e41fcfb013a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_60.asset using Guid(79694961d1f3ecb46b44e41fcfb013a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57361a2ec124a5c0ac31f2dd2e4e5e39') in 0.006666 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_58.asset
+  artifactKey: Guid(a43003dac11912940b37136316a88134) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_58.asset using Guid(a43003dac11912940b37136316a88134) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa1e4316bf6014b597051dd5c2100c47') in 0.009096 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_55.asset
+  artifactKey: Guid(ff447d814c223b241a7998f230763527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_55.asset using Guid(ff447d814c223b241a7998f230763527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68019626d355f38d6211e2a450be1478') in 0.009712 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_65.asset
+  artifactKey: Guid(fd9601abcdb70254ba68eb5fe88d8929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_65.asset using Guid(fd9601abcdb70254ba68eb5fe88d8929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f4f929463491323ee5ba55b9385cf9e') in 0.005835 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_52.asset
+  artifactKey: Guid(12c6c16ac11a18c40a793e22c5dbe03f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_52.asset using Guid(12c6c16ac11a18c40a793e22c5dbe03f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b229ad97fc0e8b0773fe9e50965f5bb6') in 0.005343 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.242698 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_67.asset
+  artifactKey: Guid(8e1748396941dfd45bd29a991a1eeda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_67.asset using Guid(8e1748396941dfd45bd29a991a1eeda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b72647531252273a8a14a56a59b31fd7') in 0.008257 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_72.asset
+  artifactKey: Guid(3d6de035ee447784ea443ca72797f7b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_72.asset using Guid(3d6de035ee447784ea443ca72797f7b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3d4ae6189fd532b52bdfab140995fe5') in 0.005718 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_80.asset
+  artifactKey: Guid(48fdd1072bb46be49a2e73c985705d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_80.asset using Guid(48fdd1072bb46be49a2e73c985705d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9780c8fc16fcb72e6ad74f061a860209') in 0.005211 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_74.asset
+  artifactKey: Guid(cbdc13558f405724498c00af7676c6f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_74.asset using Guid(cbdc13558f405724498c00af7676c6f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90af30fbb1c9e7f4f307025ea74fae37') in 0.006016 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_97.asset
+  artifactKey: Guid(bd0e6305b55dff44c95eb08e651a90c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_97.asset using Guid(bd0e6305b55dff44c95eb08e651a90c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b30f20f221908fac702c53f5e020463') in 0.006123 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_4.asset
+  artifactKey: Guid(86ac444095827bf4b9c709d53189efd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_4.asset using Guid(86ac444095827bf4b9c709d53189efd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16f79370350452ef3b5eeb965ffe02b9') in 0.005386 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_84.asset
+  artifactKey: Guid(700fe9b965f7a164fb932455c881e1a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_84.asset using Guid(700fe9b965f7a164fb932455c881e1a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a273bda7b83bb0e7da8c36d0b847631') in 0.006234 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_91.asset
+  artifactKey: Guid(36d05fbcb2ed0c64fa8b61ceca4470d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_91.asset using Guid(36d05fbcb2ed0c64fa8b61ceca4470d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfda5d557e3ccf359ba2465c364804e3') in 0.005424 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_3.asset
+  artifactKey: Guid(25e8a03f554f1d947a879c13b4baa098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_3.asset using Guid(25e8a03f554f1d947a879c13b4baa098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a2d71c0eeb49d8a03fd06d222d67ac4') in 0.005169 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_7.asset
+  artifactKey: Guid(4b52d15390b4b5240a2e63812e581ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_7.asset using Guid(4b52d15390b4b5240a2e63812e581ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05414f98ac9083d39aff0ed4eb9f623e') in 0.005244 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_95.asset
+  artifactKey: Guid(5c0a275d453307540a58502f1cbaf099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/overworld_95.asset using Guid(5c0a275d453307540a58502f1cbaf099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39085608f1fea8d449836e6f89bd1878') in 0.005312 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.233998 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_11.asset
+  artifactKey: Guid(24cd473c336d1064dade4fde90f277ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_11.asset using Guid(24cd473c336d1064dade4fde90f277ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21f8a073bcc82a8a55b6e4f142ad7099') in 0.006203 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_19.asset
+  artifactKey: Guid(488e68775801adf449cdd0979dc17de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_19.asset using Guid(488e68775801adf449cdd0979dc17de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f464c883dbeb7770fbc488fe0cfabec3') in 0.005536 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_36.asset
+  artifactKey: Guid(bb9a19aa79e86f64d8ce9d5c09a8945b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_36.asset using Guid(bb9a19aa79e86f64d8ce9d5c09a8945b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9d50284de750e231ecc5ef2d62f5062') in 0.005773 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_33.asset
+  artifactKey: Guid(ca24a5e7afaae25438e40752f47a9ff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_33.asset using Guid(ca24a5e7afaae25438e40752f47a9ff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d499b20f45acd2920c5d516799ff710') in 0.005868 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_17.asset
+  artifactKey: Guid(813a2a4659cd0b1468d43695a9d049a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_17.asset using Guid(813a2a4659cd0b1468d43695a9d049a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b896f8412cc08b50cab91fd02ba40a2') in 0.005511 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_38.asset
+  artifactKey: Guid(753b1920b2eee97449fa6c7846bf4fd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_38.asset using Guid(753b1920b2eee97449fa6c7846bf4fd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3da15ec0496e1b996a409a826b60e841') in 0.005948 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_14.asset
+  artifactKey: Guid(1a44199026968054a9140e4308de6bc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_14.asset using Guid(1a44199026968054a9140e4308de6bc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '932675aaa235fe7c7891dc4f9d4cc7ef') in 0.005983 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.429616 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_41.asset
+  artifactKey: Guid(e2cf6632b680f4445b6f3d14ad029f68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_41.asset using Guid(e2cf6632b680f4445b6f3d14ad029f68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a544ad1c26239d12fc66f9c9b8ab004') in 0.005956 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_44.asset
+  artifactKey: Guid(720ede12fa38ae248a15d808103ac75c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_44.asset using Guid(720ede12fa38ae248a15d808103ac75c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6da0fe37d1c780ddca6d7ad69e91e0aa') in 0.006314 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_52.asset
+  artifactKey: Guid(432b39fe32fc6ab4b8e7f6236adf06c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_52.asset using Guid(432b39fe32fc6ab4b8e7f6236adf06c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4c4b9d8e36ac909f31d220bfbd68004') in 0.005572 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_56.asset
+  artifactKey: Guid(c6599be1ae4ad134b9323650ce7ee607) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_56.asset using Guid(c6599be1ae4ad134b9323650ce7ee607) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70f4ff316111e2a8d47122ff9ad071cb') in 0.005750 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_1.asset
+  artifactKey: Guid(0f8a9595b794245478c2626235cdba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_1.asset using Guid(0f8a9595b794245478c2626235cdba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7479ca11b4bf09b1817d19327b1e6692') in 0.006450 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_60.asset
+  artifactKey: Guid(dc4bd763f00944140a8dfc4c6c1f48c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_60.asset using Guid(dc4bd763f00944140a8dfc4c6c1f48c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c99c6dd512efcef7dab53251334970e1') in 0.004669 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_9.asset
+  artifactKey: Guid(34a77bc01e680dd4090f6a5172307b5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_9.asset using Guid(34a77bc01e680dd4090f6a5172307b5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c04780f3ae0c29d1079ef28a969809be') in 0.005645 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_7.asset
+  artifactKey: Guid(a821f54f4c009cf42bb86d0b94835776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_7.asset using Guid(a821f54f4c009cf42bb86d0b94835776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dcdd328006f7e2ba0230573440f860d') in 0.006163 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_14.asset
+  artifactKey: Guid(30892d99e68ebbc4ba6a013f8e323519) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_14.asset using Guid(30892d99e68ebbc4ba6a013f8e323519) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f0b9d02a67a1095051ee331b6ddcef9') in 0.005997 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_4.asset
+  artifactKey: Guid(8e164a7aa3d9ca44ea30416887eeaf31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_4.asset using Guid(8e164a7aa3d9ca44ea30416887eeaf31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baaa14713853519279bbc039ee9e2ebc') in 0.005809 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_55.asset
+  artifactKey: Guid(a46a17808a5bd9141952df273676566e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_55.asset using Guid(a46a17808a5bd9141952df273676566e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eb94c8944ead9bf4367a4d383d0bfe0') in 0.005140 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_58.asset
+  artifactKey: Guid(2b7735ee33869e640becd69a2db43a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_58.asset using Guid(2b7735ee33869e640becd69a2db43a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '221ce20f3299ff50ada1f9c5d371562f') in 0.005756 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_48.asset
+  artifactKey: Guid(30fb07d27966f9142bb2aa92cb3554dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Prefab mountains and clounds_48.asset using Guid(30fb07d27966f9142bb2aa92cb3554dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f864636d46094f9792498dfe2af886e1') in 0.004563 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.333131 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_20.asset
+  artifactKey: Guid(608190035ee7f984bb5589f1556bacb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_20.asset using Guid(608190035ee7f984bb5589f1556bacb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a81c3b8c6000c5404966f79ac726c88d') in 0.005434 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_31.asset
+  artifactKey: Guid(be1c9310fd415504d9ab24f58755583b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_31.asset using Guid(be1c9310fd415504d9ab24f58755583b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48702afc1df23d592d39a8b241332efa') in 0.005689 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_32.asset
+  artifactKey: Guid(5336e50774cf6494c9b8005a559369e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_32.asset using Guid(5336e50774cf6494c9b8005a559369e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2efeb3ca600f4d3850dbdb5ad3dc37f6') in 0.006176 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_23.asset
+  artifactKey: Guid(91233fa471a7daa43820db7710231add) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_23.asset using Guid(91233fa471a7daa43820db7710231add) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4515fc083be13b9f2fd08bc8a87bbd34') in 0.005437 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.099403 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_35.asset
+  artifactKey: Guid(606b73dc0e002ce4d9c92386de34858f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_35.asset using Guid(606b73dc0e002ce4d9c92386de34858f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df4991c256480fb57a897122ae55f34c') in 0.004688 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_38.asset
+  artifactKey: Guid(a553dfbde5a7452489e4d61ef5d1c17d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Scenes/tiles/Water animation_38.asset using Guid(a553dfbde5a7452489e4d61ef5d1c17d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dd746a1eb9ab5c5d89cd6baaebb0bb6') in 0.005104 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 7.532001 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/You may also like/Pixel Art Plataformer Painted Style.png
+  artifactKey: Guid(c7a077ad49fa3304c9a30b50a8e048ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/You may also like/Pixel Art Plataformer Painted Style.png using Guid(c7a077ad49fa3304c9a30b50a8e048ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6615088d34a80fa85fe84d71def183d4') in 0.023179 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 7.699279 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/PSD/Water.psd
+  artifactKey: Guid(2bc2b2903d15e2642a468216e8579418) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/PSD/Water.psd using Guid(2bc2b2903d15e2642a468216e8579418) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca75167c7b06029daf1993e9965be631') in 0.026799 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 51.718094 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/PREVIEWS/Example 1.png
+  artifactKey: Guid(09ee9d64b4373af4493715aadb30c770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/PREVIEWS/Example 1.png using Guid(09ee9d64b4373af4493715aadb30c770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51ec41a51b81cd812c316a9477ecd1bd') in 0.024063 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 71.714928 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/PNG/overworld type 2.png
+  artifactKey: Guid(47bf6e7d71c8a314ba68058eb1095eed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/PNG/overworld type 2.png using Guid(47bf6e7d71c8a314ba68058eb1095eed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd687b8388d719e4ced3ea781817191d2') in 0.240260 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 115
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/PNG/overworld with shadows.png
+  artifactKey: Guid(513a6c4ff48fb7c4687ffa9ac2bbab40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Art Overworld Tileset/Free Pixel Art overworld tileset/PNG/overworld with shadows.png using Guid(513a6c4ff48fb7c4687ffa9ac2bbab40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a25c26d637f807fc9e9757071611242') in 0.078549 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 46
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: ½º·¹µå Á¾·á ¶Ç´Â ÀÀ¿ë ÇÁ·Î±×·¥ ¿äÃ» ¶§¹®¿¡ I/O ÀÛ¾÷ÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.
 AssetImportWorker is now disconnected from the server
