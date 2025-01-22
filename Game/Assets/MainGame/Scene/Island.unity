@@ -166,6 +166,7 @@ MonoBehaviour:
   animalImagePrefab: {fileID: 2089527198144723283, guid: b551b98c72d83f545914116ef7b11c3f, type: 3}
   animalCanvas: {fileID: 237684736}
   clearPanel: {fileID: 0}
+  OnPlay: 0
   SoundManager: {fileID: 0}
 --- !u!4 &9161069
 Transform:
@@ -10124,6 +10125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8c896458bcac824b9bc82308f5d0226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IceEffect: {fileID: 7975864103615003158, guid: aefc1c70898d5f34bb1bbdd9694bae13, type: 3}
 --- !u!65 &176165055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15530,6 +15532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8c896458bcac824b9bc82308f5d0226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IceEffect: {fileID: 0}
 --- !u!65 &393021590
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26298,6 +26301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8c896458bcac824b9bc82308f5d0226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IceEffect: {fileID: 7975864103615003158, guid: aefc1c70898d5f34bb1bbdd9694bae13, type: 3}
 --- !u!1001 &667567433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37863,6 +37867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 0
+  HealthDebuff: {fileID: 0}
   HunterCanvas: {fileID: 237684732}
   HPSlider: {fileID: 336027520}
   bananaMotion: {fileID: 0}

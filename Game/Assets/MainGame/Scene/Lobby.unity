@@ -8790,13 +8790,13 @@ MonoBehaviour:
   animalData:
     name: 
     Health: 0
-    Attack: 0
+    AttackDMG: 0
+    SkillCount: 0
   Animals: []
   hunter: {fileID: 867037032}
   animalImagePrefab: {fileID: 2089527198144723283, guid: b551b98c72d83f545914116ef7b11c3f, type: 3}
   animalCanvas: {fileID: 155643244}
   clearPanel: {fileID: 785649877}
-  MaxAnimalHP: 3
   SoundManager: {fileID: 27852165}
 --- !u!4 &283961538
 Transform:
@@ -9884,6 +9884,15 @@ MonoBehaviour:
   mouseImage:
   - {fileID: 2800000, guid: c0762f5c32ae738428f60d537be08554, type: 3}
   - {fileID: 2800000, guid: 5f417697b29fe0940b7e3519d363c7d9, type: 3}
+  soundManager: {fileID: 0}
+  LobbyCanvas: {fileID: 0}
+  PausePanel: {fileID: 0}
+  curLevel: 0
+  imageNumber: 0
+  stageImage: []
+  levelImage: {fileID: 0}
+  state: []
+  sceneName: []
 --- !u!4 &385718951
 Transform:
   m_ObjectHideFlags: 0
@@ -17509,21 +17518,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 0
-  herringDebuff: 0
-  squidDebuff: 0
-  stagePosition: {x: 0, y: 0, z: 0}
-  levelPosition: {x: 8, y: 0, z: 0}
-  cameraTriggers: []
-  cameraPosition: []
-  onStage: 1
-  onStair: 0
-  LevelCollider: {fileID: 0}
-  stageCollider: {fileID: 0}
+  HunterCanvas: {fileID: 0}
   HPSlider: {fileID: 1381352404}
   bananaMotion: {fileID: 167173750}
+  posionMotion: {fileID: 0}
+  magic: {fileID: 0}
   AttackWeapon:
   - {fileID: 992603915}
   - {fileID: 2083228496}
+  AttackButton: []
   MenuPanel: {fileID: 544907288}
   mainCamera: {fileID: 1562534192}
   AttackBox:
@@ -17531,6 +17534,12 @@ MonoBehaviour:
   - {fileID: 842802622}
   AttackSound: []
   moveAbleBlock: {fileID: 0}
+  attackAbleDirection: {x: 0, y: 0, z: 0}
+  moveDebuff: 0
+  attackDebuff: 0
+  healthDebuffCount: 0
+  healthDebuffDMG: 0
+  tileManager: {fileID: 0}
 --- !u!65 &867037033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24310,6 +24319,7 @@ MonoBehaviour:
   - {fileID: 2480830249581196319, guid: 1aca29776ceb9064b8649c6ade889718, type: 3}
   - {fileID: 2384998989500822691, guid: 3cea0b96dd71ff74abee1f569383115c, type: 3}
   - {fileID: 7898553801141457248, guid: b7d01337d5999654991c0a77fc21b804, type: 3}
+  targetBlock: {fileID: 0}
 --- !u!4 &1398636744
 Transform:
   m_ObjectHideFlags: 0

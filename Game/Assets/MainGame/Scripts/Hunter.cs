@@ -18,9 +18,10 @@ public class Hunter : MonoBehaviour
     [SerializeField] public static bool Attackable = false;
     [SerializeField] public static bool fireball = false;
     [SerializeField] public static bool chooseDirection = false;
-    
-   [SerializeField] public static float Health;
-   [SerializeField] public float MaxHealth;
+
+    [SerializeField] public static float Health;
+    [SerializeField] public float MaxHealth;
+    [SerializeField] GameObject HealthDebuff;
 
   
     [SerializeField] GameObject HunterCanvas;
@@ -52,16 +53,7 @@ public class Hunter : MonoBehaviour
     private static Hunter instance;
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-        if(instance == null)
-        {
-            instance = this;
-        }
-
-        else if(instance != this)
-        {
-            Destroy(gameObject);
-        }
+        
        
         mainCamera = Camera.main;
 
@@ -238,6 +230,7 @@ public class Hunter : MonoBehaviour
 
     public void GetHealthDebuff(int count, float dmg)
     {
+        HealthDebuff.SetActive(true);
         healthDebuffCount = count;
         healthDebuffDMG = dmg;
     }
@@ -266,7 +259,7 @@ public class Hunter : MonoBehaviour
                     if (clickedObject.CompareTag("MoveAbleBlock"))
                     {
                         moveAbleBlock = clickedObject;
-                        attackAbleDirection = clickedObject.transform.position;
+                        attackAbleDirection = new Vector3(clickedObject.transform.position.x,0, clickedObject.transform.position.z);
                         chooseDirection = true;
                     }
                 }
@@ -291,6 +284,7 @@ public class Hunter : MonoBehaviour
             getDamaged(healthDebuffDMG);
             if(healthDebuffCount == 0)
             {
+                HealthDebuff.SetActive(false);
                 healthDebuffDMG = 0;
             }
         }
@@ -490,7 +484,7 @@ public class Hunter : MonoBehaviour
         while (Mathf.Abs(currentPosition.x - target.x) > Mathf.Epsilon&&Moveable)
         {
             float newX = Mathf.MoveTowards(currentPosition.x, target.x, speed * Time.deltaTime);
-            transform.position = new Vector3(newX, startPosition.y, startPosition.z);
+            transform.position = new Vector3(newX, 0, startPosition.z);
             currentPosition = transform.position;
             
 
@@ -504,7 +498,7 @@ public class Hunter : MonoBehaviour
         while (Mathf.Abs(currentPosition.z - target.z) > Mathf.Epsilon && Moveable)
         {
             float newZ = Mathf.MoveTowards(currentPosition.z, target.z, speed * Time.deltaTime);
-            transform.position = new Vector3(startPosition.x, startPosition.y, newZ);
+            transform.position = new Vector3(startPosition.x,0, newZ);
             currentPosition = transform.position;
             yield return null;
         }

@@ -37,7 +37,7 @@ public class AIManager : MonoBehaviour
     [SerializeField] GameObject animalImagePrefab;
     [SerializeField] Canvas animalCanvas;
     [SerializeField] GameObject clearPanel;
-
+    [SerializeField] bool OnPlay;
 
     [SerializeField] GameObject SoundManager;
     private SoundManager soundManager;
@@ -61,6 +61,7 @@ public class AIManager : MonoBehaviour
     private void SceneOnLoaded(Scene scene, LoadSceneMode mode)
     {
         StartCoroutine("SetStageData");
+        OnPlay = true;
     }
 
     public void SetStageData(){
@@ -138,11 +139,18 @@ public class AIManager : MonoBehaviour
             while (Hunter.Attackable) { yield return null; }
             
 
-            if (Animals.Length <= 0||Hunter.Health<=0)
+            if (Animals.Length <= 0)
+            {
+                OnPlay = false;
+                break;
+            }
+
+            if (Hunter.Health <= 0)
             {
                 break;
             }
         }
+       
     }
 
 
@@ -256,7 +264,10 @@ public class AIManager : MonoBehaviour
     }
 
 
-
+    public bool getTurnState()
+    {
+        return OnPlay;
+    }
    
 
 

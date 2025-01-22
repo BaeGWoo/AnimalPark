@@ -94,7 +94,6 @@ public class TileManager : MonoBehaviour
                         TileBlocks[j, i].GetComponent<Block>().SetMaterial(false);                  
                     }
                 }
-
             }
         }        
     }

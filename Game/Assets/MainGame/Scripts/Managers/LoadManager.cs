@@ -16,13 +16,20 @@ public class LoadManager : MonoBehaviour
 
     [SerializeField] GameObject LobbyCanvas;
     [SerializeField] GameObject PausePanel;
+    [SerializeField] GameObject ClearPanel;
+
+    [SerializeField] bool stageTrigger;
     [SerializeField] int curLevel;
     [SerializeField] int imageNumber;
     [SerializeField] Sprite[] stageImage;
     [SerializeField] Image levelImage;
     [SerializeField] GameObject[] state;
+    [SerializeField] Button LeftButton;
+    [SerializeField] Button RightButton;
+
+
     [SerializeField] string[] sceneName;
-    
+    [SerializeField] AIManager aiManager;
     private static LoadManager instance;
     private void Awake()
     {
@@ -42,14 +49,37 @@ public class LoadManager : MonoBehaviour
         curLevel = 0;
         imageNumber = curLevel;
         state[1].SetActive(true);
+        stageTrigger = false;
+        LeftButton.interactable = false;
         sceneName =new string[]{ "GameStart","Nature","Island","Dessert","City","Space"};
     }
 
     private void Update()
     {
+        if(aiManager == null)
+        {
+            aiManager = FindAnyObjectByType<AIManager>();
+        }
+
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             PausePanel.SetActive(true);
+        }
+
+        if (!stageTrigger)
+        {
+            if (!aiManager.GetComponent<AIManager>().getTurnState())
+            {
+                ClearPanel.SetActive(true);
+                stageTrigger = true;
+            }
+
+            if (Hunter.Health <= 0)
+            {
+                StartCoroutine(PausePanelOn());
+                stageTrigger = true;
+            }
         }
     }
 
@@ -78,6 +108,8 @@ public class LoadManager : MonoBehaviour
 
     public void curStage(int level)
     {
+        ClearPanel.SetActive(false);
+        PausePanel.SetActive(false);
         // 로비로 이동
         if (level == 0)
         {
@@ -87,6 +119,7 @@ public class LoadManager : MonoBehaviour
             imageNumber = curLevel;
             state[1].SetActive(true);
             PausePanel.SetActive(false);
+           
         }
 
         else
@@ -158,6 +191,7 @@ public class LoadManager : MonoBehaviour
                 loadingBar.value = 0;
                 loadingCanvas.SetActive(false);
                 FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().BGMPlay();
+                stageTrigger = false;
             }
         }
     }
@@ -172,14 +206,24 @@ public class LoadManager : MonoBehaviour
 
         if (button.name == "Left")
         {
+            RightButton.interactable = true;
             if (imageNumber > 0)
+            {
                 levelImage.sprite = stageImage[--imageNumber];
+                if (imageNumber == 0)
+                    LeftButton.interactable = false;
+            }
         }
 
         else if (button.name == "Right")
         {
+            LeftButton.interactable = true;
             if (imageNumber < stageImage.Length-1)
+            {
                 levelImage.sprite = stageImage[++imageNumber];
+                if (imageNumber == stageImage.Length - 1)
+                    RightButton.interactable = false;
+            }
         }
 
         if (imageNumber < curLevel)
@@ -210,6 +254,7 @@ public class LoadManager : MonoBehaviour
 
     public void ReLoadScene()
     {
+        PausePanel.SetActive(false);
         string sceneName = SceneManager.GetActiveScene().name;
         ExitScene();       
         LoadScene(sceneName);
@@ -242,6 +287,24 @@ public class LoadManager : MonoBehaviour
         return curLevel;
     }
 
+
+    public void LevelUpNext()
+    {
+        curLevel++;
+        curStage(curLevel);
+        imageNumber = curLevel;
+        ClearPanel.SetActive(false);
+    }
+
+    public void LevelUpLobby()
+    {
+        curLevel++;
+        imageNumber = curLevel;
+        curStage(0);
+        ClearPanel.SetActive(false);
+    }
+
+
     public void QuitGame()
     {
         Application.Quit();
@@ -251,4 +314,10 @@ public class LoadManager : MonoBehaviour
 #endif
     }
 
+
+    IEnumerator PausePanelOn()
+    {
+        yield return new WaitForSeconds(1.0f);
+        PausePanel.SetActive(true);
+    }
 }

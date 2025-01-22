@@ -53,15 +53,12 @@ public class MushRoom : Monster
     public override void Skill()
     {
         GameObject prefab;
-        int randomNumber = Random.Range(0, 5);
         animationComponent.Play("BombAttack");
         prefab = Instantiate(BombPrefab);
         prefab.name = BombPrefab.name;
         prefab.transform.position = transform.position;
         prefab.GetComponent<Monster>().SetInitialSetting();
-        prefab.GetComponent<Monster>().Move();
-        //Vector3 targetPosition = transform.position + bombPosition[randomNumber];
-        //StartCoroutine(JumpToPosition(prefab, targetPosition));
+        //prefab.GetComponent<Monster>().AnimalAct();
         FindAnyObjectByType<AIManager>().GetComponent<AIManager>().AddAnimal(prefab);
     }
 
@@ -75,26 +72,7 @@ public class MushRoom : Monster
         return MaxHealth;
     }
 
-    IEnumerator JumpToPosition(GameObject prefab, Vector3 targetPosition)
-    {
-        //base.JumpAnimaition();
-        Vector3 startPosition = transform.position;
-        float elapsedTime = 0f;
-
-        while (elapsedTime < jumpDuration)
-        {
-            float t = elapsedTime / jumpDuration;
-            float height = Mathf.Sin(t * Mathf.PI) * jumpHeight; // Á¡ÇÁ °î¼±
-
-            Vector3 currentPosition = Vector3.Lerp(startPosition, targetPosition, t);
-            prefab.transform.position = new Vector3(currentPosition.x, startPosition.y + height, currentPosition.z);
-
-            elapsedTime += Time.deltaTime;
-            yield return null; 
-        }
-
-        prefab.transform.position = new Vector3(targetPosition.x, startPosition.y, targetPosition.z);
-    }
+  
     
 
 
