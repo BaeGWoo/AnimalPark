@@ -15,7 +15,7 @@ D:/ë°°ê±´ìš°/AnimalPark/Game
 -logFile
 Logs/AssetImportWorker5.log
 -srvPort
-51324
+50634
 Successfully changed project path to: D:/ë°°ê±´ìš°/AnimalPark/Game
 D:/ë°°ê±´ìš°/AnimalPark/Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ D:/ë°°ê±´ìš°/AnimalPark/Game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [19432] Host "[IP] 211.193.185.145 [Port] 0 [Flags] 2 [Guid] 1731214610 [EditorId] 1731214610 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [8408] Host "[IP] 183.103.60.149 [Port] 0 [Flags] 2 [Guid] 2973173285 [EditorId] 2973173285 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [19432] Host "[IP] 211.193.185.145 [Port] 0 [Flags] 2 [Guid] 1731214610 [EditorId] 1731214610 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8408] Host "[IP] 183.103.60.149 [Port] 0 [Flags] 2 [Guid] 2973173285 [EditorId] 2973173285 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H29PI8H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 15.72 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 11.07 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.30f1 (70558241b701)
 [Subsystems] Discovering subsystems at path C:/Users/User/2022.3.30f1/Editor/Data/Resources/UnitySubsystems
@@ -70,43 +70,43 @@ Initialize mono
 Mono path[0] = 'C:/Users/User/2022.3.30f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Users/User/2022.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56264
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56756
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Users/User/2022.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.012949 seconds.
-- Loaded All Assemblies, in  0.386 seconds
+Registered in 0.014315 seconds.
+- Loaded All Assemblies, in  0.426 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.269 seconds
-Domain Reload Profiling: 651ms
-	BeginReloadAssembly (128ms)
+- Finished resetting the current domain, in  0.279 seconds
+Domain Reload Profiling: 702ms
+	BeginReloadAssembly (133ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (35ms)
+	RebuildCommonClasses (44ms)
 	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (69ms)
-	LoadAllAssembliesAndSetupDomain (139ms)
-		LoadAssemblies (125ms)
+	initialDomainReloadingComplete (71ms)
+	LoadAllAssembliesAndSetupDomain (163ms)
+		LoadAssemblies (129ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (136ms)
-			TypeCache.Refresh (135ms)
-				TypeCache.ScanAssembly (120ms)
+		AnalyzeDomain (161ms)
+			TypeCache.Refresh (159ms)
+				TypeCache.ScanAssembly (144ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (270ms)
+	FinalizeReload (280ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (214ms)
+		SetupLoadedEditorAssemblies (219ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
+			InitializePlatformSupportModulesInManaged (12ms)
 			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (142ms)
+			ProcessInitializeOnLoadAttributes (146ms)
 			ProcessInitializeOnLoadMethodAttributes (52ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
@@ -115,55 +115,55 @@ Domain Reload Profiling: 651ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.800 seconds
-Refreshing native plugins compatible for Editor in 4.60 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.827 seconds
+Refreshing native plugins compatible for Editor in 4.30 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.739 seconds
-Domain Reload Profiling: 1536ms
-	BeginReloadAssembly (170ms)
+- Finished resetting the current domain, in  0.804 seconds
+Domain Reload Profiling: 1626ms
+	BeginReloadAssembly (176ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (19ms)
 	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (11ms)
+	RebuildNativeTypeToScriptingClass (15ms)
 	initialDomainReloadingComplete (50ms)
-	LoadAllAssembliesAndSetupDomain (529ms)
-		LoadAssemblies (363ms)
+	LoadAllAssembliesAndSetupDomain (546ms)
+		LoadAssemblies (387ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (275ms)
-			TypeCache.Refresh (231ms)
-				TypeCache.ScanAssembly (214ms)
+		AnalyzeDomain (273ms)
+			TypeCache.Refresh (233ms)
+				TypeCache.ScanAssembly (212ms)
 			ScanForSourceGeneratedMonoScriptInfo (27ms)
-			ResolveRequiredComponents (15ms)
-	FinalizeReload (740ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (804ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (557ms)
+		SetupLoadedEditorAssemblies (609ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
+			InitializePlatformSupportModulesInManaged (7ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (81ms)
-			ProcessInitializeOnLoadAttributes (387ms)
-			ProcessInitializeOnLoadMethodAttributes (63ms)
-			AfterProcessingInitializeOnLoad (14ms)
+			BeforeProcessingInitializeOnLoad (85ms)
+			ProcessInitializeOnLoadAttributes (427ms)
+			ProcessInitializeOnLoadMethodAttributes (71ms)
+			AfterProcessingInitializeOnLoad (15ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 4.36 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (15ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 4.89 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5687 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 72 unused Assets / (1.5 MB). Loaded Objects now: 6158.
-Memory consumption went from 302.1 MB to 300.6 MB.
-Total: 3.921800 ms (FindLiveObjects: 0.418500 ms CreateObjectMapping: 0.399400 ms MarkObjects: 2.610400 ms  DeleteObjects: 0.492700 ms)
+Memory consumption went from 302.3 MB to 300.8 MB.
+Total: 3.878900 ms (FindLiveObjects: 0.477600 ms CreateObjectMapping: 0.480700 ms MarkObjects: 2.425100 ms  DeleteObjects: 0.494600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -180,52 +180,60 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 486869.174719 seconds.
-  path: Assets/MainGame/Prefabs/Skill UI/UI Assets/Ability_Skill_Icons/UI_Skill_Icon_Beam.png
-  artifactKey: Guid(b450d0b398880cb458f83d1a01b399ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Skill UI/UI Assets/Ability_Skill_Icons/UI_Skill_Icon_Beam.png using Guid(b450d0b398880cb458f83d1a01b399ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d214c0338f3fbca164cd002b01b0ae3') in 0.098343 seconds
+  Time since last request: 589128.081599 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Prefabs/Fire/CFXR Fire Breath.prefab
+  artifactKey: Guid(c4ed38c72957f2241ad144a1614956d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Prefabs/Fire/CFXR Fire Breath.prefab using Guid(c4ed38c72957f2241ad144a1614956d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75783498b5b6fb6dbab78ff66657a19a') in 0.166975 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 26
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/MainGame/Prefabs/Skill UI/UI Assets/Ability_Skill_Icons/UI_Skill_Icon_Pound.png
-  artifactKey: Guid(61dab0b6e506c6a43b12d9fde15b2393) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Skill UI/UI Assets/Ability_Skill_Icons/UI_Skill_Icon_Pound.png using Guid(61dab0b6e506c6a43b12d9fde15b2393) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '583f3870b04aa7c8a10fd58bf367181f') in 0.012985 seconds
+  Time since last request: 0.000024 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Prefabs/Fire/CFXR2 Firewall A.prefab
+  artifactKey: Guid(2af5562ce69fc2d448481a1587a352a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Prefabs/Fire/CFXR2 Firewall A.prefab using Guid(2af5562ce69fc2d448481a1587a352a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69c9fa094fda3b7bea8e89bf8eb1cfd6') in 0.041334 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 20
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/MainGame/Prefabs/Skill UI/UI Assets/Ability_Skill_Icons/UI_Skill_Icon_Punches.png
-  artifactKey: Guid(eecb85004343b0e4d8b78fd7f9877b32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Skill UI/UI Assets/Ability_Skill_Icons/UI_Skill_Icon_Punches.png using Guid(eecb85004343b0e4d8b78fd7f9877b32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '944648afeca528f0a555c97e38f34915') in 0.012015 seconds
+  Time since last request: 0.000025 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Prefabs/Fire/CFXR3 Hit Fire B (Air).prefab
+  artifactKey: Guid(3ed0d324122d7b24eaec75c55c74aafc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Prefabs/Fire/CFXR3 Hit Fire B (Air).prefab using Guid(3ed0d324122d7b24eaec75c55c74aafc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49949e417af7afad2395e035974fdd8c') in 0.143531 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 20
 ========================================================================
 Received Import Request.
-  Time since last request: 0.012375 seconds.
-  path: Assets/MainGame/Prefabs/Skill UI/UI Assets/Ability_Skill_Icons/UI_Skill_Icon_Slash.png
-  artifactKey: Guid(2a5c892bdd014164da633b8c6fd0f246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Skill UI/UI Assets/Ability_Skill_Icons/UI_Skill_Icon_Slash.png using Guid(2a5c892bdd014164da633b8c6fd0f246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2efa832e998d7d23ab30863a9859317') in 0.027713 seconds
+  Time since last request: 26.640146 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_SETTINGS.cginc
+  artifactKey: Guid(12c0fc6ff46c9b64a99fb4b921970883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_SETTINGS.cginc using Guid(12c0fc6ff46c9b64a99fb4b921970883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c3f124b336ac2f6b3c136b8f9020b3e') in 0.001007 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/MainGame/Prefabs/Skill UI/UI Assets/Ability_Skill_Icons/UI_Skill_Icon_SpiritArrows.png
-  artifactKey: Guid(0825dfa25de4551469e65496af7b3c71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Skill UI/UI Assets/Ability_Skill_Icons/UI_Skill_Icon_SpiritArrows.png using Guid(0825dfa25de4551469e65496af7b3c71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80e9c40382bac924fe594e4e82016d93') in 0.027933 seconds
+  Time since last request: 5.755216 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/CFX4 Prefabs/Misc/CFX4 Hit Paint C (Cyan).prefab
+  artifactKey: Guid(f2dba9e16cd347f44a395b8204544ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/CFX4 Prefabs/Misc/CFX4 Hit Paint C (Cyan).prefab using Guid(f2dba9e16cd347f44a395b8204544ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03c39737b6f1e8e2fa3cb06e4ff0227f') in 0.043915 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 15
 ========================================================================
 Received Import Request.
   Time since last request: 0.000015 seconds.
-  path: Assets/MainGame/Prefabs/Skill UI/UI Assets/Ability_Skill_Icons/UI_Skill_Icon_Buff.png
-  artifactKey: Guid(a2563f2b8dbc4044b9a50537d3a29962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainGame/Prefabs/Skill UI/UI Assets/Ability_Skill_Icons/UI_Skill_Icon_Buff.png using Guid(a2563f2b8dbc4044b9a50537d3a29962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33041a04307b1db5d54000470457d05e') in 0.023535 seconds
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/CFX4 Prefabs/Misc/CFX4 Hit Pow.prefab
+  artifactKey: Guid(fb7b0526ade434043b350a180d741cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/CFX4 Prefabs/Misc/CFX4 Hit Pow.prefab using Guid(fb7b0526ade434043b350a180d741cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a0da1d34a3b14853c14c837d4cf0ba8') in 0.046120 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Import Request.
+  Time since last request: 22.041213 seconds.
+  path: Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/CFX3 Prefabs/Fire/CFX3_Flying_Ember_Upward.prefab
+  artifactKey: Guid(f89732ea99785b94c87bbba1e27f75a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainGame/Prefabs/Skill Effect/Cartoon FX (legacy)/CFX3 Prefabs/Fire/CFX3_Flying_Ember_Upward.prefab using Guid(f89732ea99785b94c87bbba1e27f75a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49284d524c9a794804d463cc29a71211') in 0.014387 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: ½º·¹µå Á¾·á ¶Ç´Â ÀÀ¿ë ÇÁ·Î±×·¥ ¿äÃ» ¶§¹®¿¡ I/O ÀÛ¾÷ÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.
 AssetImportWorker is now disconnected from the server
