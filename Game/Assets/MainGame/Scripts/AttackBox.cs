@@ -29,6 +29,13 @@ public class AttackBox : MonoBehaviour
             other.GetComponent <Monster>().Damaged(2);
             other.GetComponent<Monster>().Iced(false);
         }
+
+        else if (other.CompareTag("IceObject"))
+        {
+            int x = Random.Range(0, 7) * 2;
+            int z = Random.Range(0, 4) * 2;
+            other.transform.position = new Vector3(x, 0, z);
+        }
         
     }
 

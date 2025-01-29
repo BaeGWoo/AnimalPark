@@ -97,7 +97,11 @@ public class Colobus :Monster
             float temp = Mathf.Abs(HunterPosition.x - (moveDirection[i].x + transform.position.x)) +
                   Mathf.Abs(HunterPosition.z - (moveDirection[i].z + transform.position.z));
 
-            if (dir < temp)
+
+            if (dir < temp &&
+                (moveDirection[i].x + transform.position.x) >= 0 && (moveDirection[i].x + transform.position.x) <= 14 &&
+                (moveDirection[i].z + transform.position.z) >= 0 && (moveDirection[i].z + transform.position.z) <= 14
+                )
             {
                 dir = temp;
                 index = i;
@@ -105,9 +109,10 @@ public class Colobus :Monster
         }
         movePoint[0] = moveDirection[index] + transform.position;
 
-        //animationComponent.Play("Run");
+        //animationComponent.Play("Jump");
         base.Move(transform.position, movePoint);
     }
+
 
 
 

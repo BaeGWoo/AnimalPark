@@ -69,70 +69,62 @@ public class LoadManager : MonoBehaviour
 
         if (!stageTrigger)
         {
-            if (!aiManager.GetComponent<AIManager>().getTurnState())
+            if (aiManager != null)
             {
-                ClearPanel.SetActive(true);
-                stageTrigger = true;
-            }
+                if (!aiManager.GetComponent<AIManager>().getTurnState())
+                {
+                    ClearPanel.SetActive(true);
+                    stageTrigger = true;
+                }
 
-            if (Hunter.Health <= 0)
-            {
-                StartCoroutine(PausePanelOn());
-                stageTrigger = true;
-            }
+
+                if (Hunter.Health <= 0)
+                {
+                    StartCoroutine(PausePanelOn());
+                    stageTrigger = true;
+                }
+            }           
         }
     }
 
-    // 각 씬이 불완전하게 보여지는 것을 방지하기 위해 페이크로딩을 이용
-    // 캔버스를 활성화 후 코루틴 함수 호출
-    public void LoadScene(string sceneName)
-    {
-        loadingCanvas.SetActive(true);
-        StartCoroutine(LoadNextScene(sceneName));
-        
-        if (sceneName== "Lobby")
-        {
-            LobbyCanvas.SetActive(true);
-            Cursor.SetCursor(mouseImage[0], Vector2.zero, CursorMode.Auto);
-            levelImage.sprite = stageImage[curLevel];
-            imageNumber = curLevel;
-            state[1].SetActive(true);
-        }
+  
 
-        else
-        {
-            LobbyCanvas.SetActive(false);
-            Cursor.SetCursor(mouseImage[1], Vector2.zero, CursorMode.Auto);
-        }
-    }
-
-    public void curStage(int level)
+    public void LoadScene(int level)
     {
-        ClearPanel.SetActive(false);
+        FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().BGMOff();
+        //ClearPanel.SetActive(false);
         PausePanel.SetActive(false);
         // 로비로 이동
         if (level == 0)
         {
+            StartCoroutine(LoadNextScene(sceneName[0]));
             LobbyCanvas.SetActive(true);
             Cursor.SetCursor(mouseImage[0], Vector2.zero, CursorMode.Auto);
             levelImage.sprite = stageImage[curLevel];
             imageNumber = curLevel;
             state[1].SetActive(true);
-            PausePanel.SetActive(false);
-           
+            //PausePanel.SetActive(false);
+
         }
 
         else
         {
+            LobbyCanvas.SetActive(false);
             loadingCanvas.SetActive(true);
             Cursor.SetCursor(mouseImage[1], Vector2.zero, CursorMode.Auto);
             StartCoroutine(LoadNextScene(sceneName[curLevel+1]));
-
-            LobbyCanvas.SetActive(false);
         }
        
     }
 
+    public void LevelUpLoadScene(int state)
+    {
+        curLevel++;
+        ClearPanel.SetActive(false);
+
+        LoadScene(state);
+        imageNumber = curLevel;
+    }
 
 
 
@@ -180,13 +172,16 @@ public class LoadManager : MonoBehaviour
                 //aiManager.ActiveHintPanel();
                 yield return new WaitForSeconds(0.5f);
 
-
-                FindAnyObjectByType<TileManager>().GetComponent<TileManager>().CreateTileMap();
-                FindAnyObjectByType<Hunter>().GetComponent<Hunter>().SetInitialState();
-                FindAnyObjectByType<Hunter>().GetComponent<Hunter>().setCamera(Camera.main);
-                //aiManager.StartTurn();
-                FindAnyObjectByType<AIManager>().GetComponent<AIManager>().StartTurn();
-                FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().MoveStage();
+                int index = SceneManager.GetActiveScene().buildIndex;
+                if (index > 0)
+                {
+                    FindAnyObjectByType<TileManager>().GetComponent<TileManager>().CreateTileMap();
+                    //FindAnyObjectByType<Hunter>().GetComponent<Hunter>().SetInitialState();
+                    //FindAnyObjectByType<Hunter>().GetComponent<Hunter>().setCamera(Camera.main);
+                    //aiManager.StartTurn();
+                    FindAnyObjectByType<AIManager>().GetComponent<AIManager>().StartTurn();
+                    FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().MoveStage();
+                }
                 FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().SetBGMPlayer();
                 loadingBar.value = 0;
                 loadingCanvas.SetActive(false);
@@ -252,25 +247,7 @@ public class LoadManager : MonoBehaviour
 
 
 
-    public void ReLoadScene()
-    {
-        PausePanel.SetActive(false);
-        string sceneName = SceneManager.GetActiveScene().name;
-        ExitScene();       
-        LoadScene(sceneName);
-    }
-
-
-    public void ExitScene()
-    {
-        //aiManager.ResetAnimalList();
-        //AIManager.SetActive(false);
-        SceneManager.LoadScene("Lobby");
-        //soundManager.EnterLobby();
-
-        // Hunter 초기화
-        FindAnyObjectByType<Hunter>().GetComponent<Hunter>().SetInitialState();
-    }
+  
 
 
 
@@ -288,21 +265,9 @@ public class LoadManager : MonoBehaviour
     }
 
 
-    public void LevelUpNext()
-    {
-        curLevel++;
-        curStage(curLevel);
-        imageNumber = curLevel;
-        ClearPanel.SetActive(false);
-    }
+   
 
-    public void LevelUpLobby()
-    {
-        curLevel++;
-        imageNumber = curLevel;
-        curStage(0);
-        ClearPanel.SetActive(false);
-    }
+   
 
 
     public void QuitGame()
@@ -318,6 +283,8 @@ public class LoadManager : MonoBehaviour
     IEnumerator PausePanelOn()
     {
         yield return new WaitForSeconds(1.0f);
+        FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().BGMOff();
+
         PausePanel.SetActive(true);
     }
 }

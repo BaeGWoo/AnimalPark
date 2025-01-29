@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MuskRat : Monster
 {
-    private Vector3[] movePoint = new Vector3[33];
+    private Vector3[] movePoint = new Vector3[4];
     private Vector3[] moveDirection = new Vector3[4];
     [SerializeField] GameObject[] AttackMotion;
     private Vector3[] attackBox = new Vector3[8];
@@ -55,7 +55,7 @@ public class MuskRat : Monster
     {
         skillCount--;
         if (skillCount < 0) { skillCount = totalSkillCount; }   
-        base.AnimalAct(-1, false, true);
+        base.AnimalAct(-1, attackable, true);
     }
 
 
@@ -69,17 +69,12 @@ public class MuskRat : Monster
 
     public override void Move()
     {
-        int index = 0;
         for (int i = 0; i < movePoint.Length; i++)
         {
-            for (int j = 0; j < attackBox.Length; j++)
-            {
-                movePoint[index++] = moveDirection[i] + transform.position + attackBox[j];
-            }
-            
+          movePoint[i] = moveDirection[i] + transform.position;           
         }
         //animationComponent.Play("Run");
-        base.Move(transform.position, movePoint);      
+        base.Move(transform.position,attackBox, movePoint);      
     }
 
 

@@ -149,7 +149,6 @@ public class Hunter : MonoBehaviour
             magic.SetActive(true);
         }
 
-
         else if (other.CompareTag("FireWall"))
         {
             getDamaged(10);
@@ -214,6 +213,14 @@ public class Hunter : MonoBehaviour
 
         StartCoroutine(NuckBack(time, NuckBackDirection));
 
+    }
+
+    public void BossAttack(Vector3 dir)
+    {
+        animator.SetTrigger("Damage");
+        float time = 6.0f;
+        dir = (dir - transform.position).normalized;
+        StartCoroutine(NuckBack(time, dir));
     }
 
     IEnumerator NuckBack(float time,Vector3 NuckBackDirection)
@@ -289,9 +296,11 @@ public class Hunter : MonoBehaviour
             }
         }
 
-        if (moveDebuff >= 6)
+        if (moveDebuff >0)
         {
             moveDebuff=0;
+            if (magic != null)
+                magic.SetActive(false);
         }
 
         else
@@ -460,6 +469,11 @@ public class Hunter : MonoBehaviour
     public void GetMoveDebuff(float value)
     {
         moveDebuff = value;
+    }
+
+    public void GetAttackDebuff()
+    {
+        attackDebuff = true;
     }
 
     public void moveHunterPosition()
