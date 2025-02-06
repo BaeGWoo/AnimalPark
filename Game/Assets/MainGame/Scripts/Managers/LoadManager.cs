@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,6 +18,7 @@ public class LoadManager : MonoBehaviour
     [SerializeField] GameObject LobbyCanvas;
     [SerializeField] GameObject PausePanel;
     [SerializeField] GameObject ClearPanel;
+    [SerializeField] GameObject HintPanel;
 
     [SerializeField] bool stageTrigger;
     [SerializeField] int curLevel;
@@ -26,8 +28,8 @@ public class LoadManager : MonoBehaviour
     [SerializeField] GameObject[] state;
     [SerializeField] Button LeftButton;
     [SerializeField] Button RightButton;
-
-
+    [SerializeField] Sprite[] HintList;
+    [SerializeField] Image hintImage;
     [SerializeField] string[] sceneName;
     [SerializeField] AIManager aiManager;
     private static LoadManager instance;
@@ -286,5 +288,16 @@ public class LoadManager : MonoBehaviour
         FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().BGMOff();
 
         PausePanel.SetActive(true);
+    }
+
+    public void CloseHintPanel()
+    {
+        HintPanel.SetActive(false);
+    }
+
+    public void OpenHintPanel()
+    {
+        HintPanel.SetActive(true);
+        hintImage.sprite = HintList[curLevel*2];
     }
 }

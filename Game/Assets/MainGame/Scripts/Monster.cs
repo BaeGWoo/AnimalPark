@@ -259,7 +259,7 @@ public class Monster : MonoBehaviour
         }
     }
 
-    public void Die()
+    public virtual void Die()
     {
         if (animator != null)
             animator.SetTrigger("Dead");

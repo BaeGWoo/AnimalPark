@@ -44,19 +44,20 @@ public class Cactus : Monster
         totalSkillCount = skillCount;
     }
 
+
     public override void AnimalAct()
     {
         skillCount--;
         taipanCount--;
-        if (taipanCount < 0) 
+        if (taipanCount <= 0) 
         {
             for (int i = 0; i < Taipans.Length; i++) 
             {
                 Taipans[i].GetComponent<Taipan>().ActiveAttackBox();
             }
-            taipanCount = 3;
+            taipanCount = 2;
         }
-        if (skillCount < 0) { skillCount = totalSkillCount; }
+        if (skillCount < 0) { skillCount = totalSkillCount-1; }
         base.AnimalAct(skillCount, false, true);
     }
 

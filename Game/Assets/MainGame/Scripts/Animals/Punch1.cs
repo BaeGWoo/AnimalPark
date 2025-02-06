@@ -89,6 +89,7 @@ public class Punch1 : Monster
         }
         //animationComponent.Play("Run");
         base.Move(transform.position, attackBox, movePoint);
+        base.AnimalAct(-1, attackable, false);
     }
 
 

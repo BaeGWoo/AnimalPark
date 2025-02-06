@@ -98,9 +98,13 @@ public class mole : Monster
     {
         if (other.name == "Hunter")
         {
-            Attack();
-            other.GetComponent<Hunter>().OnReachedDestination();
-            other.GetComponent<Hunter>().StopPosition(new Vector3(transform.position.x, 0, transform.position.z));
+            if (!transform.CompareTag("IceAnimal"))
+            {
+                Attack();
+                other.GetComponent<Hunter>().OnReachedDestination();
+                other.GetComponent<Hunter>().StopPosition(new Vector3(transform.position.x, 0, transform.position.z));
+            }
+                
         }
     }
 

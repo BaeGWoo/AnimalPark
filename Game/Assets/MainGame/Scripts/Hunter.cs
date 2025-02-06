@@ -99,6 +99,15 @@ public class Hunter : MonoBehaviour
 
     }
 
+    public void setInitialState()
+    {
+        moveDebuff = 0;
+        healthDebuffCount = 0;
+        if(magic!=null)
+            magic.SetActive(false);
+
+    }
+
     public int getCurLevel()
     {
         return curLevel;
@@ -289,27 +298,23 @@ public class Hunter : MonoBehaviour
         {
             healthDebuffCount--;
             getDamaged(healthDebuffDMG);
-            if(healthDebuffCount == 0)
+            if (healthDebuffCount == 0)
             {
                 HealthDebuff.SetActive(false);
                 healthDebuffDMG = 0;
             }
         }
 
-        if (moveDebuff >0)
-        {
-            moveDebuff=0;
-            if (magic != null)
-                magic.SetActive(false);
-        }
 
-        else
-        {
-            Moveable = true;
-            tileManager.SetMoveableTile(transform.position, moveDebuff);
-        }
+        Moveable = true;
+        tileManager.SetMoveableTile(transform.position, moveDebuff);
 
-       
+        moveDebuff = 0;
+        if (magic != null)
+            magic.SetActive(false);
+
+
+
     }
 
     public void Attack()

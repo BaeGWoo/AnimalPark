@@ -77,6 +77,7 @@ public class Chomper : Monster
         float speed = 3.0f * Time.deltaTime;
         while (!reached)  // 0.1f는 허용 오차
         {
+            //posion null check
             // 목표 위치로 서서히 이동
             posion.transform.position = Vector3.MoveTowards(posion.transform.position, Hunter.HunterPosition, speed);
             if (posion.transform.position.x == Hunter.HunterPosition.x && posion.transform.position.z == Hunter.HunterPosition.z)
@@ -98,7 +99,6 @@ public class Chomper : Monster
         }
         //animationComponent.Play("Run");
         base.Move(transform.position, movePoint);
-       
     }
 
 
