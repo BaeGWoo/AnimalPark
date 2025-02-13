@@ -28,6 +28,8 @@ public class LoadManager : MonoBehaviour
     [SerializeField] GameObject[] state;
     [SerializeField] Button LeftButton;
     [SerializeField] Button RightButton;
+    [SerializeField] Button nextHintButton;
+    [SerializeField] Button prevHintButton;
     [SerializeField] Sprite[] HintList;
     [SerializeField] Image hintImage;
     [SerializeField] string[] sceneName;
@@ -53,7 +55,7 @@ public class LoadManager : MonoBehaviour
         state[1].SetActive(true);
         stageTrigger = false;
         LeftButton.interactable = false;
-        sceneName =new string[]{ "GameStart","Nature","Island","Dessert","City","Space"};
+        sceneName =new string[]{ "GameStart","Nature","Island","Dessert","City","Space","End"};
     }
 
     private void Update()
@@ -75,8 +77,19 @@ public class LoadManager : MonoBehaviour
             {
                 if (!aiManager.GetComponent<AIManager>().getTurnState())
                 {
-                    ClearPanel.SetActive(true);
-                    stageTrigger = true;
+                    if (curLevel < 4)
+                    {
+                        ClearPanel.SetActive(true);
+                        stageTrigger = true;
+                    }
+                    else
+                    {
+                        SceneManager.LoadSceneAsync("End");
+                        FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().MoveStage();
+                        FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().SetBGMPlayer();
+                        FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().BGMPlay();
+                    }
+                    
                 }
 
 
@@ -124,6 +137,7 @@ public class LoadManager : MonoBehaviour
         curLevel++;
         ClearPanel.SetActive(false);
 
+        LeftButton.interactable = true;
         LoadScene(state);
         imageNumber = curLevel;
     }
@@ -178,9 +192,6 @@ public class LoadManager : MonoBehaviour
                 if (index > 0)
                 {
                     FindAnyObjectByType<TileManager>().GetComponent<TileManager>().CreateTileMap();
-                    //FindAnyObjectByType<Hunter>().GetComponent<Hunter>().SetInitialState();
-                    //FindAnyObjectByType<Hunter>().GetComponent<Hunter>().setCamera(Camera.main);
-                    //aiManager.StartTurn();
                     FindAnyObjectByType<AIManager>().GetComponent<AIManager>().StartTurn();
                     FindAnyObjectByType<SoundManager>().GetComponent<SoundManager>().MoveStage();
                 }
@@ -299,5 +310,22 @@ public class LoadManager : MonoBehaviour
     {
         HintPanel.SetActive(true);
         hintImage.sprite = HintList[curLevel*2];
+        nextHintButton.interactable = true;
+        prevHintButton.interactable = false;
+    }
+
+    public void NextHintMove()
+    {
+        hintImage.sprite=HintList[curLevel*2+1];
+        nextHintButton.interactable = false;
+        prevHintButton.interactable = true;
+    }
+
+
+    public void PrevHintMove()
+    {
+        hintImage.sprite = HintList[curLevel * 2];
+        nextHintButton.interactable = true;
+        prevHintButton.interactable = false;
     }
 }

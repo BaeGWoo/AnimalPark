@@ -69,7 +69,6 @@ public class AIManager : MonoBehaviour
 
         if (animalStatus != null)
         {
-            //AnimalDataList dataList = JsonUtility.FromJson<AnimalDataList>(StatusList.text);
             AnimalData[] animals = JsonUtility.FromJson<AnimalDataArray>(StatusList.ToString()).animal;
             // 동물 데이터 리스트를 Dictionary에 저장
             animalDictionary = new Dictionary<string, AnimalData>();
@@ -77,12 +76,10 @@ public class AIManager : MonoBehaviour
             foreach (var animal in animals)
             {
                 animalDictionary.Add(animal.name, animal);
-                //Debug.Log(animal.name);
             }
 
             foreach (var animal in Animals)
             {
-                //Debug.Log(animal.name);
                 if (animalDictionary.ContainsKey(animal.name))
                 {
                     AnimalData animalData = animalDictionary[animal.name];
@@ -92,14 +89,11 @@ public class AIManager : MonoBehaviour
                         animalData.SkillCount
                         );
 
-                    //Debug.Log($"Found: {animalData.name}, Health: {animalData.Health}, Attack: {animalData.AttackDMG}, Skills: {animalData.SkillCount}");
                 }
                 Vector3 animalPosition=animal.transform.position;
                 FindAnyObjectByType<TileManager>().GetComponent<TileManager>().insertTileMap(
                     (int)animalPosition.x / 2, (int)animalPosition.z / 2, 1);               
             }
-
-
         }
     }
 

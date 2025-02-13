@@ -143,6 +143,7 @@ public class Hunter : MonoBehaviour
             HPSlider.fillAmount = Health / MaxHealth;
         }
 
+
         else if (other.CompareTag("Posion"))
         {
             animator.SetTrigger("Damage");
@@ -242,6 +243,14 @@ public class Hunter : MonoBehaviour
             time -= 6.0f * Time.deltaTime;
             yield return null;
         }
+        transform.position = new Vector3
+            (
+            (int)((transform.position.x+1)/2)*2,
+            transform.position.y,
+             (int)((transform.position.z + 1) / 2)*2
+            );
+        GetMoveDebuff(6);
+        GetAttackDebuff();
     }
 
     public void GetHealthDebuff(int count, float dmg)
@@ -309,6 +318,8 @@ public class Hunter : MonoBehaviour
         Moveable = true;
         tileManager.SetMoveableTile(transform.position, moveDebuff);
 
+        if (moveDebuff >= 6)
+            Moveable = false;
         moveDebuff = 0;
         if (magic != null)
             magic.SetActive(false);
